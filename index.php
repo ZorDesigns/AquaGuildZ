@@ -24,91 +24,117 @@
         <![endif]-->
    
         <!-- Le javascripts -->
+        <script type="text/javascript"> window.baseUrl = "<?php echo base_url(); ?>";</script>
         <script src="assets/javascript/jquery.min.js"></script>
         <script src="assets/javascript/jquery.flexslider.min.js"></script>
         <script src="assets/javascript/bootstrap.min.js"></script>
         <script src="assets/javascript/global.js"></script>
-        <script src="assets/javascript/login.js"></script>
-        <script src="assets/javascript/register.js"></script>
+		<script src="assets/javascript/common_orig.js"></script>
 </head>
 <body>
 <div id="wrapper">
-    <header id="main_header" class="clearfix">
-    <div id="topbar">
-        <nav>
-        <a class="home" href=""><img src="assets/images/topbar-home.png" alt=""><span>Home</span></a></li>
-        <p><a data-toggle="modal" href="#loginframe">Login</a> or <a data-toggle="modal" href="#registerframe">Create Account</a></p>
-        <div class="modal hide" id="logoutframe">
-            <button type="button" class="close" data-dismiss="modal">&#215;</button>
-                <div class="modal-body">
-                    <p><center>Are you sure you want to Logout?</center></p>
-                    <p><center><a href="#" class="lbutton" type="button" id="logoutYes">Yes</a>or<a href="#" type="button" class="closebutton" data-dismiss="modal">No</a></center></p>
-                </div>
-        </div>
-        <div class="modal hide" id="loginframe">
-            <button type="button" class="close" data-dismiss="modal">&#215;</button>
-                <div class="modal-body">
-                    <h1>Flame.Net</h1>
-                    <form>
-                        <p><label class="text">Username</label>
-                        <input class="input" value="" id="accountName" maxlength="320" type="text" tabindex="1" placeholder="Username">
-                        </p>
-                        <p>
-                        <label class="text">Password</label>
-                        <input class="input" type="password" class="span3" placeholder="Password" id="accountPassword"/>
-         
-                        <label class="checkbox">
-                        <input type="checkbox"> Keep me logged in
-                        </label>
-         
-                        <center><a id="loginSubmit" href="#" class="login-btn">Login</a></center></p>
-                    </form>
-                    <ul>
-                        <p><li><a href="">Can't log in?</a></li></p>
-                        <li>Learn how to <a href="">protect your account!</a></li>
-                        <p><li>Dont have an account yet? <a href="">Sign up now!</a></li></p>
-          
-                    </ul>
-                </div>
-        </div>
-        <div class="modal hide" id="registerframe">
-            <button type="button" class="close" data-dismiss="modal">&#215;</button>
-                <div class="modal-body">
-                    <form>
-                        <p><label class="text">Username</label>
-                        <input class="input" type="text" class="span3" placeholder="Username" id="registerUsername">
-                        </p>
-                        <p>
-                        <label class="text">E-Mail</label>
-                        <input class="input" type="text" class="span3" placeholder="E-Mail" id="registerEmail">
-                        </p>
-                        <p>
-                        <label class="text">Password</label>
-                        <input class="input" type="password" class="span3" placeholder="Password" id="registerPassword">
-                        </p>
-                        <p>
-                        <label class="text">Confirm Password</label>
-                        <input class="input" type="password" class="span3" placeholder="Confirm Password" id="registerPasswordConfirm">
-                        <label class="checkbox">
-                        <input type="checkbox" id="registerAcceptRules"> I accept the <a href="#">Terms of Use</a> applicable to my country of residence and if under 18 years old, agree and acknowledge that my parent or guardian has also reviewed and accepted the Terms of Use on my behalf.
-                        </label>
-                        </p>
-                        <center><a href="#" class="login-btn-c" id="registerSubmit">Create Account</a></center>
-                     </form>
-                     <ul>
-                        <p><li><a href="">Got Problems with Registering?</a></li><p>
-                        <li>Learn how to <a href="">protect your account!</a></li>
-                        </p>
-                     </ul>
-                </div>
-            </div>
-            <ul class="pull-right">
-                <li><a class="account" href="">Account</a></li>
-                <li><a class="support" href="">Support</a></li>
-                <li><a class="explore" href="">Explore</a></li>
-            </ul>
-        </nav>
-    </div>
+<header id="main_header" class="clearfix">
+<div id="service">
+<ul class="service-bar">
+<li class="service-cell service-home">
+<a href="#" tabindex="50" accessKey="1" title="AquaGuildZ Home" data-action="AquaGuildZ Home"> </a>
+</li>
+<li class="service-cell service-welcome">
+<a href="login.html">Log in</a> or <a href="register.html">Create an Account</a>
+</li>
+<li class="service-cell service-shop">
+<a href="#" class="service-link" data-action="Shop">Shop</a>
+</li>
+<li class="service-cell service-account">
+<a href="#" class="service-link" tabindex="50" accesskey="3" data-action="Account">Account</a>
+</li>
+<li class="service-cell service-support service-support-enhanced">
+<a href="#support" class="service-link service-link-dropdown" tabindex="50" accesskey="4" id="support-link" style="cursor: pointer;" rel="javascript" data-action="Support - Support">Support<span class="no-support-tickets" id="support-ticket-count"></span></a>
+<div class="support-menu" id="support-menu" style="display:none;">
+<div class="support-primary">
+<ul class="support-nav">
+<li>
+<a href="#" tabindex="55" class="support-category" id="support-nav-kb" data-action="Support - Knowledge Center">
+<strong class="support-caption">Knowledge Center</strong>
+Browse our support articles
+</a>
+</li>
+<li>
+<a href="#" tabindex="55" class="support-category" id="support-nav-tickets" data-action="Support - Your Support Tickets">
+<strong class="support-caption">Your Support Tickets</strong>
+View your active tickets (login required).
+</a>
+</li>
+</ul>
+<span class="clear"><!-- --></span>
+</div>
+<div class="support-secondary"></div>
+</div>
+</li>
+<li class="service-cell service-explore">
+<a href="#explore" tabindex="50" accesskey="5" class="dropdown" id="explore-link" style="cursor: pointer;" rel="javascript" data-action="Explore - Explore">Explore</a>
+<div class="explore-menu" id="explore-menu" style="display:none;">
+<div class="explore-primary">
+<ul class="explore-nav">
+<li>
+<a href="#" tabindex="55" data-action="Explore - AquaGuildZ Home">
+<strong class="explore-caption">AquaGuildZ Home</strong>
+</a>
+</li>
+<li>
+<a href="h#" tabindex="55" data-action="Explore - Shop">
+<strong class="explore-caption">Shop</strong>
+</a>
+</li>
+<li>
+<a href="#" tabindex="55" data-action="Explore - Account">
+<strong class="explore-caption">Account</strong>
+</a>
+</li>
+<li>
+<a href="#" tabindex="55" data-action="Explore - Support">
+<strong class="explore-caption">Support</strong>
+</a>
+</li>
+</ul>
+<div class="explore-links">
+<h2 class="explore-caption">More</h2>
+<ul>
+<li><a href="#" tabindex="55" data-action="Explore - What is AquaGuildZ?">What is AquaGuildZ?</a></li>
+<li><a href="#" tabindex="55" data-action="Explore - What is Real ID?">What is Real ID?</a></li>
+<li><a href="#" tabindex="55" data-action="Explore - Parental Controls">Parental Controls</a></li>
+<li><a href="#" tabindex="55" data-action="Explore - Account Security">Account Security</a></li>
+<li><a href="#" tabindex="55" data-action="Explore - Work For Us">Work At Blizzard</a></li>
+<li><a href="#" tabindex="55" data-action="Explore - Classic Games">Classic Games</a></li>
+<li><a href="#" tabindex="55" data-action="Explore - Account Support">Account Support</a></li>
+</ul>
+</div>
+<a class="explore-get-app" href="#">
+<div class="app-preview"></div>
+<div class="app-tagline">Download our app now for free</div>
+</a>
+<span class="clear"><!-- --></span>
+</div>
+</div>
+</li>
+</ul>
+<script type="text/javascript">
+		//<![CDATA[
+			$(function() {
+				var category = Core.project + ' - GNB';
+				Core.bindTrackEvent('#service .service-home a', category);
+				Core.bindTrackEvent('#service .service-account a', category);
+				Core.bindTrackEvent('#service .service-shop a', category);
+				Core.bindTrackEvent('#support-link', category);
+				Core.bindTrackEvent('#support-nav-kb', category);
+				Core.bindTrackEvent('#support-nav-tickets', category);
+				Core.bindTrackEvent('#ticket-summary', category);
+				Core.bindTrackEvent('#explore-link', category);
+				Core.bindTrackEvent('.explore-nav li a', category);
+			});
+		//]]>
+		</script>
+	</div>
     <div id="logo">
     </div>
     <div id="searchbar">
