@@ -24,7 +24,6 @@
         <![endif]-->
    
         <!-- Le javascripts -->
-        <script type="text/javascript"> window.baseUrl = "<?php echo base_url(); ?>";</script>
         <script src="assets/javascript/jquery.min.js"></script>
         <script src="assets/javascript/jquery.flexslider.min.js"></script>
         <script src="assets/javascript/bootstrap.min.js"></script>
@@ -305,7 +304,7 @@ View your active tickets (login required).
             <li class="header">Support</li>
             <li><a href="">OMFG I got hacked</a></li>
             <li><a href="">Banned, why?</a></li>
-            <li><a href="<?php echo base_url()."index.php/forum"?>">Forums</a></li>
+            <li><a href="">Forums</a></li>
             <li><a href="">FAQ</a></li>
             <li><a href="">Rules</a></li>
         </ul>
