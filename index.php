@@ -6,10 +6,10 @@
 <html>
 <head>
         <meta charset="utf-8">
-        <title>AquaFlameCMS Frontpage</title>
+        <title>AquaGuildZ - UVT</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A wow private server made with AquaFlameCMS">
-        <meta name="author" content="AquaFlameCMS">
+        <meta name="description" content="A Guild System Manager made with AquaGuildZ Core">
+        <meta name="author" content="AquaGuildZ - UVT">
    
         <!-- Le styles -->
         <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -39,7 +39,7 @@
 <a href="#" tabindex="50" accessKey="1" title="AquaGuildZ Home" data-action="AquaGuildZ Home"> </a>
 </li>
 <li class="service-cell service-welcome">
-<a href="login.html">Log in</a> or <a href="register.html">Create an Account</a>
+<a href="login.php">Log in</a> or <a href="register.php">Create an Account</a>
 </li>
 <li class="service-cell service-shop">
 <a href="#" class="service-link" data-action="Shop">Shop</a>
@@ -217,7 +217,7 @@ View your active tickets (login required).
         </div>
         <div id="sidebar">
             <div id="user_control">
-                <a data-toggle="modal" href="#loginframe">
+                <a data-toggle="modal" href="login.php">
                                 <div id="user_control_deco"><!-- --></div>
                                 <p><span>Log in now</span> to enhance and<br>personalize your experience!</p></a>            </div>
                 <div id="sidebar_content" class="clearfix">
@@ -310,7 +310,7 @@ View your active tickets (login required).
         </ul>
     </nav>
         <div id="logos">
-        <a href="http://aquaflame.org/"><span>AquaFlameCMS</span></a>
+        <a href="http://aquaflame.org/"><span>AquaGuildZ - UVT</span></a>
         <a class="id820" href=""><span>ID820</span></a>
         </div>
     </div>
