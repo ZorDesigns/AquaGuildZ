@@ -147,12 +147,12 @@ View your active tickets (login required).
             <div id="main_navigation">
                 <nav>
                     <ul>
-                        <li><a class="home" href="index.php/"><span>Home</span></a></li>
-                        <li><a class="media" href="index.php/media"><span>Media</span></a></li>
-                        <li><a class="community" href="index.php/community"><span>Community</span></a></li>
-                        <li><a class="status" href="index.php/status"><span>Status</span></a></li>
-                        <li><a class="forums" href="index.php/forum"><span>Forums</span></a></li>
-                        <li><a class="services" href="index.php/service"><span>Services</span></a></li>
+                        <li><a class="home" href="#"><span>Home</span></a></li>
+                        <li><a class="media" href="#"><span>Media</span></a></li>
+                        <li><a class="community" href="#"><span>Community</span></a></li>
+                        <li><a class="status" href="#"><span>Roster</span></a></li>
+                        <li><a class="forums" href="#"><span>Forums</span></a></li>
+                        <li><a class="services" href="#"><span>Services</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -167,6 +167,11 @@ View your active tickets (login required).
                     <li><img src="assets/images/test/featured1.png" alt=""></li>
                     <li><img src="assets/images/test/featured2.png" alt=""></li>
                     <li><img src="assets/images/test/featured3.png" alt=""></li>
+                    <!-- Test for 4th Slide -->
+                    <li><img src="assets/images/test/featured4.png" alt=""></li>
+                    <!-- Test for 5th Slide -->
+                    <li><img src="assets/images/test/featured5.png" alt=""></li>
+                    <!-- Goes to infinite, could be setup via DB but reduced to a specific number -->
                 </ul>
             </div>
         </div>
@@ -310,8 +315,7 @@ View your active tickets (login required).
         </ul>
     </nav>
         <div id="logos">
-        <a href="http://aquaflame.org/"><span>AquaGuildZ - UVT</span></a>
-        <a class="id820" href=""><span>ID820</span></a>
+        <a href="#"><span>AquaGuildZ - UVT</span></a>
         </div>
     </div>
     <div id="credits">

@@ -1,7 +1,7 @@
-body { background: #000 url(../images/background2.png) 50% 0 no-repeat; color: #fff; text-align: center; }
+body { background: #000 url(../images/background.png) 50% 0 no-repeat; color: #fff; text-align: center; }
 
 header#main_header { height: 203px; position: relative; }
-header #logo { background: url(../images/logo.png) 0 0 no-repeat; height: 121px; margin: 40px 0 0 10px; width: 433px; }
+header #logo {  background: url(../images/logo.png) 0 0 no-repeat;  height: 157px;  margin: 40px 0 0 -30px;  width: 490px;}
 
 /* Userplate Bar */
 #service { float: right; position: absolute; right: 0; top: 0; z-index: 75; }
@@ -457,8 +457,7 @@ footer #lower_nav nav ul li a { color: #4c290f; }
 footer #lower_nav nav ul li a:hover { color: #fff; text-decoration: none; }
 footer #lower_nav nav ul li.header { border-bottom: 1px solid #22160c; color: #3c2b1e; padding-bottom: 7px; }
 footer #lower_nav #logos { display: block; float: right; padding-top: 18px; }
-footer #lower_nav #logos a { background: url(../images/footer-logos.png) 0 0 no-repeat; display: block; height: 40px; width: 382px; }
-footer #lower_nav #logos a.id820 { background-position: 0 100%; height: 55px; margin-top: 20px; width: 343px; }
+footer #lower_nav #logos a { background: url(../images/footer-logos.png) 0 0 no-repeat; display: block; height: 115px; width: 382px; }
 footer #lower_nav #logos a span { display: none; }
 
 footer #credits { color: #b16c2e; margin: 7px 0; }

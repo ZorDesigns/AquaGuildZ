@@ -3,7 +3,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>FlameCMS Login</title>
+<title>AquaGuildZ Register</title>
 <link rel="shortcut icon" href="ENTER FAVICON LINK HERE" />
 <link rel="stylesheet" type="text/css" media="all" href="assets/css/toolkit/wow-web.min05b1.css?v=58-1" />
 <link rel="stylesheet" type="text/css" media="all" href="assets/css/login/global.min05b1.css?v=58-1" />
@@ -24,7 +24,7 @@ $('body').removeClass('preload');
 //]]>
 </script>
 <div class="grid-container wrapper" >
-<h1 class="logo">FlameCMS Account Login</h1>
+<h1 class="logo">AquaGuildZ Account Register</h1>
 <div class="hide" id="info-wrapper">
 <h2><strong class="info-title"></strong></h2>
 <p class="info-body"></p>
