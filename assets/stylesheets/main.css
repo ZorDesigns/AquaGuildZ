@@ -191,6 +191,14 @@ ul.screanshots-media-page-two li { width: 160px; height: 91px; margin: 0 27px 27
 #main_navigation nav ul li a.services:hover { background: url(../images/main_navigation.png) -498px -81px no-repeat; }
 #main_navigation nav ul li a:hover { text-decoration: none; }
 
+/*Active Menu */
+#main_navigation nav ul li a.forums-active { background: url(../images/main_navigation.png) -408px -81px no-repeat; }
+#main_navigation nav ul li a.services-active { background: url(../images/main_navigation.png) -498px -81px no-repeat; }
+#main_navigation nav ul li a.status-active { background: url(../images/main_navigation.png) -319px -81px no-repeat; }
+#main_navigation nav ul li a.community-active { background: url(../images/main_navigation.png) -226px -81px no-repeat; }
+#main_navigation nav ul li a.media-active { background: url(../images/main_navigation.png) -135px -81px no-repeat; }
+#main_navigation nav ul li a.home-active { background: url(../images/main_navigation.png) -43px -81px no-repeat; }
+
 /* Sidebar */
 
 #main, #sidebar { float: left; }
