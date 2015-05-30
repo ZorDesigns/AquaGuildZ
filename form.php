@@ -6,7 +6,7 @@
 <html>
 <head>
         <meta charset="utf-8">
-        <title>AquaFlameCMS Frontpage</title>
+        <title>AquaGuildZ | Form</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A wow private server made with AquaFlameCMS">
         <meta name="author" content="AquaFlameCMS">
@@ -29,108 +29,8 @@
 <body>
 <div id="wrapper">
 <header id="main_header" class="clearfix">
-<div id="service">
-<ul class="service-bar">
-<li class="service-cell service-home">
-<a href="#" tabindex="50" accessKey="1" title="AquaGuildZ Home" data-action="AquaGuildZ Home"> </a>
-</li>
-<li class="service-cell service-welcome">
-<a href="login.html">Log in</a> or <a href="register.html">Create an Account</a>
-</li>
-<li class="service-cell service-shop">
-<a href="#" class="service-link" data-action="Shop">Shop</a>
-</li>
-<li class="service-cell service-account">
-<a href="#" class="service-link" tabindex="50" accesskey="3" data-action="Account">Account</a>
-</li>
-<li class="service-cell service-support service-support-enhanced">
-<a href="#support" class="service-link service-link-dropdown" tabindex="50" accesskey="4" id="support-link" style="cursor: pointer;" rel="javascript" data-action="Support - Support">Support<span class="no-support-tickets" id="support-ticket-count"></span></a>
-<div class="support-menu" id="support-menu" style="display:none;">
-<div class="support-primary">
-<ul class="support-nav">
-<li>
-<a href="#" tabindex="55" class="support-category" id="support-nav-kb" data-action="Support - Knowledge Center">
-<strong class="support-caption">Knowledge Center</strong>
-Browse our support articles
-</a>
-</li>
-<li>
-<a href="#" tabindex="55" class="support-category" id="support-nav-tickets" data-action="Support - Your Support Tickets">
-<strong class="support-caption">Your Support Tickets</strong>
-View your active tickets (login required).
-</a>
-</li>
-</ul>
-<span class="clear"><!-- --></span>
-</div>
-<div class="support-secondary"></div>
-</div>
-</li>
-<li class="service-cell service-explore">
-<a href="#explore" tabindex="50" accesskey="5" class="dropdown" id="explore-link" style="cursor: pointer;" rel="javascript" data-action="Explore - Explore">Explore</a>
-<div class="explore-menu" id="explore-menu" style="display:none;">
-<div class="explore-primary">
-<ul class="explore-nav">
-<li>
-<a href="#" tabindex="55" data-action="Explore - AquaGuildZ Home">
-<strong class="explore-caption">AquaGuildZ Home</strong>
-</a>
-</li>
-<li>
-<a href="h#" tabindex="55" data-action="Explore - Shop">
-<strong class="explore-caption">Shop</strong>
-</a>
-</li>
-<li>
-<a href="#" tabindex="55" data-action="Explore - Account">
-<strong class="explore-caption">Account</strong>
-</a>
-</li>
-<li>
-<a href="#" tabindex="55" data-action="Explore - Support">
-<strong class="explore-caption">Support</strong>
-</a>
-</li>
-</ul>
-<div class="explore-links">
-<h2 class="explore-caption">More</h2>
-<ul>
-<li><a href="#" tabindex="55" data-action="Explore - What is AquaGuildZ?">What is AquaGuildZ?</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - What is Real ID?">What is Real ID?</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - Parental Controls">Parental Controls</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - Account Security">Account Security</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - Work For Us">Work At Blizzard</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - Classic Games">Classic Games</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - Account Support">Account Support</a></li>
-</ul>
-</div>
-<a class="explore-get-app" href="#">
-<div class="app-preview"></div>
-<div class="app-tagline">Download our app now for free</div>
-</a>
-<span class="clear"><!-- --></span>
-</div>
-</div>
-</li>
-</ul>
-<script type="text/javascript">
-		//<![CDATA[
-			$(function() {
-				var category = Core.project + ' - GNB';
-				Core.bindTrackEvent('#service .service-home a', category);
-				Core.bindTrackEvent('#service .service-account a', category);
-				Core.bindTrackEvent('#service .service-shop a', category);
-				Core.bindTrackEvent('#support-link', category);
-				Core.bindTrackEvent('#support-nav-kb', category);
-				Core.bindTrackEvent('#support-nav-tickets', category);
-				Core.bindTrackEvent('#ticket-summary', category);
-				Core.bindTrackEvent('#explore-link', category);
-				Core.bindTrackEvent('.explore-nav li a', category);
-			});
-		//]]>
-		</script>
-	</div>
-    <div id="logo">
+<?php include("webkit/servicebar") ?>
+<div id="logo">
     </div>
     <div id="searchbar">
         <form>
