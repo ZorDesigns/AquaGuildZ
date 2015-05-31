@@ -1,4 +1,26 @@
-body { background: #000 url(../images/background.png) 50% 0 no-repeat; color: #fff; text-align: center; }
+parsererror { position:absolute; }
+html { min-width: 1006px; }
+body { background: #000 url("../images/background.png") 0% 0 no-repeat; -webkit-background-size: auto; color: #efc9a0; font: normal 12px/1.5 Arial, Verdana, sans-serif; }
+
+@media (max-width: 1920px) {
+	body { background-image: url("../images/background.png") }
+}
+
+@media (max-width: 1680px) {
+	body { background-image: url("../images/background.png") }
+}
+
+@media (max-width: 1440px) {
+	body { background-image: url("../images/background.png") }
+}
+
+@media (max-width: 1280px) {
+	body { background-image: url("../images/background.png") }
+}
+
+@media (max-width: 1024px) {
+  body { background-image: url("../images/background.png") }
+}
 
 header#main_header { height: 203px; position: relative; }
 header #logo {  background: url(../images/logo.png) 0 0 no-repeat;  height: 157px;  margin: 40px 0 0 -30px;  width: 490px;}
