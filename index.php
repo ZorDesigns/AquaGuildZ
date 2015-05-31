@@ -64,14 +64,8 @@
             </div>
             <div class="flexslider">
                 <ul class="slides">
-                    <li><img src="assets/images/test/featured1.png" alt=""></li>
-                    <li><img src="assets/images/test/featured2.png" alt=""></li>
-                    <li><img src="assets/images/test/featured3.png" alt=""></li>
-                    <!-- Test for 4th Slide -->
-                    <li><img src="assets/images/test/featured4.png" alt=""></li>
-                    <!-- Test for 5th Slide -->
-                    <li><img src="assets/images/test/featured5.png" alt=""></li>
-                    <!-- Goes to infinite, could be setup via DB but reduced to a specific number -->
+                    <li><img src="assets/images/slider/featured1.png" alt=""></li>
+					<li><img src="assets/images/slider/featured2.png" alt=""></li>
                 </ul>
             </div>
         </div>
@@ -79,13 +73,25 @@
     <div id="news_thumbs" class="clearfix">
    	    <ul>
             <li>
-                    <a href="index.php/index/viewarticle/1">
-                        <img src="" alt="" style="background-image: url(assets/uploads/images/newsarticle1.png);">
+                    <a href="#">
+                        <img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb1.png);">
+                        <span>Test Title</span>
+                    </a>
+                  </li>
+				  <li>
+                    <a href="#">
+                        <img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb2.png);">
+                        <span>Test Title</span>
+                    </a>
+                  </li>
+				  <li>
+                    <a href="#">
+                        <img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb3.png);">
                         <span>Test Title</span>
                     </a>
                   </li><li>
-                    <a href="index.php/index/viewarticle/2">
-                        <img src="" alt="" style="background-image: url(assets/uploads/images/newsarticle2.png);">
+                    <a href="#">
+                        <img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb4.png);">
                         <span>hdrd</span>
                     </a>
                   </li>        </ul>
@@ -94,14 +100,14 @@
 <div id="main_content">
     <article>
                 	<header>
-                    	<h1><a href="">Test Title</a></h1>
+                    	<h1><a href="">Pro Guide: Hotie</a></h1>
                         <p class="meta">by <a href="">FailZorD</a> 2 years, 6 months, 3 weeks ago <a href="">0</a> <img src="assets/images/content-comments.png" alt="Comments"></p>
                     </header>
                     <div class="content">
                     	<div class="thumb">
-                        	<a href=""><img src="assets/uploads/images/newsarticle1.png" alt=""></a>
+                        	<a href=""><img src="assets/images/news/square/newsarticle1.png" alt=""></a>
                         </div>
-                    	<p>gdss</p>
+                    	<p>Priest Hotie has been announced as the best Priest Discipline on Twisting Nether! After a lot of research and statistics Hotie was announced...</p>
 						<div align="right"><a href="" class="login-btn">Read More</a></div>
                     </div>
                     <footer><!-- --></footer>
@@ -112,7 +118,7 @@
                     </header>
                     <div class="content">
                     	<div class="thumb">
-                        	<a href=""><img src="assets/uploads/images/newsarticle2.png" alt=""></a>
+                        	<a href=""><img src="assets/images/news/square/newsarticle2.png" alt=""></a>
                         </div>
                     	<p>hhdrh</p>
 						<div align="right"><a href="" class="login-btn">Read More</a></div>
@@ -124,7 +130,7 @@
             <div id="user_control">
                 <a data-toggle="modal" href="login.php">
                                 <div id="user_control_deco"><!-- --></div>
-                                <p><span>Log in now</span> to enhance and<br>personalize your experience!</p></a>            </div>
+                                <p><span>Log in</span><span> now</span> to participate <br>in the Invictus Experience!</p></a>            </div>
                 <div id="sidebar_content" class="clearfix">
         <section class="advertisement">
             <img src="assets/images/test/advertisement.png" alt="" width="0" height="0" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 0px 0px;">

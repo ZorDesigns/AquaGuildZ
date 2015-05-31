@@ -138,7 +138,7 @@ header #logo {  background: url(../images/logo.png) 0 0 no-repeat;  height: 157p
 .support-nav a.support-category:active { border-color: #FFF; color: #FFF; }
 
 /* Search */
-header #searchbar { background: url(../images/searchbar.png) 0 0 no-repeat; bottom: 22px; height: 49px; padding: 14px 0 0 14px ; position: absolute; right: -4px; width: 403px; }
+header #searchbar { background: url(../images/searchbar.png) 0 0 no-repeat; bottom: 22px; height: 49px; padding: 14px 0 0 14px ; position: absolute; right: -4px; width: 403px; margin-bottom: 38px;}
 header #searchbar input { background: transparent; border: none; border-radius: 0; box-shadow: none; color: #ab6761; padding: 8px 9px; width: 326px }
 
 /* content 
@@ -415,7 +415,7 @@ html[xmlns] .slides {display: block;}
 #main #slider_wrapper #news_thumbs ul li a { color: #e39f1e; display: block; float: left; font-size: 0.8em; line-height: 1.2; margin-left: 16px; width: 138px; }
 #main #slider_wrapper #news_thumbs ul li a:hover { color: #fff; text-decoration: none; }
 #main #slider_wrapper #news_thumbs ul li a span { display: block; margin: 5px 0 0 0; }
-#main #slider_wrapper #news_thumbs ul li a img { background-position: 50% 50%; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; box-shadow: 0px 0px 3px 1px #000; display: block; height: 88px; max-height: 88px; max-width: 138px; width: 138px; }
+#main #slider_wrapper #news_thumbs ul li a img { border-radius: 4px 4px 4px 4px;-moz-border-radius: 4px 4px 4px 4px;-webkit-border-radius: 4px 4px 4px 4px;border: 0px solid #000000;background-position: 50% 50%; box-shadow: 0px 0px 3px 1px #000; display: block; height: 88px; max-height: 88px; max-width: 138px; width: 138px; }
 
 #main #main_content article { background: #0d0808 url(../images/content-background-top.png) 0 0 no-repeat; border-left: 1px solid #1c0f0f; font-family: Verdana, Geneva, sans-serif; position: relative; }
 #main #main_content article header { padding: 12px 13px 0 13px; }
@@ -476,7 +476,7 @@ html[xmlns] .slides {display: block;}
 #user_control p { display: block; margin: 0 0 0 23px; padding: 29px 0 0 0; }
 #user_control span { color: #b5ca2c; font-weight: bold; }
 #user_control a:hover span { color: #fff; }
-#user_control_deco { background: url(../images/user-control-deco.png) 100% 100% no-repeat; bottom: 7px; height: 133px; position: absolute; right: 0; width: 151px; }
+#user_control_deco {  background: url(../images/user-control-deco.png) 100% 100% no-repeat;  bottom: 7px;  height: 183px;  position: absolute;  right: 0;  width: 181px;  margin-right: -27px;}
 
 footer #lower_nav { border-bottom: 1px solid #22160c; margin-top: 21px; }
 footer #lower_nav nav { display: block; float: left; width: 196px; }
