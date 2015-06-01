@@ -28,7 +28,7 @@
         <script src="assets/javascript/jquery.flexslider.min.js"></script>
         <script src="assets/javascript/bootstrap.min.js"></script>
         <script src="assets/javascript/global.js"></script>
-		<script src="assets/javascript/common_orig.js"></script>
+<script src="assets/javascript/common_orig.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -65,26 +65,26 @@
             <div class="flexslider">
                 <ul class="slides">
                     <li><img src="assets/images/slider/featured1.png" alt=""></li>
-					<li><img src="assets/images/slider/featured2.png" alt=""></li>
+<li><img src="assets/images/slider/featured2.png" alt=""></li>
                 </ul>
             </div>
         </div>
     </div>
     <div id="news_thumbs" class="clearfix">
-   	    <ul>
+       <ul>
             <li>
                     <a href="#">
                         <img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb1.png);">
                         <span>Test Title</span>
                     </a>
                   </li>
-				  <li>
+  <li>
                     <a href="#">
                         <img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb2.png);">
                         <span>Test Title</span>
                     </a>
                   </li>
-				  <li>
+  <li>
                     <a href="#">
                         <img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb3.png);">
                         <span>Test Title</span>
@@ -99,57 +99,151 @@
 </div>
 <div id="main_content">
     <article>
-                	<header>
-                    	<h1><a href="">Pro Guide: Hotie</a></h1>
+                <header>
+                    <h1><a href="">Pro Guide: Hotie</a></h1>
                         <p class="meta">by <a href="">FailZorD</a> 2 years, 6 months, 3 weeks ago <a href="">0</a> <img src="assets/images/content-comments.png" alt="Comments"></p>
                     </header>
                     <div class="content">
-                    	<div class="thumb">
-                        	<a href=""><img src="assets/images/news/square/newsarticle1.png" alt=""></a>
+                    <div class="thumb">
+                        <a href=""><img src="assets/images/news/square/newsarticle1.png" alt=""></a>
                         </div>
-                    	<p>Priest Hotie has been announced as the best Priest Discipline on Twisting Nether! After a lot of research and statistics Hotie was announced...</p>
-						<div align="right"><a href="" class="login-btn">Read More</a></div>
+                    <p>Priest Hotie has been announced as the best Priest Discipline on Twisting Nether! After a lot of research and statistics Hotie was announced...</p>
+<div align="right"><a href="" class="login-btn">Read More</a></div>
                     </div>
                     <footer><!-- --></footer>
                 </article><article>
-                	<header>
-                    	<h1><a href="">hdrd</a></h1>
+                <header>
+                    <h1><a href="">hdrd</a></h1>
                         <p class="meta">by <a href="">FailZorD</a> 2 years, 6 months, 3 weeks ago <a href="">0</a> <img src="assets/images/content-comments.png" alt="Comments"></p>
                     </header>
                     <div class="content">
-                    	<div class="thumb">
-                        	<a href=""><img src="assets/images/news/square/newsarticle2.png" alt=""></a>
+                    <div class="thumb">
+                        <a href=""><img src="assets/images/news/square/newsarticle2.png" alt=""></a>
                         </div>
-                    	<p>hhdrh</p>
-						<div align="right"><a href="" class="login-btn">Read More</a></div>
+                    <p>hhdrh</p>
+<div align="right"><a href="" class="login-btn">Read More</a></div>
                     </div>
                     <footer><!-- --></footer>
                 </article></div>
         </div>
-        <div id="sidebar">
-            <div id="user_control">
-                <a data-toggle="modal" href="login.php">
-                                <div id="user_control_deco"><!-- --></div>
-                                <p><span>Log in</span><span> now</span> to participate <br>in the Invictus Experience!</p></a>            </div>
-                <div id="sidebar_content" class="clearfix">
-        <section class="advertisement">
-            <img src="assets/images/test/advertisement.png" alt="" width="0" height="0" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 0px 0px;">
-        </section>
-        <section class="votingpanel">
-            <header>
-                <!-- -->
-            </header>
-        <div class="content">
-            <ul>
-                <li><a href="">XtremeTop100</a></li>
-                <li><a href="">MGTop100</a></li>
-                <li><a href="">MotaFking100</a></li>
-            </ul>
-            <!-- <p><a href="">Login</a> to vote for our awesome sauce site!</p> -->
-        </div>
-        <footer>
-            <a href=""><span>198 Vote Points Earned</span></a>
-        </footer>
+<div id="sidebar">
+<div id="user_control">
+<a data-toggle="modal" href="login.php">
+<div id="user_control_deco"><!-- --></div>
+<p><span>Log in</span><span> now</span> to participate <br>in the Invictus Experience!</p></a>
+</div>
+<div id="sidebar_content" class="clearfix">
+<section class="votingpanel">
+<header>
+<!-- -->
+</header>
+<div class="cont_container">
+<ul class="top_voters_list">
+<li>
+<p><img src="assets/images/class/class_warrior.jpg" alt="Warrior" title="Warrior"></p>
+<a href="#">Warrior</a>
+<span>
+<img src="assets/images/class/specs/ability_warrior_defensivestance.jpg" alt="Protection" title="Protection">
+<img src="assets/images/class/specs/ability_warrior_savageblow.jpg" alt="Arms" title="Arms">
+<img src="assets/images/class/specs/ability_warrior_innerrage.jpg" alt="Fury" title="Fury" >
+</span>
+</li>
+<li>
+<p><img src="assets/images/class/class_paladin.jpg" alt="Paladin" title="Paladin"></p>
+<a href="#">Paladin</a>
+<span>
+<img src="assets/images/class/specs/spell_holy_holybolt.jpg" alt="Holy" title="Holy">
+<img src="assets/images/class/specs/spell_holy_auraoflight.jpg" alt="Retribution" title="Retribution">
+<img src="assets/images/class/specs/ability_paladin_shieldofthetemplar.jpg" alt="Protection" title="Protection">
+</span>
+</li>
+<li>
+<p><img src="assets/images/class/class_hunter.jpg" alt="Hunter" title="Hunter"></p>
+<a href="#">Hunter</a>
+<span>
+<img src="assets/images/class/specs/ability_hunter_beasttaming.jpg" alt="Beast Master" title="Beast Master">
+<img src="assets/images/class/specs/ability_hunter_explosiveshot.jpg" alt="Survival" title="Survival">
+<img src="assets/images/class/specs/ability_marksmanship.jpg" alt="Marksmanship" title="Marksmanship">
+</span>
+</li>
+<li>
+<p><img src="assets/images/class/class_rogue.jpg" alt="Rogue" title="Rogue"></p>
+<a href="#">Rogue</a>
+<span>
+<img src="assets/images/class/specs/ability_rogue_eviscerate.jpg" alt="Assassination" title="Assassination">
+<img src="assets/images/class/specs/ability_backstab.jpg" alt="Combat" title="Combat">
+<img src="assets/images/class/specs/ability_stealth.jpg" alt="Subtlety" title="Subtlety">
+</span>
+</li>
+<li>
+<p><img src="assets/images/class/class_priest.jpg" alt="Guardian Druid" title="Guardian Druid"></p>
+<a href="#">Priest</a>
+<span>
+<img src="assets/images/class/specs/spell_holy_powerwordshield.jpg" alt="Discipline" title="Discipline">
+<img src="assets/images/class/specs/spell_holy_guardianspirit.jpg" alt="Holy" title="Holy">
+<img src="assets/images/class/specs/spell_shadow_shadowform.jpg" alt="Shadow" title="Shadow">
+</span>
+</li>
+<li>
+<p><img src="assets/images/class/class_deathknight.jpg" alt="Death Knight" title="Death Knight"></p>
+<a href="#">Death Knight</a>
+<span>
+<img src="assets/images/class/specs/spell_deathknight_unholypresence.jpg" alt="Unholy" title="Unholy">
+<img src="assets/images/class/specs/spell_deathknight_frostpresence.jpg" alt="Frost" title="Frost">
+<img src="assets/images/class/specs/spell_deathknight_bloodpresence.jpg" alt="Blood" title="Blood">
+</span>
+</li>
+<li>
+<p><img src="assets/images/class/class_shaman.jpg" alt="Shaman" title="Shaman"></p>
+<a href="#">Shaman</a>
+<span>
+<img src="assets/images/class/specs/spell_nature_lightning.jpg" alt="Elemental" title="Elemental">
+<img src="assets/images/class/specs/spell_nature_lightningshield.jpg" alt="Enhancement" title="Enhancement">
+<img src="assets/images/class/specs/spell_nature_healingwavelesser.jpg" alt="Restoration" title="Restoration">
+</span>
+</li>
+<li>
+<p><img src="assets/images/class/class_mage.jpg" alt="Mage" title="Mage"></p>
+<a href="#">Mage</a>
+<span>
+<img src="assets/images/class/specs/spell_frost_frostbolt02.jpg" alt="Frost" title="Frost">
+<img src="assets/images/class/specs/spell_fire_flamebolt.jpg" alt="Fire" title="Fire">
+<img src="assets/images/class/specs/spell_arcane_blast.jpg" alt="Arcane" title="Arcane">
+</span>
+</li>
+<li>
+<p><img src="assets/images/class/class_warlock.jpg" alt="Warlock" title="Warlock"></p>
+<a href="#">Warlock</a>
+<span>
+<img src="assets/images/class/specs/spell_shadow_rainoffire.jpg" alt="Destruction" title="Destruction">
+<img src="assets/images/class/specs/spell_shadow_deathcoil.jpg" alt="Affliction" title="Affliction">
+<img src="assets/images/class/specs/spell_shadow_metamorphosis.jpg" alt="Demonology" title="Demonology">
+</span>
+</li>
+<li>
+<p><img src="assets/images/class/class_monk.jpg" alt="Monk" title="Monk"></p>
+<a href="#">Monk</a>
+<span>
+<img src="assets/images/class/specs/monk_stance_wiseserpent.jpg" alt="Mistweaver" title="Mistweaver">
+<img src="assets/images/class/specs/monk_stance_whitetiger.jpg" alt="Windwalker" title="Windwalker">
+<img src="assets/images/class/specs/monk_stance_drunkenox.jpg" alt="Brewmaster" title="Brewmaster">
+</span>
+</li>
+<li>
+<p><img src="assets/images/class/class_druid.jpg" alt="Druid" title="Druid"></p>
+<a href="#">Druid</a>
+<span>
+<img src="assets/images/class/specs/ability_druid_catform.jpg" alt="Feral" title="Feral">
+<img src="assets/images/class/specs/ability_racial_bearform.jpg" alt="Guardian" title="Guardian">
+<img src="assets/images/class/specs/spell_nature_forceofnature.jpg" alt="Balance" title="Balance">
+<img src="assets/images/class/specs/ability_druid_improvedtreeform.jpg" alt="Restoration" title="Restoration">
+</span>
+</li>
+</ul>
+ </div>
+<footer>
+<a href="#"><span>Get to the Recruitment Form</span></a>
+</footer>
         </section>
         <section class="ssotd">
             <header>
