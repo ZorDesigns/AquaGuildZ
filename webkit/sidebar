@@ -118,6 +118,140 @@
 </footer>
 </section>
 <br>
+<section>
+<div class="top_voters home_container">
+ <div class="sub_header">
+<p>Mythic Guild Progress</p>
+<h2>Based on % of Guild Group Kills</h2>
+<span class="title_overlay"></span>
+</div>
+<div class="cont_container">
+<ul class="top_voters_list">
+<li>
+<p>BRF</p>
+<a href="#">Blackhand</a>
+<span>0 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Iron Maidens</a>
+<span>0 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Kromog</a>
+<span>0 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Blast Furnace</a>
+<span>0 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Operator Thogar</a>
+<span>0 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Flamebender Ka'graz</a>
+<span>0 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Gruul</a>
+<span>1 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Beastlord Darmac</a>
+<span>2 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Hans'gar & Franzok</a>
+<span>0 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Oregorger</a>
+<span>1 <i>Kills</i></span>
+</li>
+</ul>
+ </div>
+ </div>
+<footer>
+<!-- -->
+</footer>
+</section>
+<br>
+<section>
+<div class="top_voters home_container">
+ <div class="sub_header">
+<p>Heroic Guild Progress</p>
+<h2>Based on % of Guild Group Kills</h2>
+<span class="title_overlay"></span>
+</div>
+<div class="cont_container">
+<ul class="top_voters_list">
+<li>
+<p>BRF</p>
+<a href="#">Blackhand</a>
+<span>2 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Iron Maidens</a>
+<span>2 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Kromog</a>
+<span>2 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Blast Furnace</a>
+<span>2 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Operator Thogar</a>
+<span>2 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Flamebender Ka'graz</a>
+<span>2 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Gruul</a>
+<span>2 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Beastlord Darmac</a>
+<span>2 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Hans'gar & Franzok</a>
+<span>2 <i>Kills</i></span>
+</li>
+<li>
+<p>BRF</p>
+<a href="#">Oregorger</a>
+<span>2 <i>Kills</i></span>
+</li>
+</ul>
+ </div>
+ </div>
+<footer>
+<!-- -->
+</footer>
+</section>
+<br>
 <section class="ssotd">
 <header>
 <h3><a href="">Screenshot of the day</a></h3>
@@ -136,11 +270,5 @@
 </footer>
 </section>
 <br>
-<section>
-<iframe src="http://localhost/projects/AquaGuildZ/show-progress.php" style="border:0px #FFFFFF none;" name="Guild Progress" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="400" width="100%"></iframe>
-<footer>
-<!-- -->
-</footer>
-</section>
 </div>
 </div>
