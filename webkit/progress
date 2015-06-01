@@ -1,0 +1,21 @@
+<section>
+<div class="top_voters home_container">
+ <div class="sub_header">
+<p>Core Guild Progress</p>
+<h2>Based on % of Guild Group Kills</h2>
+<span class="title_overlay"></span>
+</div>
+<div class="cont_container">
+<ul class="top_voters_list">
+<li>
+<p>GRP1</p>
+<a href="roster.php">Core Group 1</a>
+<span>23 <i>Kills</i></span>
+</li>
+</ul>
+ </div>
+ </div>
+<footer>
+<!-- -->
+</footer>
+</section>
