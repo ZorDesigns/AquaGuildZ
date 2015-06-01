@@ -164,7 +164,7 @@ class jsonConnect {
 			}
    		} else {
    			if ($this->useKeys){
-   				$GLOBALS['wowarmory']['debug']['global'] ? print "GETTING NEW DATA! $url\n": '';
+   				//$GLOBALS['wowarmory']['debug']['global'] ? print "GETTING NEW DATA! $url\n": '';
    				#$objectJSON = $this->getByKeys($url,$region);
 				$objectJSON = @file_get_contents($url."&apikey=".$GLOBALS['wowarmory']['keys']['api']);
    			} else {

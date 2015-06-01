@@ -1,8 +1,5 @@
 # ![logo](http://i.imgur.com/aceAYGu.png) AquaGuildZ
 
-[![Coverity Scan Build Status](NOT YET DETERMINED) 
-[![Bountysource](NOT YET DETERMINED)](NOT YET DETERMINED)  
-
 ## Introduction
 
 AquaGuildZ is a Guild Manager Framework based in PHP & HTML.
