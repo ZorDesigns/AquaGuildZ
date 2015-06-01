@@ -44,7 +44,18 @@
     </header>
     <div id="content" class="clearfix">
         <div id="main">
-<?php include("webkit/menu"); ?>
+            <div id="main_navigation">
+                <nav>
+                    <ul>
+                        <li><a class="home" href="#"><span>Home</span></a></li>
+                        <li><a class="media" href="#"><span>Media</span></a></li>
+                        <li><a class="community" href="#"><span>Community</span></a></li>
+                        <li><a class="status" href="#"><span>Roster</span></a></li>
+                        <li><a class="forums" href="#"><span>Forums</span></a></li>
+                        <li><a class="services" href="#"><span>Services</span></a></li>
+                    </ul>
+                </nav>
+            </div>
             <div id="slider_wrapper">
     <div id="slider">
         <div id="slider_trickery">
@@ -113,9 +124,8 @@
 <div align="right"><a href="" class="login-btn">Read More</a></div>
                     </div>
                     <footer><!-- --></footer>
-</article>
-</div>
-</div>
+                </article></div>
+        </div>
 <?php include("webkit/sidebar"); ?>
 </div>
 <?php include("webkit/footer"); ?>
