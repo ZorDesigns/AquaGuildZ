@@ -20,3 +20,4 @@ $RECYCLE.BIN/
 */cache/*
 */cache/!index.html
 */cache/!.htaccess
+config.php
