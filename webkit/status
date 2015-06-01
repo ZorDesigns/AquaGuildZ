@@ -1,0 +1,41 @@
+<div class="index-status-container status_container">
+<div class="ts-status">
+<h3>TEAMSPEAK is <p class="status" id="teeamspeak-status"><!--<font color="#313F09">--><font color="#680000 ">Offline</font></p></h3>
+<a href="http://www.teamspeak.com/?page=downloads" target="_blank" id="download-ts">Download TS3 Client</a>
+<a href="#" id="download-htc">How to Connect</a>
+</div>
+<div class="logon-status">
+<div id="logon-status">
+<h3>LOGON Status: <br><p class="status online" id="logon-status2">Online</p></h3>
+</div>
+ <div id="server-time">
+<span>Website Time</span>
+<html>
+<head>
+<script>
+function startTime() {
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML = h+":"+m+":"+s;
+    var t = setTimeout(function(){startTime()},500);
+}
+function checkTime(i) {
+    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</head>
+<body onload="startTime()">
+<div class="server-time">
+<p id="txt"></p>
+</div>
+</body>
+</html>
+</div>
+</div>
+</div>
+<br>
