@@ -46,7 +46,7 @@ $page_cat = "roster";
 <div class="container_3" align="center">
 <div class="players">
 <a id="main-content"></a>
-<h1 class="title" id="page-title">Group 1 </h1>
+<h1 class="title" id="page-title">Guild Roster </h1>
 <div class="region region-content">
 <div id="block-system-main" class="block block-system">
 <div class="content">
@@ -55,7 +55,7 @@ $page_cat = "roster";
 <div class="wrapper clearfix">
 <div class="item-list Tanks">
 <h3>Tanks
-<span class="class-count">(2)</span>
+<span class="class-count">(3)</span>
 </h3>
 <ul class="clearfix">
 <li class="views-row views-row-1 views-row-odd views-row-first clearfix">
@@ -66,11 +66,15 @@ $page_cat = "roster";
 <span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_paladin.jpg" width="16" height="16" alt=""></span> </span>
 <span class="views-field views-field-title"> <span class="field-content"><a href="#">Abathar</a></span> </span>
 <span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Abathar/advanced"></a> </span></li>
+<li class="views-row views-row-1 views-row-odd views-row-first clearfix">
+<span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_monk.jpg" width="16" height="16" alt=""></span> </span>
+<span class="views-field views-field-title"> <span class="field-content"><a href="#">Dejia</a></span> </span>
+<span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Dejia/advanced"></a> </span></li>
 </ul>
 </div>
 <div class="item-list Dps">
 <h3>Dps
-<span class="class-count">(2)</span>
+<span class="class-count">(8)</span>
 </h3>
 <ul class="clearfix">
 <li class="views-row views-row-1 views-row-odd views-row-first clearfix">
@@ -78,20 +82,48 @@ $page_cat = "roster";
 <span class="views-field views-field-title"> <span class="field-content"><a href="#">Lokshid</a></span> </span>
 <span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Lokshid/advanced"></a> </span></li>
 <li class="views-row views-row-1 views-row-odd views-row-first clearfix">
+<span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_monk.jpg" width="16" height="16" alt=""></span> </span>
+<span class="views-field views-field-title"> <span class="field-content"><a href="#">Suromenakias</a></span> </span>
+<span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Suromenakias/advanced"></a> </span></li>
+<li class="views-row views-row-1 views-row-odd views-row-first clearfix">
 <span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_mage.jpg" width="16" height="16" alt=""></span> </span>
 <span class="views-field views-field-title"> <span class="field-content"><a href="#">Firebender</a></span> </span>
 <span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Firebender/advanced"></a> </span></li>
+<li class="views-row views-row-1 views-row-odd views-row-first clearfix">
+<span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_warrior.jpg" width="16" height="16" alt=""></span> </span>
+<span class="views-field views-field-title"> <span class="field-content"><a href="#">Bollshid
+</a></span> </span><span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Bollshid/advanced"></a> </span></li>
+<li class="views-row views-row-1 views-row-odd views-row-first clearfix">
+<span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_hunter.jpg" width="16" height="16" alt=""></span> </span>
+<span class="views-field views-field-title"> <span class="field-content"><a href="#">Xet</a></span> </span>
+<span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Xet/advanced"></a> </span></li>
+<li class="views-row views-row-1 views-row-odd views-row-first clearfix">
+<span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_druid.jpg" width="16" height="16" alt=""></span> </span>
+<span class="views-field views-field-title"> <span class="field-content"><a href="#">Treemendus</a></span> </span>
+<span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Treemendus/advanced"></a> </span></li>
+<li class="views-row views-row-1 views-row-odd views-row-first clearfix">
+<span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_shaman.jpg" width="16" height="16" alt=""></span> </span>
+<span class="views-field views-field-title"> <span class="field-content"><a href="#">Ekatoburst</a></span> </span>
+<span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Ekatoburst/advanced"></a> </span></li>
+<li class="views-row views-row-1 views-row-odd views-row-first clearfix">
+<span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_mage.jpg" width="16" height="16" alt=""></span> </span>
+<span class="views-field views-field-title"> <span class="field-content"><a href="#">Ekamehame</a></span> </span>
+<span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Ekamehame/advanced"></a> </span></li>
 </ul>
 </div>
 <div class="item-list Healers">
 <h3>Healers
-<span class="class-count">(1)</span>
+<span class="class-count">(2)</span>
 </h3>
 <ul class="clearfix">
 <li class="views-row views-row-1 views-row-odd views-row-first clearfix">
 <span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_priest.jpg" width="16" height="16" alt=""></span> </span>
-<span class="views-field views-field-title"> <span class="field-content"><a href="/player/smirk">Chaosinner</a></span> </span>
+<span class="views-field views-field-title"> <span class="field-content"><a href="/player/smirk">Chaossinner</a></span> </span>
 <span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Chaossinner/advanced"></a> </span></li>
+<li class="views-row views-row-1 views-row-odd views-row-first clearfix">
+<span class="views-field views-field-field-class-icon"> <span class="field-content"><img typeof="foaf:Image" src="assets/images/class/class_monk.jpg" width="16" height="16" alt=""></span> </span>
+<span class="views-field views-field-title"> <span class="field-content"><a href="/player/smirk">Primordiani</a></span> </span>
+<span class="views-field views-field-nothing armory-link"> <a href="http://eu.battle.net/wow/en/character/twisting-nether/Primordiani/advanced"></a> </span></li>
 </ul>
 </div>
 </div>
@@ -100,7 +132,7 @@ $page_cat = "roster";
 </div>
 </div>
 </div>
-<?php include("webkit/progressrost"); ?>
+<?php include("webkit/progressrostg"); ?>
 </div>
 </div>
 <?php include("webkit/sidebar"); ?>

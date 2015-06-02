@@ -1,3 +1,6 @@
+<?php
+$page_cat = "home";
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>           <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,7 +13,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A Guild System Manager made with AquaGuildZ Core">
         <meta name="author" content="AquaGuildZ - UVT">
-   
         <!-- Le styles -->
         <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
@@ -34,19 +36,18 @@
 <div id="wrapper">
 <header id="main_header" class="clearfix">
 <?php include("webkit/servicebar") ?>
-<div id="logo">
-    </div>
-    <div id="searchbar">
-        <form>
-            <input placeholder="Search characters, items, forums and more..." type="text">
-        </form>
-    </div>
-    </header>
-    <div id="content" class="clearfix">
-        <div id="main">
+<a href="index.php"><div id="logo"></div></a>
+<div id="searchbar">
+<form>
+<input placeholder="Search characters, items, forums and more..." type="text">
+</form>
+</div>
+</header>
+<div id="content" class="clearfix">
+<div id="main">
 <?php include("webkit/menu"); ?>
-            <div id="slider_wrapper">
-    <div id="slider">
+<div id="slider_wrapper">
+<div id="slider">
         <div id="slider_trickery">
             <div id="slider_mask">
                 <!-- -->

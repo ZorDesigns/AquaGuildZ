@@ -25,7 +25,7 @@ body { background: #000 url("../images/background.png") 0% 0 no-repeat; -webkit-
 header#main_header { height: 203px; position: relative; }
 header #logo {  background: url(../images/logo.png) 0 0 no-repeat;  height: 157px;  margin: 40px 0 0 -30px;  width: 490px;}
 
-/* Userplate Bar */
+/* Service Bar */
 #service { float: right; position: absolute; right: 0; top: 0; z-index: 75; }
 .service-bar { margin-right: -5px; display: inline-block; float: right; font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif; position: relative; text-align: right; -webkit-user-select: none; -moz-user-select: none; user-select: none; z-index: 75; }
 .service-bar .dropdown-menu { background-color: #c5c5c5; border-radius: 2px; border-top-right-radius: 0px; box-shadow: 0 3px 4px #1b1b1b; color: #000; display: none; line-height: normal; padding: 10px; position: absolute; right: 0; text-align: left; top: 33px; width: 150px; }
@@ -136,26 +136,14 @@ header #logo {  background: url(../images/logo.png) 0 0 no-repeat;  height: 157p
 .support-nav a.support-category:hover,
 .support-nav a.support-category:focus,
 .support-nav a.support-category:active { border-color: #FFF; color: #FFF; }
-
 /* Search */
 header #searchbar { background: url(../images/searchbar.png) 0 0 no-repeat; bottom: 22px; height: 49px; padding: 14px 0 0 14px ; position: absolute; right: -4px; width: 403px; margin-bottom: 38px;}
 header #searchbar input { background: transparent; border: none; border-radius: 0; box-shadow: none; color: #ab6761; padding: 8px 9px; width: 326px }
-
-/* content 
-#content .name-trail { height: 30px; padding: 10px 0 0 22px; }
-.ui-breadcrumb li { float: left; font-size: 12px; margin-right: 0; padding-right: 0; }
-.ui-breadcrumb { list-style: none; margin: 0; padding: 0; float: left; }
-.ui-breadcrumb li a { border-color: #8C6407; float: left; height: 16px; }
-.ui-breadcrumb li .breadcrumb-arrow { display: block; float: left; background: url("../images/flyout-arrows.gif") no-repeat 100% -123px; width: 15px; height: 10px; margin: 5px 7px 0 8px; }
-*/
-
 /* Blog */
-
 .header-image { overflow: hidden; -moz-box-shadow: 0 0 20px #000; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; padding: 0; margin-top: 10px; }
 .header-image img { position: relative; }
-
-/* Media */
-.container_2 { padding:30px 40px; width:904px; height: auto; min-height: 600px; background: url(../images/texture_1.gif) repeat; box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05); -webkit-border-radius: 5px; border-radius: 5px; }
+/* Containers */
+.container_2 { padding:30px 40px; width:904px; height: auto; min-height: 600px; background: url(../images/texture_1.png) repeat; box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05); -webkit-border-radius: 5px; border-radius: 5px; }
 .container_3 {  width: 628px;  height: auto;  min-height: 40px;  background: rgba(31,23,19,.80);  box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);  -webkit-border-radius: 5px;  -moz-border-radius: 5px;  border-radius: 5px;  margin: 0 0 14px 0;  padding: 35px 0 25px 0;  z-index: 1;  margin-left: 5px;  margin-top: -20px;}
 /* Raid Roster */
 #block-system-main {  margin: 10px 0;  text-shadow: 0 1px 0 #000;}
@@ -182,6 +170,37 @@ div.view-players .armory-link a {  display: block;  background: url(../images/ar
 .game-subscriptions .subscription-col .ui-button span span {  font-size: 14px;  min-width: 189px;}
 .button1 .button-right {  padding: 0 28px 0 0;  background-position: 100% -123px;  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;  font-size: 12px;  height: 38px;  line-height: 38px;  text-transform: uppercase;}
 .inline {display: inline-flex;}
+/* Media */
+.half-w {  width: 46%;}
+.flleft {  float: left;}
+.media-c-header {  width: 100%;  height: 33px;  margin: 0 0 23px 0;  text-shadow: 0 0 4px #000;  box-shadow: 0 2px 0 #392f21, 0 3px 0 rgba(0,0,0,.3), 0 4px 0 rgba(0,0,0,.2);}
+.media-c-header h3 {  font-size: 18px;  font-family: 'Ropa Sans',sans-serif;  font-weight: bold;  color: #968059;  text-transform: uppercase;  float: left;  letter-spacing: 1px;}
+.media-c-header a.view-alll {  float: right;  display: block;  margin: 7px 0 0 0;  font-size: 11px;  text-transform: uppercase; color: #63503c;  text-shadow: 0 0 5px rgba(0,0,0,.4), 1px 1px 1px rgba(0,0,0,.25);  text-decoration: none;}
+.flright {  float: right;}
+ul.screanshots-media-page {  padding: 0;  width: auto;  left: 0;  width: 440px; margin-left: 0px;}
+.screanshots {  padding: 0 0 0 0px;  width: 385px;}
+ul.screanshots-media-page li {  width: 200px;  height: 113px;  margin: 0 20px 20px 0;}
+.screanshots li {  width: 99px;  height: 63px;  float: left;  display: block;  margin: 0 0 14px 16px;}
+ul.screanshots-media-page .container_frame {  width: 200px;  height: 113px;}
+.screanshots .container_frame {  width: 99px;  height: 63px;  display: block;  padding: 0;  border: 1px solid #84663e;  box-shadow: 0 0 10px rgba(79,37,12,.65);  border-radius: 4px;  transition: all 1200ms;  -webkit-transition: all 1200ms;  -moz-transition: all 1200ms;  -o-transition: all 1200ms;}
+.container_frame {  background: #000;  box-shadow: inset 0 0 0 1px #392f21, 0 0 6px #000;  padding: 2px;  -webkit-border-radius: 5px;  -moz-border-radius: 5px;  border-radius: 5px;  overflow: hidden;  transition: all 600ms;  -webkit-transition: all 600ms;  -moz-transition: all 600ms;  -o-transition: all 600ms;}
+ul.screanshots-media-page .cframe_inner {  width: 200px;  height: 113px;}
+.screanshots .cframe_inner {  width: 99px;  height: 63px;  box-shadow: inset 0 0 5px rgba(147,107,56,.5);  transition: all 1200ms;  -webkit-transition: all 1200ms;  -moz-transition: all 1200ms;  -o-transition: all 1200ms;}
+.cframe_inner {  -webkit-border-radius: 4px;  -moz-border-radius: 4px;  border-radius: 4px;  overflow: hidden;  display: block;  background-size: 105%;}
+.full-w {  width: 100%;}
+.flright {  float: right;}
+ul.screanshots-media-page-two {  padding: 0;  width: auto;  left: 0;  width: 110%; margin-left: 0px;}
+ul.screanshots-media-page-two li {  width: 160px;  height: 91px;  margin: 0 27px 27px 0;}
+ul.screanshots-media-page-two .container_frame {  width: 160px;  height: 91px;}
+ul.screanshots-media-page-two .cframe_inner {  width: 160px;  height: 91px;}
+.media-zoom-ico {  transition: all 450ms;  -webkit-transition: all 450ms;  -moz-transition: all 450ms;  -o-transition: all 450ms;}
+.media-zoom-ico {  width: 81px;  height: 76px;  background-position: -219px -153px;  position: absolute;  z-index: 999;  top: 50%;  left: 50%;  margin: -40px 0 0 -38px;  opacity: 0;}
+.media-zoom-ico {  background-image: url(../images/media-controls.png);  background-repeat: no-repeat;}
+.screanshots-media-page-two li a span {  background-size: 110% !important;}
+.container_4 { margin-top: 10px;  margin-left: 5px;padding:30px 40px;width: 895px;height: auto; min-height: 600px; background: url(../images/texture_1.png) repeat; box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05); -webkit-border-radius: 5px; border-radius: 5px; }
+
+
+
 
 
 
@@ -210,12 +229,12 @@ div.view-players .armory-link a {  display: block;  background: url(../images/ar
 #main_navigation nav ul li a:hover { text-decoration: none; }
 
 /*Active Menu */
-#main_navigation nav ul li a.forums-active { background: url(../images/main_navigation.png) -408px -81px no-repeat; }
+#main_navigation nav ul li a.forums-active { width: 90px; background: url(../images/main_navigation.png) -408px -81px no-repeat; }
 #main_navigation nav ul li a.services-active { background: url(../images/main_navigation.png) -498px -81px no-repeat; }
-#main_navigation nav ul li a.status-active { background: url(../images/main_navigation.png) -319px -81px no-repeat; }
-#main_navigation nav ul li a.community-active { background: url(../images/main_navigation.png) -226px -81px no-repeat; }
+#main_navigation nav ul li a.status-active { width: 89px; background: url(../images/main_navigation.png) -319px -81px no-repeat; }
+#main_navigation nav ul li a.community-active { width: 93px; background: url(../images/main_navigation.png) -226px -81px no-repeat; }
 #main_navigation nav ul li a.media-active { background: url(../images/main_navigation.png) -135px -81px no-repeat; }
-#main_navigation nav ul li a.home-active { background: url(../images/main_navigation.png) -43px -81px no-repeat; }
+#main_navigation nav ul li a.home-active { width: 92px; background: url(../images/main_navigation.png) -43px -81px no-repeat; }
 
 /* Sidebar */
 

@@ -27,28 +27,16 @@
 <div id="wrapper">
 <header id="main_header" class="clearfix">
 <?php include("webkit/servicebar") ?>
-<div id="logo">
-    </div>
-    <div id="searchbar">
-        <form>
-            <input placeholder="Search characters, items, forums and more..." type="text">
-        </form>
-    </div>
-    </header>
-    <div id="content" class="clearfix">
-        <div id="main">
-           <div id="main_navigation">
-                <nav>
-                    <ul>
-                        <li><a class="home" href="#"><span>Home</span></a></li>
-                        <li><a class="media" href="#"><span>Media</span></a></li>
-                        <li><a class="community" href="#"><span>Community</span></a></li>
-                        <li><a class="status" href="#"><span>Status</span></a></li>
-                        <li><a class="forums" href="#"><span>Forums</span></a></li>
-                        <li><a class="services-active" href="#"><span>Services</span></a></li>
-                    </ul>
-                </nav>
-            </div>
+<a href="index.php"><div id="logo"></div></a>
+<div id="searchbar">
+<form>
+<input placeholder="Search characters, items, forums and more..." type="text">
+</form>
+</div>
+</header>
+<div id="content" class="clearfix">
+<div id="main">
+<?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
 
 

@@ -1,3 +1,6 @@
+<?php
+$page_cat = "roster";
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>           <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -27,8 +30,7 @@
 <div id="wrapper">
 <header id="main_header" class="clearfix">
 <?php include("webkit/servicebar") ?>
-<div id="logo">
-    </div>
+<a href="index.php"><div id="logo"></div></a>
     <div id="searchbar">
         <form>
             <input placeholder="Search characters, items, forums and more..." type="text">
@@ -46,7 +48,7 @@
 <br />
 </div>
 <div class="subscription-col subscription-1">
-<a href="#" class="game-title">Guild Roster</a>
+<a href="guildroster.php" class="game-title">Guild Roster</a>
 </div>
 </div>
 </div>
