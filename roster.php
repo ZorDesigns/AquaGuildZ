@@ -41,16 +41,43 @@ $page_cat = "roster";
 <div id="main">
 <?php include("webkit/menu") ?>
 <!-- Main Content Add here -->
-<div class="container_2" align="center">
-<div class="inline">
-<div class="subscription-col subscription-3">
-<a href="raidroster.php" class="game-title">Raid Roster</a>
-<br />
+<div class="container_5 features" align="center">
+<div class="content_holder">
+<div class="sub-page-title">
+<div id="title"><h1>Roster<p></p><span></span></h1></div>
 </div>
-<div class="subscription-col subscription-1">
-<a href="guildroster.php" class="game-title">Guild Roster</a>
+<ul>
+<li class="container_6 archived-news w-addons" id="xprate">
+<div class="w-addon-row">
+<img src="assets/images/gr.jpg" width="268" height="163" alt="Guild Roster">
+<div class="addon-info">
+<h1>Guild Roster</h1>
+<p>You will access a page that will preview all the members of the Guild. Technically speaking it will show the Roster of the Guild.</p>
+<div class="war-links">
+<a class="download" href="guildroster.php" title="Guild Roster" target="_self">Guild Roster</a>
+ </div>
 </div>
 </div>
+<div class="clear"></div>
+</li>
+<li class="container_6 archived-news w-addons" id="launcher">
+<div class="w-addon-row">
+<img src="assets/images/rr.jpg" width="268" height="163" alt="Heroes WoW Background Downloader">
+<div class="addon-info">
+<h1>Raid Roster</h1>
+<p>You will access a page that will preview all the Raid members of the Guild. Technically speaking it will show the Raiding Team.</p>
+<div class="war-links">
+<a class="download" href="raidroster.php" title="Raid Roster" target="_self">Raid Roster</a>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</li>
+</ul>
+<div class="features-bg-dark"></div>
+<div class="features-bg"></div>
+</div>
+<br>
 </div>
 </div>
 <div id="sidebar">

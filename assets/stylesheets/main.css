@@ -163,15 +163,22 @@ div.view-players a {  color: #cdcdcd;}
 div.view-players .armory-link {  float: right;  margin-right: 40px;}
 div.view-players .armory-link a {  display: block;  background: url(../images/armorylogo.png) no-repeat; width: 16px;   height: 16px;}
 /* Roster Page */
-.subscription-3 {  background-position: -442px 0;  margin-right: 0;}
-.subscription-col {  background-image: url("../images/subscriptions.jpg");  background-repeat: no-repeat;  float: left;  margin-right: 12px;  min-height: 380px;  text-align: center;  width: 442px; display: inline-block;}
-.subscription-col .game-title {  color: #b39265;  display: block;  font-size: 14px;  margin: 0 auto;  padding: 193px 0 18px 0;  width: 290px;}
-.ui-button, .ui-cancel {  background: none;  border: 0;  cursor: pointer;  display: inline-block;  height: auto;  overflow: visible;  padding: 0;  margin: 0;  vertical-align: middle;  outline: none;  text-align: center;  white-space: nowrap;  cursor: pointer;}
-.button1 .button-left {  padding: 0 0 0 28px;  background-position: 0 0;  height: 38px;  line-height: 37px;}
-.button1 .button-left, .button1 .button-right {  background-image: url("../images/button-1.png");  background-repeat: no-repeat;  color: #ffae00;}
-.game-subscriptions .subscription-col .ui-button span span {  font-size: 14px;  min-width: 189px;}
-.button1 .button-right {  padding: 0 28px 0 0;  background-position: 100% -123px;  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;  font-size: 12px;  height: 38px;  line-height: 38px;  text-transform: uppercase;}
-.inline {display: inline-flex;}
+.features ul li.w-addons {  box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 12px rgba(255,202,77,.05), inset 0 1px 0 rgba(255,202,77,.05), inset 0 0 0 1px rgba(255,202,77,.05);    margin: 20px 100px 40px 0;  text-align: left;  height: 240px;  width: 800px;  list-style: none;  }
+.features ul {}
+.features ul li.w-addons:first-child{margin:20px0 50px 0;}
+.w-addon-row{margin:0;}
+.w-addon-row img{border-radius:4px;box-shadow:0 0 15px rgba(0,0,0,1);float:left;width:268px;  margin-left: 20px;  margin-top: 38px;}
+.addon-info{width:475px;float:left;margin:0 0 0 30px;text-shadow:0 0 14px rgba(0,0,0,.4), 2px 3px 0 rgba(0,0,0,.4);margin-top: 26px;}
+.addon-info h1{margin:0 0 18px 0;color:#afa288;font-size:21px;text-transform:uppercase;}
+.addon-info p{font-size:13px;height:78px;text-shadow:0 0 14px rgba(0,0,0,.4), 1px 1px 0 rgba(0,0,0,.4);color:#867f72;}
+.addon-info .war-links{margin:13px 0 0 0;}
+.addon-info .war-links a.download{display:inline-block;padding:7px 15px;border-radius:3px;background:#355c35;box-shadow:inset 0 0 0 1px rgba(0,255,0,.05),inset 0 1px 0 rgba(0,255,0,.1), 0 0 6px rgba(0,0,0,.4);color:#1f1f17;text-shadow:1px 1px 0 rgba(0,255,0,.1);font-weight:bold;text-transform:uppercase;}
+.addon-info .war-links a.download:hover{color:#e0bb28;text-shadow:0 0 4px rgba(0,0,0,.5), 0 1px 1px rgba(0,0,0,.5);background:#2c4e2c;}
+.feature-row{width:723px;margin:15px 0 0 0;z-index:2}
+.feature-row img{border-radius:4px;box-shadow:0 0 15px rgba(0,0,0,1), 0 2px 3px rgba(0,0,0,1);float:left;width:90px;}
+.feature-row.info{text-shadow:0 0 14px rgba(0,0,0,.4), 1px 1px 0 rgba(0,0,0,.4);text-align:left;margin:0 0 0 20px;float:left;width:570px;}
+.feature-row .info h1{margin:0 0 5px 0;color:#897f6b;font-size:16px;font-weight:bold;text-transform:uppercase;}
+.feature-row .info h2{font-size:13px;height:78px;color:#6a6458;font-weight:normal;}
 /* Media */
 .half-w {  width: 46%;}
 .flleft {  float: left;}
