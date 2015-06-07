@@ -47,6 +47,7 @@ $page_cat = "roster";
 <div id="title"><h1>Roster<p></p><span></span></h1></div>
 </div>
 <ul>
+<div class="features-bg-dark_roster">
 <li class="container_6 archived-news w-addons" id="xprate">
 <div class="w-addon-row">
 <img src="assets/images/gr.jpg" width="268" height="163" alt="Guild Roster">
@@ -73,9 +74,8 @@ $page_cat = "roster";
 </div>
 <div class="clear"></div>
 </li>
+</div>
 </ul>
-<div class="features-bg-dark"></div>
-<div class="features-bg"></div>
 </div>
 <br>
 </div>
