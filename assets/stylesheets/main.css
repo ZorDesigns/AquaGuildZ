@@ -163,7 +163,7 @@ div.view-players a {  color: #cdcdcd;}
 div.view-players .armory-link {  float: right;  margin-right: 40px;}
 div.view-players .armory-link a {  display: block;  background: url(../images/armorylogo.png) no-repeat; width: 16px;   height: 16px;}
 /* Roster Page */
-.features ul li.w-addons {  box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 12px rgba(255,202,77,.05), inset 0 1px 0 rgba(255,202,77,.05), inset 0 0 0 1px rgba(255,202,77,.05);    margin: 20px 100px 40px 0;  text-align: left;  height: 240px;  width: 800px;  list-style: none;  }
+.features ul li.w-addons {  box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 12px rgba(255,202,77,.05), inset 0 1px 0 rgba(255,202,77,.05), inset 0 0 0 1px rgba(255,202,77,.05); margin: 20px 0px 40px 0;  text-align: left;  height: 240px;  width: 800px;  list-style: none;  }
 .features ul {}
 .features ul li.w-addons:first-child{margin:20px0 50px 0;}
 .w-addon-row{margin:0;}
