@@ -24,9 +24,9 @@
 		<script src="assets/javascript/common_orig.js"></script>
 </head>
 <body>
+<?php include("webkit/servicebar") ?>
 <div id="wrapper">
 <header id="main_header" class="clearfix">
-<?php include("webkit/servicebar") ?>
 <a href="index.php"><div id="logo"></div></a>
 <div id="searchbar">
 <form>

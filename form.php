@@ -30,9 +30,9 @@ $page_cat = "services";
 		<script src="assets/css/form/reg1.js"></script>
 </head>
 <body>
+<?php include("webkit/servicebar") ?>
 <div id="wrapper">
 <header id="main_header" class="clearfix">
-<?php include("webkit/servicebar") ?>
 <div id="logo">
     </div>
     <div id="searchbar">

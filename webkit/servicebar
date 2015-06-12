@@ -1,76 +1,44 @@
-<div id="service">
-<ul class="service-bar">
-<li class="service-cell service-home">
-<a href="#" tabindex="50" accessKey="1" title="AquaGuildZ Home" data-action="AquaGuildZ Home">&#160;</a>
-</li>
-<li class="service-cell service-welcome">
-<a href="login.php">Log in</a> or <a href="form.php">Register</a>
-</li>
-<li class="service-cell service-account">
-<a href="#" class="service-link" tabindex="50" accesskey="3" data-action="Account">Account</a>
-</li>
-<li class="service-cell service-explore">
-<a href="#explore" tabindex="50" accesskey="5" class="dropdown" id="explore-link" style="cursor: pointer;" rel="javascript" data-action="Explore - Explore">Explore</a>
-<div class="explore-menu" id="explore-menu" style="display:none;">
-<div class="explore-primary">
-<ul class="explore-nav">
+<link href="assets/stylesheets/nav.css" rel="stylesheet" type="text/css">
+<div xmlns="http://www.w3.org/1999/xhtml" id="nav-client-header" class="nav-client compact">
+<div id="nav-client-bar">
+<div class="grid-container nav-header-content">
+<ul class="nav-list nav-left" id="nav-client-main-menu">
 <li>
-<a href="#" tabindex="55" data-action="Explore - AquaGuildZ Home">
-<strong class="explore-caption">AquaGuildZ Home</strong>
-</a>
+<a id="nav-client-home" class="nav-item nav-home" href="/en/" data-analytics="global-nav" data-analytics-placement="Home"></a>
 </li>
 <li>
-<a href="h#" tabindex="55" data-action="Explore - Shop">
-<strong class="explore-caption">Shop</strong>
-</a>
-</li>
-<li>
-<a href="#" tabindex="55" data-action="Explore - Account">
-<strong class="explore-caption">Account</strong>
-</a>
-</li>
-<li>
-<a href="#" tabindex="55" data-action="Explore - Support">
-<strong class="explore-caption">Support</strong>
-</a>
+<a id="nav-client-shop" class="nav-item nav-link" href="index.php" data-analytics="global-nav" data-analytics-placement="Home">Home</a>
 </li>
 </ul>
-<div class="explore-links">
-<h2 class="explore-caption">More</h2>
-<ul>
-<li><a href="#" tabindex="55" data-action="Explore - What is AquaGuildZ?">What is AquaGuildZ?</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - What is Real ID?">What is Real ID?</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - Parental Controls">Parental Controls</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - Account Security">Account Security</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - Work For Us">Work At Blizzard</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - Classic Games">Classic Games</a></li>
-<li><a href="#" tabindex="55" data-action="Explore - Account Support">Account Support</a></li>
+<ul class="nav-list nav-right" id="nav-client-account-menu">
+<li>
+<div id="username">
+<div class="dropdown pull-right">
+<a class="nav-link username dropdown-toggle" data-toggle="dropdown" rel="navbar">Your account<b class="caret"></b></a>
+<div class="dropdown-menu">
+<div class="arrow top"></div>
+<div class="user-profile">
+<div class="dropdown-section">
+<div class="nav-box">
+<a class="nav-item nav-btn nav-btn-block nav-login-btn" href="login.php" data-analytics="global-nav" data-analytics-placement="Log In">Log In</a>
+</div>
+</div>
+<div class="dropdown-section">
+<ul class="nav-list">
+<li>
+<a class="nav-item nav-a nav-item-box" href="login.php" data-analytics="global-nav" data-analytics-placement="Settings"><i class="nav-icon-24-blue nav-icon-character-cog"></i>Account Settings</a>
+</li>
 </ul>
 </div>
-<a class="explore-get-app" href="#">
-<div class="app-preview"></div>
-<div class="app-tagline">Download our app now for free</div>
-</a>
-<span class="clear"><!-- --></span>
+</div>
+</div>
 </div>
 </div>
 </li>
+<li>
+<a id="nav-client-support-link" class="nav-item nav-link" href="services.php" data-analytics="global-nav" data-analytics-placement="About Us"> About Us </a>
+</li>
 </ul>
-<script type="text/javascript">
-		//<![CDATA[
-			$(function() {
-				var category = Core.project + ' - GNB';
-				Core.bindTrackEvent('#service .service-home a', category);
-				Core.bindTrackEvent('#service .service-account a', category);
-				Core.bindTrackEvent('#service .service-shop a', category);
-				Core.bindTrackEvent('#support-link', category);
-				Core.bindTrackEvent('#support-nav-kb', category);
-				Core.bindTrackEvent('#support-nav-tickets', category);
-				Core.bindTrackEvent('#ticket-summary', category);
-				Core.bindTrackEvent('#explore-link', category);
-				Core.bindTrackEvent('.explore-nav li a', category);
-			});
-		//]]>
-		</script>
-	</div>
-    
+</div>
+</div>
+</div>

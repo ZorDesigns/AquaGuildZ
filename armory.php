@@ -28,9 +28,9 @@
 		<script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
 </head>
 <body>
+<?php include("webkit/servicebar") ?>
 <div id="wrapper">
 <header id="main_header" class="clearfix">
-<?php include("webkit/servicebar") ?>
 <div id="logo">
     </div>
     <div id="searchbar">
