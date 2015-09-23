@@ -9,7 +9,18 @@ body { background: #000 url("../images/frame.png") center center no-repeat;}
 .fullscreen-bg__video {    display: none;  }}
 header#main_header { height: 203px; position: relative; }
 header #logo {  background: url(../images/logo.png) 0 0 no-repeat;  height: 157px;  margin: 40px 0 0 -30px;  width: 490px;}
-
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #1C130F;
+  outline: 1px solid #1C130F;
+}
 /* Search */
 header #searchbar { background: url(../images/searchbar.png) 0 0 no-repeat; bottom: 22px; height: 49px; padding: 14px 0 0 14px ; position: absolute; right: -4px; width: 403px; margin-bottom: 38px;}
 header #searchbar input { background: transparent; border: none; border-radius: 0; box-shadow: none; color: #ab6761; padding: 8px 9px; width: 326px }
