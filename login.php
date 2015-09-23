@@ -67,7 +67,7 @@ $('body').removeClass('preload');
 <div class="lower-footer-wrapper">
 <div class="lower-footer">
 <div id="copyright">
-All rights reserved to © 2015 Blizzard Entertainment, Inc. Powered by FlameNET.
+All rights reserved to © 2015 Hellenic Horde, Inc. Powered by FlameNET.
 </div>
 <div id="legal">
 <span class="clear"><!-- --></span>

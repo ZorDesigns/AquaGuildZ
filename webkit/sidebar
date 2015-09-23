@@ -6,6 +6,30 @@
 </div>
 <div id="sidebar_content" class="clearfix">
 <?php include("status"); ?>
+<section class="expansion">
+<header>
+<!-- -->
+</header>
+<div class="top_voters home_container">
+<div class="sub_header2">
+<p><img src="assets/images/box.png" alt="Legion" title="Legion"> Future Expansion</p>
+<h2>6th Expansion</h2>
+<span class="title_overlay"></span>
+</div>
+<div class="cont_container">
+<ul class="top_voters_list">
+<li>
+<p><img src="assets/images/legion_logo.png" alt="Legion" title="Legion"></p>
+<a href="http://eu.battle.net/wow/en/legion/">World of Warcaft: Legion</a>
+<span>Soon...<i>ish</i></span>
+</li>
+</ul>
+</div>
+ </div>
+<footer>
+<!-- -->
+</footer>
+</section>
 <?php include("progress"); ?>
 <section class="votingpanel">
 <header>
@@ -118,7 +142,7 @@
 <footer>
 <a href="form.php"><span>Get to the Recruitment Form</span></a>
 </footer>
-</section>
+</section><!--
 <br>
 <section class="ssotd">
 <header>
@@ -132,7 +156,7 @@
 <a class="pull-right" href="">All Screenshots</a>
 </div>
 </div>
-</div>
+</div>-->
 <footer>
 <!-- -->
 </footer>
