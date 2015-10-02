@@ -32,7 +32,7 @@
 <div class="dropdown-section">
 <ul class="nav-list">
 <li>
-<a class="nav-item nav-a nav-item-box" href="login.php" data-analytics="global-nav" data-analytics-placement="Settings"><i class="nav-icon-24-blue nav-icon-character-cog"></i>Account Settings</a>
+<a class="nav-item nav-a nav-item-box" href="register.php" data-analytics="global-nav" data-analytics-placement="Settings"><i class="nav-icon-24-blue nav-icon-character-cog"></i>Register an Account</a>
 </li>
 </ul>
 </div>

@@ -17,6 +17,16 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  **/
 
+/*
+|--------------------------------------------------------------------------
+| No edit
+|--------------------------------------------------------------------------
+| From now on, we recommend not to change the code to maintain default operation script.
+| All changes must be made on data found above. If NOT that means that the CMS is still in Alpha/Beta Mode.
+| Thus, making any changes might break the code. This CMS is tagged "IN DEVELOPMENT"
+*/
+
+/* FUNCTIONS */
 ob_start();  
 if(file_exists("install"))
 {
@@ -24,71 +34,38 @@ if(file_exists("install"))
 	die();
 }
 if (!isset($_SESSION))
-    session_start();
+session_start();
 
-/*
-|--------------------------------------------------------------------------
-| MySQL Configuration.
-|--------------------------------------------------------------------------
-| Connect to MySQL Host
-| For example:
-| 	$serveraddress = "MySQL Host Address"; 
-|	$serveruser    = "User";
-| 	$serverpass    = "Password";
-| 	$serverport	   = "Port";
-*/
-$serveraddress = "127.0.0.1";
-$serveruser    = "root";
-$serverpass    = "password";
-$serverport    = "3306";
-$server_adb = "auth";
-$server_db  = "gcms";
-@define('DBHOST', '127.0.0.1');
-@define('DBUSER', 'root');
-@define('DBPASS', 'password');
-@define('DB', 'gcms');
-@define('DBAUTH', 'auth');
+/* API SETTINGS */
+//----------------------------------------------//
+//-- Edit These Values With Your Information --//
+//--------------------------------------------//
 
-$expansion_wow = "5"; /* DO NOT TOUCH THE EXPANSION AS IT IS SET ALWAYS TO LATEST */
-$mysql_cod            = 'cp1251';
+//-- Your Registered API Key --//
+$APIkey = '';
 
-/*
-|--------------------------------------------------------------------------
-| Maintenance Page
-|--------------------------------------------------------------------------
-|
-| Disable site? on maintenance page
-| For Example
-| Change true(maintenance mode)/false(normal mode) to disable/enable website
-|        true or false
-|
-*/
-$maintenance = false;
-    
-/*
-|--------------------------------------------------------------------------
-| No edit
-|--------------------------------------------------------------------------
-| From now on, we recommend not to change the code to maintain default operation script.
-| All changes must be made on data found above.
-|
-*/
+//-- Your Region, Locale & Game --//
+$RegionName = 'eu';
+$LocaleName = 'en_GB';
+$GameName = 'wow';
 
-if ($maintenance == true) {
-    if (!isset($bucle_mant)) {
-        header('Location: maintenance.php');
-    }
-} else {
-    $teamsLimit = 50; // Number of ITEMS to display on each page
-    $connection_setup= mysqli_connect($serveraddress,$serveruser,$serverpass,$server_db) or die("Error " . mysqli_error($link)); 
-    
-    if (isset($_SESSION['username'])) {
-        $username            = mysql_real_escape_string($_SESSION['username']);
-        $account_information = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.account WHERE username = '" . $username . "'"));
-        $account_extra       = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '" . $account_information['id'] . "'"));
-        mysql_select_db($server_db, $connection_setup) or die(mysql_error());
-    }
-}
+//-- Your Realm, Guild & Player Name --//
+$RealmName = str_replace(' ', '%20', 'Twisting-Nether');
+$GuildName = str_replace(' ', '%20', 'Hellenic Horde');
+
+/* SOCIAL LINKS */
+$socialnk['Facebook'] 	= "https://www.facebook.com/";
+$socialnk['Twitter']  	= "#";
+$socialnk['Youtube']  	= "https://www.youtube.com/channel/UCcegG7KKMvpd7UVFHdJ4tTQ";
+
+/* CMS LINKS */
+$cms['title']   	= "Hellenic Horde |";
+$cms['description'] 	= "Hellenic Horde is the best Hellenic Guild on Twisting Nether Europe.";
+$cms['keywords']	= "Hellenic, Hellenic Horde, ZorDesigns, FlameCMS, World of Warcraft Guild, Guild";
+$cms['author']		= "ZorDesigns, FailZorD, FlameCMS";
+
+/* DB CONNECTION CODE */
+$aquaglz = mysqli_connect("127.0.0.1","root","password","gcms") or die("Error " . mysqli_error($aquaglz));
 
 /* End of file configs.php */
-
+?>

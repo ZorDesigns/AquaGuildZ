@@ -1,84 +1,80 @@
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" class="en-us">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<head xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>AquaGuildZ Login</title>
-<link rel="shortcut icon" href="ENTER FAVICON LINK HERE" />
-<link rel="stylesheet" type="text/css" media="all" href="assets/css/toolkit/wow-web.min05b1.css?v=58-1" />
-<link rel="stylesheet" type="text/css" media="all" href="assets/css/login/global.min05b1.css?v=58-1" />
-<script type="text/javascript" src="assets/js/toolkit/third-party/jquery/jquery-1.11.0.min05b1.js?v=58-1"></script>
-<script type="text/javascript" src="assets/js/core.min05b1.js?v=58-1"></script>
-<meta name="viewport" content="width=device-width" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AquaGuildZ | Login</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<!-- ===== FAVICON =====-->
+<link rel="shortcut icon" href="admin/img/favicon.png">
+<!-- ===== CSS =====-->
+<!-- General-->
+<link rel="stylesheet" href="admin/css/basic.css">
+<link rel="stylesheet" href="admin/css/general.css">
+<link rel="stylesheet" href="admin/css/theme.css" class="style-theme">
+<link rel="stylesheet" href="admin/css/background.css">
 </head>
-<body class="en-us login-template web wow" data-embedded-state="STATE_LOGIN">
-<script type="text/javascript">
-//<![CDATA[
-(function() {
-var body = document.getElementsByTagName("body")[0];
-body.className = body.className + " js-enabled preload";
-})();
-$(function(){
-$('body').removeClass('preload');
-});
-//]]>
-</script>
-<div class="grid-container wrapper" >
-<h1 class="logo">AquaGuildZ Account Login</h1>
-<div class="hide" id="info-wrapper">
-<h2><strong class="info-title"></strong></h2>
-<p class="info-body"></p>
-<button class="btn btn-block hide visible-phone" id="info-phone-close">Close</button>
+<body class="login-bg">
+<div class="fullscreen-bg">
+<video loop="" muted="" autoplay="" poster="assets/images/frame.png" class="fullscreen-bg__video">
+<source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.webm" type="video/webm">
+<source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.mp4" type="video/mp4">
+</video>
 </div>
-<div class="input-container" id="login-wrapper">
-<form action="#" method="post" id="password-form" class=" username-required input-focus">
-<div class="control-group">
-<label id="accountName-label" class="control-label" for="accountName">Account Name</label>
-<div class="controls">
-<input aria-labelledby="accountName-label" id="accountName" name="accountName" title="Account Name" maxlength="320" type="text" tabindex="1" class="input-block input-large" placeholder="Account Name" autocorrect="off" spellcheck="false"/>
+<!--SECTION-->
+<section class="l-main-container">
+<!--Main Content-->
+<div class="login-wrapper">
+<div class="login-container">
+<!--Logo-->
+<h1 class="login-logo"><img src="admin/img/logo.png"></h1>
+<!--Login Form-->
+<form id="loginForm" role="form" action="#" class="login-form">
+<div class="form-group">
+<input id="loginEmail" type="email" name="loginEmail" placeholder="Email" class="form-control">
 </div>
+<div class="form-group">
+<input id="loginPassword" type="password" name="loginPassword" placeholder="Password" class="form-control">
 </div>
-<div class="control-group">
-<label id="password-label" class="control-label" for="password">Password</label>
-<div class="controls">
-<input aria-labelledby="password-label" id="password" name="password" title="Password" maxlength="16" type="password" tabindex="1" class="input-block input-large" autocomplete="off" placeholder="Password" autocorrect="off" spellcheck="false"/>
+<button type="submit" class="btn btn-dark btn-block btn-login">Sign In - Disabled</button>
+<div class="login-social">
+<div class="l-span-md-12">
+<div class="or"><span>- OR -</span></div>
 </div>
+<div class="l-col-sm-6"><a href="#" class="btn btn-facebook btn-block"><i class="fa fa-facebook"></i>Sign with Facebook - Disabled</a></div>
+<div class="l-col-sm-6"><a class="btn btn-bnet btn-block"><img src="admin/img/plugins/battlenet.png">  Sign with Battle.Net - Disabled</a></div>
 </div>
-<div class="persistWrapper">
-<label id="persistLogin-label" class="checkbox-label css-label " for="persistLogin">
-<input aria-labelledby="persistLogin-label" id="persistLogin" name="persistLogin" type="checkbox" checked="checked" tabindex="1"/>
-<span class="input-checkbox"></span>Keep me logged in
-</label>
-</div>
-<div class="control-group submit ">
-<button type="submit" id="submit" class="btn btn-primary btn-large btn-block " data-loading-text="" tabindex="1">Log In<i class="spinner-battlenet"></i></button>
-</div>
-<ul id="help-links">
-<li>
-<a class="btn btn-block btn-large" rel="external" href="#" tabindex="1">Create Free Account<i class="icon-external-link"></i></a>
-</li>
-<li>
-<a class="" rel="external" href="#" tabindex="1">Can’t log in?<i class="icon-external-link"></i></a>
-</li>
-</ul>
+<div class="login-options"><a href="page-forgot-password.html" class="fl">FORGOT PASSWORD ?</a><a href="register.php" class="fr">REGISTER AN ACCOUNT</a></div>
 </form>
 </div>
-<footer class="footer footer-eu">
-<div class="lower-footer-wrapper">
-<div class="lower-footer">
-<div id="copyright">
-All rights reserved to © 2015 Hellenic Horde, Inc. Powered by FlameNET.
 </div>
-<div id="legal">
-<span class="clear"><!-- --></span>
-</div>
-</div>
-</div>
-</footer>
-</div>
-<script src="assets/js/embedded-javascript/embed-0.1.5.min05b1.js?v=58-1"></script>
-<script src="assets/js/toolkit/toolkit.min05b1.js?v=58-1"></script>
-<script type="text/javascript" src="assets/js/login/global.min05b1.js?v=58-1"></script>
-<script type="text/javascript" src="assets/js/login/login.min05b1.js?v=58-1"></script>
+</section>
+<!-- ===== JS =====-->
+<!-- jQuery-->
+<script src="admin/js/basic/jquery.min.js"></script>
+<script src="admin/js/basic/jquery-migrate.min.js"></script>
+<!-- General-->
+<script src="admin/js/basic/modernizr.min.js"></script>
+<script src="admin/js/basic/bootstrap.min.js"></script>
+<script src="admin/js/shared/jquery.asonWidget.js"></script>
+<script src="admin/js/plugins/plugins.js"></script>
+<script src="admin/js/general.js"></script>
+<!-- Semi general-->
+<script type="text/javascript">
+var paceSemiGeneral = { restartOnPushState: false };
+if (typeof paceSpecific != 'undefined'){
+	var paceOptions = $.extend( {}, paceSemiGeneral, paceSpecific );
+	paceOptions = paceOptions;
+}else{
+	paceOptions = paceSemiGeneral;
+}
+
+</script>
+<script src="admin/js/plugins/pageprogressbar/pace.min.js"></script>
+<!-- Specific-->
+<script src="admin/js/plugins/forms/validation/jquery.validate.min.js"></script>
+<script src="admin/js/plugins/forms/validation/jquery.validate.additional.min.js"></script>
+<script src="admin/js/calls/page.login.js"></script>
 </body>
 </html>
