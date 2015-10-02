@@ -166,7 +166,7 @@
 }
 .syntax-wrapper h3 {
   margin: 20px 0;
-  font-family: "Source Sans Pro Semibold";
+  font-family: "sans-serif", Georgia, Serif;
 }
 .syntax-wrapper .syntax-info {
   border-bottom: 1px solid #EDEDED;

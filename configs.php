@@ -33,8 +33,6 @@ if(file_exists("install"))
 	header("Location: install");
 	die();
 }
-if (!isset($_SESSION))
-session_start();
 
 /* API SETTINGS */
 //----------------------------------------------//
