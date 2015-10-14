@@ -30,7 +30,7 @@
 <!--Logo-->
 <h1 class="login-logo"><img src="img/logo.png"></h1>
 <div class="lock-screen-image"><img src="img/profile/profile.gif" alt="Profile"></div>
-<p class="tac"> Please enter your character that you want to search</p>
+<p class="tac"> Please enter your character that you want to add / search</p>
 <!--Form-->
 <form id="lockScreenForm" role="form" action="charsql.php" class="login-form">
 <div class="form-group">
