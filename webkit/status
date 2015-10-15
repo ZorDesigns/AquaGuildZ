@@ -1,4 +1,13 @@
 <div class="index-status-container status_container">
+<div class="realm_st realm_st_pandaria">
+<div class="realmst_head">
+<div class="realm_name">
+<span class="online"><img src="assets/images/status_up.png"></span>
+Twisting Nether
+</div>
+<p class="realm-desc">Resets in 6 days!</p>
+</div>
+</div>
 <div class="ts-status">
 <h3>TEAMSPEAK is <p class="status" id="teeamspeak-status"><!--<font color="#313F09">--><font color="#680000 ">Offline</font></p></h3>
 <a href="http://www.teamspeak.com/?page=downloads" target="_blank" id="download-ts">Download TS3 Client</a>
@@ -6,7 +15,7 @@
 </div>
 <div class="logon-status">
 <div id="logon-status">
-<h3>Twisting Nether <br><p class="status online" id="logon-status2">Online</p></h3>
+<h3>Website Services <br><p class="status online" id="logon-status2">working</p></h3>
 </div>
  <div id="server-time">
 <span>Website Time</span>

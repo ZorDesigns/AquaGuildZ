@@ -380,7 +380,7 @@ else
 <?php 
 {
 echo "<div class='doc doc-warning doc-border doc-left l-spaced-bottom'>";
-echo "<strong>";echo $PlayerName; echo"</strong> does <strong>not</strong> exist in the Database.";
+echo "<strong>";echo $PlayerName; echo"</strong> does <strong>not</strong> exist in the Database <strong>or</strong> the data needs updating.";
 echo "</div>";
 }
 ?>

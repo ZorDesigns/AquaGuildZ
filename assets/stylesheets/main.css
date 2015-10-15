@@ -410,6 +410,23 @@ ul.top_voters_list li span i {  font-style: normal;  font-weight: normal;  font-
 .ts-status a#download-ts, .ts-status a#download-htc {  font-size: 11px;  color: #35322d;  display: inline-block;  padding: 1px 0 2px 9px;  margin: 0 8px 0 0;  font-weight: bold;  background: url(../images/link-arrow.png) no-repeat left;  transition: none;  -moz-transition: none;  -webkit-transition: none;  -o-transition: none;}
 .ts-status h3 p.status {  display: inline-block;}
 .status_container {  background: url(../images/texture_1.png) no-repeat top;  box-shadow: 0 0 6px rgba(0,0,0,.25), 2px 2px 1px rgba(0,0,0,.05), inset 0 0 2px rgba(68,51,31,.35), inset 0 0 15px rgba(88,71,63,.20);  border-radius: 4px;  -webkit-border-radius: 4px;  -moz-border-radius: 4px;}
+.realm_st:first-child {margin-top: 0 !important;}
+.realm_st_pandaria { background: url(../images/realm_bg_status.png) no-repeat;}
+.realm_st {  width: 297px;  height: 69px;  overflow: hidden;  margin-top: -2px;}
+.realmst_head {  height: 49px;  padding: 13px 0 0 5px;}
+.realmst_head .realm_name {  font-family: 'Ebrima';  font-size: 14px;  color: #968166;  font-weight: bold; text-shadow: 0 0 5px rgba(0,0,0,.15), 1px 1px 1px rgba(0,0,0,.25);}
+.realm_st p.realm-desc {  padding: 3px 0 0 14px;}
+.realm_st p { font-family: 'Ebrima';  font-size: 11px;  font-style: italic;  color: #50473d;  text-shadow: 0 0 3px rgba(0,0,0,.25), 1px 1px 0 rgba(0,0,0,.30);}
+/* Unplaced fix */
+.sub_header_h1 h1 {  font-family: 'Ebrima';  font-size: 28px;  font-variant: small-caps;  color: #91532D; text-shadow: 0 0 3px rgba(0,0,0,.25), 1px 1px 0 rgba(0,0,0,.30);}
+/* Guild Roster */
+
+
+
+
+
+
+
 
 
 

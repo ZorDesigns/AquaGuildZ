@@ -1,0 +1,28 @@
+.groster-row img {border-radius:4px;box-shadow:0 0 15px rgba(0,0,0,1), 0 2px 3px rgba(0,0,0,1);float:left;width:90px;}
+.groster-row a {text-decoration: none; color: #FFF;}
+.grinfo{  padding-top: 7px; }
+.grinfo p { font-variant: small-caps;  font-size: 20px;}
+.grinfo p img {width: 16px; height:16px;}
+.wow-class-1, .wow-class-1 a { color: #c69b6d !important; } /* warrior */
+.wow-class-2, .wow-class-2 a { color: #f48cba !important; } /* paladin */
+.wow-class-3, .wow-class-3 a { color: #aad372 !important; } /* hunter */
+.wow-class-4, .wow-class-4 a { color: #fff468 !important; } /* rogue */
+.wow-class-5, .wow-class-5 a { color: #f0ebe0 !important; } /* priest */
+.wow-class-6, .wow-class-6 a { color: #c41e3b !important; } /* death knight */
+.wow-class-7, .wow-class-7 a { color: #2359ff !important; } /* shaman */
+.wow-class-8, .wow-class-8 a { color: #68ccef !important; } /* mage */
+.wow-class-9, .wow-class-9 a { color: #9382c9 !important; } /* warlock */
+.wow-class-10, .wow-class-10 a { color: #00ffba !important; } /* monk */
+.wow-class-11, .wow-class-11 a { color: #ff7c0a !important; } /* druid */
+.roster-bg-dark {
+  width: 620px;
+  height: 90px;
+  background-color: rgba(0,0,0,.2);
+  z-index: 0;
+  top: 473px;
+  box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: -10px;
+  margin-bottom: 5px;
+}
