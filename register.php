@@ -1,3 +1,32 @@
+<?php
+include ("configs.php");
+$msg = "";
+if(isset($_POST["submit"]))
+{
+$name = $_POST["name"];
+$email = $_POST["email"];
+$password = $_POST["password"];
+$name = mysqli_real_escape_string($aquaglz, $name);
+$email = mysqli_real_escape_string($aquaglz, $email);
+$password = mysqli_real_escape_string($aquaglz, $password);
+$password = md5($password);
+$sql="SELECT email FROM users WHERE email='$email'";
+$result=mysqli_query($aquaglz,$sql);
+$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+if(mysqli_num_rows($result) == 1)
+{
+echo" <meta http-equiv='refresh'content='0; url=failed.php'>";
+}
+else
+{
+$query = mysqli_query($aquaglz, "INSERT INTO users (name, email, password, rank)VALUES ('$name', '$email', '$password', 0)");
+if($query)
+{
+echo" <meta http-equiv='refresh'content='0; url=success.php'>";
+}
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,15 +63,15 @@
 <!--Logo-->
 <h1 class="login-logo"><img src="admin/img/logo.png"></h1>
 <!--Login Form-->
-<form id="registerForm" role="form" action="#" class="login-form">
+<form id="registerForm" role="form" method="post" action="" class="login-form">
 <div class="form-group">
-<input id="registerName" type="text" name="registerName" placeholder="Name" class="form-control">
+<input id="name" type="text" name="name" placeholder="Name" class="form-control">
 </div>
 <div class="form-group">
-<input id="registerEmail" type="email" name="registerEmail" placeholder="Email" class="form-control">
+<input id="email" type="email" name="email" placeholder="Email" class="form-control">
 </div>
 <div class="form-group">
-<input id="registerPassword" type="password" name="registerPassword" placeholder="Password" class="form-control">
+<input id="registerPassword" type="password" name="password" placeholder="Password" class="form-control">
 </div>
 <div class="form-group">
 <input id="registerPasswordRepeat" type="password" name="registerPasswordRepeat" placeholder="Repeat password" class="form-control">
@@ -51,12 +80,12 @@
 <input id="registerTerms" type="checkbox" name="registerTerms" class="checkradios checkradiosDark-1">By signing up you are accepting out
 <a href="#">Terms and Conditions</a>
 </div>
-<button type="submit" class="btn btn-dark btn-block btn-login">Sign Up - Disabled</button>
+<button type="submit" name="submit" class="btn btn-dark btn-block btn-login">Sign Up</button>
 <div class="login-social">
 <div class="l-span-md-12">
 <div class="or"><span>- OR -</span></div>
 </div>
-<div class="l-span-md-12 register-sign-in"><a href="page-login.html" class="btn btn-primary btn-block btn-login-register">Sign In - Disabled</a></div>
+<div class="l-span-md-12 register-sign-in"><a href="login.php" class="btn btn-primary btn-block btn-login-register">Sign In - Disabled</a></div>
 <div class="l-col-sm-6"><a class="btn btn-facebook btn-block"><i class="fa fa-facebook"></i>Sign with Facebook - Disabled</a></div>
 <div class="l-col-sm-6"><a class="btn btn-bnet btn-block"><img src="admin/img/plugins/battlenet.png">  Sign with Battle.Net - Disabled</a></div>
 </div>
