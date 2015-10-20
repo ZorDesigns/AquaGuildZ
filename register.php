@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ("configs.php");
 $msg = "";
 if(isset($_POST["submit"]))
@@ -26,6 +27,16 @@ echo" <meta http-equiv='refresh'content='0; url=success.php'>";
 }
 }
 }
+?>
+<?php
+$user_check=@$_SESSION['email'];
+$ses_sql = mysqli_query($aquaglz,"SELECT email FROM users WHERE email='$user_check' ");
+$row=mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
+$login_user=$row['email'];
+if ((isset($_SESSION['email']) != '')) 
+	{
+		header('Location: logged.php');
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -33,7 +33,7 @@ $page_cat = "home";
 <script src="assets/javascript/common_orig.js"></script>
 </head>
 <body>
-<?php include("webkit/servicebar.php") ?>
+<?php include("webkit/servicebar") ?>
 <div id="wrapper">
 <header id="main_header" class="clearfix">
 <a href="index.php"><div id="logo"></div></a>

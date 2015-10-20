@@ -1,7 +1,14 @@
+<?php
+if ((isset($_SESSION['email']) != '')) 
+{
+echo"<meta http-equiv='refresh'content='2;url=index.php'>";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>AquaGuildZ | Registration Failed</title>
+<title>AquaGuildZ | Hey!</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,13 +36,12 @@
 <div class="login-container">
 <!--Logo-->
 <h1 class="login-logo"><img src="admin/img/logo.png"></h1>
-<p class="tac"> You failed to register!</p>
-<center><p class="tac"> <b>OR</b></p></center>
-<p class="tac"> Your Credentials are wrong!</p>
+<p class="tac"> Hey! You are already logged and registered!</p>
+<br>
 <!--Form-->
-<form id="lockScreenForm" role="form" action="register.php" class="login-form">
-<meta http-equiv='refresh'content='5;url=register.php'>
-<button type="submit" class="btn btn-dark btn-block btn-login">Go Register</button>
+<form id="lockScreenForm" role="form" action="index.php" class="login-form">
+<meta http-equiv='refresh'content='2;url=index.php'>
+<button type="submit" class="btn btn-dark btn-block btn-login">Go Home</button>
 </form>
 <div class="login-options"></div>
 </div>

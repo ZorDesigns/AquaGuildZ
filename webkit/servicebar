@@ -1,3 +1,6 @@
+<?php
+include("check.php");	
+?>
 <div class="fullscreen-bg">
 <video loop muted autoplay poster="assets/images/frame.png" class="fullscreen-bg__video">
 <source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.webm" type="video/webm">
@@ -21,7 +24,7 @@
 <?php if(isset($_SESSION['email'])){ ?>
 <div id="username">
 <div class="dropdown pull-right">
-<a class="nav-link username needsclick dropdown-toggle" data-toggle="dropdown" rel="navbar">NAME
+<a class="nav-link username needsclick dropdown-toggle" data-toggle="dropdown" rel="navbar">Welcome
 <b class="caret"></b></a>
 <div class="dropdown-menu  pull-right">
 <div class="arrow top"></div>
@@ -29,21 +32,18 @@
 <div class="dropdown-section">
 <div class="nav-box selectable">
 <div class="label">
-<span class="battletag">NAME</span>#
-<span class="code">ID</span>
 </div>
 <div class="email"><?php echo $login_user;?></div>
 </div>
 </div>
 <div class="dropdown-section">
-<ul class="nav-list">
-<li>
 <a class="nav-item nav-a nav-item-box" href="#" data-analytics="global-nav" data-analytics-placement="Nav - Account - Settings"><i class="nav-icon-24-blue nav-icon-character-cog"></i>Account Settings</a>
-</li>
-</ul>
 </div>
 <div class="dropdown-section">
-<a class="nav-item nav-item-box" href="#" data-analytics="global-nav" data-analytics-placement="Nav - Account - Log Out"><i class="nav-icon-24-blue nav-icon-logout"></i>Log Out</a>
+<a class="nav-item nav-item-box" href="logout.php" data-analytics="global-nav" data-analytics-placement="Nav - Account - Log Out"><i class="nav-icon-24-blue nav-icon-logout"></i>Log Out</a>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

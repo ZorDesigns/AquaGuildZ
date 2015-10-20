@@ -1,3 +1,47 @@
+<?php
+session_start();
+include("configs.php"); //Establishing connection with our database
+
+$error = ""; //Variable for storing our errors.
+if(isset($_POST["submit"]))
+{
+if(empty($_POST["email"]) || empty($_POST["password"]))
+{
+$error = "Both fields are required.";
+}else
+{
+// Define $email and $password
+$email=$_POST['email'];
+$password=$_POST['password'];
+// To protect from MySQL injection
+$email = stripslashes($email);
+$password = stripslashes($password);
+$email = mysqli_real_escape_string($aquaglz,$email);
+$password = mysqli_real_escape_string($aquaglz,$password);
+$password = md5($password);
+//Check email and password from database
+$sql="SELECT uid FROM users WHERE email='$email' and password='$password'";
+$result=mysqli_query($aquaglz,$sql);
+$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+//If email and password exist in our database then create a session.
+//Otherwise echo error.
+if(mysqli_num_rows($result) == 1)
+{
+$_SESSION['email'] = $email; // Initializing Session
+header("location: logsucc.php"); // Redirecting To Other Page
+}else
+{
+$error = "Incorrect email or password.";
+}
+}
+}
+?>
+<?php
+if ((isset($_SESSION['email']) != '')) 
+{
+header('Location: logsucc.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,14 +74,15 @@
 <!--Logo-->
 <h1 class="login-logo"><img src="admin/img/logo.png"></h1>
 <!--Login Form-->
-<form id="loginForm" role="form" action="#" class="login-form">
+<form id="loginForm" role="form" method="post" action="" class="login-form">
+<div class="error"><?php echo $error;?></div>
 <div class="form-group">
-<input id="loginEmail" type="email" name="loginEmail" placeholder="Email" class="form-control">
+<input id="loginEmail" type="text" name="email" placeholder="Email" class="form-control">
 </div>
 <div class="form-group">
-<input id="loginPassword" type="password" name="loginPassword" placeholder="Password" class="form-control">
+<input id="loginPassword" type="password" name="password" placeholder="Password" class="form-control">
 </div>
-<button type="submit" class="btn btn-dark btn-block btn-login">Sign In - Disabled</button>
+<button type="submit" name="submit" class="btn btn-dark btn-block btn-login">Sign In</button>
 <div class="login-social">
 <div class="l-span-md-12">
 <div class="or"><span>- OR -</span></div>
