@@ -5,7 +5,7 @@
 </video>
 </div>
 <link href="assets/stylesheets/nav.css" rel="stylesheet" type="text/css">
-<div xmlns="http://www.w3.org/1999/xhtml" id="nav-client-header" class="nav-client compact">
+<div id="nav-client-header" class="nav-client compact">
 <div id="nav-client-bar">
 <div class="grid-container nav-header-content">
 <ul class="nav-list nav-left" id="nav-client-main-menu">
@@ -18,6 +18,38 @@
 </ul>
 <ul class="nav-list nav-right" id="nav-client-account-menu">
 <li>
+<?php if(isset($_SESSION['email'])){ ?>
+<div id="username">
+<div class="dropdown pull-right">
+<a class="nav-link username needsclick dropdown-toggle" data-toggle="dropdown" rel="navbar">NAME
+<b class="caret"></b></a>
+<div class="dropdown-menu  pull-right">
+<div class="arrow top"></div>
+<div class="user-profile">
+<div class="dropdown-section">
+<div class="nav-box selectable">
+<div class="label">
+<span class="battletag">NAME</span>#
+<span class="code">ID</span>
+</div>
+<div class="email"><?php echo $login_user;?></div>
+</div>
+</div>
+<div class="dropdown-section">
+<ul class="nav-list">
+<li>
+<a class="nav-item nav-a nav-item-box" href="#" data-analytics="global-nav" data-analytics-placement="Nav - Account - Settings"><i class="nav-icon-24-blue nav-icon-character-cog"></i>Account Settings</a>
+</li>
+</ul>
+</div>
+<div class="dropdown-section">
+<a class="nav-item nav-item-box" href="#" data-analytics="global-nav" data-analytics-placement="Nav - Account - Log Out"><i class="nav-icon-24-blue nav-icon-logout"></i>Log Out</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<?php }else{ ?>
 <div id="username">
 <div class="dropdown pull-right">
 <a class="nav-link username dropdown-toggle" data-toggle="dropdown" rel="navbar">Your account<b class="caret"></b></a>
@@ -48,3 +80,4 @@
 </div>
 </div>
 </div>
+<?php } ?>
