@@ -81,15 +81,9 @@ $page_cat = "roster";
 <br>
 </div>
 </div>
-<div id="sidebar">
-<div id="user_control">
-<a data-toggle="modal" href="login.php">
-<div id="user_control_deco"><!-- --></div>
-<p><span>Log in</span><span> now</span> to participate <br>in the Invictus Experience!</p></a>
+<?php include("webkit/sidelogin"); ?>
 </div>
 </div>
-</div>
-<?php include("webkit/footer") ?>
-</div>
+<?php include("webkit/footer"); ?>
 </body>
 </html>

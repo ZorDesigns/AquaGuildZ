@@ -164,12 +164,7 @@ $page_cat = "media";
 <div class="clear"></div>
  </div>
 </div>
-<div id="sidebar">
-<div id="user_control">
-<a data-toggle="modal" href="#loginframe">
-<div id="user_control_deco"><!-- --></div>
-<p><span>Log in now</span> to enhance and<br>personalize your experience!</p></a> 
-</div>
+<?php include("webkit/sidelogin"); ?>
 </div>
 </div>
 <?php include("webkit/footer"); ?>

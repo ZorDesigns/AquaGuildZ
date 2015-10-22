@@ -1,0 +1,17 @@
+<?php
+include("check.php");
+?>
+<div id="sidebar">
+<?php if(isset($_SESSION['email'])){ ?>
+<div id="user_control-log">
+<a data-toggle="modal" href="login.php">
+<div id="user_control_deco-logged"><!-- --></div>
+<p><span>You are logged!</span> Character <br>list is coming soonish...</p></a>
+</div>
+<?php }else{ ?>
+<div id="user_control">
+<a data-toggle="modal" href="login.php">
+<div id="user_control_deco"><!-- --></div>
+<p><span>Log in</span><span> now</span> to participate <br>in the Hellenic Experience!</p></a>
+</div>
+<?php } ?>
