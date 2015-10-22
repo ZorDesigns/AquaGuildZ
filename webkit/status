@@ -9,7 +9,7 @@ Twisting Nether
 </div>
 </div>
 <div class="ts-status">
-<h3>TEAMSPEAK is <p class="status" id="teeamspeak-status"><!--<font color="#313F09">--><font color="#680000 ">Offline</font></p></h3>
+<h3>TEAMSPEAK is <p class="status" id="teeamspeak-status"><!--<font color="#680000">--><font color="#313F09">Online</font></p></h3>
 <a href="http://www.teamspeak.com/?page=downloads" target="_blank" id="download-ts">Download TS3 Client</a>
 <a href="#" id="download-htc">How to Connect</a>
 </div>

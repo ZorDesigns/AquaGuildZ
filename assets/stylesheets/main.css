@@ -388,7 +388,7 @@ html[xmlns] .slides {display: block;}
 .top_voters .sub_header2 {  width: 100%;  height: 55px;  background: url(../images/bg_top_vot.png) no-repeat top;  margin: 0;}
 .top_voters .sub_header p {  font-family: 'Ebrima';  font-size: 18px;  font-variant: small-caps;  float: left;  padding: 0px 0 0 8px;  color: #91532D;  padding-top: 2px; margin-top: 10px;}
 .top_voters .sub_header2 p {  font-family: 'Ebrima';  font-size: 18px;  font-variant: small-caps;  float: left;  padding: 0px 0 0 8px;  color: #91532D;  padding-top: 2px; margin-top: 10px;}
-.top_voters .sub_header h2 {  float: right;  font-family: 'Ebrima';  color: #493f34;  text-shadow: 1px 1px 1px rgba(0,0,0,.25);  text-transform: uppercase;  font-size: 08px;    margin-top: -26px;  margin-right: 3px;}
+.top_voters .sub_header h2 {  float: right;  font-family: 'Ebrima';  color: #493f34;  text-shadow: 1px 1px 1px rgba(0,0,0,.25);  text-transform: uppercase;  font-size: 08px;    margin-top: -16px;  margin-right: 3px;}
 .top_voters .sub_header2 h2 {  float: right;  font-family: 'Ebrima';  color: #493f34;  text-shadow: 1px 1px 1px rgba(0,0,0,.25);  text-transform: uppercase;  font-size: 08px;    margin-top: 22px;  margin-right: 3px;}
 ul.top_voters_list {  display: block;  margin: 5px 0 0 0;}
 ul.top_voters_list li {  display: block;  width: 274px;  height: 42px;  background: url(../images/bg_top_line.png) no-repeat bottom;  text-align: left;  font-family: 'Ebrima';  text-shadow: 1px 1px 1px rgba(0,0,0,.45);}

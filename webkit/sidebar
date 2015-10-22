@@ -12,7 +12,7 @@ include("check.php");
 <div id="user_control">
 <a data-toggle="modal" href="login.php">
 <div id="user_control_deco"><!-- --></div>
-<p><span>Log in</span><span> now</span> to participate <br>in the Invictus Experience!</p></a>
+<p><span>Log in</span><span> now</span> to participate <br>in the Hellenic Experience!</p></a>
 </div>
 <?php } ?>
 <div id="sidebar_content" class="clearfix">
