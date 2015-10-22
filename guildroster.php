@@ -19,7 +19,7 @@ $page_cat = "roster";
         <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/status.css" rel="stylesheet" type="text/css">
-		        <link href="assets/stylesheets/roster.css" rel="stylesheet" type="text/css">
+		<link href="assets/stylesheets/roster.css" rel="stylesheet" type="text/css">
         <!-- Le javascripts -->
         <script src="assets/javascript/jquery.min.js"></script>
         <script src="assets/javascript/jquery.flexslider.min.js"></script>
