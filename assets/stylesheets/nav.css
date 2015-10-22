@@ -2002,7 +2002,7 @@ a.nav-client .nav-bar-item.active {  color: #fff;  text-decoration: none;  text-
   background-image: url("../images/toolkit/themes/bnet/icons/sprite-24-orange.png");
   width: 24px;
   height: 24px;
-  margin: -2px 8px -2px 2px;
+  margin: 3px 8px -2px 2px;
 }
 .nav-client .nav-icon {
   /*

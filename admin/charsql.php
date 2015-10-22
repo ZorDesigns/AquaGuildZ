@@ -1,3 +1,13 @@
+<?php
+$page_cat = "char";
+include("../check.php");
+if($login_rank <= 2)
+{
+die('
+<meta http-equiv="refresh" content="2;url=wrong.php"/>
+');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,41 +67,7 @@
 <!--Left Sidebar Content-->
 <aside id="sb-left" class="l-sidebar l-sidebar-1 t-sidebar-1">
 <!-- Profile in sidebar-->
-<div class="widget-profile-2 profile-2-in-side-2 t-profile-2-3">
-<div class="profile-2-wrapper" style="display: block;">
-<div class="profile-2-details">
-<div class="profile-2-img"><a href="#"><img src="img/profile/profile.gif"></a></div>
-<ul class="profile-2-info">
-<li>
-<h3>USERNAME</h3>
-</li>
-<li>DEVELOPER</li>
-<li>
-<div class="btn-group btn-group-sm btn-group-justified">
-<a role="button" title="Social Stats" class="toggle-stats btn btn-dark tt-top"><i class="fa fa-rss"></i></a>
-<a role="button" title="Visitor Stats" class="toggle-visitors btn btn-dark tt-top"><i class="fa fa-area-chart"></i></a>
-<a href="page-profile.html" title="Edit Profile" class="btn btn-dark tt-top"><i class="fa fa-cogs"></i></a></div>
-</li>
-</ul>
-</div>
-<div class="profile-2-social-stats">
-<div class="l-span-xs-4">
-<div class="profile-2-status-nr text-danger">0</div>Likes
-</div>
-<div class="l-span-xs-4">
-<div class="profile-2-status-nr text-info">0</div>Comments
-</div>
-<div class="l-span-xs-4">
-<div class="profile-2-status-nr text-success">0</div>Messages
-</div>
-</div>
-<div class="profile-2-chart">
-<div class="hide rickshaw-visitors"></div>
-<div id="rickshawVisitors"></div>
-<div id="rickshawVisitorsLegend" class="visitors_rickshaw_legend"></div>
-</div>
-</div>
-</div>
+<?php include("webkit/profile.php"); ?>
 <!-- Logo in Sidebar-->
 <div class="l-side-box">
 <!--Logo-->
@@ -116,20 +92,7 @@
 <!--Main Menu-->
 <div class="l-side-box">
 <!--MAIN NAVIGATION MENU-->
-<nav class="navigation">
-<ul data-ason-type="menu" class="ason-widget">
-<li><a href="#"><i class="icon fa fa-dashboard"></i><span class="title">Dashboard</span><span class="arrow"><i class="fa fa-angle-left"></i></span><span class="info">DISABLED</span></a>
-<ul>
-<li><a href="index.php"><span class="title">Dashboard 1</span></a></li>
-</li>
-</ul>
-<li class="active"><a href="#"><i class="icon fa fa-cogs"></i><span class="title">Functions</span><span class="arrow"><i class="fa fa-angle-left"></i></span><span class="info">1</span></a>
-<ul>
-<li class="active"><a href="char.php"><span class="title">Add Character</span></a></li>
-</li>
-</ul>
-</ul>
-</nav>
+<?php include("webkit/nav.php"); ?>
 </div>
 </aside>
 <!--Main Content-->
@@ -201,7 +164,6 @@
 </div>
 </li>
 <?php include ('webkit/msg.php'); ?>
-
 <li>
 <!-- Search Widget-->
 <div class="widget-search search-in-header is-search-right t-search-1">
@@ -225,17 +187,7 @@
 <i class="fa fa-expand"></i>
 </a>
 </li>
-<li>
-<!-- Profile Widget-->
-<div class="widget-profile profile-in-header">
-<button type="button" data-toggle="dropdown" class="btn dropdown-toggle"><span class="name">USERNAME</span><img src="img/profile/profile.gif"></button>
-<ul role="menu" class="dropdown-menu">
-<li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
-<li class="lock"><a href="lock.php"><i class="fa fa-lock"></i>Log Out</a></li>
-<li class="power"><a href="logout.php"><i class="fa fa-power-off"></i>Sign Out</a></li>
-</ul>
-</div>
-</li>
+<?php include("webkit/profmini.php"); ?>
 </ul>
 </div>
 </div>
@@ -323,7 +275,7 @@
 </div>
 <div class="doc doc-info doc-border doc-left l-spaced-bottom">
 This page shows you the character <strong>data</strong> and the <strong>SQL Code</strong> to use to the database to implement the character that you have selected.<br>
-This gives you greater flexibility to add new Characters that joined the Guild recently.<br>For more info theck out the <strong>documentation</strong>.
+This gives you greater flexibility to add new Characters that joined the Guild recently.<br>For more info check out the <strong>documentation</strong>.
 </div>
 <div class="syntax-wrapper">
 <div class="table-responsive">

@@ -19,6 +19,7 @@ $page_cat = "roster";
         <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/status.css" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="admin/img/favicon.png">
         <!-- Le javascripts -->
         <script src="assets/javascript/jquery.min.js"></script>
         <script src="assets/javascript/jquery.flexslider.min.js"></script>

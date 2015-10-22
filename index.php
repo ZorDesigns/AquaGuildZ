@@ -13,18 +13,13 @@ $page_cat = "home";
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A Guild System Manager made with AquaGuildZ Core">
         <meta name="author" content="AquaGuildZ - UVT">
+		<link rel="shortcut icon" href="admin/img/favicon.png">
         <!-- Le styles -->
         <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/status.css" rel="stylesheet" type="text/css">
-   
-        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-   
         <!-- Le javascripts -->
         <script src="assets/javascript/jquery.min.js"></script>
         <script src="assets/javascript/jquery.flexslider.min.js"></script>

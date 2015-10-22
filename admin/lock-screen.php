@@ -1,3 +1,12 @@
+<?php	
+include("../check.php");
+if($login_rank <= 2)
+{
+die('
+<meta http-equiv="refresh" content="2;url=wrong.php"/>
+');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

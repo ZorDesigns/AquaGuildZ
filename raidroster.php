@@ -13,6 +13,7 @@ $page_cat = "roster";
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A wow private server made with AquaFlameCMS">
         <meta name="author" content="AquaFlameCMS">
+		<link rel="shortcut icon" href="admin/img/favicon.png">
         <!-- Le styles -->
         <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">

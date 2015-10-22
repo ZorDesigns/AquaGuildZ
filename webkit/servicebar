@@ -1,5 +1,5 @@
 <?php
-include("check.php");	
+include("check.php");
 ?>
 <div class="fullscreen-bg">
 <video loop muted autoplay poster="assets/images/frame.png" class="fullscreen-bg__video">
@@ -39,6 +39,15 @@ include("check.php");
 <div class="dropdown-section">
 <a class="nav-item nav-a nav-item-box" href="#" data-analytics="global-nav" data-analytics-placement="Nav - Account - Settings"><i class="nav-icon-24-blue nav-icon-character-cog"></i>Account Settings</a>
 </div>
+<?php if($login_rank < 1)
+{
+echo'';
+}else{
+echo '<div class="dropdown-section">
+<a class="nav-item nav-a nav-item-box" href="admin/" data-analytics="global-nav" data-analytics-placement="Nav - Account - Settings"><i class="nav-icon-24-blue nav-icon-globe"></i>Admin Settings</a>
+</div>';
+}
+?>
 <div class="dropdown-section">
 <a class="nav-item nav-item-box" href="logout.php" data-analytics="global-nav" data-analytics-placement="Nav - Account - Log Out"><i class="nav-icon-24-blue nav-icon-logout"></i>Log Out</a>
 </div>
