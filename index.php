@@ -5,8 +5,10 @@ include ('configs.php');
 if ($aquaglz->connect_error) {
     die("Connection failed: " . $aquaglz->connect_error);
 } 
-$sql = "SELECT * FROM news ORDER BY id ASC LIMIT 5";
-$result = $aquaglz->query($sql);
+$news = "SELECT * FROM news ORDER BY id ASC LIMIT 10";
+$result = $aquaglz->query($news);
+$vids = "SELECT * FROM vids ORDER BY id ASC LIMIT 4";
+$vidrslt = $aquaglz->query($vids);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -51,43 +53,41 @@ $result = $aquaglz->query($sql);
 <div id="slider_wrapper">
 <div id="slider">
 <div id="slider_trickery">
-    <div id="slider_mask">
+<div id="slider_mask">
 <!-- -->
-    </div>
-    <div class="flexslider">
+</div>
+<div class="flexslider">
 <ul class="slides">
-    <li><img src="assets/images/slider/featured1.png" alt=""></li>
+<li><img src="assets/images/slider/featured1.png" alt=""></li>
 <li><img src="assets/images/slider/featured2.png" alt=""></li>
 </ul>
-    </div>
 </div>
-    </div>
-    <div id="news_thumbs" class="clearfix">
-       <ul>
-    <li>
-    <a href="#">
-<img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb1.png);">
-<span>Test Title 1</span>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-<img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb2.png);">
-<span>Test Title 2</span>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-<img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb3.png);">
-<span>Test Title 3</span>
-    </a>
-  </li><li>
-    <a href="#">
-<img src="" alt="" style="background-image: url(assets/images/news/usquare/newsthumb4.png);">
-<span>Test Title 4</span>
-    </a>
-  </li></ul>
-    </div>
+</div>
+</div>
+<div id="news_thumbs" class="clearfix">
+<ul>
+<?php
+if ($vidrslt->num_rows > 0) {
+// output data of each row
+while($vids = $vidrslt->fetch_assoc()) {
+echo '<li>
+<a href="'.$vids["contentlnk"].'">
+<img src="" alt="" style="background-image: url(assets/images/news/usquare/'.$vids["image"].'.png);">
+<span>'.$vids["title"].'</span>
+</a>
+</li>';
+}
+}else{
+echo '<li>
+<a href="#">
+<img src="" alt="" style="background-image: url(assets/images/news/usquare/novideo.png);">
+<span>No Videos</span>
+</a>
+</li>';
+}
+?>
+</ul>
+</div>
 </div>
 <div id="main_content">
 <?php
@@ -110,7 +110,7 @@ echo '
 </header>
 <div class="content">
 <div class="thumb">
-<a href=""><img src="assets/images/news/square/newsarticle1.png" alt=""></a>
+<a href=""><img src="assets/images/news/square/'.$news["image"].'.png" alt=""></a>
 </div>
 <p>'.$content.'...</p>
 <p><a href="#">Read more</a></p>
