@@ -1,4 +1,15 @@
 <?php
+include ('configs.php');
+
+// Check connection
+if ($aquaglz->connect_error) {
+    die("Connection failed: " . $aquaglz->connect_error);
+} 
+
+$sql = "SELECT name, class, race, level, thumbnail, talent FROM chars";
+$result = $aquaglz->query($sql);
+?>
+<?php
 $page_cat = "roster";
 ?>
 <!DOCTYPE html>
@@ -42,7 +53,6 @@ $page_cat = "roster";
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-
 <div id="main_content">
 <div class="container_3" align="center">
 <div class="players">
@@ -56,30 +66,36 @@ $page_cat = "roster";
 <div class="view view-players view-id-players view-display-id-page_1 view-dom-id-89414b9b52314f613ee7b35d83babee2 clearfix">
 <hr>
 <div class="wrapper clearfix">
-<!-- STARTS SHOWING CHARACTERS -->
+<?php
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+echo '
 <div class="roster-bg-dark">
 <div class="groster-row">
-<img src="http://eu.battle.net/static-render/eu/internal-record-3674/167/111048615-avatar.jpg" width="90" height="90">
+<img src="http://eu.battle.net/static-render/eu/'.$row["thumbnail"].'" width="90" height="90">
 <div class="grinfo">
-<p><a href="#">Baldazzar</a></p>
-<p class="wow-class-6">Death Knight</p>
-<p class="wow-class-6">Blood</p>
+<p><a href="http://eu.battle.net/wow/en/character/silvermoon/'.$row["name"].'/advanced">'.$row["name"].'</a></p>
+<p class="wow-class-'.$row["class"].'">'.$row["class"].'</p>
+<p class="wow-class-'.$row["class"].'">'.$row["talent"].'</p>
 </div>
 <div class="clear"></div>
 </div>
-</div>
+</div>';
+}
+} else {
+echo '
 <div class="roster-bg-dark">
 <div class="groster-row">
-<img src="http://eu.battle.net/static-render/eu/internal-record-3674/5/116116485-avatar.jpg" width="90" height="90">
 <div class="grinfo">
-<p><a href="#">Maouzi</a></p>
-<p class="wow-class-11">Druid</p>
-<p class="wow-class-11">Restoration</p>
+<br><p>No Characters on the Database</p>
 </div>
 <div class="clear"></div>
 </div>
-</div>
-<!-- ENDS SHOWING CHARACTERS -->
+</div>';
+}
+$aquaglz->close();
+?>
 </div>
 </div> </div>
 </div>
