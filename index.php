@@ -9,6 +9,8 @@ $news = "SELECT * FROM news ORDER BY id ASC LIMIT 10";
 $result = $aquaglz->query($news);
 $vids = "SELECT * FROM vids ORDER BY id ASC LIMIT 4";
 $vidrslt = $aquaglz->query($vids);
+$slds = "SELECT * FROM slides ORDER BY id ASC LIMIT 5";
+$sldrslt = $aquaglz->query($slds);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -58,8 +60,16 @@ $vidrslt = $aquaglz->query($vids);
 </div>
 <div class="flexslider">
 <ul class="slides">
-<li><img src="assets/images/slider/featured1.png" alt=""></li>
-<li><img src="assets/images/slider/featured2.png" alt=""></li>
+<?php
+if ($sldrslt->num_rows > 0) {
+// output data of each row
+while($slds = $sldrslt->fetch_assoc()) {
+echo '<li><img src="assets/images/slider/'.$slds["image"].'.png" alt="'.$slds["alt"].'"></li>';
+}
+}else{
+echo '<li><img src="assets/images/slider/noslider.png" alt=""></li>';
+}
+?>
 </ul>
 </div>
 </div>

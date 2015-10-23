@@ -49,6 +49,18 @@ CREATE TABLE IF NOT EXISTS `news` (
 -- Data exporting was unselected.
 
 
+-- Dumping structure for table gcms.slides
+DROP TABLE IF EXISTS `slides`;
+CREATE TABLE IF NOT EXISTS `slides` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `alt` text,
+  `image` varchar(255) DEFAULT 'staff',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- Data exporting was unselected.
+
+
 -- Dumping structure for table gcms.users
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
@@ -60,6 +72,19 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`uid`),
   UNIQUE KEY `username` (`email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- Data exporting was unselected.
+
+
+-- Dumping structure for table gcms.vids
+DROP TABLE IF EXISTS `vids`;
+CREATE TABLE IF NOT EXISTS `vids` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `contentlnk` text,
+  `title` text,
+  `image` varchar(255) DEFAULT 'staff',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
