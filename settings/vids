@@ -1,0 +1,2 @@
+<?php $vids = "SELECT * FROM vids ORDER BY id ASC LIMIT 4";
+$vidrslt = $aquaglz->query($vids); ?>

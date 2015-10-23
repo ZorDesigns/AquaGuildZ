@@ -1,16 +1,9 @@
 <?php
 $page_cat = "home";
 include ('configs.php');
-// Check connection
-if ($aquaglz->connect_error) {
-    die("Connection failed: " . $aquaglz->connect_error);
-} 
-$news = "SELECT * FROM news ORDER BY id ASC LIMIT 10";
-$result = $aquaglz->query($news);
-$vids = "SELECT * FROM vids ORDER BY id ASC LIMIT 4";
-$vidrslt = $aquaglz->query($vids);
-$slds = "SELECT * FROM slides ORDER BY id ASC LIMIT 5";
-$sldrslt = $aquaglz->query($slds);
+include ('settings/news');
+include ('settings/vids');
+include ('settings/slides');
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->

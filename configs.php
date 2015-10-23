@@ -63,7 +63,16 @@ $cms['keywords']	= "Hellenic, Hellenic Horde, ZorDesigns, FlameCMS, World of War
 $cms['author']		= "ZorDesigns, FailZorD, FlameCMS";
 
 /* DB CONNECTION CODE */
+//----------------------------------------------//
+//----- UTF8 USED FOR SPECIAL CHARACTERS ------//
+//--------------------------------------------//
 $aquaglz = mysqli_connect("127.0.0.1","root","password","gcms") or die("Error " . mysqli_error($aquaglz));
-
+if (!$aquaglz->set_charset("utf8")) {
+printf("Error loading character set utf8: %s\n", $aquaglz->error);
+} else {}
+// Check connection
+if ($aquaglz->connect_error) {
+    die("Connection failed: " . $aquaglz->connect_error);
+}
 /* End of file configs.php */
 ?>

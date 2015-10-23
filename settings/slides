@@ -1,0 +1,2 @@
+<?php $slds = "SELECT * FROM slides ORDER BY id ASC LIMIT 5";
+$sldrslt = $aquaglz->query($slds); ?>

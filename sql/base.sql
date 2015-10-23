@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `comments` int(10) DEFAULT '0',
   `image` varchar(255) DEFAULT 'staff',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 
@@ -53,10 +53,10 @@ CREATE TABLE IF NOT EXISTS `news` (
 DROP TABLE IF EXISTS `slides`;
 CREATE TABLE IF NOT EXISTS `slides` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `alt` text,
-  `image` varchar(255) DEFAULT 'staff',
+  `alt` text CHARACTER SET utf8,
+  `image` varchar(255) CHARACTER SET utf8 DEFAULT 'staff',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 
@@ -80,11 +80,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 DROP TABLE IF EXISTS `vids`;
 CREATE TABLE IF NOT EXISTS `vids` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `contentlnk` text,
-  `title` text,
-  `image` varchar(255) DEFAULT 'staff',
+  `contentlnk` text CHARACTER SET utf8,
+  `title` text CHARACTER SET utf8,
+  `image` varchar(255) CHARACTER SET utf8 DEFAULT 'staff',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
