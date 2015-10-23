@@ -1,5 +1,5 @@
 <?php
-$page_cat = "char";
+$page_cat = "prog";
 include("../check.php");
 if($login_rank <= 2)
 {
@@ -8,6 +8,7 @@ die('
 ');
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -221,146 +222,89 @@ die('
 </div>
 </div>
 <div class="doc doc-info doc-border doc-left l-spaced-bottom">
-This page shows you the character <strong>data</strong> and the <strong>SQL Code</strong> to use to the database to implement the character that you have selected.<br>
-This gives you greater flexibility to add new Characters that joined the Guild recently.<br>For more info check out the <strong>documentation</strong>.
-</div>
-<div class="syntax-wrapper">
-<div class="table-responsive">
-<div class="l-box l-spaced-bottom">
-<div class="l-box-header">
-<div class="syntax-info">
-<h3>JSON Dump Table</h3>
-</div>
-<ul class="l-box-options">
-<li><a href="#"><i class="fa fa-cogs"></i></a></li>
-<li><a href="#" data-ason-type="refresh" data-ason-target=".l-box" data-ason-duration="1000" class="ason-widget"><i class="fa fa-rotate-right"></i></a></li>
-<li><a href="#" data-ason-type="toggle" data-ason-find=".l-box" data-ason-target=".l-box-body" data-ason-content="true" data-ason-duration="200" class="ason-widget"><i class="fa fa-chevron-down"></i></a></li>
-</ul>
-</div>
-<div class="l-box-body l-spaced">
-<div class="form-horizontal">
-<div class="form-group">
-<label for="counterTextarea" class="col-sm-3 control-label">Preview:</label>
-<div class="col-sm-9">
-<?php
-$PlayerName = $_GET["characterText"];
-require_once('../configs.php');
-//-- GENERAL INFORMATION --//
-// Link for the character images: http://eu.battle.net/static-render/eu/ADD-THE-EXPORTED-DATA
-//-- Player --//
-$json_wow_api_url = file_get_contents('https://'.$RegionName.'.api.battle.net/'.$GameName.'/character/'.$RealmName.'/'.$PlayerName.'?locale='.$LocaleName.'&apikey='.$APIkey.'');
-//------------//
-//-- Output --//
-//------------//
-?>
-<textarea id="counterTextarea" rows="3" placeholder="" class="form-control" style="overflow: hidden; height: 200px;">
-<?php
-$my_arr = json_decode($json_wow_api_url, true);
-foreach($my_arr as $key => $value){
-$sql[] = "`$key` = '" . ($value) . "'";
-}
-$sqlclause = implode(",",$sql);
-var_dump(json_decode($json_wow_api_url, true));
-
-$aquaglz ->query("SELECT name WHERE $PlayerName");
-if (!$aquaglz) {
-    die('Invalid query: ' . mysql_error());
-}
-else
-	?>
-</textarea>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<?php 
-{
-echo "<div class='doc doc-warning doc-border doc-left l-spaced-bottom'>";
-echo "<strong>";echo $PlayerName; echo"</strong> does <strong>not</strong> exist in the Database <strong>or</strong> the data needs updating.";
-echo "</div>";
-}
-?>
-<div class="syntax-wrapper">
-<div class="table-responsive">
-<div class="l-box l-spaced-bottom">
-<div class="l-box-header">
-<div class="syntax-info">
-<h3>SQL Code</h3>
-</div>
-<ul class="l-box-options">
-<li><a href="#"><i class="fa fa-cogs"></i></a></li>
-<li><a href="#" data-ason-type="refresh" data-ason-target=".l-box" data-ason-duration="1000" class="ason-widget"><i class="fa fa-rotate-right"></i></a></li>
-<li><a href="#" data-ason-type="toggle" data-ason-find=".l-box" data-ason-target=".l-box-body" data-ason-content="true" data-ason-duration="200" class="ason-widget"><i class="fa fa-chevron-down"></i></a></li>
-</ul>
-</div>
-<div class="l-box-body l-spaced">
-<div class="form-horizontal">
-<div class="form-group">
-<label for="autogrowTextarea" class="col-sm-3 control-label">Copy the Following:</label>
-<div class="col-sm-9">
-<textarea id="autogrowTextarea" rows="3" placeholder="" class="form-control" style="overflow: hidden; resize: none; height: 81px;">
-<?php echo "INSERT INTO `chars` SET $sqlclause"; ?>
-</textarea>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+Welcome to <strong>AquaGuildZ</strong> Progress API powered by <strong>FlameCMS</strong>! This is the progress settings. Mostly...<br>
+Here you can refresh or update the guilds progress.<br>For more info check out the <strong>documentation</strong>.
 </div>
 <!-- Row 2 - Tabs Statistic-->
 <div class="l-spaced-vertical group">
 <!-- Widget Tabs 2-->
-<div class="widget-tabs-2">
-<div class="hide tab-chart-track-color"></div>
-<ul>
-<li class="l-span-lg-3 l-span-sm-6">
-<div class="l-span-xs-7">
-<div class="tab-2-title">Death Knights</div>
-<div class="tab-2-stat">9<span class="text-success">+1</span></div>
-<div class="tab-2-info">Closed</div>
-</div>
-<div class="l-span-xs-5 tab-chart-wrapper">
-<div title="Update" class="tabChartUpdate1 tab-chart-update tt-top"><i class="fa fa-refresh"></i></div><span data-percent="75" class="tabChart1 tab-chart"><span class="percent"></span><i class="tab-chart-1-color fa fa-area-chart"></i></span>
-</div>
-</li>
-<li class="l-span-lg-3 l-span-sm-6">
-<div class="l-span-xs-7">
-<div class="tab-2-title">Hunters</div>
-<div class="tab-2-stat">22<span class="text-danger">+2</span></div>
-<div class="tab-2-info">Closed</div>
-</div>
-<div class="l-span-xs-5 tab-chart-wrapper">
-<div title="Update" class="tabChartUpdate2 tab-chart-update tt-top"><i class="fa fa-refresh"></i></div><span data-percent="32" class="tabChart2 tab-chart"><span class="percent"></span><i class="tab-chart-2-color fa fa-line-chart"></i></span>
-</div>
-</li>
-<li class="l-span-lg-3 l-span-sm-6">
-<div class="l-span-xs-7">
-<div class="tab-2-title">Druids</div>
-<div class="tab-2-stat">17<span class="text-warning">-1</span></div>
-<div class="tab-2-info">Closed</div>
-</div>
-<div class="l-span-xs-5 tab-chart-wrapper">
-<div title="Update" class="tabChartUpdate3 tab-chart-update tt-top"><i class="fa fa-refresh"></i></div><span data-percent="54" class="tabChart3 tab-chart"><span class="percent"></span><i class="tab-chart-3-color fa fa-rss"></i></span>
-</div>
-</li>
-<li class="l-span-lg-3 l-span-sm-6">
-<div class="l-span-xs-7">
-<div class="tab-2-title">Mages</div>
-<div class="tab-2-stat">14<span class="text-success">+5</span></div>
-<div class="tab-2-info">Closed</div>
-</div>
-<div class="l-span-xs-5 tab-chart-wrapper">
-<div title="Update" class="tabChartUpdate4 tab-chart-update tt-top"><i class="fa fa-refresh"></i></div><span data-percent="45" class="tabChart4 tab-chart"><span class="percent"></span><i class="tab-chart-4-color fa fa-facebook"></i></span>
-</div>
-</li>
+<div class="l-box l-col-md-6 l-spaced-bottom">
+<div class="l-box-header">
+<h2 class="l-box-title"><span>Progress</span> Update</h2>
+<ul class="l-box-options">
+<li><a href="#"><i class="fa fa-cogs"></i></a></li>
+<li><a href="#" data-ason-type="refresh" data-ason-target=".l-box" data-ason-duration="1000" class="ason-widget"><i class="fa fa-rotate-right"></i></a></li>
+<li><a href="#" data-ason-type="toggle" data-ason-find=".l-box" data-ason-target=".l-box-body" data-ason-content="true" data-ason-duration="200" class="ason-widget"><i class="fa fa-chevron-down"></i></a></li>
 </ul>
 </div>
+<div class="l-box-body l-spaced">
+<form role="form" action="../progress.php?Update=true" class="form-horizontal">
+<div class="form-group">
+<label for="inputEmail3" class="col-md-3 control-label"></label>
+<div class="col-md-9">
 </div>
-
+</div>
+<div class="form-group">
+<label for="inputPassword3" class="col-md-3 control-label"></label>
+<div class="col-md-9">
+<p class="help-block">Here you can update the progress of the guild. Either manually or automatically.</p>
+<p class="help-block">(Auto is selected by default)</p>
+</div>
+</div>
+<div class="form-group">
+<div class="col-md-offset-3 col-md-9">
+<div class="checkbox">
+<div class="checkradios-checkbox checkradios checked checked"><input type="checkbox" class="checkradios"></div>Auto-Update
+</div>
+</div>
+</div>
+<div class="form-group">
+<div class="col-md-offset-3 col-md-9">
+<button type="submit" class="btn btn-default">Update</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="l-box l-col-md-6 l-spaced-bottom">
+<div class="l-box-header">
+<h2 class="l-box-title"><span>Progress</span> Refresh</h2>
+<ul class="l-box-options">
+<li><a href="#"><i class="fa fa-cogs"></i></a></li>
+<li><a href="#" data-ason-type="refresh" data-ason-target=".l-box" data-ason-duration="1000" class="ason-widget"><i class="fa fa-rotate-right"></i></a></li>
+<li><a href="#" data-ason-type="toggle" data-ason-find=".l-box" data-ason-target=".l-box-body" data-ason-content="true" data-ason-duration="200" class="ason-widget"><i class="fa fa-chevron-down"></i></a></li>
+</ul>
+</div>
+<div class="l-box-body l-spaced">
+<form role="form" action="../progress.php?Refresh=true" class="form-horizontal">
+<div class="form-group">
+<label for="inputEmail3" class="col-md-3 control-label"></label>
+<div class="col-md-9">
+</div>
+</div>
+<div class="form-group">
+<label for="inputPassword3" class="col-md-3 control-label"></label>
+<div class="col-md-9">
+<p class="help-block">Here you can refresh the progress of the guild. Either manually or automatically.</p>
+<p class="help-block">(Auto is selected by default)</p>
+</div>
+</div>
+<div class="form-group">
+<div class="col-md-offset-3 col-md-9">
+<div class="checkbox">
+<div class="checkradios-checkbox checkradios checked checked"><input type="checkbox" class="checkradios"></div>Auto-Update
+</div>
+</div>
+</div>
+<div class="form-group">
+<div class="col-md-offset-3 col-md-9">
+<button type="submit" class="btn btn-default">Refresh</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
 
 <!--FOOTER-->
 <footer class="l-footer l-footer-1 t-footer-1">
