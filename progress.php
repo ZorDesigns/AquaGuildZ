@@ -13,13 +13,13 @@ $page_cat = "roster";
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A wow private server made with AquaFlameCMS">
         <meta name="author" content="AquaFlameCMS">
+		<link rel="shortcut icon" href="admin/img/favicon.png">
         <!-- Le styles -->
         <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
         <link href="assets/stylesheets/status.css" rel="stylesheet" type="text/css">
-		<link rel="shortcut icon" href="admin/img/favicon.png">
         <!-- Le javascripts -->
         <script src="assets/javascript/jquery.min.js"></script>
         <script src="assets/javascript/jquery.flexslider.min.js"></script>
@@ -32,57 +32,21 @@ $page_cat = "roster";
 <div id="wrapper">
 <header id="main_header" class="clearfix">
 <a href="index.php"><div id="logo"></div></a>
-    <div id="searchbar">
-        <form>
-            <input placeholder="Search characters, items, forums and more..." type="text">
-        </form>
-    </div>
-    </header>
-    <div id="content" class="clearfix">
+<div id="searchbar">
+<form>
+<input placeholder="Search characters, items, forums and more..." type="text">
+</form>
+</div>
+</header>
+<div id="content" class="clearfix">
 <div id="main">
-<?php include("webkit/menu") ?>
+<?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div class="container_5 features" align="center">
-<div class="content_holder">
-<div class="sub-page-title">
-<div id="title"><h1>Roster<p></p><span></span></h1></div>
-</div>
-<ul>
-<div class="features-bg-dark_roster">
-<li class="container_6 archived-news w-addons" id="xprate">
-<div class="w-addon-row">
-<img src="assets/images/gr.jpg" width="268" height="163" alt="Guild Roster">
-<div class="addon-info">
-<h1>Guild Roster</h1>
-<p>You will access a page that will preview all the members of the Guild. Technically speaking it will show the Roster of the Guild.</p>
-<div class="war-links">
-<a class="download" href="guildroster.php" title="Guild Roster" target="_self">Guild Roster</a>
- </div>
+<div id="main_content">
+<?php include ('api/progress.php'); ?>
 </div>
 </div>
-<div class="clear"></div>
-</li>
-<li class="container_6 archived-news w-addons" id="launcher">
-<div class="w-addon-row">
-<img src="assets/images/rr.jpg" width="268" height="163" alt="Heroes WoW Background Downloader">
-<div class="addon-info">
-<h1>Raid Progress</h1>
-<p>You will access a page that will view all the Progress of our Guild. Technically speaking it will show the Raid Bosses if they are killed or not.</p>
-<div class="war-links">
-<a class="download" href="progress.php" title="Raid Roster" target="_self">Raid Progress</a>
-</div>
-</div>
-</div>
-<div class="clear"></div>
-</li>
-</div>
-</ul>
-</div>
-<br>
-</div>
-</div>
-<?php include("webkit/sidelogin"); ?>
-</div>
+<?php include("webkit/sidebar"); ?>
 </div>
 <?php include("webkit/footer"); ?>
 </body>
