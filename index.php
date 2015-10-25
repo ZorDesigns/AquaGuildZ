@@ -108,15 +108,15 @@ $content = substr(strip_tags($news['content']),0,390);}
 echo '
 <article>
 <header>
-<h1><a href="#">'.$news["title"].'</a></h1>
+<h1><a href="news.php?id='.$news["id"].'">'.$news["title"].'</a></h1>
 <p class="meta">by <a href="">System</a> '.$news["date"].' <a href="">0</a> <img src="assets/images/content-comments.png" alt="Comments"></p>
 </header>
 <div class="content">
 <div class="thumb">
-<a href=""><img src="assets/images/news/square/'.$news["image"].'.png" alt=""></a>
+<a href="news.php?id='.$news["id"].'"><img src="assets/images/news/square/'.$news["image"].'.png" alt=""></a>
 </div>
 <p>'.$content.'...</p>
-<p><a href="#">Read more</a></p>
+<p><a href="news.php?id='.$news["id"].'">Read more</a></p>
 </div>
 <footer><!-- --></footer>
 </article>
