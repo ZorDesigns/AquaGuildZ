@@ -6,7 +6,7 @@
                         <li><a class="media<?php if($page_cat=='media') echo'-active"';?>" href="media.php"><span>Media</span></a></li>
                         <li><a class="community<?php if($page_cat=='community') echo'-active';?>" href="#"><span>Community</span></a></li>
                         <li><a class="status<?php if($page_cat=='roster') echo'-active';?>" href="roster.php"><span>Roster</span></a></li>
-                        <li><a class="forums<?php if($page_cat=='forums') echo'-active';?>" href="#"><span>Forums</span></a></li>
+                        <li><a class="forums<?php if($page_cat=='forums') echo'-active';?>" href="forums.php"><span>Forums</span></a></li>
                         <li><a class="services<?php if($page_cat=='services') echo'-active';?>" href="services.php"><span>Services</span></a></li>
                     </ul>
                 </nav>

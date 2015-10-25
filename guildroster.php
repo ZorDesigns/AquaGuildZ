@@ -103,7 +103,6 @@ $aquaglz->close();
 </div>
 </div>
 </div>
-<?php include("webkit/progressrostg"); ?>
 </div>
 </div>
 <?php include("webkit/sidebar"); ?>
