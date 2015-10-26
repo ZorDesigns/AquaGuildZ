@@ -1,4 +1,5 @@
 <?php
+$page_tit = "reg";
 session_start();
 include ("configs.php");
 $msg = "";
@@ -41,11 +42,7 @@ if ((isset($_SESSION['email']) != ''))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>AquaGuildZ | Register</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<?php include ('webkit/meta'); ?>
 <!-- ===== FAVICON =====-->
 <link rel="shortcut icon" href="admin/img/favicon.png">
 <!-- ===== CSS =====-->

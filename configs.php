@@ -58,9 +58,10 @@ $socialnk['Youtube']  	= "https://www.youtube.com/channel/UCcegG7KKMvpd7UVFHdJ4t
 
 /* CMS LINKS */
 $cms['title']   	= "Hellenic Horde |";
-$cms['description'] 	= "Hellenic Horde is the best Hellenic Guild on Twisting Nether Europe.";
-$cms['keywords']	= "Hellenic, Hellenic Horde, ZorDesigns, FlameCMS, World of Warcraft Guild, Guild";
-$cms['author']		= "ZorDesigns, FailZorD, FlameCMS";
+$cms['description'] = "Hellenic Horde is the best Hellenic Guild on Twisting Nether Europe, the best and the most friendliest guild for Greek members! Join us and improve your progress and your mood with us!";
+$cms['keywords']	= "Hellenic, Hellenic Horde, ZorDesigns, FlameCMS, World of Warcraft Guild, Guild. AquaGuildZ";
+$cms['author']		= "ZorDesigns, FailZorD, FlameCMS, AquaGuildZ";
+$cms['favicon']		= "admin/img/favicon.png";
 
 /* DB CONNECTION CODE */
 //----------------------------------------------//

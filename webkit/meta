@@ -1,0 +1,20 @@
+<?php require_once ('configs.php'); ?>
+<meta charset="utf-8">
+<?php if(isset($page_tit)){?>
+<title><?php echo $cms['title']; ?>
+<?php if($page_tit=='home') echo' Home';?>
+<?php if($page_tit=='reg') echo' Registration';?>
+<?php if($page_tit=='login') echo' Login';?>
+<?php if($page_tit=='media') echo' Media';?>
+<?php if($page_tit=='forums') echo' Forums';?>
+<?php if($page_tit=='services') echo' Services';?>
+<?php if($page_tit=='roster') echo' Roster';?>
+<?php if($page_tit=='gprogress') echo' Guild Progress';?>
+<?php if($page_tit=='groster') echo' Guild Roster';?>
+</title>
+<?php } ?>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="<?php echo $cms['description']; ?>">
+<meta name="author" content="<?php echo $cms['author']; ?>">
+<meta name="keywords" content="<?php $cms['keywords']; ?>">
+<link rel="shortcut icon" href="<?php $cms['favicon']; ?>">

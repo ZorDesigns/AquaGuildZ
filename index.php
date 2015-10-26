@@ -1,5 +1,6 @@
 <?php
 $page_cat = "home";
+$page_tit = "home";
 include ('configs.php');
 include ('settings/news');
 include ('settings/vids');
@@ -12,12 +13,7 @@ include ('settings/slides');
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
-<meta charset="utf-8">
-<title>AquaGuildZ - UVT</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A Guild System Manager made with AquaGuildZ Core">
-<meta name="author" content="AquaGuildZ - UVT">
-<link rel="shortcut icon" href="admin/img/favicon.png">
+<?php include ('webkit/meta'); ?>
 <!-- Le styles -->
 <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">

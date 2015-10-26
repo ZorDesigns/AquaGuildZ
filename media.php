@@ -1,5 +1,6 @@
 <?php
 $page_cat = "media";
+$page_tit = "media";
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -8,12 +9,7 @@ $page_cat = "media";
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
-<meta charset="utf-8">
-<title>AquaFlameCMS Frontpage</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A wow private server made with AquaFlameCMS">
-<meta name="author" content="AquaFlameCMS">
-<link rel="shortcut icon" href="admin/img/favicon.png">
+<?php include ('webkit/meta'); ?>
 <!-- Le styles -->
 <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">

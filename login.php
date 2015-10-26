@@ -1,4 +1,5 @@
 <?php
+$page_tit = "login";
 session_start();
 include("configs.php"); //Establishing connection with our database
 
@@ -45,11 +46,7 @@ header('Location: logsucc.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>AquaGuildZ | Login</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<?php include ('webkit/meta'); ?>
 <!-- ===== FAVICON =====-->
 <link rel="shortcut icon" href="admin/img/favicon.png">
 <!-- ===== CSS =====-->
