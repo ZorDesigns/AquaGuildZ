@@ -1,0 +1,33 @@
+a {  color: #63503c;  text-shadow: 0 0 5px rgba(0,0,0,.4), 1px 1px 1px rgba(0,0,0,.25);  text-decoration: none;}
+a.important_notice {  display: block;  width: 977px;  height: 45px;  margin: 10px 0px 10px 3px;  background: url(../images/forum/important_bar.png) no-repeat;  color: #74634d;  font-family: Arial,Helvetica,sans-serif;  font-size: 13px;  text-shadow: 1px 1px 1px rgba(0,0,0,.4);  border-radius: 2px;  box-shadow: 0 0 6px rgba(0,0,0,.25), 2px 2px 1px rgba(0,0,0,.05);  transition: all 400ms;  -moz-transition: all 400ms;  -webkit-transition: all 400ms;  -o-transition: all 400ms;}
+a.important_notice p {  display: block;  padding: 14px 0 0 63px;  transition: all 400ms;  -moz-transition: all 400ms;  -webkit-transition: all 400ms;  -o-transition: all 400ms;}
+.main-wide {  margin: 0 0 40px 0;  width: 996px;}
+.container {  width: 977px;  height: auto;  background: url(../images/forum/index_news_container.png) repeat;  box-shadow: 0 0 6px #000, inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);  -webkit-border-radius: 5px;  -moz-border-radius: 5px;  border-radius: 5px;  color: #3a3a39;  text-shadow: 0 1px 0 #000, 0 0 6px #000;  overflow: hidden;  margin: 10px 0px 10px 3px;}
+.wide-padding {  background: url(../images/forum/forum_mc_image1.png) no-repeat top;  padding: 35px 60px 60px 60px;}
+h1.category-title {  display: block;  padding: 0 0 33px 0;  margin: 0 0 0 25px;}
+h1.category-title a {  display: block;  color: #6d6657;  font-family: Arial;  font-size: 15px;  font-weight: bold;  text-shadow: 0 0 8px #000000, 0 1px 1px #000;  text-transform: uppercase;}
+ul.forum_row {  width: 843px;  height: 65px;  margin: 0 auto 15px auto;  border-radius: 3px;  overflow: hidden;  background: url(../images/forum/forum_row_bg.png) no-repeat, url(../images/forum/texture_light_2.gif) repeat;  box-shadow: 0 0 11px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.03);  transition: all 200ms;  -moz-transition: all 200ms;  -webkit-transition: all 200ms;  -o-transition: all 200ms;}
+ul.forum_row li.icon {  width: 65px;}
+ul.forum_row li {  float: left;  display: block;  width: auto;  height: 65px;  text-shadow: 0 0 6px rgba(0,0,0,.5), 0 1px 1px rgba(0,0,0,.6);}
+ul.forum_row li.icon img {  margin: 6px 0 0 6px;}
+body img {  top: 3px;}
+ul.forum_row li.forum_title_desc {  width: 399px;}
+ul.forum_row li {  float: left;  display: block;  width: auto;  height: 65px;  text-shadow: 0 0 6px rgba(0,0,0,.5), 0 1px 1px rgba(0,0,0,.6);}
+ul.forum_row li.forum_title_desc a {  display: block;  width: 399px;  height: 65px;}
+ul.forum_row li.forum_title_desc a h1 {  font-family: Arial,Helvetica,sans-serif;  font-size: 14px;  color: #907748;  font-weight: bold;  margin: 9px 0 0 20px;  transition: all 200ms;  -moz-transition: all 200ms;  -webkit-transition: all 200ms;  -o-transition: all 200ms;}
+ul.forum_row li.forum_title_desc a h2 {  font-family: Arial,Helvetica,sans-serif;  font-size: 12px;  color: #4b4840;  font-weight: bold;  margin: -19px 0 0 19px;  transition: all 200ms;  -moz-transition: all 200ms;  -webkit-transition: all 200ms;  -o-transition: all 200ms;}
+ul.forum_row li.post, ul.forum_row li.topics {  width: 78px;  background: url(../images/forum/forum-seperators.png) no-repeat left;  text-align: center;}
+ul.forum_row li.post p, ul.forum_row li.topics p {  font-family: Arial,Helvetica,sans-serif;  font-size: 15px;  color: #494842;  font-weight: bold;  margin: 24px 0 0 0;}
+ul.forum_row li.topics {  width: 78px;  background: url(../images/forum/forum-seperators.png) no-repeat left;  text-align: center;}
+ul.forum_row li.topics p {  font-family: Arial,Helvetica,sans-serif;  font-size: 15px;  color: #494842;  font-weight: bold;  margin: 24px 0 0 0;}
+ul.forum_row li.lastpost {  background: url(../images/forum/forum-seperators.png) no-repeat left;}
+ul.forum_row li.lastpost p.topic_title {  margin: 9px 0 0 15px;  float: none !important;}
+ul.forum_row li.lastpost p.topic_title a {  font-size: 12px;  color: #52514c;  font-weight: bold;  transition: all 200ms;  -moz-transition: all 200ms;  -webkit-transition: all 200ms;  -o-transition: all 200ms;}
+ul.forum_row li.lastpost p.by {  margin: 2px 0 0 15px;}
+ul.forum_row li.lastpost p.by a {  font-size: 12px;  font-weight: bold;}
+ul.forum_row li.lastpost p.postdate {  margin: 1px 0 0 15px;  font-size: 11px;  color: #3d3c37;}
+
+
+
+
+
