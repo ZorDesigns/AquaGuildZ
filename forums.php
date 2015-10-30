@@ -1,6 +1,12 @@
 <?php
 $page_cat = "forums";
 $page_tit = "forums";
+include ('settings/forum.php');
+include("check.php");
+if($login_rank <= 1)
+{
+die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,18 +39,35 @@ $page_tit = "forums";
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<a href="#" class="important_notice"><p>Forums are under construction so please DO NOT use them!</p></a>
+<?php include("webkit/warning"); ?>
+<?php 
+$ct = mysqli_query($aquaglz, "SELECT * FROM categories ORDER BY id ASC");
+if (mysqli_num_rows($ct) > 0) {
+while ($cat = mysqli_fetch_array($ct)) {
+$uid = $cat["id"];
+$name = $cat["name"];
+
+echo '
 <div class="container main-wide">
 <div class="wide-padding">
-<h1 class="category-title"><a href="#" title="News">News</a></h1>
+<h1 class="category-title" data-forum-id="'.$uid.'"><a title="'.$name.'">'.$name.'</a></h1>
+';
+$sct = mysqli_query($aquaglz, "SELECT * FROM subcategories WHERE $uid=cat");
+if (mysqli_num_rows($sct) > 0) {
+while ($scat = mysqli_fetch_array($sct)) {
+$sid = $scat['uid'];
+$categ = $scat['cat'];
+$title = $scat['title'];
+$desc = $scat['desc'];
+echo '
 <ul class="forum_row">
-<li class="icon mark-as-read" data-forum-id="1">
+<li class="icon mark-as-read" data-forum-id="'.$sid.'">
 <img src="assets/images/forum/forum_unread_locked.png" width="56" height="53" title="New Posts">
 </li>
 <li class="forum_title_desc">
-<a href="#">
-<h1>Latest News</h1>
-<h2>Latest news for the community.</h2>
+<a href="topics.php?ctID='.$sid.'">
+<h1>'.$scat['title'].'</h1>
+<h2>'.$scat['desc'].'</h2>
 </a>
 </li>
 <li class="post">
@@ -54,128 +77,22 @@ $page_tit = "forums";
 <p>0</p>
 </li>
 <li class="lastpost">
-<p class="topic_title"><a href="#">Title 1</a></p>
-<p class="by"><a href="#">Author</a></p>
-<p class="postdate">Date & Hour</p>
+<p class="topic_title"><a href="topics.php?ctID='.$sid.'">'.$name.'</a></p>
+<p class="by">by <a href="#">System</a></p>
+<p class="postdate">Unlocked</p>
 </li>
 </ul>
-<ul class="forum_row">
-<li class="icon" data-forum-id="45">
-<img src="assets/images/forum/forum_read_locked.png" width="56" height="53" title="No Unread Posts">
-</li>
-<li class="forum_title_desc">
-<a href="#">
-<h1>Rules and Regulations</h1>
-<h2>Laws to abide by to keep your game experience intact.</h2>
-</a>
-</li>
-<li class="post">
-<p>0</p>
-</li>
-<li class="topics">
-<p>0</p>
-</li>
-<li class="lastpost">
-<p class="topic_title"><a href="#">Title 1</a></p>
-<p class="by"><a href="#">Author</a></p>
-<p class="postdate">Date & Hour</p>
-</li>
-</ul>
-<ul class="forum_row">
-<li class="icon mark-as-read" data-forum-id="41">
-<img src="assets/images/forum/forum_unread.png" width="56" height="53" title="New Posts">
-</li>
-<li class="forum_title_desc">
-<a href="#">
-<h1>Guild Events</h1>
-<h2>Guild Events related news</h2>
-</a>
-</li>
-<li class="post">
-<p>0</p>
-</li>
-<li class="topics">
-<p>0</p>
-</li>
-<li class="lastpost">
-<p class="topic_title"><a href="#">Title 1</a></p>
-<p class="by"><a href="#">Author</a></p>
-<p class="postdate">Date & Hour</p>
-</li>
-</ul></div>
+
+';
+}
+echo '
 </div>
-<div class="clear"></div>
-<div class="container main-wide">
-<div class="wide-padding">
-<h1 class="category-title"><a href="#" title="News">News</a></h1>
-<ul class="forum_row">
-<li class="icon mark-as-read" data-forum-id="1">
-<img src="assets/images/forum/forum_read.png" width="56" height="53" title="New Posts">
-</li>
-<li class="forum_title_desc">
-<a href="#">
-<h1>Latest News</h1>
-<h2>Latest news for the community.</h2>
-</a>
-</li>
-<li class="post">
-<p>0</p>
-</li>
-<li class="topics">
-<p>0</p>
-</li>
-<li class="lastpost">
-<p class="topic_title"><a href="#">Title 1</a></p>
-<p class="by"><a href="#">Author</a></p>
-<p class="postdate">Date & Hour</p>
-</li>
-</ul>
-<ul class="forum_row">
-<li class="icon" data-forum-id="45">
-<img src="assets/images/forum/forum_unread_locked.png" width="56" height="53" title="No Unread Posts">
-</li>
-<li class="forum_title_desc">
-<a href="#">
-<h1>Rules and Regulations</h1>
-<h2>Laws to abide by to keep your game experience intact.</h2>
-</a>
-</li>
-<li class="post">
-<p>0</p>
-</li>
-<li class="topics">
-<p>0</p>
-</li>
-<li class="lastpost">
-<p class="topic_title"><a href="#">Title 1</a></p>
-<p class="by"><a href="#">Author</a></p>
-<p class="postdate">Date & Hour</p>
-</li>
-</ul>
-<ul class="forum_row">
-<li class="icon mark-as-read" data-forum-id="41">
-<img src="assets/images/forum/forum_unread_locked.png" width="56" height="53" title="New Posts">
-</li>
-<li class="forum_title_desc">
-<a href="#">
-<h1>Guild Events</h1>
-<h2>Guild Events related news</h2>
-</a>
-</li>
-<li class="post">
-<p>0</p>
-</li>
-<li class="topics">
-<p>0</p>
-</li>
-<li class="lastpost">
-<p class="topic_title"><a href="#">Title 1</a></p>
-<p class="by"><a href="#">Author</a></p>
-<p class="postdate">Date & Hour</p>
-</li>
-</ul></div>
 </div>
-<br>
+<div class="clear"></div>';
+}
+}
+}
+?>
 <div class="clear"></div>
 </div>
 <?php include("webkit/sidelogin"); ?>

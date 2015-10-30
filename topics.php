@@ -2,6 +2,11 @@
 $page_cat = "forums";
 $page_tit = "forums";
 include ('settings/forum.php');
+include("check.php");
+if($login_rank <= 1)
+{
+die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,7 +39,7 @@ include ('settings/forum.php');
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<a href="#" class="important_notice"><p>Forums are under construction so please DO NOT use them!</p></a>
+<?php include("webkit/warning"); ?>
 <div class="container main-wide">
 <div class="forum-padding">
 <!-- Forum Header -->
@@ -47,26 +52,24 @@ include ('settings/forum.php');
 </div>
 <!-- Actions -->
 <div class="actions_c">
-<a href="#" class="forum_btn_large">Post New Topic</a>
+<a href="crtThread.php" class="forum_btn_large">Post New Topic</a>
 <div class="paging">
 <ul class="pagination-forum">
 <li class="current">
 <a href="#" class="forum_btn_large_list" data-pagenum="1">1</a>
 </li>
 <li>
-<a href="#" class="forum_btn_large_list" data-pagenum="2">2</a>
+<a class="forum_btn_large_list" data-pagenum="2">...</a>
 </li>
 <li>
-<a href="#" class="forum_btn_large_list" data-pagenum="3">3</a>
-</li>
-<li>
-<a href="#" class="forum_btn_large_list" data-pagenum="4">></a>
+<a href="#" class="forum_btn_large_list" data-pagenum="3">></a>
 </li>
 </ul>
 </div>
 </div>
 <?php
-$qu = mysqli_query($con, "SELECT * FROM `threads`");
+$ctID = $_GET["ctID"];
+$qu = mysqli_query($aquaglz, "SELECT * FROM `threads` WHERE `cat`=$ctID");
 if (mysqli_num_rows($qu) > 0) {
 while ($row = mysqli_fetch_array($qu)) {
 echo '					
@@ -105,20 +108,17 @@ echo '
 ?>
 <!-- Actions -->
 <div class="actions_c">
-<a href="#" class="forum_btn_large">Post New Topic</a>
+<a href="crtThread.php" class="forum_btn_large">Post New Topic</a>
 <div class="paging">
 <ul class="pagination-forum">
 <li class="current">
 <a href="#" class="forum_btn_large_list" data-pagenum="1">1</a>
 </li>
 <li>
-<a href="#" class="forum_btn_large_list" data-pagenum="2">2</a>
+<a class="forum_btn_large_list" data-pagenum="2">...</a>
 </li>
 <li>
-<a href="#" class="forum_btn_large_list" data-pagenum="3">3</a>
-</li>
-<li>
-<a href="#" class="forum_btn_large_list" data-pagenum="4">></a>
+<a href="#" class="forum_btn_large_list" data-pagenum="3">></a>
 </li>
 </ul>
 </div>
