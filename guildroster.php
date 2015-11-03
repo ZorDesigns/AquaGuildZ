@@ -2,12 +2,10 @@
 $page_cat = "roster";
 $page_tit = "groster";
 include ('configs.php');
-
 // Check connection
 if ($aquaglz->connect_error) {
-    die("Connection failed: " . $aquaglz->connect_error);
+die("Connection failed: " . $aquaglz->connect_error);
 } 
-
 $sql = "SELECT name, class, race, level, thumbnail, talent FROM chars";
 $result = $aquaglz->query($sql);
 ?>
@@ -59,13 +57,19 @@ $result = $aquaglz->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
+$class = $row["class"];
+
+$classes = array( '1', '2', '4', '5', '6', '7', '8', '9', '10', '11' );
+$replacements = array( 'Warrior', 'Paladin', 'Hunter', 'Rogue', 
+'Priest', 'Death Knight', 'Shaman', 'Mage', 'Warlock', 'Monk','Druid' );
+$resultclass = $replacements[$row["class"] - 1];
 echo '
 <div class="roster-bg-dark">
 <div class="groster-row">
 <img src="http://eu.battle.net/static-render/eu/'.$row["thumbnail"].'" width="90" height="90">
 <div class="grinfo">
-<p><a href="http://eu.battle.net/wow/en/character/silvermoon/'.$row["name"].'/advanced">'.$row["name"].'</a></p>
-<p class="wow-class-'.$row["class"].'">'.$row["class"].'</p>
+<p><a href="http://eu.battle.net/wow/en/character/twisting-nether/'.$row["name"].'/advanced">'.$row["name"].'</a></p>
+<p class="wow-class-'.$row["class"].'">'.$resultclass.'</p>
 <p class="wow-class-'.$row["class"].'">'.$row["talent"].'</p>
 </div>
 <div class="clear"></div>
