@@ -32,7 +32,7 @@ class Character {
 		$this->characterData = $jsonConnect->getCharacter($character, $realm, $region, implode(",",$this->fields));
 		if ($this->characterData != FALSE){
 			$this->name = $this->characterData['name'];
-
+			//$this->setTitles();
 			$this->setTalentTreeSelected();
 			$this->race = new Races($region);
 			$this->class = new Classes($region);
@@ -475,7 +475,16 @@ class Character {
    		foreach (array_keys($raids) as $key){
    			$raid = $raids[$key];
    			$bosses = $raid['bosses'];
-
+   			/*$numberofbosses = count($bosses);
+   			$numberofbosseskilled = 0;
+   			foreach ($bosses as $boss){
+   				if ($boss['normalKills']>0 OR $boss['heroicKills']>0){
+   					$numberofbosseskilled++;
+   				}
+   			}
+   			$t['totalbosses'] = $numberofbosses;
+   			$raids[$key]['totalbosses'] = $numberofbosses;
+   			$raids[$key]['bosseskilled'] = $numberofbosseskilled;*/
    		} 
    		if ($sort == 'desc'){
    			$raids = array_reverse($raids);

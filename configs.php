@@ -48,7 +48,7 @@ $LocaleName = 'en_GB';
 $GameName = 'wow';
 
 //-- Your Realm, Guild & Player Name --//
-$RealmName = str_replace(' ', '%20', 'Twisting-Nether');
+$RealmName = str_replace(' ', '%20', 'Twisting Nether');
 $GuildName = str_replace(' ', '%20', 'Hellenic Horde');
 
 /* SOCIAL LINKS */

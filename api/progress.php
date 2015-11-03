@@ -4,7 +4,7 @@ include('config.php');
 
 $armory = new BattlenetArmory(WOW_REGION,GUILD_SERVER); 
 // Enable this is if toons with special characters break the API.
-// $armory->UTF8(TRUE);
+$armory->UTF8(TRUE);
 $armory->setLocale(WOW_LOCALE);
 // Exclude everything except progression
 $armory->characterExcludeFields(array('titles','stats','talents','items','reputation','professions','appearance','mounts','achievements','pvp','quests','pets','guild','petSlots','audit','feed','hunterPets')); 
