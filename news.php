@@ -43,32 +43,56 @@ $page_tit = "home";
 <div id="main_content">
 <div class="container_3 archived-news">  
 <!-- News Content -->
-<?php 
+<?php
 $newsID = $_GET["id"];
-$news = "SELECT * FROM news WHERE id=$newsID";
-$result = $aquaglz->query($news); 
-if ($result->num_rows > 0)
-// output data of each row
-while($news = $result->fetch_assoc()) {
+$currentid=$newsID;
+$result = mysqli_query($aquaglz, "select * from news where id=$currentid");
+while ($row = mysqli_fetch_array($result))
+{
+$newsTT=$row['title'];
+$newsDT=$row['date'];
+$newsIMG=$row['image'];
+$newsCNT=$row['content'];
+$currentid=$row['id'];
+}
+$resultPrev = mysqli_query($aquaglz, "select * from news where id<$currentid 
+LIMIT 1");
+while($prevRow = mysqli_fetch_array($resultPrev))
+{
+$previd = $prevRow['id'];
+}
+$resultNext = mysqli_query($aquaglz, "select * from news where id>$currentid 
+LIMIT 1");
+while($nextRow = mysqli_fetch_array($resultNext))
+{
+$nextid = $nextRow['id'];
+}
 echo '
 <div class="arnews-head" align="left">
-<h1>'.$news["title"].' </h1>'.$news["date"].', posted by System
+<h1>'.$newsTT.' </h1>'.$newsDT.', posted by System
 </div>
 <div class="header-image">
-<img itemprop="image" alt="" src="assets/images/news/full/'.$news["image"].'-big.png" />
+<img itemprop="image" alt="" src="assets/images/news/full/'.$newsIMG.'-big.png" />
 </div>
-<div class="arnews-cont" align="left"><br><p><a href="assets/images/news/full/'.$news["image"].'-big.png">Click</a> for a full view of the image.</p></div>
-<div class="arnews-cont" align="left"><p>'.$news['content'].'</p>
+<div class="arnews-cont" align="left"><br><p><a href="assets/images/news/full/'.$newsIMG.'-big.png">Click</a> for a full view of the image.</p></div>
+<div class="arnews-cont" align="left"><p>'.$newsCNT.'</p>
 <div class="clear"></div>
 </div>
+</div>
 ';
-} 
+if (@$nextid < '1'){
+echo '<a class="newer-news-btn" href="news.php?id='.@$currentid.'">Newer</a>';
+}else{
+echo '<a class="newer-news-btn" href="news.php?id='.@$nextid.'">Newer</a>';
+}
+if (@$previd < '1'){
+echo '<a class="older-news-btn" href="news.php?id='.@$currentid.'">Older</a>';
+}else{
+echo '<a class="older-news-btn" href="news.php?id='.@$previd.'">Older</a>';
+}
 $aquaglz->close();
 ?>
 <!-- News Content.End --> 
-</div>
-<a class="newer-news-btn" href="#">Newer</a>
-<a class="older-news-btn" href="#">Older</a>
 <div class="clear"></div>
 </div>
 </div>
