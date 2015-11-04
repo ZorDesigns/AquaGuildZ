@@ -8,9 +8,19 @@
 <div class="cont_container">
 <ul class="top_voters_list">
 <li>
-<p>GRP1</p>
-<a href="roster.php">Core Group 1</a>
-<span>23 <i>Kills</i></span>
+<p>HFC</p>
+<a href="progress.php">Hellfire Citadel</a>
+<span>Mythic</span>
+</li>
+<li>
+<p>BRF</p>
+<a href="progress.php">Blackrock Foundry</a>
+<span>Mythic</span>
+</li>
+<li>
+<p>HM</p>
+<a href="progress.php">Highmaul</a>
+<span>Mythic</span>
 </li>
 </ul>
  </div>

@@ -31,7 +31,7 @@ header #searchbar input { background: transparent; border: none; border-radius: 
 .container_2 { padding:30px 40px; width:904px; height: auto; min-height: 600px; background: url(../images/texture_1.png) repeat; box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05); -webkit-border-radius: 5px; border-radius: 5px; }
 .container_3 {  width: 628px;  height: auto;  min-height: 40px;  background: rgba(31,23,19,.80);  box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);  -webkit-border-radius: 5px;  -moz-border-radius: 5px;  border-radius: 5px;  margin: 0 0 14px 0;  padding: 35px 0 25px 0;  z-index: 1;  margin-left: 5px;  margin-top: -20px;}
 .container_4 { margin-top: 10px;  margin-left: 5px;padding:30px 40px;width: 895px;height: auto; min-height: 600px; background: url(../images/texture_1.png) repeat; box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05); -webkit-border-radius: 5px; border-radius: 5px; }
-.container_5 { margin-top: 10px;  margin-left: 5px;padding:30px 40px;width: 895px;height: auto; min-height: 700px; background: url(../images/houroftwilight.png) no-repeat; box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05); -webkit-border-radius: 5px; border-radius: 5px; }
+.container_5 { margin-top: 10px;  margin-left: 5px;padding:30px 40px;width: 895px;height: auto; min-height: 750px; background: url(../images/houroftwilight.png) no-repeat; box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05); -webkit-border-radius: 5px; border-radius: 5px; }
 /* Raid Roster */
 #block-system-main {  margin: 10px 0;  text-shadow: 0 1px 0 #000;}
 #main hr {  background: url(../images/hr.png);  display: block;  clear: both;  height: 2px;  margin: 0;  border: 0;}
@@ -48,7 +48,7 @@ div.view-players a {  color: #cdcdcd;}
 div.view-players .armory-link {  float: right;  margin-right: 40px;}
 div.view-players .armory-link a {  display: block;  background: url(../images/armorylogo.png) no-repeat; width: 16px;   height: 16px;}
 /* Roster Page */
-.features ul li.w-addons {  box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 12px rgba(255,202,77,.05), inset 0 1px 0 rgba(255,202,77,.05), inset 0 0 0 1px rgba(255,202,77,.05); margin: 20px 0px 40px 0;  text-align: left;  height: 240px;  width: 800px;  list-style: none;  }
+.features ul li.w-addons {  padding-bottom: 10px;box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 12px rgba(255,202,77,.05), inset 0 1px 0 rgba(255,202,77,.05), inset 0 0 0 1px rgba(255,202,77,.05); margin: 20px 0px 40px 0;  text-align: left;  height: 240px;  width: 800px;  list-style: none;  }
 .features ul {}
 .features ul li.w-addons:first-child{margin:20px0 50px 0;}
 .w-addon-row{margin:0;}
@@ -57,14 +57,13 @@ div.view-players .armory-link a {  display: block;  background: url(../images/ar
 .addon-info h1{margin:0 0 18px 0;color:#afa288;font-size:21px;text-transform:uppercase;}
 .addon-info p{font-size:13px;height:78px;text-shadow:0 0 14px rgba(0,0,0,.4), 1px 1px 0 rgba(0,0,0,.4);color:#867f72;}
 .addon-info .war-links{margin:13px 0 0 0;}
-.addon-info .war-links a.download{text-decoration:none; display:inline-block;padding:7px 15px;border-radius:3px;background:#2D0D0D;  box-shadow: inset 0 0 0 1px rgba(120, 60, 9, 0.05),inset 0 1px 0 rgba(87, 60, 8, 0.1), 0 0 6px rgba(44, 15, 2, 0.4);color:#160606;text-shadow:1px 1px 0 rgba(0,255,0,.1);font-weight:bold;text-transform:uppercase;}
-.addon-info .war-links a.download:hover{color:#e0bb28;text-shadow:0 0 4px rgba(0,0,0,.5), 0 1px 1px rgba(0,0,0,.5);background:#2D0D0D;}
+.addon-info .war-links a.download {   margin: -8px 0px 0px 0px; display: inline-block;  width: auto;  height: auto;  padding: 10px 14px 10px 14px;  background: #2c2a26;  background: -moz-linear-gradient(top, #2c2a26 0%, #201e1c 100%);  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c2a26), color-stop(100%,#201e1c));  background: -webkit-linear-gradient(top, #2c2a26 0%,#201e1c 100%);  background: -o-linear-gradient(top, #2c2a26 0%,#201e1c 100%);  background: -ms-linear-gradient(top, #2c2a26 0%,#201e1c 100%);  background: linear-gradient(to bottom, #2c2a26 0%,#201e1c 100%);  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2a26', endColorstr='#201e1c',GradientType=0 );  text-shadow: none;  font-family: Arial,Helvetica,sans-serif;  font-size: 12px;  text-transform: uppercase;  font-weight: bold;  border-radius: 3px;  text-shadow: 1px 1px 0 rgba(0,0,0,.2), 0 0 5px rgba(0,0,0,.2);  box-shadow: inset 0 0 10px rgba(0,0,0,.15), inset 0 0 0 1px rgba(255,255,255,.02), inset 0 2px 0 rgba(255,255,255,.05), 0 0 6px rgba(0,0,0,.8);  transition: all 500ms;  -moz-transition: all 500ms;  -webkit-transition: all 500ms;  -o-transition: all 500ms;}  .addon-info .war-links a.download:hover{color:#e0bb28;text-shadow:0 0 4px rgba(0,0,0,.5), 0 1px 1px rgba(0,0,0,.5);  transition: all 500ms;  -moz-transition: all 500ms;  -webkit-transition: all 500ms;  -o-transition: all 500ms;}
 .feature-row{width:723px;margin:15px 0 0 0;z-index:2}
 .feature-row img{border-radius:4px;box-shadow:0 0 15px rgba(0,0,0,1), 0 2px 3px rgba(0,0,0,1);float:left;width:90px;}
 .feature-row.info{text-shadow:0 0 14px rgba(0,0,0,.4), 1px 1px 0 rgba(0,0,0,.4);text-align:left;margin:0 0 0 20px;float:left;width:570px;}
 .feature-row .info h1{margin:0 0 5px 0;color:#897f6b;font-size:16px;font-weight:bold;text-transform:uppercase;}
 .feature-row .info h2{font-size:13px;height:78px;color:#6a6458;font-weight:normal;}
-.features-bg-dark_roster {  width: 971px;  height: 650px;  background-color: rgba(0,0,0,.2);  position: absolute;  z-index: 0;  top: 473px;  box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);  border-radius: 6px;  overflow: hidden;  margin-left: -63px;}
+.features-bg-dark_roster {  width: 971px;  height: 670px;  background-color: rgba(0,0,0,.2);  position: absolute;  z-index: 0;  top: 473px;  box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);  border-radius: 6px;  overflow: hidden;  margin-left: -63px;}
 /* Media */
 .half-w {  width: 46%;}
 .flleft {  float: left;}
@@ -104,7 +103,7 @@ ul.screanshots-media-page-two .cframe_inner {  width: 160px;  height: 91px;}
 .feature-row .info {  text-shadow: 0 0 14px rgba(0,0,0,.4), 1px 1px 0 rgba(0,0,0,.4);  text-align: left;  margin: 0 0 0 20px;  float: left;  width: 570px;}
 .feature-row .info h1 {  margin: 0 0 5px 0;  color: #897f6b;  font-size: 16px;  font-weight: bold;  text-transform: uppercase;}
 .feature-row .info h2 {  line-height: 17px; font-size: 13px;  height: 78px;  color: #6a6458;  font-weight: normal;}
-.features-bg-dark {  width: 971px;  height: 695px;  background-color: rgba(0,0,0,.2);  position: absolute;  z-index: 0;  top: 420px;  box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);  border-radius: 6px;  overflow: hidden;  margin-left: -38px;}
+.features-bg-dark {  width: 971px;  height: 755px;  background-color: rgba(0,0,0,.2);  position: absolute;  z-index: 0;  top: 420px;  box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);  border-radius: 6px;  overflow: hidden;  margin-left: -38px;}
 
 /* Wrapper */
 
