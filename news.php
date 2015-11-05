@@ -55,14 +55,12 @@ $newsIMG=$row['image'];
 $newsCNT=$row['content'];
 $currentid=$row['id'];
 }
-$resultPrev = mysqli_query($aquaglz, "select * from news where id<$currentid 
-LIMIT 1");
+$resultPrev = mysqli_query($aquaglz, "select * from news where id<$currentid ORDER BY id DESC LIMIT 1");
 while($prevRow = mysqli_fetch_array($resultPrev))
 {
 $previd = $prevRow['id'];
 }
-$resultNext = mysqli_query($aquaglz, "select * from news where id>$currentid 
-LIMIT 1");
+$resultNext = mysqli_query($aquaglz, "select * from news where id>$currentid LIMIT 1");
 while($nextRow = mysqli_fetch_array($resultNext))
 {
 $nextid = $nextRow['id'];
