@@ -55,3 +55,41 @@ Wiki: NOT YET DETERMINED
 Documentation: NOT YET DETERMINED
 
 Forums: NOT YET DETERMINED
+
+
+## Work To Do (TODO)
+
+| Functions        | Progress           |
+| ------------- |:-------------:| -----:|
+| News        | 90% |
+| Register        | 100% |
+| Login        | 100% |
+| Media    | 10%      |
+| Community | 0%     |
+| Forums        | 50% |
+| Services        | 99%|
+| Admin Panel        | 10% |
+| Account Panel        | 0% |
+| Battle.net Linking        | 0% |
+| Facebook Linking        | 0% |
+| Battle.net API        | 0% |
+| World of Warcraft API        | 20% |
+
+| Admin Panel        | Progress           |
+| ------------- |:-------------:| -----:|
+| News        | 0% |
+| Media    | 0% |
+| Forums        | 0% |
+| Services        | 0% |
+| Accounts        | 0% |
+| Characters        | 0% |
+| Settings        | 0% |
+
+| Account Panel        | Progress           |
+| ------------- |:-------------:| -----:|
+| Battle.net Linking        | 0% |
+| Characters    | 0% |
+| Settings | 0% |
+| Avatar        | 0% |
+| Custom Avatar        | 0% |
+| Signatures        | 0% |
