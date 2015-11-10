@@ -40,7 +40,7 @@ if(file_exists("install"))
 //--------------------------------------------//
 
 //-- Your Registered API Key --//
-$APIkey = '7ubb8arhkwtnwxh8gg6nh24yk249ndnb';
+$APIkey = 'v6kduqwxczssrhw5w6ys2yx62r35dvf2';
 
 //-- Your Region, Locale & Game --//
 $RegionName = 'eu';
