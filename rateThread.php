@@ -1,5 +1,5 @@
 <?php
-require_once('configs.php');
+include __DIR__ . '/configs.php';
 session_start();
 if (isSet($_GET['tid']) && isSet($_GET['rating'])) {
 $id = $_GET['tid'];

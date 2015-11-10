@@ -1,10 +1,10 @@
 <?php
 $page_cat = "home";
 $page_tit = "home";
-include ('configs.php');
-include ('settings/news');
-include ('settings/vids');
-include ('settings/slides');
+include __DIR__ . '/configs.php';
+include __DIR__ . '/settings/news';
+include __DIR__ . '/settings/vids';
+include __DIR__ . '/settings/slides';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->

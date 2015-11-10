@@ -1,5 +1,5 @@
 <?php
-include ('configs.php');
+include __DIR__ . '/configs.php';
 $page_cat = "home";
 $page_tit = "home";
 ?>

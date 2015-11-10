@@ -1,7 +1,7 @@
 <?php
 $page_tit = "reg";
 session_start();
-include ("configs.php");
+include __DIR__ . '/configs.php';
 $msg = "";
 if(isset($_POST["submit"]))
 {

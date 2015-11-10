@@ -1,8 +1,8 @@
 <?php
 $page_cat = "forums";
 $page_tit = "forums";
-include ('settings/forum.php');
-include("check.php");
+include __DIR__ . '/settings/forum.php';
+include __DIR__ . '/check.php';
 if($login_rank <= 1)
 {
 die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
