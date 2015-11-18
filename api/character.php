@@ -1,5 +1,5 @@
 <?php
-include('configs.php');
+include(dirname(__DIR__).'/configs.php');
 $ranks = array('rank 1', 'rank 2', 'rank 3', 'rank 4', 'rank 5', 'rank 6', 'rank 7', 'rank 8', 'rank 9', 'rank 10');
 @$json = file_get_contents("https://$RegionName.api.battle.net/wow/guild/$RealmName/$GuildName?fields=members&locale=$LocaleName&apikey=$APIkey");
 if($json == false)

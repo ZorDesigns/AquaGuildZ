@@ -24,6 +24,10 @@ die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
 <script src="assets/javascript/global.js"></script>
 <script src="assets/javascript/common_orig.js"></script>
 <!-- Special CSS & JS for WYSIWYG Editor -->
+<script src="assets/ckeditor/ckeditor.js"></script>
+<!-- WoWHead Linking -->
+<script type="text/javascript" src="//static.wowhead.com/widgets/power.js"></script>
+<script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
 </head>
 <body>
 <?php include("webkit/servicebar") ?>
@@ -87,7 +91,8 @@ echo '<a href="#" class="important_notice"><p>Failed to Create Topic. Please wai
 </label>
 <label>
 <p>Text</p>
-<textarea type='text' name='description' class="bbcode"></textarea>		
+<textarea name='description' id="editor1" class="bbcode" rows="10" cols="80"></textarea>
+<script>CKEDITOR.replace( 'editor1' );</script>
 </label>
 <div>
 <input type='submit' value='Create Topic' name='createThread'>
