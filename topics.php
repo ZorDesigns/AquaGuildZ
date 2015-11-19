@@ -72,7 +72,7 @@ die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
 </div>
 <?php
 $ctID = $_GET["ctID"];
-$qu = mysqli_query($aquaglz, "SELECT * FROM `threads` WHERE `cat`=$ctID");
+$qu = mysqli_query($aquaglz, "SELECT * FROM `threads` WHERE `cat`=$ctID ORDER BY id DESC");
 if (mysqli_num_rows($qu) > 0) {
 while ($row = mysqli_fetch_array($qu)) {
 echo '					
@@ -81,7 +81,7 @@ echo '
 <img src="assets/images/forum/topic_unread_hot.png" width="55px" height="39px">
 </li>
 <li class="topic_title_by_date">
-<h1><a href="thread.php?tid='.$row["id"].'">'.$row["title"].'</a></h1>
+<h1><a href="thread.php?tid='.$row["id"].'">['.$row["id"].'] '.$row["title"].'</a></h1>
 <p>Created by <a>System</a>, '.$row["last_date"].'</p>
 </li>
 <li class="lastpost">
