@@ -90,9 +90,10 @@ echo '<a href="#" class="important_notice"><p>Failed to Create Topic. Please wai
 <input type='text' name='tags' maxlength="150">
 </label>
 <label>
-<p>Text</p>
 <textarea name='description' id="editor1" class="bbcode" rows="10" cols="80"></textarea>
-<script>CKEDITOR.replace( 'editor1' );</script>
+<script data-sample="1">
+CKEDITOR.replace('editor1');
+</script>
 </label>
 <div>
 <input type='submit' value='Create Topic' name='createThread'>
