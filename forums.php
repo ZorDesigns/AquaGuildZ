@@ -92,6 +92,7 @@ echo '
 }
 }
 }
+$aquaglz->close();
 ?>
 <div class="clear"></div>
 </div>

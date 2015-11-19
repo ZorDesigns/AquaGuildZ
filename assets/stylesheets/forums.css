@@ -108,34 +108,9 @@ small {font-size: 11px}
 .new_title {  width: auto;  height: 69px;  float: left;  padding: 0 42px 0 0;  margin: 0 20px 0 0;}
 .new_title p {  z-index: 3;  font-family: 'Ropa Sans',sans-serif;  font-size: 16px;  font-weight: bold;  text-transform: uppercase;  color: #857b6b;  display: inline-block;  margin: 15px 0 0 0;}
 .new_title div {  width: 22px;  height: 55px;    z-index: 2;    margin: -40px -40px 0 155px;  right: 0;  background-position: right;  background-repeat: no-repeat;  background-image: url(../images/forum/huge_arrow.png);}
-form.post_topic_reply {  padding: 40px 0 0 0;}
 form.post_topic_reply label {  display: block;  margin: 0 0 25px 0;}
 form.post_topic_reply label p {  font-family: Arial,Helvetica,sans-serif;  font-size: 12px;  margin: 10px 20px 10px 2px;  color: #3e3c3b;  font-weight: bold;  display: inline-block;  vertical-align: top;}
 input[type="text"], input[type="password"] {  font-family: 'Ebrima';  font-size: 14px;  text-shadow: 0 0 5px rgba(0,0,0,.15), 1px 0px 1px rgba(0,0,0,.25);   border: none; -webkit-border-radius: 3px;  -moz-border-radius: 3px;  border-radius: 3px;  width: 290px;  height: 32px;  padding: 0 10px 2px 10px;  background: rgba(0,0,0,.20);  box-shadow: inset 1px 1px 2px rgba(0,0,0,.25), inset 0 0 10px rgba(0,0,0,.10), 1px 1px 0 rgba(54,45,40,.25);  transition: all 300ms;  -moz-transition: all 300ms;  -webkit-transition: all 300ms;  -o-transition: all 300ms;}
 form.post_topic_reply label textarea {  display: inline-block;  float: none;  width: 750px;  height: 400px;}
 textarea.bbcode {  width: 816px;  height: auto;  min-height: 350px;  text-align: left;}
 textarea {  resize: none !important;  font-family: 'Ebrima';  font-size: 14px;  text-shadow: 0 0 5px rgba(0,0,0,.15), 1px 0px 1px rgba(0,0,0,.25);  color: #40342e;  border: none;  -webkit-border-radius: 3px;  -moz-border-radius: 3px;  border-radius: 3px;  width: auto;  height: auto;  padding: 10px;  background: rgba(0,0,0,.20);  box-shadow: inset 1px 1px 2px rgba(0,0,0,.25), inset 0 0 10px rgba(0,0,0,.10), 1px 1px 0 rgba(54,45,40,.25);  transition: all 300ms;  -moz-transition: all 300ms;  -webkit-transition: all 300ms;  -o-transition: all 300ms;}
-.row { width: 490px;  height: 34px;  margin: 0 0 12px 0;}
-.row label {  height: 26px;  padding: 10px 0 0 18px;  display: block;  float: left;  font-family: 'Ebrima';  font-weight: normal;  font-size: 14px;  color: #68594a;  text-shadow: 0 0 5px rgba(0,0,0,.15), 1px 0px 1px rgba(0,0,0,.25);}
-.row select, form .row .js-select {  float: right;}
-.js-select {  display: block;  width: 310px;  height: 32px;  text-align: left;  -webkit-border-radius: 4px;  -moz-border-radius: 4px;  border-radius: 4px;  margin: 0;  font-family: 'Ebrima';  font-size: 14px;  text-shadow: 0 0 5px rgba(0,0,0,.15), 1px 0px 1px rgba(0,0,0,.25);  color: #40342e;  padding: 2px 0 0 0;  background: rgba(0,0,0,.20);  box-shadow: inset 1px 1px 2px rgba(0,0,0,.25), inset 0 0 10px rgba(0,0,0,.10), 1px 1px 0 rgba(54,45,40,.25);  transition: all 300ms;  -moz-transition: all 300ms;  -webkit-transition: all 300ms;  -o-transition: all 300ms;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

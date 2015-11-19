@@ -17,12 +17,15 @@ die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
 <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/forums.css" rel="stylesheet" type="text/css">
+<link href="assets/stylesheets/form/reg.css" rel="stylesheet" type="text/css">
 <!-- Le javascripts -->
 <script src="assets/javascript/jquery.min.js"></script>
 <script src="assets/javascript/jquery.flexslider.min.js"></script>
 <script src="assets/javascript/bootstrap.min.js"></script>
 <script src="assets/javascript/global.js"></script>
 <script src="assets/javascript/common_orig.js"></script>
+<script src="assets/stylesheets/form/reg.js"></script>
+<script src="assets/stylesheets/form/reg1.js"></script>
 <!-- Special CSS & JS for WYSIWYG Editor -->
 <script src="assets/ckeditor/ckeditor.js"></script>
 <!-- WoWHead Linking -->
@@ -59,7 +62,7 @@ $user = $_SESSION['email'];
 $q = mysqli_query($aquaglz, "INSERT INTO `threads` VALUES ('', '$cat', '$title', '', '', '$description', '$user', '$tags', now())") or die(mysql_error());
 if ($q) {
 echo '<a href="#" class="important_succ"><p>Topic Created. Please wait while we redirect you!</p></a>
-<meta http-equiv="refresh"content="2;url=topics.php">';
+<meta http-equiv="refresh"content="2;url=forums.php">';
 }else
 echo '<a href="#" class="important_notice"><p>Failed to Create Topic. Please wait while we redirect you!</p></a>
 <meta http-equiv="refresh"content="2;url=crtThread.php">';
@@ -79,30 +82,52 @@ echo '<a href="#" class="important_notice"><p>Failed to Create Topic. Please wai
 <form action='crtThread.php' method='POST' class="post_topic_reply" name="post_topic">
 <label>
 <p>Title:</p><br>
-<input style="width: 832px" type='text' name='title' maxlength="150">
+<input style="width: 832px;" type='text' name='title' maxlength="150">
 </label>
-<div class="row" style="float: right;">
-<label>Secret Category</label>
-<select name="secretQuestion" style="width: 350px !important; display: none;" styled="true" id="select-style-1">
-<option disabled="disabled">Select Category</option>
-<option value="1">News</option>
-</select><div id="select-style-1" class="js-select">
-<div class="js-select-selected">News</div>
-<div class="js-select-arrow js-select-arrow-active"></div>
-<div class="js-select-list-container js-select-list-container-scrollable" id="js-list-container" style="z-index: 101;">
-<div class="js-select-list-top-controller" id="js-list-top-controller" align="center"><p></p></div>
-<div class="js-select-list-scroller" id="js-list-scroller"><div class="js-select-list-scrollable" id="js-list">
-<ul id="0" class="js-select-list-option js-select-list-option-disabled">Select Category</ul>
-<ul id="1" class="js-select-list-option js-select-list-option-selected">News</ul>
-<ul id="2" class="js-select-list-option">Developer's Place </ul>
-</div>
-</div><div class="js-select-list-bottom-controller" id="js-list-bottom-controller" align="center"><p></p>
-</div></div></div>
-</div>
 <label>
 <p>Tags:</p><br>
-<input type='text' name='tags' maxlength="150">
+<input style="width: 832px;" type='text' name='tags' maxlength="150">
 </label>
+<div class="row">
+<p><label>Category:</label></p>
+<select name='cat' style="display: none;" styled="true" id="select-style-1">
+<?php 
+$sct = mysqli_query($aquaglz, "SELECT * FROM subcategories");
+if (mysqli_num_rows($sct) > 0) {
+while ($scat = mysqli_fetch_array($sct)) {
+echo '
+<option value="'.$scat['uid'].'"><b>'.$scat['title'].'</b> - (<i>'.$scat['desc'].'</i>)</option>
+';
+}
+echo '
+</select>
+</div>
+';
+}
+?>
+<div id="select-style-1" class="js-select" style="display: none;">
+<div class="js-select-list-top-controller" id="js-list-top-controller" align="center"><p></p></div>
+<div class="js-select-list-scroller" id="js-list-scroller"><div class="js-select-list-scrollable" id="js-list">
+<?php 
+$sct = mysqli_query($aquaglz, "SELECT * FROM subcategories");
+if (mysqli_num_rows($sct) > 0) {
+while ($scat = mysqli_fetch_array($sct)) {
+echo '
+<ul id="'.$scat['uid'].'" class="js-select-list-option js-select-list-option-selected"><b>'.$scat['title'].'</b> - (<i>'.$scat['desc'].'</i>)</ul>
+';
+}
+echo '
+</div></div>
+<div class="js-select-list-bottom-controller" id="js-list-bottom-controller" align="center"><p></p>
+</div>
+</div>
+';
+}
+$aquaglz->close();
+?>
+<br>
+<br>
+<br>
 <label>
 <textarea name='description' id="editor1" class="bbcode" rows="10" cols="80"></textarea>
 <script data-sample="1">
@@ -110,7 +135,9 @@ CKEDITOR.replace('editor1');
 </script>
 </label>
 <div>
-<input type='submit' value='Create Topic' name='createThread'>
+<div>
+<center><input type="submit" value="Create Topic" name="createThread"></center>
+</div>
 </div>
 </form>
 </div>
