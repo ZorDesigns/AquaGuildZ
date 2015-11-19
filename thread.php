@@ -60,7 +60,13 @@ $average = $all / $total;
 ?>
 <!-- Actions -->
 <div class="actions_c">
-<a class="forum_btn_large">Reply Topic</a>
+<script>
+$("#hulk").click(function() {
+  $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+
+});
+</script>
+<a href="#bottom" id="hulk" class="forum_btn_large">Reply Topic</a>
 <div class="pagingT">
 <div class="rating">
 <a href="rateThread.php?tid=<?php echo $id; ?>&rating=5" class="fa-star-o" data-pagenum="5"></a>
@@ -146,7 +152,7 @@ echo '
 <div class="container main-wide">
 <?php 
 echo "
-<div class='forum-padding'>
+<div id='bottom' class='forum-padding'>
 <div class='topic_header'>
 <div class='topic_title'>
 <h1>Leave a Reply</h1>
