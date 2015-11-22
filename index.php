@@ -71,7 +71,7 @@ if ($vidrslt->num_rows > 0) {
 while($vids = $vidrslt->fetch_assoc()) {
 echo '<li>
 <a href="'.$vids["contentlnk"].'">
-<img src="" alt="" style="background-image: url(assets/images/news/usquare/'.$vids["image"].'.png);">
+<img src="" alt="" style="background-image: url(assets/images/media/vids/'.$vids["image"].'.png);">
 <span>'.$vids["title"].'</span>
 </a>
 </li>';
@@ -79,7 +79,7 @@ echo '<li>
 }else{
 echo '<li>
 <a href="#">
-<img src="" alt="" style="background-image: url(assets/images/news/usquare/novideo.png);">
+<img src="" alt="" style="background-image: url(assets/images/media/vids/novideo.png);">
 <span>No Videos</span>
 </a>
 </li>';
