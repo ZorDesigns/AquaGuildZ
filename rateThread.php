@@ -99,5 +99,9 @@ if (typeof paceSpecific != 'undefined'){
 <script src="admin/js/plugins/forms/validation/jquery.validate.min.js"></script>
 <script src="admin/js/plugins/forms/validation/jquery.validate.additional.min.js"></script>
 <script src="admin/js/calls/page.lockscreen.js"></script>
+<?php 
+// Closing the Connection for Injection Measures!
+$aquaglz->close();
+?>
 </body>
 </html>

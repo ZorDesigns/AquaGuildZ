@@ -3,7 +3,13 @@ $page_cat = "forums";
 $page_tit = "forums";
 include __DIR__ . '/settings/forum.php';
 include __DIR__ . '/check.php';
-if($login_rank <= 1)
+$ctID = $_GET["ctID"];
+$chid = mysqli_query($aquaglz, "SELECT rank FROM `subcategories` WHERE `uid`=$ctID");
+if (mysqli_num_rows($chid) > 0) {
+while ($chrow = mysqli_fetch_array($chid)) {
+$rankch = $chrow["rank"];
+}}
+if($login_rank <= $rankch)
 {
 die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
 }
@@ -71,7 +77,6 @@ die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
 </div>
 </div>
 <?php
-$ctID = $_GET["ctID"];
 $qu = mysqli_query($aquaglz, "SELECT * FROM `threads` WHERE `cat`=$ctID ORDER BY id DESC");
 if (mysqli_num_rows($qu) > 0) {
 while ($row = mysqli_fetch_array($qu)) {
@@ -135,5 +140,9 @@ echo '
 </div>
 </div>
 <?php include("webkit/footer"); ?>
+<?php 
+// Closing the Connection for Injection Measures!
+$aquaglz->close();
+?>
 </body>
 </html>

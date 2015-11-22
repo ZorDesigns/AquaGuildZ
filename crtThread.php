@@ -123,7 +123,6 @@ echo '
 </div>
 ';
 }
-$aquaglz->close();
 ?>
 <br>
 <br>
@@ -150,5 +149,9 @@ CKEDITOR.replace('editor1');
 </div>
 </div>
 <?php include("webkit/footer"); ?>
+<?php 
+// Closing the Connection for Injection Measures!
+$aquaglz->close();
+?>
 </body>
 </html>

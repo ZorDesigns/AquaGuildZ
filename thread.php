@@ -180,5 +180,9 @@ echo "
 </div>
 </div>
 <?php include("webkit/footer"); ?>
+<?php 
+// Closing the Connection for Injection Measures!
+$aquaglz->close();
+?>
 </body>
 </html>

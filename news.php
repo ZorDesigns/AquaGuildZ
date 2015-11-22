@@ -88,7 +88,6 @@ echo '<a class="older-news-btn" href="news.php?id='.@$currentid.'">Older</a>';
 }else{
 echo '<a class="older-news-btn" href="news.php?id='.@$previd.'">Older</a>';
 }
-$aquaglz->close();
 ?>
 <!-- News Content.End --> 
 <div class="clear"></div>
@@ -97,5 +96,9 @@ $aquaglz->close();
 <?php include("webkit/sidebar"); ?>
 </div>
 <?php include("webkit/footer"); ?>
+<?php 
+// Closing the Connection for Injection Measures!
+$aquaglz->close();
+?>
 </body>
 </html>
