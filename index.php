@@ -8,8 +8,8 @@ include __DIR__ . '/settings/slides';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>   <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>   <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
@@ -18,7 +18,6 @@ include __DIR__ . '/settings/slides';
 <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
-<link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/status.css" rel="stylesheet" type="text/css">
 <!-- Le javascripts -->
 <script src="assets/javascript/jquery.min.js"></script>
@@ -89,6 +88,21 @@ echo '<li>
 </div>
 </div>
 <div id="main_content">
+<a class="newer-index-btn index_pag_old_next" href="index.php?id=2">Newer</a>
+<div class="paging">
+<ul class="pagination-forum">
+<li class="current">
+<a href="#" class="index_pag_old_next pag-list" data-pagenum="1">1</a>
+</li>
+<li>
+<a href="#" class="index_pag_old_next pag-list" data-pagenum="2">2</a>
+</li>
+<li>
+<a href="#" class="index_pag_old_next pag-list" data-pagenum="3">3</a>
+</li>
+</ul>
+</div>
+<a class="older-index-btn index_pag_old_next" href="index.php?id=1">Older</a>
 <?php
 if ($result->num_rows > 0) {
 // output data of each row
@@ -137,6 +151,21 @@ echo '
 }
 $aquaglz->close();
 ?>
+<a class="newer-index-btn-dn index_pag_old_next" href="index.php?id=2">Newer</a>
+<div class="paging-dn">
+<ul class="pagination-forum">
+<li class="current">
+<a href="#" class="index_pag_old_next pag-list" data-pagenum="1">1</a>
+</li>
+<li>
+<a href="#" class="index_pag_old_next pag-list" data-pagenum="2">2</a>
+</li>
+<li>
+<a href="#" class="index_pag_old_next pag-list" data-pagenum="3">3</a>
+</li>
+</ul>
+</div>
+<a class="older-index-btn-dn index_pag_old_next" href="index.php?id=1">Older</a>
 </div>
 </div>
 <?php include("webkit/sidebar"); ?>
