@@ -168,31 +168,81 @@ die('
 </li>
 </ul>
 </div>
+<?php
+/* check connection */
+if (mysqli_connect_errno()) {
+printf("Connect failed: %s\n", mysqli_connect_error());
+exit();
+}
+if ($newsrslt = $aquaglz->query("SELECT * FROM news ORDER BY id")) {
+/* determine number of rows result set */
+$news_cnt = $newsrslt->num_rows;
+?>
 <div class="l-row">
 <!-- Page Summary Charts-->
 <div class="summary-chart chart-views l-col-md-4">
 <div class="l-row">
 <div class="l-col-xl-5 l-col-md-6 l-col-sm-5">
-<div class="chart-info"><a href="#" title="Update total views" class="update-chart-views tt-top"><i class="fa fa-eye"></i></a><span>0</span>
-<p>Total Views</p>
+<div class="chart-info"><a href="#" title="Update total views" class="update-chart-views tt-top"><i class="fa fa-eye"></i></a><span>
+<?php
+echo $news_cnt;
+/* close result set */
+$newsrslt->close();
+}
+?>
+</span>
+<p>News</p>
 </div>
 </div>
 </div>
 </div>
+<?php
+/* check connection */
+if (mysqli_connect_errno()) {
+printf("Connect failed: %s\n", mysqli_connect_error());
+exit();
+}
+if ($result = $aquaglz->query("SELECT * FROM users ORDER BY uid")) {
+/* determine number of rows result set */
+$row_cnt = $result->num_rows;
+?>
 <div class="summary-chart chart-followers l-col-md-4">
 <div class="l-row">
 <div class="l-col-sm-5">
-<div class="chart-info"><a href="#" title="Update followers" class="update-chart-followers tt-top"><i class="fa fa-users"></i></a><span>0</span>
-<p>Followers</p>
+<div class="chart-info"><a href="#" title="Update followers" class="update-chart-followers tt-top"><i class="fa fa-users"></i></a><span>
+<?php
+echo $row_cnt;
+/* close result set */
+$result->close();
+}
+?>
+</span>
+<p>Users</p>
 </div>
 </div>
 </div>
 </div>
+<?php
+/* check connection */
+if (mysqli_connect_errno()) {
+printf("Connect failed: %s\n", mysqli_connect_error());
+exit();
+}
+if ($forumrslt = $aquaglz->query("SELECT * FROM threads ORDER BY id")) {
+/* determine number of rows result set */
+$frm_cnt = $forumrslt->num_rows;
+?>
 <div class="summary-chart chart-comments l-col-md-4">
 <div class="l-row">
 <div class="l-col-sm-5">
-<div class="chart-info"><a href="#" title="Update comments" class="update-chart-comments tt-top"><i class="fa fa-comments"></i></a><span>0</span>
-<p>Comments</p>
+<div class="chart-info"><a href="#" title="Update comments" class="update-chart-comments tt-top"><i class="fa fa-comments"></i></a><span>
+<?php
+echo $frm_cnt;
+/* close result set */
+$forumrslt->close();
+}
+?></span>
+<p>Topics</p>
 </div>
 </div>
 </div>
@@ -205,18 +255,7 @@ die('
 </div>
 <!-- Page Summary Weather-->
 <div class="summary-time-status weather-wrapper l-col-md-4 l-col-sm-6">
-<div id="weather">
-<div class="l-span-sm-6 l-span-xs-12">
-<div class="weather-location">Athens, GRC</div>
-<div class="weather-description">Scattered Thunderstorms</div>
-</div>
-<div class="l-span-sm-3 l-span-xs-9">
-<div class="weather-temp"> 12°C</div>
-</div>
-<div class="l-span-sm-3 l-span-xs-3">
-<div class="weather-icon"><i class="ac ac-0"></i></div>
-</div>
-</div>
+<div id="weather"></div>
 </div>
 </div>
 </div>
@@ -225,57 +264,526 @@ die('
 Welcome to <strong>AquaGuildZ</strong> Content Management System powered by <strong>FlameCMS</strong>! You have accessed the administrators panel.<br>
 Here you can customize your CMS as much as you want and also configure it to your needs.<br>For more info check out the <strong>documentation</strong>.
 </div>
-<!-- Row 2 - Tabs Statistic-->
-<div class="l-spaced-vertical group">
-<!-- Widget Tabs 2-->
-<div class="widget-tabs-2">
-<div class="hide tab-chart-track-color"></div>
+<!-- Row 1 - Info Widgets-->
+<div class="l-row l-spaced-horizontal l-spaced-top">
+<!-- User Widget Info-->
+<div class="l-col-md-3 l-col-sm-6 l-spaced-bottom">
+<div data-ason-type="draggable" class="widget-info-wrapper ason-widget">
+<div class="widget-info-refresh-helper">
+<div class="widget-info t-info-1 ui-drag-item">
+<ul class="widget-options is-options-right">
+<li class="option-main-item"><a href="#" class="ui-drag-handle"><i class="fa fa-arrows"></i></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="refresh" data-ason-target=".widget-info-refresh-helper" data-ason-content="true" data-ason-duration="1100" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="toggle" data-ason-parent="false" data-ason-target="#user-info" data-ason-content="true" data-ason-duration="200" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="delete" data-ason-target=".widget-info-wrapper" data-ason-content="true" data-ason-animation="fadeOut" class="ason-widget"></a></li>
+<li>
 <ul>
-<li class="l-span-lg-3 l-span-sm-6">
-<div class="l-span-xs-7">
-<div class="tab-2-title">Death Knights</div>
-<div class="tab-2-stat">9<span class="text-success">+1</span></div>
-<div class="tab-2-info">Closed</div>
-</div>
-<div class="l-span-xs-5 tab-chart-wrapper">
-<div title="Update" class="tabChartUpdate1 tab-chart-update tt-top"><i class="fa fa-refresh"></i></div><span data-percent="75" class="tabChart1 tab-chart"><span class="percent"></span><i class="tab-chart-1-color fa fa-area-chart"></i></span>
-</div>
-</li>
-<li class="l-span-lg-3 l-span-sm-6">
-<div class="l-span-xs-7">
-<div class="tab-2-title">Hunters</div>
-<div class="tab-2-stat">22<span class="text-danger">+2</span></div>
-<div class="tab-2-info">Closed</div>
-</div>
-<div class="l-span-xs-5 tab-chart-wrapper">
-<div title="Update" class="tabChartUpdate2 tab-chart-update tt-top"><i class="fa fa-refresh"></i></div><span data-percent="32" class="tabChart2 tab-chart"><span class="percent"></span><i class="tab-chart-2-color fa fa-line-chart"></i></span>
-</div>
-</li>
-<li class="l-span-lg-3 l-span-sm-6">
-<div class="l-span-xs-7">
-<div class="tab-2-title">Druids</div>
-<div class="tab-2-stat">17<span class="text-warning">-1</span></div>
-<div class="tab-2-info">Closed</div>
-</div>
-<div class="l-span-xs-5 tab-chart-wrapper">
-<div title="Update" class="tabChartUpdate3 tab-chart-update tt-top"><i class="fa fa-refresh"></i></div><span data-percent="54" class="tabChart3 tab-chart"><span class="percent"></span><i class="tab-chart-3-color fa fa-rss"></i></span>
-</div>
-</li>
-<li class="l-span-lg-3 l-span-sm-6">
-<div class="l-span-xs-7">
-<div class="tab-2-title">Mages</div>
-<div class="tab-2-stat">14<span class="text-success">+5</span></div>
-<div class="tab-2-info">Closed</div>
-</div>
-<div class="l-span-xs-5 tab-chart-wrapper">
-<div title="Update" class="tabChartUpdate4 tab-chart-update tt-top"><i class="fa fa-refresh"></i></div><span data-percent="45" class="tabChart4 tab-chart"><span class="percent"></span><i class="tab-chart-4-color fa fa-facebook"></i></span>
-</div>
+<li class="option-sub-item"><a href="#" class="details-btn"><i class="fa fa-file"></i></a></li>
+<li class="option-sub-item"><a href="#" class="chart-btn"><i class="fa fa-line-chart"></i></a></li>
+</ul>
 </li>
 </ul>
+<div id="user-info" class="widget-info-details">
+<div class="info-data open">
+<h4><?php echo $row_cnt; ?></h4>
+<hr>
+<p><span>Total</span> Users
+</p>
+<div class="progress progress-no-border progress-mini">
+<div role="progressbar" aria-valuenow="<?php echo $row_cnt; ?>" aria-valuemin="0" aria-valuemax="1000" style="width: <?php echo $row_cnt; ?>%;" class="progress-bar"><span class="sr-only"><?php echo $row_cnt; ?>% Complete</span></div>
 </div>
 </div>
+<div class="info-chart">
+<div class="hide info-t-1-spark-1-c"></div>
+<div id="customerChart"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Orders Widget Info-->
+<div class="l-col-md-3 l-col-sm-6 l-spaced-bottom l-clear-sm">
+<div data-ason-type="draggable" class="widget-info-wrapper ason-widget">
+<div class="widget-info-refresh-helper">
+<div class="widget-info t-info-2 ui-drag-item">
+<ul class="widget-options is-options-right">
+<li class="option-main-item"><a href="#" class="ui-drag-handle"><i class="fa fa-arrows"></i></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="refresh" data-ason-target=".widget-info-refresh-helper" data-ason-content="true" data-ason-duration="1100" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="toggle" data-ason-parent="false" data-ason-target="#order-info" data-ason-content="true" data-ason-duration="200" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="delete" data-ason-target=".widget-info-wrapper" data-ason-content="true" data-ason-animation="fadeOut" class="ason-widget"></a></li>
+<li>
+<ul>
 
+<li class="option-sub-item"><a href="#" class="details-btn"><i class="fa fa-file"></i></a></li>
+<li class="option-sub-item"><a href="#" class="chart-btn"><i class="fa fa-line-chart"></i></a></li>
+</ul>
+</li>
+</ul>
+<div id="order-info" class="widget-info-details">
+<div class="info-data open">
+<h4><?php echo $news_cnt; ?></h4>
+<hr>
+<p><span>Total</span> News Posts
+</p>
+<div class="progress progress-no-border progress-mini">
+<div role="progressbar" aria-valuenow="<?php echo $news_cnt; ?>" aria-valuemin="0" aria-valuemax="1000" style="width: <?php echo $news_cnt; ?>%;" class="progress-bar"><span class="sr-only"><?php echo $news_cnt; ?>% Complete</span></div>
+</div>
+</div>
+<div class="info-chart">
+<div class="hide info-t-2-spark-1-c"></div>
+<div class="hide info-t-2-spark-2-c"></div>
+<div class="hide info-t-2-spark-3-c"></div>
+<div id="ordersChart"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Reports Widget Info-->
+<div class="l-col-md-3 l-col-sm-6 l-spaced-bottom">
+<div data-ason-type="draggable" class="widget-info-wrapper ason-widget">
+<div class="widget-info-refresh-helper">
+<div class="widget-info t-info-3 ui-drag-item">
+<ul class="widget-options is-options-right">
+<li class="option-main-item"><a href="#" class="ui-drag-handle"><i class="fa fa-arrows"></i></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="refresh" data-ason-target=".widget-info-refresh-helper" data-ason-content="true" data-ason-duration="1100" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="toggle" data-ason-parent="false" data-ason-target="#report-info" data-ason-content="true" data-ason-duration="200" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="delete" data-ason-target=".widget-info-wrapper" data-ason-content="true" data-ason-animation="fadeOut" class="ason-widget"></a></li>
+<li>
+<ul>
 
+<li class="option-sub-item"><a href="#" class="details-btn"><i class="fa fa-file"></i></a></li>
+<li class="option-sub-item"><a href="#" class="chart-btn"><i class="fa fa-line-chart"></i></a></li>
+</ul>
+</li>
+</ul>
+<div id="report-info" class="widget-info-details">
+<div class="info-data open">
+<h4><?php echo $frm_cnt; ?></h4>
+<hr>
+<p><span>Total</span> Forum Posts
+</p>
+<div class="progress progress-no-border progress-mini">
+<div role="progressbar" aria-valuenow="<?php echo $frm_cnt; ?>" aria-valuemin="0" aria-valuemax="1000" style="width: <?php echo $frm_cnt; ?>%;" class="progress-bar"><span class="sr-only"><?php echo $frm_cnt; ?>% Complete</span></div>
+</div>
+</div>
+<div class="info-chart">
+<div class="pt-10">
+<div class="hide info-t-3-spark-1-c"></div>
+<div id="reportsChart"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Payout Widget Info-->
+<div class="l-col-md-3 l-col-sm-6 l-spaced-bottom">
+<div data-ason-type="draggable" class="widget-info-wrapper ason-widget">
+<div class="widget-info-refresh-helper">
+<div class="widget-info t-info-4 ui-drag-item">
+<ul class="widget-options is-options-right">
+<li class="option-main-item"><a href="#" class="ui-drag-handle"><i class="fa fa-arrows"></i></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="refresh" data-ason-target=".widget-info-refresh-helper" data-ason-content="true" data-ason-duration="1100" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="toggle" data-ason-parent="false" data-ason-target="#payout-info" data-ason-content="true" data-ason-duration="200" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="delete" data-ason-target=".widget-info-wrapper" data-ason-content="true" data-ason-animation="fadeOut" class="ason-widget"></a></li>
+<li>
+<ul>
+
+<li class="option-sub-item"><a href="#" class="details-btn"><i class="fa fa-file"></i></a></li>
+<li class="option-sub-item"><a href="#" class="chart-btn"><i class="fa fa-line-chart"></i></a></li>
+</ul>
+</li>
+</ul>
+<div id="payout-info" class="widget-info-details">
+<div class="info-data open">
+<h4>0 &#8364;</h4>
+<hr>
+<p><span>Total</span> Maintenance Taxes
+</p>
+<div class="progress progress-no-border progress-mini">
+<div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;" class="progress-bar"><span class="sr-only">0% Complete</span></div>
+</div>
+</div>
+<div class="info-chart">
+<div class="hide info-t-4-spark-1-c"></div>
+<div id="paymentChart"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 2 - Stats, Orders, Social-->
+<div class="l-row l-spaced-horizontal">
+<!-- Stats Widget-->
+<div class="l-col-lg-3 l-col-md-4 l-spaced-bottom">
+<div class="widget-stats t-stats-1">
+<ul class="widget-options is-options-right">
+<li class="option-main-item"><a href="#" data-ason-type="refresh" data-ason-target=".widget-stats" data-ason-content="true" data-ason-duration="1100" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="toggle" data-ason-parent="false" data-ason-target=".widget-stats-info" data-ason-content="true" data-ason-duration="200" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="delete" data-ason-target=".widget-stats" data-ason-content="true" data-ason-animation="fadeOut" class="ason-widget"></a></li>
+</ul>
+<?php
+$num_amount = $row_cnt;
+$num_total = 1000;
+
+function percent($num_amount, $num_total) {
+$count1 = $num_amount / $num_total;
+$count2 = $count1 * 100;
+$count = number_format($count2, 0);
+?>
+<div class="widget-stats-info">
+<h4 class="widget-header">Stats</h4>
+<div class="l-row">
+<div class="l-col-xs-8 stats-data"><span><?php echo $num_amount; ?></span>
+<div>users</div>
+</div>
+<div class="l-col-xs-4 stats-change"><span class="text-success">
+<?php echo $count;
+}
+percent($num_amount, $num_total); ?>%</span>
+<div>increased</div>
+</div>
+</div>
+<?php
+$news_amount = $news_cnt;
+$news_total = 1000;
+
+function percent_news($news_amount, $news_total) {
+$ncount1 = $news_amount / $news_total;
+$ncount2 = $ncount1 * 100;
+$ncount = number_format($ncount2, 0);
+?>
+<div class="l-row">
+<div class="l-col-xs-8 stats-data"><span><?php echo $news_amount; ?></span>
+<div>news / posts</div>
+</div>
+<div class="l-col-xs-4 stats-change"><span class="text-success">
+<?php echo $ncount;
+}
+percent_news($news_amount, $news_total); ?>%</span>
+<div>increased</div>
+</div>
+</div>
+<?php
+/* check connection */
+if (mysqli_connect_errno()) {
+printf("Connect failed: %s\n", mysqli_connect_error());
+exit();
+}
+if ($replyrslt = $aquaglz->query("SELECT * FROM replies ORDER BY id")) {
+/* determine number of rows result set */
+$reply_cnt = $replyrslt->num_rows;
+/* close result set */
+$replyrslt->close();
+}
+$repl_amount = $reply_cnt;
+$repl_total = 1000;
+
+function percent_replies($repl_amount, $repl_total) {
+$rcount1 = $repl_amount / $repl_total;
+$rcount2 = $rcount1 * 100;
+$rcount = number_format($rcount2, 0);
+?>
+<div class="l-row">
+<div class="l-col-xs-8 stats-data"><span><?php echo $repl_amount; ?></span>
+<div>comments / replies</div>
+</div>
+<div class="l-col-xs-4 stats-change"><span class="text-success">
+<?php echo $rcount;
+}
+percent_replies($repl_amount, $repl_total); ?>%</span>
+<div>increased</div>
+</div>
+</div>
+<?php
+$forum_amount = $frm_cnt;
+$forum_total = 1000;
+
+function percent_forums($forum_amount, $forum_total) {
+$fcount1 = $forum_amount / $forum_total;
+$fcount2 = $fcount1 * 100;
+$fcount = number_format($fcount2, 0);
+?>
+<div class="l-row">
+<div class="l-col-xs-8 stats-data"><span><?php echo $forum_amount; ?></span>
+<div>forum topics</div>
+</div>
+<div class="l-col-xs-4 stats-change"><span class="text-success">
+<?php echo $fcount;
+}
+percent_forums($forum_amount, $forum_total); ?>%</span>
+<div>increased</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Orders Widget-->
+<div class="l-col-lg-6 l-col-md-8 l-clear-md l-spaced-bottom">
+<div class="widget-latest-orders t-latest-orders-1">
+<ul class="widget-options is-options-left">
+<li class="option-main-item"><a href="#" data-ason-type="refresh" data-ason-target=".widget-latest-orders" data-ason-content="true" data-ason-duration="1100" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="toggle" data-ason-parent="false" data-ason-target=".widget-latest-orders-info" data-ason-content="true" data-ason-duration="200" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="delete" data-ason-target=".widget-latest-orders" data-ason-content="true" data-ason-animation="fadeOut" class="ason-widget"></a></li>
+
+</ul>
+<div class="widget-latest-orders-info">
+<h4 class="widget-header">Latest News
+<?php
+$news_amount = $news_cnt;
+$news_total = 1000;
+
+function percent_news2($news_amount, $news_total) {
+$ncount1 = $news_amount / $news_total;
+$ncount2 = $ncount1 * 100;
+$ncount = number_format($ncount2, 0);
+?>
+<div class="weekly"><span class="text-success"><?php echo $ncount;
+}
+percent_news2($news_amount, $news_total); ?>%</span> increased
+</div>
+</h4>
+<table class="table table-hover table-order-header">
+<thead>
+<tr>
+<th class="tb-col-1">#</th>
+<th class="tb-col-2">Title</th>
+<th class="tb-col-3">Author</th>
+<th class="tb-col-4">Details</th>
+<th class="tb-col-5">Image Code</th>
+</tr>
+</thead>
+</table>
+<div class="table-order-body">
+<div data-ason-type="scrollbar" data-ason-max-height="200" class="ason-widget">
+<table class="table table-hover">
+<tbody>
+<?php
+$news = "SELECT * FROM news ORDER BY id ASC";
+$result = $aquaglz->query($news);
+if ($result->num_rows > 0) {
+// output data of each row
+while($news = $result->fetch_assoc()) {
+if($news['content'] == "")
+{
+$news['content'] = substr(strip_tags($news['content'],'<p><a><br><li><ol><ul>'),0,20);
+if (substr($news['content'], -1) == '<') 
+{$news['content'] = substr($news['content'], 0, -1);}
+$content = $news['content'];
+}else{
+$content = substr(strip_tags($news['content']),0,20);}
+echo '
+<tr>
+<td class="tb-col-1">'.$news["id"].'</td>
+<td class="tb-col-2">'.$news["title"].'</td>
+<td class="tb-col-3">'.$news["author"].'</td>
+<td class="tb-col-4">'.$content.'...</td>
+<td class="tb-col-5">'.$news["image"].'</td>
+</tr>
+';
+}
+} else {
+echo '
+<tr>
+<td class="tb-col-1">0</td>
+<td class="tb-col-2">No News</td>
+<td class="tb-col-3">YET</td>
+<td class="tb-col-4">GO Make</td>
+<td class="tb-col-5">NOW!</td>
+</tr>';
+}
+?>
+</tbody>
+</table>
+</div>
+</div>
+<div class="l-row">
+<div class="l-col-xs-6"><a class="view-all"><i class="fa fa-angle-double-down"></i> Scroll for more</a></div>
+<div class="l-col-xs-6">
+<div class="total">Total:<span></span><?php echo $news_cnt; ?> Posts</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Widget-->
+<div class="l-col-lg-3 l-col-md-12 l-spaced-bottom">
+<div class="l-row">
+<div class="l-col-lg-12 l-col-sm-4">
+<div class="widget-social social-in-box t-social-facebook">
+<div class="social-icon"><i class="fa fa-facebook"></i></div>
+<div class="social-info"><span>0</span> Likes
+</div>
+</div>
+</div>
+<div class="l-col-lg-12 l-col-sm-4">
+<div class="widget-social social-in-box t-social-twitter">
+<div class="social-icon"><i class="fa fa-twitter"></i></div>
+<div class="social-info"><span>0</span> Followers
+</div>
+</div>
+</div>
+<div class="l-col-lg-12 l-col-sm-4">
+<div class="widget-social social-in-box t-social-google-plus">
+<div class="social-icon"><i class="fa fa-google-plus"></i></div>
+<div class="social-info"><span>0</span> Followers
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 4 - Todo and Maps-->
+<!-- <div class="l-row l-spaced-horizontal">
+<div class="l-col-xl-3 l-col-lg-4 l-col-md-5 l-spaced-bottom">
+<!-- Todo Widget-->
+<!-- <div class="widget-todo">
+<ul class="widget-options is-options-right">
+<li class="option-main-item"><a href="#" data-ason-type="refresh" data-ason-target=".widget-todo" data-ason-content="true" data-ason-duration="1100" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="toggle" data-ason-parent="false" data-ason-target=".widget-todo-info" data-ason-content="true" data-ason-duration="200" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="delete" data-ason-target=".widget-todo" data-ason-content="true" data-ason-animation="fadeOut" class="ason-widget"></a></li>
+</ul>
+<div class="widget-todo-info">
+<h4 class="widget-header">Version List</h4>
+<ul data-ason-type="draggable" class="todo-list todocheckbo ason-widget">
+<li class="todo-item ui-drag-item"><a href="#" class="ui-drag-handle"><i class="fa fa-bars"></i></a>
+<label class="cb-checkbox cb-checkbox-danger-2">
+<input type="checkbox" value=""><span class="todo-text">Commit latest changes</span>
+</label><a href="#" data-ason-type="delete" data-ason-target=".todo-item" data-ason-content="true" data-ason-animation="fadeOut" class="delete-todo ason-widget pull-right"></a>
+</li>
+</ul>
+<div class="todo-input">
+<div class="input-group">
+<input id="addTaskInput" type="text" placeholder="Add task..." class="form-control"><span class="input-group-btn">
+<button type="button" id="addTaskButton" class="btn btn-dark"><i class="fa fa-plus"></i></button></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="l-col-xl-9 l-col-lg-8 l-col-md-7 l-spaced-bottom">
+<div class="widget-members t-members-1">
+<ul class="widget-options is-options-right">
+<li class="option-main-item"><a href="#" data-ason-type="refresh" data-ason-target=".widget-members" data-ason-loader-class="spinner duo" data-ason-content="true" data-ason-duration="1100" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="toggle" data-ason-parent="false" data-ason-target=".widget-members-info" data-ason-content="true" data-ason-duration="200" class="ason-widget"></a></li>
+<li class="option-main-item"><a href="#" data-ason-type="delete" data-ason-target=".widget-members" data-ason-content="true" data-ason-animation="fadeOut" class="ason-widget"></a></li>
+</ul>
+<div class="widget-members-info">
+<h4 class="widget-header">Members</h4>
+<div class="table-responsive">
+<table class="todocheckbo table table-hover table-striped table-order-header">
+<thead>
+<tr>
+<th class="tb-col-0">
+<label id="members-all" class="cb-checkbox cb-checkbox">
+<input type="checkbox" value="">
+</label>
+</th>
+<th class="tb-col-1">#</th>
+<th class="tb-col-2">Name</th>
+<th class="tb-col-3">Position</th>
+<th class="tb-col-4">Status</th>
+<th class="tb-col-5">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="members-row">
+<td class="tb-col-0">
+<label class="cb-checkbox">
+<input type="checkbox" value="">
+</label>
+</td>
+<td class="tb-col-1">1</td>
+<td class="tb-col-2">Kelly Garcia</td>
+<td class="tb-col-3">Designer</td>
+<td class="tb-col-4">
+<div class="label label-danger">Offline</div>
+</td>
+<td class="tb-col-5"><a href="#" class="btn btn-dark">Edit</a></td>
+</tr>
+<tr class="members-row">
+<td class="tb-col-0">
+<label class="cb-checkbox">
+<input type="checkbox" value="">
+</label>
+</td>
+<td class="tb-col-1">2</td>
+<td class="tb-col-2">Jerry Nelson</td>
+<td class="tb-col-3">Member</td>
+<td class="tb-col-4">
+<div class="label label-success">Online</div>
+</td>
+<td class="tb-col-5"><a href="#" class="btn btn-dark">Edit</a></td>
+</tr>
+<tr class="members-row">
+<td class="tb-col-0">
+<label class="cb-checkbox">
+<input type="checkbox" value="">
+</label>
+</td>
+<td class="tb-col-1">3</td>
+<td class="tb-col-2">Harold Ellis</td>
+<td class="tb-col-3">Programmer</td>
+<td class="tb-col-4">
+<div class="label label-danger">Offline</div>
+</td>
+<td class="tb-col-5"><a href="#" class="btn btn-dark">Edit</a></td>
+</tr>
+<tr class="members-row">
+<td class="tb-col-0">
+<label class="cb-checkbox">
+<input type="checkbox" value="">
+</label>
+</td>
+<td class="tb-col-1">4</td>
+<td class="tb-col-2">Michael Hart</td>
+<td class="tb-col-3">Co-founder</td>
+<td class="tb-col-4">
+<div class="label label-danger">Offline</div>
+</td>
+<td class="tb-col-5"><a href="#" class="btn btn-dark">Edit</a></td>
+</tr>
+<tr class="members-row">
+<td class="tb-col-0">
+<label class="cb-checkbox">
+<input type="checkbox" value="">
+</label>
+</td>
+<td class="tb-col-1">5</td>
+<td class="tb-col-2">Madison Hart</td>
+<td class="tb-col-3">Member</td>
+<td class="tb-col-4">
+<div class="label label-success">Online</div>
+</td>
+<td class="tb-col-5"><a href="#" class="btn btn-dark">Edit</a></td>
+</tr>
+<tr class="members-row">
+<td class="tb-col-0">
+<label class="cb-checkbox">
+<input type="checkbox" value="">
+</label>
+</td>
+<td class="tb-col-1">6</td>
+<td class="tb-col-2">Kelly Oliver</td>
+<td class="tb-col-3">CEO</td>
+<td class="tb-col-4">
+<div class="label label-success">Online</div>
+</td>
+<td class="tb-col-5"><a href="#" class="btn btn-dark">Edit</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>-->
 <!--FOOTER-->
 <footer class="l-footer l-footer-1 t-footer-1">
 <div class="group pt-10 pb-10 ph">
@@ -286,11 +794,22 @@ Powered by
 <a href="#">ZorDesigns</a>
 All rights reserved.
 </div>
-<div class="version pull-right">v 1.0</div>
+<?php
+$vrsn = "SELECT * FROM version ORDER BY id DESC LIMIT 1";
+$resultv = $aquaglz->query($vrsn);
+if ($resultv->num_rows > 0) {
+// output data of each row
+while($vrsn = $resultv->fetch_assoc()) {
+?>
+<div class="version pull-right">v<?php echo $vrsn["text"]; }}?></div>
 </div>
 </footer>
 </section>
 </section>
+<?php 
+/* close connection */
+$aquaglz->close();
+?>
 <!-- ===== JS =====-->
 <!-- jQuery-->
 <script src="js/basic/jquery.min.js"></script>

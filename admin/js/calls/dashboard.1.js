@@ -97,7 +97,7 @@ function toggleFullScreen() {
 function runForecast(){
 
     // Default Setup
-    runSetForecastWeather('New York, NY','f');
+    runSetForecastWeather('Athens, GR','C');
 
     // Search On Enter Press Setup
     $(document).keypress(function(e) {
@@ -303,7 +303,7 @@ function runTextRotator(){
 function runDisplayWeather(){
 
     // Default Setup
-    runSetWeather('New York, NY','f');
+    runSetWeather('Athens, GR','c');
 
     // Default Setup
     var color = $('.switcheryUnits').css('color');
@@ -323,9 +323,9 @@ function runDisplayWeather(){
                 }
             }else{
                 if(switcheryUnits.checked){
-                    runSetWeather('New York, NY','c');
+                    runSetWeather('Athens, GR','c');
                 }else{
-                    runSetWeather('New York, NY','f');
+                    runSetWeather('Athens, GR','f');
                 }
             }
 

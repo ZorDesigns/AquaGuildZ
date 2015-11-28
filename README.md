@@ -5,14 +5,14 @@
 ----------
 | Functions        | Progress           | Admin Panel        | Progress           | Account Panel        | Progress           |
 | ------------- |:-------------:| ------------- |:-------------:| ------------- |:-------------:| -----:|
-| News        | 100% |News        | 0% |BNET API         | 0% |
-| Register        | 100% |Media    | 0% |Characters    | 0% |
-| Login        | 100% |Forums        | 0% |Settings | 0% |
-| Media    | 25%      |Services        | 0% |Avatar        | 0% |
-| Community | 0%     |Accounts        | 0% |Custom Avatar        | 0% |
-| Forums        | 65% |Characters        | 0% |Signatures        | 0% |
-| Services        | 100%|Settings        | 0% |Index - Main        | 5% |
-| Admin Panel        | 10% |
+| News        | 100% |News        | 5% |BNET API         | 0% |
+| Register        | 100% |Media    | 5% |Characters    | 0% |
+| Login        | 100% |Forums        | 5% |Settings | 0% |
+| Media    | 25%      |Services        | 5% |Avatar        | 0% |
+| Community | 0%     |Accounts        | 5% |Custom Avatar        | 0% |
+| Forums        | 65% |Characters        | 5% |Signatures        | 0% |
+| Services        | 100%|Settings        | 5% |Index - Main        | 5% |
+| Admin Panel        | 10% |Dashboard        | 85% |
 | Account Panel        | 0% |
 | Facebook API        | 0% |
 | BNET API        | 0% |
