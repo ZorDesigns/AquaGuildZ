@@ -1,2 +1,0 @@
-<?php $news = "SELECT * FROM news ORDER BY id DESC LIMIT 4";
-$result = $aquaglz->query($news); ?>

@@ -7,7 +7,7 @@ include("../check.php");
 <div class="profile-2-img"><a href="#"><img src="img/profile/profile.gif"></a></div>
 <ul class="profile-2-info">
 <li>
-<h3><?php echo $row['name']; ?></h3>
+<h3><?php echo $row['firstname']; ?></h3>
 </li>
 <li>Rank: <?php echo $row['rank']; ?></li>
 <li>

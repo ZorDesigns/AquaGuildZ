@@ -1,12 +1,10 @@
 <?php
 include("check.php");
 ?>
-<div class="fullscreen-bg">
-<video loop muted autoplay poster="assets/images/frame.png" class="fullscreen-bg__video">
+<video loop muted autoplay poster="assets/images/frame.png" id="bgvid">
 <source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.webm" type="video/webm">
 <source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.mp4" type="video/mp4">
 </video>
-</div>
 <link href="assets/stylesheets/nav.css" rel="stylesheet" type="text/css">
 <div id="nav-client-header" class="nav-client compact">
 <div id="nav-client-bar">

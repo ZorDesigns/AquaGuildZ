@@ -2,7 +2,6 @@
 $page_cat = "home";
 $page_tit = "home";
 include __DIR__ . '/configs.php';
-include __DIR__ . '/settings/news';
 include __DIR__ . '/settings/vids';
 include __DIR__ . '/settings/slides';
 ?>
@@ -88,51 +87,110 @@ echo '<li>
 </div>
 </div>
 <div id="main_content">
-<a class="newer-index-btn index_pag_old_next" href="index.php?id=2">Newer</a>
-<div class="paging">
-<ul class="pagination-forum">
-<li class="current">
-<a href="#" class="index_pag_old_next pag-list" data-pagenum="1">1</a>
-</li>
-<li>
-<a href="#" class="index_pag_old_next pag-list" data-pagenum="2">2</a>
-</li>
-<li>
-<a href="#" class="index_pag_old_next pag-list" data-pagenum="3">3</a>
-</li>
-</ul>
-</div>
-<a class="older-index-btn index_pag_old_next" href="index.php?id=1">Older</a>
 <?php
-if ($result->num_rows > 0) {
-// output data of each row
-while($news = $result->fetch_assoc()) {
-if($news['content'] == "")
+// The name says it all :P
+$per_page = 4;
+
+// Numbering the results from the DB
+if ($news = $aquaglz->query("SELECT * FROM news ORDER BY id"))
 {
-$news['content'] = substr(strip_tags($news['content'],'<p><a><br><li><ol><ul>'),0,310);
-if (substr($news['content'], -1) == '<') 
-{$news['content'] = substr($news['content'], 0, -1);}
-$content = $news['content'];
+if (@$news->num_rows != 0)
+{
+$total_results = $news->num_rows;
+// Returns the highest integer in row by rounding them up -> ceil()
+$total_pages = ceil($total_results / $per_page);
+
+// Checking the Variable of the Page
+if (isset($_GET['page']) && is_numeric($_GET['page']))
+{
+$show_page = $_GET['page'];
+if ($show_page > 0 && $show_page <= $total_pages)
+{
+$start = ($show_page -1) * $per_page;
+$end = $start + $per_page;
+}
+else
+{
+// Error to show the first page.
+$start = 0;
+$end = $per_page;
+}
+}
+else
+{
+// Display Page One if not numbered.
+$start = 0;
+$end = $per_page;
+}
+
+// Pagination Yay!
+echo '<a class="newer-index-btn index_pag_old_next" href="index.php?page='.$end.'">Last</a>
+<div class="paging">
+<ul class="pagination-forum">';
+for ($i = 1; $i <= $total_pages; $i++)
+{
+if (isset($_GET['page']) && $_GET['page'] == $i)
+{
+echo '<li class="current">
+<a href="index.php?page='.$i.'" class="current_nr pag-list" data-pagenum="'.$i.'">'.$i.'</a>
+</li>';
+}
+else
+{
+echo '';
+echo'
+<li class="current">
+<a href="index.php?page='.$i.'" class="index_pag_old_next pag-list" data-pagenum="'.$i.'">'.$i.'</a>
+</li>
+';
+}
+}
+echo '</ul>
+</div>
+<a class="older-index-btn-dn index_pag_old_next" href="index.php?page=1">First</a>';
+
+// Loop results from the DB Query, displaying them
+for ($i = $start; $i < $end; $i++)
+{
+// Make sure the PHP doesn't display "potatoes"
+if ($i == $total_results) { break; }
+
+// Search for Specific Row
+$news->data_seek($i);
+$row = $news->fetch_row();
+
+//Minimizing the news information.
+if($row[3] == "")
+{
+$row[3] = substr(strip_tags($row[3],'<p><a><br><li><ol><ul>'),0,310);
+if (substr($row[3], -1) == '<') 
+{$row[3] = substr($row[3], 0, -1);}
+$content = $row[3];
 }else{
-$content = substr(strip_tags($news['content']),0,390);}
+$content = substr(strip_tags($row[3]),0,390);
+}
+// Display the News in rows
 echo '
 <article>
 <header>
-<h1><a href="news.php?id='.$news["id"].'">'.$news["title"].'</a></h1>
-<p class="meta">by <a href="">System</a> '.$news["date"].' <a href="">0</a> <img src="assets/images/content-comments.png" alt="Comments"></p>
+<h1><a href="news.php?id='.$row[0].'">'.$row[4].'</a></h1>
+<p class="meta">by <a href="">System</a> '.$row[2].' <a href="">0</a> <img src="assets/images/content-comments.png" alt="Comments"></p>
 </header>
 <div class="content">
 <div class="thumb">
-<a href="news.php?id='.$news["id"].'"><img src="assets/images/news/square/'.$news["image"].'.png" alt=""></a>
+<a href="news.php?id='.$row[0].'"><img src="assets/images/news/square/'.$row[6].'.png" alt=""></a>
 </div>
 <p>'.$content.'...</p>
-<p><a href="news.php?id='.$news["id"].'">Read more</a></p>
+<p><a href="news.php?id='.$row[0].'">Read more</a></p>
 </div>
 <footer><!-- --></footer>
 </article>
 ';
 }
-} else {
+}
+// Else use the Basic Intro for not having any News
+else
+{
 echo '
 <article>
 <header>
@@ -149,23 +207,10 @@ echo '
 <footer><!-- --></footer>
 </article>';
 }
+}
+// Close the Query
 $aquaglz->close();
 ?>
-<a class="newer-index-btn-dn index_pag_old_next" href="index.php?id=2">Newer</a>
-<div class="paging-dn">
-<ul class="pagination-forum">
-<li class="current">
-<a href="#" class="index_pag_old_next pag-list" data-pagenum="1">1</a>
-</li>
-<li>
-<a href="#" class="index_pag_old_next pag-list" data-pagenum="2">2</a>
-</li>
-<li>
-<a href="#" class="index_pag_old_next pag-list" data-pagenum="3">3</a>
-</li>
-</ul>
-</div>
-<a class="older-index-btn-dn index_pag_old_next" href="index.php?id=1">Older</a>
 </div>
 </div>
 <?php include("webkit/sidebar"); ?>
