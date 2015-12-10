@@ -7,6 +7,7 @@
 <ul>
 <li class="<?php if($page_cat=='char') echo'active';?>"><a href="char.php"><span class="title">Add Character</span></a></li>
 <li class="<?php if($page_cat=='prog') echo'active';?>"><a href="prog.php"><span class="title">Progress API</span></a></li>
+<li class="<?php if($page_cat=='edituser') echo'active';?>"><a href="#"><span class="title">Edit User</span></a></li>
 </li>
 </ul>
 </ul>
