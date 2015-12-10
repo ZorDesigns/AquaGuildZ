@@ -34,15 +34,15 @@ echo "<div style='padding:4px; border:1px solid red; color:red'>" . $error
 
 <strong>Email: *</strong> <input type="text" name="email" value="<?php echo $first; ?>"/><br/>
 
-<strong>bTag: *</strong> <input type="text" name="lastname" value="<?php echo $second; ?>"/><br/>
+<strong>bTag: *</strong> <input type="text" name="bTag" value="<?php echo $second; ?>"/><br/>
 
-<strong>First Name: *</strong> <input type="text" name="lastname" value="<?php echo $third; ?>"/><br/>
+<strong>First Name: *</strong> <input type="text" name="firstname" value="<?php echo $third; ?>"/><br/>
 
 <strong>Last Name: *</strong> <input type="text" name="lastname" value="<?php echo $fourth; ?>"/><br/>
 
-<strong>Rank: *</strong> <input type="text" name="lastname" value="<?php echo $fifth; ?>"/><br/>
+<strong>Rank: *</strong> <input type="text" name="rank" value="<?php echo $fifth; ?>"/><br/>
 
-<strong>Avatar: *</strong> <input type="text" name="lastname" value="<?php echo $last; ?>"/>
+<strong>Avatar: *</strong> <input type="text" name="avatar" value="<?php echo $last; ?>"/>
 <p>* required</p>
 <input type="submit" name="submit" value="Submit" />
 </div>
@@ -100,7 +100,7 @@ echo "ERROR: could not prepare SQL statement.";
 }
 
 // redirect the user once the form is updated
-header("Location: view.php");
+header("Location: test.php");
 }
 }
 // if the 'id' variable is not valid, show an error message
@@ -138,10 +138,10 @@ else
 echo "Error: could not prepare SQL statement";
 }
 }
-// if the 'id' value is not valid, redirect the user back to the view.php page
+// if the 'id' value is not valid, redirect the user back to the test.php page
 else
 {
-header("Location: view.php");
+header("Location: test.php");
 }
 }
 }
@@ -186,7 +186,7 @@ echo "ERROR: Could not prepare SQL statement.";
 }
 
 // redirec the user
-header("Location: view.php");
+header("Location: test.php");
 }
 
 }

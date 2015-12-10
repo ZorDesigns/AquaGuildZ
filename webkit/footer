@@ -2,9 +2,9 @@
 <div id="lower_nav" class="clearfix">
 <nav>
 <ul>
-<li class="header">Natus Invictus Home</li>
-<li><a href="">What's Natus Invictus?</a></li>
-<li><a href="">Donate for us</a></li>
+<li class="header"><?php echo $cms['title']; ?> Home</li>
+<li><a href="">What's <?php echo $cms['title']; ?>?</a></li>
+<li><a href="">Support us</a></li>
 <li><a href="">Account Panel</a></li>
 <li><a href="">Support</a></li>
 <li><a href="">Apply now</a></li>
@@ -14,7 +14,7 @@
 <ul>
 <li class="header">Account</li>
 <li><a href="">Forgot Password?</a></li>
-<li><a href="">Go Premium/VIP</a></li>
+<li><a href="">Keep us alive!</a></li>
 <li><a href="">Forum User CP</a></li>
 <li><a href="">Account User CP</a></li>
 <li><a href="">Report Abuse</a></li>
@@ -23,8 +23,8 @@
 <nav>
 <ul>
 <li class="header">Support</li>
-<li><a href="">OMFG I got hacked</a></li>
-<li><a href="">Banned, why?</a></li>
+<li><a href="">Server is crashing?</a></li>
+<li><a href="">Can't find my Characters!</a></li>
 <li><a href="">Forums</a></li>
 <li><a href="">FAQ</a></li>
 <li><a href="">Rules</a></li>
@@ -37,9 +37,16 @@
 <div id="credits">
 <nav class="pull-right">
 <ul>
+<?php
+$vrsn = "SELECT * FROM version ORDER BY id DESC LIMIT 1";
+$resultv = $aquaglz->query($vrsn);
+if ($resultv->num_rows > 0) {
+// output data of each row
+while($vrsn = $resultv->fetch_assoc()) {
+?>
 <li><a href="https://github.com/Blizzard">BlizzardAPI</a></li>
 <li><a href="https://github.com/Blizzard/api-wow-docs">WoWAPI</a></li>
-<li><a href="https://github.com/ZorDesigns/AquaGuildZ">AquaGuildZ</a></li>
+<li><a href="https://github.com/ZorDesigns/AquaGuildZ">AquaGuildZ v<?php echo $vrsn["text"]; }}?></a></li>
 </ul>
 </nav>
 Hellenic Horde &copy; 2012 <a href="//flamecms.org/" style="color: #e39f1e;  text-decoration: none;">AquaGuildZ</a>, INC. All rights reserved. Powered by <a href="//flamecms.org/" style="color: #e39f1e;  text-decoration: none;">FlameCMS</a>

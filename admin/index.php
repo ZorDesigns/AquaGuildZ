@@ -696,12 +696,6 @@ echo '
 }
 ?>
 </ul>
-<div class="todo-input">
-<div class="input-group">
-<input id="addTaskInput" type="text" placeholder="Add task..." class="form-control"><span class="input-group-btn">
-<button type="button" id="addTaskButton" class="btn btn-dark"><i class="fa fa-plus"></i></button></span>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -755,7 +749,7 @@ echo '
 <td class="tb-col-4">
 <div class="label label-info"><img src="img/plugins/battlenet.png"> '.$uservi["bTag"].'</div>
 </td>
-<td class="tb-col-5"><a href="#" class="btn btn-dark">Edit</a> <a href="#" class="btn btn-dark">Promote</a></td>
+<td class="tb-col-5"><a href="edit-user.php?id='.$uservi["uid"].'" class="btn btn-dark">Edit</a> <a href="#" class="btn btn-dark">Promote</a></td>
 </tr>
 ';}
 }else{

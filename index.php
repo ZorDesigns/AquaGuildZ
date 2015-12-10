@@ -92,7 +92,7 @@ echo '<li>
 $per_page = 4;
 
 // Numbering the results from the DB
-if ($news = $aquaglz->query("SELECT * FROM news ORDER BY id"))
+if ($news = $aquaglz->query("SELECT * FROM news ORDER BY id DESC"))
 {
 if (@$news->num_rows != 0)
 {
@@ -124,7 +124,7 @@ $end = $per_page;
 }
 
 // Pagination Yay!
-echo '<a class="newer-index-btn index_pag_old_next" href="index.php?page='.$end.'">Last</a>
+echo '<a class="newer-index-btn index_pag_old_next" href="index.php">View All</a>
 <div class="paging">
 <ul class="pagination-forum">';
 for ($i = 1; $i <= $total_pages; $i++)
