@@ -3,7 +3,7 @@
 <nav>
 <ul>
 <li class="header"><?php echo $cms['title']; ?> Home</li>
-<li><a href="">What's <?php echo $cms['title']; ?>?</a></li>
+<li><a href="">What's <?php echo $cms['title']; ?> Guild?</a></li>
 <li><a href="">Support us</a></li>
 <li><a href="">Account Panel</a></li>
 <li><a href="">Support</a></li>

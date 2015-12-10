@@ -5,10 +5,14 @@ include __DIR__ . '/configs.php';
 $msg = "";
 if(isset($_POST["submit"]))
 {
-$name = $_POST["name"];
+$fname = $_POST["fname"];
+$lname = $_POST["lname"];
+$bTag = $_POST["bTag"];
 $email = $_POST["email"];
 $password = $_POST["password"];
-$name = mysqli_real_escape_string($aquaglz, $name);
+$fname = mysqli_real_escape_string($aquaglz, $fname);
+$lname = mysqli_real_escape_string($aquaglz, $lname);
+$bTag = mysqli_real_escape_string($aquaglz, $bTag);
 $email = mysqli_real_escape_string($aquaglz, $email);
 $password = mysqli_real_escape_string($aquaglz, $password);
 $password = md5($password);
@@ -21,7 +25,7 @@ echo" <meta http-equiv='refresh'content='0; url=failed.php'>";
 }
 else
 {
-$query = mysqli_query($aquaglz, "INSERT INTO users (name, email, password, rank)VALUES ('$name', '$email', '$password', 0)");
+$query = mysqli_query($aquaglz, "INSERT INTO users (firstname, lastname, bTag, email, password, rank)VALUES ('$fname', '$lname', '$bTag', '$email', '$password', 0)");
 if($query)
 {
 echo" <meta http-equiv='refresh'content='0; url=success.php'>";
@@ -53,16 +57,13 @@ if ((isset($_SESSION['email']) != ''))
 <link rel="stylesheet" href="admin/css/background.css">
 </head>
 <body class="login-bg">
-<div class="fullscreen-bg">
-<video loop="" muted="" autoplay="" poster="assets/images/frame.png" class="fullscreen-bg__video">
+<video loop muted autoplay poster="assets/images/frame.png" id="bgvid">
 <source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.webm" type="video/webm">
 <source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.mp4" type="video/mp4">
 </video>
-</div>
 <!--[if lt IE 9]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-
 <!--SECTION-->
 <section class="l-main-container">
 <!--Main Content-->
@@ -73,7 +74,16 @@ if ((isset($_SESSION['email']) != ''))
 <!--Login Form-->
 <form id="registerForm" role="form" method="post" action="" class="login-form">
 <div class="form-group">
-<input id="name" type="text" name="name" placeholder="Name" class="form-control">
+<input id="fname" type="text" name="fname" placeholder="First Name" class="form-control">
+</div>
+<div class="form-group">
+<input id="lname" type="text" name="lname" placeholder="Last Name" class="form-control">
+</div>
+<div class="form-group bTag">
+<input id="bTag" type="text" name="bTag" placeholder="BattleTag" class="form-control">
+</div>
+<div class="next form-group bTag">
+<input id="" type="text" name="" placeholder="#0000" class="form-control" disabled>
 </div>
 <div class="form-group">
 <input id="email" type="email" name="email" placeholder="Email" class="form-control">
@@ -85,19 +95,9 @@ if ((isset($_SESSION['email']) != ''))
 <input id="registerPasswordRepeat" type="password" name="registerPasswordRepeat" placeholder="Repeat password" class="form-control">
 </div>
 <div class="checkbox">
-<input id="registerTerms" type="checkbox" name="registerTerms" class="checkradios checkradiosDark-1">By signing up you are accepting out
-<a href="#">Terms and Conditions</a>
+<input id="registerTerms" type="checkbox" name="registerTerms" class="checkradios checkradiosDark-1">By signing up you are accepting our <a href="#">Terms and Conditions</a>
 </div>
 <button type="submit" name="submit" class="btn btn-dark btn-block btn-login">Sign Up</button>
-<div class="login-social">
-<div class="l-span-md-12">
-<div class="or"><span>- OR -</span></div>
-</div>
-<div class="l-span-md-12 register-sign-in"><a href="login.php" class="btn btn-primary btn-block btn-login-register">Sign In - Disabled</a></div>
-<div class="l-col-sm-6"><a class="btn btn-facebook btn-block"><i class="fa fa-facebook"></i>Sign with Facebook - Disabled</a></div>
-<div class="l-col-sm-6"><a class="btn btn-bnet btn-block"><img src="admin/img/plugins/battlenet.png">  Sign with Battle.Net - Disabled</a></div>
-</div>
-<div class="login-options"></div>
 </form>
 </div>
 </div>
