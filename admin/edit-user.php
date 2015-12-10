@@ -87,7 +87,7 @@ renderForm($emailTag, $bTag, $firstname, $lastname, $rankTag, $avatar, $error, $
 else
 {
 // if everything is fine, update the record in the database
-if ($stmt = $aquaglz->prepare("UPDATE users SET email = ?, bTag = ?, firstname = ?, lastname = ?, rankTag = ?, avatar = ? WHERE uid=?"))
+if ($stmt = $aquaglz->prepare("UPDATE users SET email = ?, bTag = ?, firstname = ?, lastname = ?, rank = ?, avatar = ? WHERE uid=?"))
 {
 $stmt->bind_param("ssssisi", $emailTag, $bTag, $firstname, $lastname, $rankTag, $avatar, $id);
 $stmt->execute();
