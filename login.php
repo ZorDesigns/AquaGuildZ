@@ -56,12 +56,10 @@ header('Location: logsucc.php');
 <link rel="stylesheet" href="admin/css/background.css">
 </head>
 <body class="login-bg">
-<div class="fullscreen-bg">
-<video loop="" muted="" autoplay="" poster="assets/images/frame.png" class="fullscreen-bg__video">
+<video loop muted autoplay poster="assets/images/frame.png" id="bgvid">
 <source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.webm" type="video/webm">
 <source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.mp4" type="video/mp4">
 </video>
-</div>
 <!--SECTION-->
 <section class="l-main-container">
 <!--Main Content-->
