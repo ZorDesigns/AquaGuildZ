@@ -450,7 +450,7 @@ renderForm();
 <footer class="l-footer l-footer-1 t-footer-1">
 <div class="group pt-10 pb-10 ph">
 <div class="copyright pull-left">
-© Copyright 2015
+&#169; Copyright 2015
 <a href="#">AquaGuildZ.</a>
 Powered by
 <a href="#">ZorDesigns</a>
