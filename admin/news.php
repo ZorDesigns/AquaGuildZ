@@ -1,5 +1,5 @@
 <?php
-$page_cat = "rusers";
+$page_cat = "news";
 include("../check.php");
 if($login_rank <= 2)
 {
@@ -12,7 +12,7 @@ die('
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>AquaGuildZ | Users</title>
+<title>AquaGuildZ | News Articles</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -141,85 +141,152 @@ die('
 </div>
 </div>
 </header>
-<?php
-$id = $_GET['id'];
-include('../configs.php');
-/* check connection */
-if (mysqli_connect_errno()) {
-printf("Connect failed: %s\n", mysqli_connect_error());
-exit();
-}
-$uservi = "SELECT * FROM users WHERE uid=$id";
-$userrslt = $aquaglz->query($uservi);
-if ($userrslt->num_rows > 0) {
-// output data of each row
-while($uservi = $userrslt->fetch_assoc()) {
-?>
 <div class="l-page-header">
-<h2 class="l-page-title"><span>Removing</span> <?php echo $uservi["bTag"];?></h2>
+<h2 class="l-page-title"><span>Registered</span> News Articles</h2>
 <!--BREADCRUMB-->
 <ul class="breadcrumb t-breadcrumb-page">
 <li><a href="index.php">Home</a></li>
 <li>Functions</li>
-<li><a href="users.php">Users</a></li>
-<li class="active">Removing User: <?php echo $uservi["uid"];?></li>
+<li class="active">Articles</li>
 </ul>
 </div>
 <div class="l-spaced">
-<div class="profile-header">
-<div class="profile-img"><img src="../assets/images/account/profile/<?php echo $uservi["avatar"];?>"></div>
-<h2><?php echo $uservi["firstname"];?> <?php echo $uservi["lastname"];?></h2>
-<h3><?php echo $uservi["bTag"];?></h3>
-<p>Rank: <?php echo $uservi["rank"];?></p>
-<ul class="contact-info">
-<li><i class="fa fa-envelope"></i><a href="mailto:<?php echo $uservi["email"];?>"><?php echo $uservi["email"];?></a></li>
-<li></li>
+<div id="tables" class="resp-tabs-skin-1" style="display: block; width: 100%; margin: 0px;">
+<ul class="resp-tabs-list">
+<li id="responsiveTable" class="resp-tab-item resp-tab-active" aria-controls="tab_item-4" role="tab">News Articles</li>
 </ul>
-<div class="profile-info">
-<ul>
-</ul>
-</div>
-</div>
-<!-- Row 1 - Page Summary Info-->
-<!-- Page Summary Widget-->
-<div class="doc doc-danger doc-border doc-left l-spaced-bottom">
-This page shows you some <strong>information</strong> about <strong>Deleting</strong> permantly a user! Oh <strong>WAIT</strong>! You still have a chance to <strong>NOT</strong> delete the user!<br>
-Read the options down and maybe you will change your mind! Do not hassle about removing the user before reading the information!<br>For more info check out the <strong>documentation</strong>.
-</div>
-<div class="l-row">
-<div class="l-col-md-6">
-<div class="l-box l-box-danger l-spaced-bottom">
+<div class="resp-tabs-container">
+<!-- News Table-->
+<h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-4"><span class="resp-arrow"></span>News Articles</h2><div class="resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-4" style="display:block">
+<a href="edit-news.php" type="button" class="mb-5 btn btn-lg btn-info btn-eff btn-eff-4"><span>Create New Post</span></a>
+<div class="l-row l-spaced-bottom">
+<div class="l-box">
 <div class="l-box-header">
-<div class="l-box-title">Danger: Administrator!</div>
+<h2 class="l-box-title"><span>Data</span> Table - News Articles</h2>
 </div>
-<div class="l-box-body l-spaced">You are about to remove permantly one of the users from the database. By doing so you are deleting the user from existance to this site! Are you sure you want to continue? <strong>IF</strong> an Officer is reading this message, you are advised to speak with your Guild Master for removing a user. <strong>IF</strong> an Officer is reading this message, you are advised to remove members that are already removed from <strong>In-Game</strong>! By pressing yes you will be redirected to the deletion page where you can <strong>NOT</strong> reverse your option. By pressing no you will be redirected back to the users page so you can think again of your actions.</div>
-<div class="l-box-footer">
-<div class="l-box-title">May the "Force" be with you!</div>
+<div class="l-box-body">
+<div id="dataTableIdResponsive_wrapper" class="dataTables_wrapper no-footer">
+<?php
+// DB Connection file
+include('../configs.php');
+// The name says it all
+$per_page = 10;
+// Numerize the results from the DB
+if ($result = $aquaglz->query("SELECT * FROM news ORDER BY id"))
+{
+if ($result->num_rows != 0)
+{
+$total_results = $result->num_rows;
+$total_pages = ceil($total_results / $per_page);
+if (isset($_GET['page']) && is_numeric($_GET['page']))
+{
+$show_page = $_GET['page'];
+if ($show_page > 0 && $show_page <= $total_pages)
+{
+$start = ($show_page -1) * $per_page;
+$end = $start + $per_page;
+}
+else
+{
+// If error show first results
+$start = 0;
+$end = $per_page;
+}
+}
+else
+{
+$start = 0;
+$end = $per_page;
+}
+// The Base Table
+echo '
+<table id="dataTableIdResponsive" cellspacing="0" width="100%" class="display dt-responsive nowrap no-footer dtr-inline dataTable" role="grid" aria-describedby="dataTableIdResponsive_info" style="width: 100%;">
+<thead>
+<tr role="row">
+<th class="sorting_asc" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="ID: activate to sort column descending" style="width: 8px;" aria-sort="ascending">ID</th>
+<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Author: activate to sort column ascending" style="width: 106px;">Author</th>
+<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Content: activate to sort column ascending" style="width: 106px;">Content</th>
+<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Title: activate to sort column ascending" style="width: 106px;">Title</th>
+<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Comments: activate to sort column ascending" style="width: 259px;">Comments</th>
+<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Image: activate to sort column ascending" style="width: 48px;">Image</th>
+<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending" style="width: 68px;">Date</th>
+<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Functions: activate to sort column ascending" style="width: 68px;">Functions</th>
+</tr>
+</thead>
+';
+// Loop the DB for results
+for ($i = $start; $i < $end; $i++)
+{
+// Make sure that it's NOT gonna display inexistent objects
+if ($i == $total_results) { break; }
+// Find the Specific Rows
+$result->data_seek($i);
+$row = $result->fetch_row();
+// Displaying the Objects from the Database
+if($row['3'] == "")
+{
+$row['3'] = substr(strip_tags($row['3'],'<p><a><br><li><ol><ul>'),0,20);
+if (substr($row['3'], -1) == '<') 
+{$row['3'] = substr($row['3'], 0, -1);}
+$content = $row['3'];
+}else{
+$content = substr(strip_tags($row['3']),0,20);}
+echo '
+<tbody>
+<tr role="row" class="odd">
+<td class="sorting_1">' . $row[0] . '</td>
+<td>' . $row[1] . '</td>
+<td>' . $content . '...</td>
+<td>' . $row[4] . '</td>
+<td>' . $row[5] . '</td>
+<td>' . $row[6] . '</td>
+<td>' . $row[2] . '</td>
+<td><a href="edit-news.php?id=' . $row[0] . '" type="button" class="btn btn-primary btn-sm">Edit</a> 
+<a href="remove-news.php?id=' . $row[0] . '" type="button" class="btn btn-primary btn-danger">Remove</a></td>
+</tr>                      
+</tbody>';
+}
+// Closing the Table
+echo "</table>";
+}
+else
+{
+echo "No results to display!";
+}
+}
+// Query Error
+else
+{
+echo "Error: " . $aquaglz->error;
+}
+// Pagination
+echo '
+<div class="dataTables_info" id="dataTableIdResponsive_info" role="status" aria-live="polite">Showing '.$per_page.' of '.$total_results.' entries</div>
+<div class="dataTables_paginate paging_simple_numbers" id="dataTableIdResponsive_paginate">
+<span>Pages: 
+';
+for ($i = 1; $i <= $total_pages; $i++)
+{
+if (isset($_GET['page']) && $_GET['page'] == $i)
+{
+echo '<a class="paginate_button " aria-controls="dataTableIdResponsive" data-dt-idx="'.$i.'" tabindex="0">'.$i.'</a>';
+}
+else
+{
+echo '<a href="news.php?page='.$i.'" class="paginate_button" aria-controls="dataTableIdResponsive" data-dt-idx="'.$i.'" tabindex="0">'.$i.'</a> ';
+}
+}
+echo "</span></div>";
+?>
+</table>
 </div>
 </div>
 </div>
-<div class="l-col-md-6">
-<div class="l-box l-box-danger l-spaced-bottom">
-<div class="l-box-header">
-<div class="l-box-title">Danger: Officer!</div>
-</div>
-<div class="l-box-body l-spaced">You are about to remove permantly one of the users from the database. By doing so you are deleting the user from existance to this site! Are you sure you want to continue? <strong>IF</strong> an Officer is reading this message, you are advised to speak with your Guild Master for removing a user. <strong>IF</strong> an Officer is reading this message, you are advised to remove members that are already removed from <strong>In-Game</strong>! By pressing yes you will be redirected to the deletion page where you can <strong>NOT</strong> reverse your option. By pressing no you will be redirected back to the users page so you can think again of your actions.</div>
-<div class="l-box-footer">
-<div class="l-box-title">May the "Force" be with you!</div>
 </div>
 </div>
 </div>
 </div>
-<div class="l-row">
-<div class="l-col-md-6">
-<a href="delete.php?id=<?php echo $uservi["uid"];?>" type="button" class="btn btn-labeled btn-success btn-lg btn-block btn-eff btn-eff-4"><i class="glyphicon glyphicon-ok"></i> <span>REMOVE</span></a>
 </div>
-<div class="l-col-md-6">
-<a href="users.php" type="button" class="btn btn-labeled btn-danger btn-lg btn-block btn-eff btn-eff-4"><i class="glyphicon glyphicon-remove"></i> <span>CANCEL</span></a>
-</div>
-</div>
-</div>
-<?php }} ?>
 <!--FOOTER-->
 <footer class="l-footer l-footer-1 t-footer-1">
 <div class="group pt-10 pb-10 ph">

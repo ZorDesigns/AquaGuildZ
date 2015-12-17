@@ -1,5 +1,4 @@
 <?php
-$page_cat = "rusers";
 include("../check.php");
 if($login_rank <= 2)
 {
@@ -12,7 +11,7 @@ die('
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>AquaGuildZ | Users</title>
+<title>AquaGuildZ | Articles Edit</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +27,10 @@ die('
 <link rel="stylesheet" href="css/addons/fonts/artill-clean-icons.css"/>
 <link rel="stylesheet" href="css/addons/theme/syntaxhighlighter.css" class="style-theme-addon">
 <link rel="stylesheet" href="css/addons/theme/select2.css" class="style-theme-addon">
+<script src="../assets/ckeditor/ckeditor.js"></script>
+<!-- WoWHead Linking -->
+<script type="text/javascript" src="//static.wowhead.com/widgets/power.js"></script>
+<script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
 </head>
 <body class="l-dashboard">
 <!--HEADER SLIDE-->
@@ -93,6 +96,18 @@ die('
 <!--Main Menu-->
 <div class="l-side-box">
 <!--MAIN NAVIGATION MENU-->
+<?php
+/*
+Allows the user to both create new records and edit existing records
+*/
+// connect to the database
+include('../configs.php');
+// creates the new/edit record form
+// since this form is used multiple times in this file, I have made it a function that is easily reusable
+function renderForm($first = '', $second ='', $third ='', $fourth ='', $fifth ='', $last ='', $error = '', $id = '')
+{
+?>
+<?php if ($id != '') { $page_cat = "enews"; } else { $page_cat = "lnews"; } ?>
 <?php include("webkit/nav.php"); ?>
 </div>
 </aside>
@@ -141,85 +156,210 @@ die('
 </div>
 </div>
 </header>
-<?php
-$id = $_GET['id'];
-include('../configs.php');
-/* check connection */
-if (mysqli_connect_errno()) {
-printf("Connect failed: %s\n", mysqli_connect_error());
-exit();
-}
-$uservi = "SELECT * FROM users WHERE uid=$id";
-$userrslt = $aquaglz->query($uservi);
-if ($userrslt->num_rows > 0) {
-// output data of each row
-while($uservi = $userrslt->fetch_assoc()) {
-?>
+<?php if ($error != '') {
+echo "<div style='padding:4px; border:1px solid red; color:red'>" . $error
+. "</div>";
+} ?>
+<form action="" method="post" class="form-horizontal">
+<div>
 <div class="l-page-header">
-<h2 class="l-page-title"><span>Removing</span> <?php echo $uservi["bTag"];?></h2>
+<?php if ($id != '') { echo "<h2 class='l-page-title'><span>Edit</span> News Article</h2>"; } else { echo "<h2 class='l-page-title'><span>Create</span> News Article</h2>"; } ?>
 <!--BREADCRUMB-->
 <ul class="breadcrumb t-breadcrumb-page">
 <li><a href="index.php">Home</a></li>
 <li>Functions</li>
-<li><a href="users.php">Users</a></li>
-<li class="active">Removing User: <?php echo $uservi["uid"];?></li>
+<?php if ($id != '') { echo "<li>Edit News</li>"; } else { echo "<li>Create Article</li>"; } ?>
+<li class="active"><?php echo $fourth; ?> - <?php if ($id != '') { ?><input type="hidden" name="id" value="<?php echo $id; ?>" />ID: <?php echo $id; ?><?php } ?>
+</li>
 </ul>
 </div>
 <div class="l-spaced">
-<div class="profile-header">
-<div class="profile-img"><img src="../assets/images/account/profile/<?php echo $uservi["avatar"];?>"></div>
-<h2><?php echo $uservi["firstname"];?> <?php echo $uservi["lastname"];?></h2>
-<h3><?php echo $uservi["bTag"];?></h3>
-<p>Rank: <?php echo $uservi["rank"];?></p>
-<ul class="contact-info">
-<li><i class="fa fa-envelope"></i><a href="mailto:<?php echo $uservi["email"];?>"><?php echo $uservi["email"];?></a></li>
-<li></li>
-</ul>
-<div class="profile-info">
-<ul>
-</ul>
-</div>
-</div>
-<!-- Row 1 - Page Summary Info-->
-<!-- Page Summary Widget-->
-<div class="doc doc-danger doc-border doc-left l-spaced-bottom">
-This page shows you some <strong>information</strong> about <strong>Deleting</strong> permantly a user! Oh <strong>WAIT</strong>! You still have a chance to <strong>NOT</strong> delete the user!<br>
-Read the options down and maybe you will change your mind! Do not hassle about removing the user before reading the information!<br>For more info check out the <strong>documentation</strong>.
-</div>
-<div class="l-row">
-<div class="l-col-md-6">
-<div class="l-box l-box-danger l-spaced-bottom">
+<div class="l-box l-spaced-bottom">
 <div class="l-box-header">
-<div class="l-box-title">Danger: Administrator!</div>
+<?php if ($id != '') { echo "<h2 class='l-box-title'>Edit <span>News Article</span></h2>"; } else { echo "<h2 class='l-box-title'>Create <span>News Article</span></h2>"; } ?>
 </div>
-<div class="l-box-body l-spaced">You are about to remove permantly one of the users from the database. By doing so you are deleting the user from existance to this site! Are you sure you want to continue? <strong>IF</strong> an Officer is reading this message, you are advised to speak with your Guild Master for removing a user. <strong>IF</strong> an Officer is reading this message, you are advised to remove members that are already removed from <strong>In-Game</strong>! By pressing yes you will be redirected to the deletion page where you can <strong>NOT</strong> reverse your option. By pressing no you will be redirected back to the users page so you can think again of your actions.</div>
-<div class="l-box-footer">
-<div class="l-box-title">May the "Force" be with you!</div>
-</div>
-</div>
-</div>
-<div class="l-col-md-6">
-<div class="l-box l-box-danger l-spaced-bottom">
-<div class="l-box-header">
-<div class="l-box-title">Danger: Officer!</div>
-</div>
-<div class="l-box-body l-spaced">You are about to remove permantly one of the users from the database. By doing so you are deleting the user from existance to this site! Are you sure you want to continue? <strong>IF</strong> an Officer is reading this message, you are advised to speak with your Guild Master for removing a user. <strong>IF</strong> an Officer is reading this message, you are advised to remove members that are already removed from <strong>In-Game</strong>! By pressing yes you will be redirected to the deletion page where you can <strong>NOT</strong> reverse your option. By pressing no you will be redirected back to the users page so you can think again of your actions.</div>
-<div class="l-box-footer">
-<div class="l-box-title">May the "Force" be with you!</div>
+<div class="l-box-body l-spaced">
+<form class="form-horizontal" novalidate="">
+<div class="form-group">
+<label for="author" class="col-sm-3 control-label">Author</label>
+<div class="col-sm-9">
+<input name="author" id="author" type="text"  required="" placeholder="Author (0 for System)" class="form-control parsley-error" value="<?php echo $first; ?>">
 </div>
 </div>
+<div class="form-group">
+<label for="date" class="col-sm-3 control-label">Date</label>
+<div class="col-sm-9">
+<input name="date" id="date" type="text"  placeholder="Date (Leave empty for AUTO)" class="form-control" value="<?php echo $second; ?>">
 </div>
 </div>
-<div class="l-row">
-<div class="l-col-md-6">
-<a href="delete.php?id=<?php echo $uservi["uid"];?>" type="button" class="btn btn-labeled btn-success btn-lg btn-block btn-eff btn-eff-4"><i class="glyphicon glyphicon-ok"></i> <span>REMOVE</span></a>
-</div>
-<div class="l-col-md-6">
-<a href="users.php" type="button" class="btn btn-labeled btn-danger btn-lg btn-block btn-eff btn-eff-4"><i class="glyphicon glyphicon-remove"></i> <span>CANCEL</span></a>
+<div class="form-group">
+<label for="title" class="col-sm-3 control-label">Title</label>
+<div class="col-sm-9">
+<input name="title" id="title" type="text" required="" placeholder="Minimum Length" class="form-control" value="<?php echo $fourth; ?>">
 </div>
 </div>
+<input name="comments" id="comments" type="hidden" value="0" class="form-control" value="<?php echo $fifth; ?>">
+<div class="form-group">
+<label for="image" class="col-sm-3 control-label">Image Name</label>
+<div class="col-sm-9">
+<input name="image" id="image" type="text" required="" placeholder="Maximum Length" class="form-control" value="<?php echo $last; ?>">
 </div>
-<?php }} ?>
+</div>
+<div class="form-group">
+<label for="content" class="col-sm-3 control-label">Content (GO BIG!)</label>
+<div class="col-sm-9">
+<textarea name="content" id="content" required="" class="form-control" type="text"><?php echo $third; ?></textarea>
+<script>
+CKEDITOR.replace('contents');
+</script>
+</div>
+</div>
+<div class="form-group">
+<div class="col-sm-offset-3 col-sm-9">
+<button name="submit" type="submit" class="btn btn-dark">Submit</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<?php }
+/* EDIT RECORD */
+// if the 'id' variable is set in the URL, we know that we need to edit a record
+if (isset($_GET['id']))
+{
+// if the form's submit button is clicked, we need to process the form
+if (isset($_POST['submit']))
+{
+// make sure the 'id' in the URL is valid
+if (is_numeric($_POST['id']))
+{
+// get variables from the URL/form
+$id = $_POST['id'];
+$author = htmlentities($_POST['author'], ENT_QUOTES);
+$date = htmlentities($_POST['date'], ENT_QUOTES);
+$content = htmlentities($_POST['content'], ENT_QUOTES);
+$title = htmlentities($_POST['title'], ENT_QUOTES);
+$comments = htmlentities($_POST['comments'], ENT_QUOTES);
+$image = htmlentities($_POST['image'], ENT_QUOTES);
+
+// check that content and title are both not empty
+if ($author == '' || $date == '' || $content == '' || $title == '' || $comments == '' || $image == '')
+{
+// if they are empty, show an error message and display the form
+$error = 'ERROR: Please fill in all required fields!';
+renderForm($author, $date, $content, $title, $comments, $image, $error, $id);
+}
+else
+{
+// if everything is fine, update the record in the database
+if ($stmt = $aquaglz->prepare("UPDATE news SET author = ?, date = ?, content = ?, title = ?, comments = ?, image = ? WHERE id=?"))
+{
+$stmt->bind_param("ssssisi", $author, $date, $content, $title, $comments, $image, $id);
+$stmt->execute();
+$stmt->close();
+}
+// show an error message if the query has an error
+else
+{
+echo "ERROR: could not prepare SQL statement.";
+}
+
+// redirect the user once the form is updated
+header("Location: news.php");
+}
+}
+// if the 'id' variable is not valid, show an error message
+else
+{
+echo "Error!";
+}
+}
+// if the form hasn't been submitted yet, get the info from the database and show the form
+else
+{
+// make sure the 'id' value is valid
+if (is_numeric($_GET['id']) && $_GET['id'] > 0)
+{
+// get 'id' from URL
+$id = $_GET['id'];
+
+// get the recod from the database
+if($stmt = $aquaglz->prepare("SELECT id, author, date, content, title, comments, image FROM news WHERE id=?"))
+{
+$stmt->bind_param("i", $id);
+$stmt->execute();
+
+$stmt->bind_result($id, $author, $date, $content, $title, $comments, $image);
+$stmt->fetch();
+
+// show the form
+renderForm($author, $date, $content, $title, $comments, $image, NULL, $id);
+
+$stmt->close();
+}
+// show an error if the query has an error
+else
+{
+echo "Error: could not prepare SQL statement";
+}
+}
+// if the 'id' value is not valid, redirect the user back to the news.php page
+else
+{
+header("Location: news.php");
+}
+}
+}
+/* NEW RECORD */
+// if the 'id' variable is not set in the URL, we must be creating a new record
+else
+{
+// if the form's submit button is clicked, we need to process the form
+if (isset($_POST['submit']))
+{
+// get the form data
+$author = htmlentities($_POST['author'], ENT_QUOTES);
+$date = htmlentities($_POST['date'], ENT_QUOTES);
+$content = htmlentities($_POST['content'], ENT_QUOTES);
+$title = htmlentities($_POST['title'], ENT_QUOTES);
+$comments = htmlentities($_POST['comments'], ENT_QUOTES);
+$image = htmlentities($_POST['image'], ENT_QUOTES);
+
+// check that content and title are both not empty
+if ($author == '' || $date == '' || $content == '' || $title == '' || $comments == '' || $image == '')
+{
+// if they are empty, show an error message and display the form
+$error = 'ERROR: Please fill in all required fields!';
+renderForm($author, $date, $content, $title, $comments, $image, $error);
+}
+else
+{
+// insert the new record into the database
+if ($stmt = $aquaglz->prepare("INSERT news (author, date, content, title, comments, image) VALUES (?, ?, ?, ?, ?, ?)"))
+{
+$stmt->bind_param("isssis", $author, $date, $content, $title, $comments, $image);
+$stmt->execute();
+$stmt->close();
+}
+// show an error if the query has an error
+else
+{
+echo "ERROR: Could not prepare SQL statement.";
+}
+
+// redirec the user
+header("Location: news.php");
+}
+}
+// if the form hasn't been submitted yet, show the form
+else
+{
+renderForm();
+}
+}
+?>
 <!--FOOTER-->
 <footer class="l-footer l-footer-1 t-footer-1">
 <div class="group pt-10 pb-10 ph">

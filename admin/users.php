@@ -208,8 +208,8 @@ echo '
 <th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="BattleTag: activate to sort column ascending" style="width: 106px;">BattleTag</th>
 <th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Eamil: activate to sort column ascending" style="width: 259px;">Email</th>
 <th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Rank: activate to sort column ascending" style="width: 48px;">Rank</th>
-<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 68px;">Avatar</th>
-<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 68px;">Functions</th>
+<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Avatar: activate to sort column ascending" style="width: 68px;">Avatar</th>
+<th class="sorting" tabindex="0" aria-controls="dataTableIdResponsive" rowspan="1" colspan="1" aria-label="Functions: activate to sort column ascending" style="width: 68px;">Functions</th>
 </tr>
 </thead>
 ';

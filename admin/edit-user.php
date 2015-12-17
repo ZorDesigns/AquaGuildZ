@@ -152,17 +152,12 @@ include('../configs.php');
 function renderForm($first = '', $second ='', $third ='', $fourth ='', $fifth ='', $last ='', $error = '', $id = '')
 {
 ?>
-
-
-
 <?php if ($error != '') {
 echo "<div style='padding:4px; border:1px solid red; color:red'>" . $error
 . "</div>";
 } ?>
-
 <form action="" method="post" class="form-horizontal">
 <div>
-
 <div class="l-page-header">
 <?php if ($id != '') { echo "<h2 class='l-page-title'><span>Edit</span> Profile</h2>"; } else { echo "<h2 class='l-page-title'><span>Create</span> Profile</h2>"; } ?>
 <!--BREADCRUMB-->

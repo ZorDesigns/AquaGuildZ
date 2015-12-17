@@ -73,7 +73,7 @@ echo '
 <img itemprop="image" alt="" src="assets/images/news/full/'.$newsIMG.'-big.png" />
 </div>
 <div class="arnews-cont" align="left"><br><p><a href="assets/images/news/full/'.$newsIMG.'-big.png">Click</a> for a full view of the image.</p></div>
-<div class="arnews-cont" align="left"><p>'.$newsCNT.'</p>
+<div class="arnews-cont" align="left">'.$newsCNT.'
 <div class="clear"></div>
 </div>
 </div>

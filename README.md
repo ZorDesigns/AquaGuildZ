@@ -5,7 +5,7 @@
 ----------
 | Functions        | Progress           | Admin Panel        | Progress           | Account Panel        | Progress           |
 | ------------- |:-------------:| ------------- |:-------------:| ------------- |:-------------:| -----:|
-| News        | 100% |News        | 5% |BNET API         | 0% |
+| News        | 100% |News        | 95% |BNET API         | 0% |
 | Register        | 100% |Media    | 5% |Characters    | 0% |
 | Login        | 100% |Forums        | 5% |Settings | 0% |
 | Media    | 25%      |Services        | 20% |Avatar        | 0% |
