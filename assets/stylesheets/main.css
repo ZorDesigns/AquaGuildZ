@@ -1,3 +1,11 @@
+/* WoWHead */
+.wowhead-newsfeed {max-width: 300px;margin: 0 0 12px 0;background: url(../images/texture_1.png) repeat top;box-shadow: 0 0 6px rgba(0,0,0,.25), 2px 2px 1px rgba(0,0,0,.05), inset 0 0 2px rgba(68,51,31,.35), inset 0 0 15px rgba(88,71,63,.20);border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;}
+.wowhead-header {width: 100%;height: 55px;background: url(../images/bg_top_vot.png) no-repeat top;margin: 0;}
+.wowhead-newsfeed .wowhead-header a {font-family: 'Ebrima';font-size: 18px;font-variant: small-caps;float: left;padding: 0px 0 0 8px;color: #91532D;padding-top: 2px;margin-top: 10px;}
+.wowhead-cont {display: block;margin: 5px 0 0 0;}
+.wowhead-cont a {display: block;width: 274px;height: 42px;background: url(../images/bg_top_line.png) no-repeat bottom;text-align: left;font-family: 'Ebrima';text-shadow: 1px 1px 1px rgba(0,0,0,.45);}
+.wowhead-cont a:hover {display: block;width: 274px;height: 42px;background: url(../images/bg_top_line.png) no-repeat bottom;text-align: left;font-family: 'Ebrima';text-shadow: 1px 1px 1px rgba(0,0,0,.45);}
+
 /* Main */
 parsererror { position:absolute; }
 html { min-width: 1006px; }
@@ -469,12 +477,8 @@ ul.pagination-forum li {display: inline-block;vertical-align: top;margin: -3px 1
 .slide_mask:hover{border: 1px solid #cd9000;}
 .main-services-banner:hover {border: 1px solid #cd9000;background-position: 0 -190px;}
 .comslider-title {text-shadow: 1px 1px 10px rgb(0, 0, 0), 1px 1px 1px rgb(0, 0, 0);font-size: 18px;text-align: left;display: block;margin: -34px 0 0 8px;}
-.comslider-desc {text-shadow: 1px 1px 10px rgb(0, 0, 0), 1px 1px 1px rgb(0, 0, 0);color: #cd9000;font-size: 11px;text-align: left;line-height: 12px;display: block;height: 16px;width: 177px;margin: 0 0 0 -385px;}
+.comslider-desc {text-shadow: 1px 1px 10px rgb(0, 0, 0), 1px 1px 1px rgb(0, 0, 0);color: #cd9000;font-size: 11px;text-align: left;line-height: 12px;display: block;height: 16px;width: 577px;margin: 0 0 0 8px;}
 .flexicom {margin-bottom: 25px;}
-
-
-
-
 
 
 

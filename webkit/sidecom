@@ -2,6 +2,15 @@
 <div id="sidebar_content" class="clearfix">
 <?php include("status"); ?>
 <br>
+<section class="wowhead">
+<script>
+document.getElementsByTagName('//wow.zamimg.com/css/basic.css')[0].disabled = true;
+</script>
+<script type="text/javascript" src="//static.wowhead.com/widgets/newsfeed.js"></script>
+<script type="text/javascript">
+$WowheadNewsFeed.fetch();
+</script>
+</section>
 <section class="ssotd">
 <header>
 <h3><a href="">Screenshot of the day</a></h3>

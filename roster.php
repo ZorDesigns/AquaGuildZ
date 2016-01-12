@@ -45,7 +45,7 @@ $page_tit = "roster";
 </div>
 <ul>
 <div class="features-bg-dark_roster">
-<li class="container_6 archived-news w-addons">
+<li class="container_0 archived-news w-addons">
 <div class="w-addon-row">
 <img src="assets/images/gr.jpg" width="268" height="163" alt="Guild Roster">
 <div class="addon-info">
@@ -58,7 +58,7 @@ $page_tit = "roster";
 </div>
 <div class="clear"></div>
 </li>
-<li class="container_6 archived-news w-addons">
+<li class="container_0 archived-news w-addons">
 <div class="w-addon-row">
 <img src="assets/images/rr.jpg" width="268" height="163" alt="Heroes WoW Background Downloader">
 <div class="addon-info">

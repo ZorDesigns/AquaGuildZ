@@ -18,6 +18,7 @@ include __DIR__ . '/settings/comslide';
 <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/status.css" rel="stylesheet" type="text/css">
+<link href="//wow.zamimg.com/css/basic.css" rel="stylesheet" type="text/css" id="style1">
 <!-- Le javascripts -->
 <script src="assets/javascript/jquery.min.js"></script>
 <script src="assets/javascript/jquery.flexslider.min.js"></script>
@@ -84,6 +85,9 @@ echo '<li><div class="slide_mask">
 <span class="banner-title">MMO Champion</span>
 <span class="banner-desc">Articles and forums with game news and raiding strategies for World of Warcraft!</span>
 </a>
+<span class="clear"><!-- --></span>
+<script type="text/javascript">var wowhead_searchbox_format = "160x200"</script>
+<script type="text/javascript" src="//static.wowhead.com/widgets/searchbox.js"></script>
 </div>
 <br>
 </div>
