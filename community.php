@@ -43,6 +43,14 @@ include __DIR__ . '/settings/comslide';
 <!-- Main Content Add here -->
 <div class="container_6" align="center">
 <div class="content_holder">
+<div id="wowhd-search">
+<div class="lgo"></div>
+<form action="http://www.wowhead.com/search" class="search">
+<span><a href="javascript:;"></a><input class="searchwd" type="text" name="q"></span>
+<input class="search-bwd" type="submit" name="" value=""><img style="margin: 19px 0px 0px -505px;" src="assets/stylesheets/form/images/logo_search.png"/></input>
+</form>
+</div>
+<span class="clear"><!-- --></span>
 <!-- Slider for Community -->
 <div class="flexslider flexicom">
 <ul class="slides">
@@ -77,17 +85,10 @@ echo '<li><div class="slide_mask">
 <span class="banner-desc">Articles and forums with game news and raiding strategies for World of Warcraft!</span>
 </a>
 <span class="clear"><!-- --></span>
-<a href="http://www.icy-veins.com/wow/" class="main-services-banner left-bnr" style="background-image:url('assets/images/community/icyveins.jpg');">
-<span class="banner-title">Icy Veins</span>
-<span class="banner-desc">Icy Veins provides news and detailed guides for all Blizzard Games like World of Warcraft.</span>
-</a>
-<a href="http://www.mmo-champion.com/content/" class="main-services-banner right-bnr" style="background-image:url('assets/images/community/mmochamp.jpg');">
-<span class="banner-title">MMO Champion</span>
-<span class="banner-desc">Articles and forums with game news and raiding strategies for World of Warcraft!</span>
-</a>
-<span class="clear"><!-- --></span>
-<script type="text/javascript">var wowhead_searchbox_format = "160x200"</script>
-<script type="text/javascript" src="//static.wowhead.com/widgets/searchbox.js"></script>
+<section id="twitter-com">
+<a class="twitter-timeline" href="https://twitter.com/BlizzardCSEU_EN" data-widget-id="687110952177799169"></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</section>
 </div>
 <br>
 </div>

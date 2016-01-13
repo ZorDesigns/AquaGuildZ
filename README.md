@@ -5,18 +5,18 @@
 ----------
 | Functions        | Progress           | Admin Panel        | Progress           | Account Panel        | Progress           |
 | ------------- |:-------------:| ------------- |:-------------:| ------------- |:-------------:| -----:|
-| News        | 100% |News        | 95% |BNET API         | 0% |
-| Register        | 100% |Media    | 5% |Characters    | 0% |
+| News        | 100% |News        | 100% |BNET API         | 0% |
+| Register        | 100% |Media    | 10% |Characters    | 0% |
 | Login        | 100% |Forums        | 5% |Settings | 0% |
-| Media    | 25%      |Services        | 20% |Avatar        | 0% |
-| Community | 0%     |Accounts        | 100% |Custom Avatar        | 0% |
-| Forums        | 65% |Characters        | 0% |Signatures        | 0% |
-| Services        | 100%|Settings        | 5% |Index - Main        | 5% |
-| Admin Panel        | 10% |Dashboard        | 95% |
+| Media    | 25%      |Services        | 100% |Avatar        | 0% |
+| Community | 80%     |Accounts        | 100% |Custom Avatar        | 0% |
+| Forums        | 75% |Characters        | 0% |Signatures        | 0% |
+| Services        | 100%|Settings        | 100% |Index - Main        | 5% |
+| Admin Panel        | 50% |Dashboard        | 100% |
 | Account Panel        | 0% |
 | Facebook API        | 0% |
 | BNET API        | 0% |
-| WoW API        | 20% |
+| WoW API        | 50% |
 
 ### ![icon](http://i.imgur.com/S3haPfo.png) Introduction
 ----------
