@@ -1,6 +1,10 @@
 <?php include("sidelogin");?>
 <div id="sidebar_content" class="clearfix">
 <?php include("status"); ?>
+<section id="wowprog">
+<!-- API for Work: http://guildox.com/api/guild/eu/twisting-nether/Hellenic%20Horde -->
+<a href="http://www.wowprogress.com/guild/eu/twisting-nether/Hellenic+Horde"><img alt="WoW Guild Rankings" src="http://wowprogress.com/guild_img/705963/out/type.site" border="0"/></a>
+</section>
 <section id="wowhd">
 <script type="text/javascript" src="//static.wowhead.com/widgets/newsfeed.js"></script>
 <script type="text/javascript">
