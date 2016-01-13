@@ -485,24 +485,4 @@ ul.pagination-forum li {display: inline-block;vertical-align: top;margin: -3px 1
 .comslider-desc {text-shadow: 1px 1px 10px rgb(0, 0, 0), 1px 1px 1px rgb(0, 0, 0);color: #cd9000;font-size: 11px;text-align: left;line-height: 12px;display: block;height: 16px;width: 577px;margin: 0 0 0 8px;}
 .flexicom {margin-bottom: 25px;}
 #twitter-com {float: left;margin: 0 0 0 -10px;width: 280px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#fb-com {    max-height: 600px;    padding: 0 0 0px 0px!important;    width: 300px!important;    border: 0px solid #91532D;    max-width: 280px;    margin: 0 0 40px -120px;    box-shadow: 0 0 6px rgba(0,0,0,.25), 2px 2px 1px rgba(0,0,0,.05), inset 0 0 2px rgba(68,51,31,.35), inset 0 0 15px rgba(88,71,63,.20);    border-radius: 4px!important;    -webkit-border-radius: 4px;    -moz-border-radius: 4px;}

@@ -89,6 +89,18 @@ echo '<li><div class="slide_mask">
 <a class="twitter-timeline" href="https://twitter.com/BlizzardCSEU_EN" data-widget-id="687110952177799169"></a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </section>
+<section id="fb-com">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=1526693774317181";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-page" data-href="https://www.facebook.com/WorldofWarcraft.eu" data-tabs="timeline" data-width="280" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" adapt_container_width="true"><div class="fb-xfbml-parse-ignore">
+<blockquote cite="https://www.facebook.com/WorldofWarcraft.eu"><a href="https://www.facebook.com/WorldofWarcraft.eu">World of Warcraft</a></blockquote></div></div>
+</section>
 </div>
 <br>
 </div>
