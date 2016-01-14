@@ -1,33 +1,12 @@
 <?php include("sidelogin");?>
 <div id="sidebar_content" class="clearfix">
 <?php include("status"); ?>
-<section id="wowprog">
-<!-- API for Work: http://guildox.com/api/guild/eu/twisting-nether/Hellenic%20Horde -->
-<a href="http://www.wowprogress.com/guild/eu/twisting-nether/Hellenic+Horde"><img alt="WoW Guild Rankings" src="http://wowprogress.com/guild_img/705963/out/type.site" border="0"/></a>
-</section>
-<section id="wowhd">
-<script type="text/javascript" src="//static.wowhead.com/widgets/newsfeed.js"></script>
-<script type="text/javascript">
-$WowheadNewsFeed.fetch();
-</script>
-</section>
-<section class="ssotd">
-<header>
-<h3><a href="">Screenshot of the day</a></h3>
-</header>
-<div class="content">
-<div class="ssotd-thumb">
-<img src="" alt="" style="background-image: url(assets/images/test/screenshot.png);">
-<div class="options">
-<a href="">Submit Screenshot</a>
-<a class="pull-right" href="">All Screenshots</a>
-</div>
-</div>
-</div>
+<?php include("ranking");?>
+<?php include("webkit/wowhead.less"); ?>
+<?php include("webkit/screenshot.less"); ?>
 <footer>
 <!-- -->
 </footer>
-</section>
 <br>
 </div>
 </div>

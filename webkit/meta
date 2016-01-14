@@ -12,6 +12,7 @@
 <?php if($page_tit=='gprogress') echo' Guild Progress';?>
 <?php if($page_tit=='groster') echo' Guild Roster';?>
 <?php if($page_tit=='community') echo' Community';?>
+<?php if($page_tit=='form') echo' Recruit Form';?>
 </title>
 <?php } ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

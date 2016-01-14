@@ -1,0 +1,12 @@
+<div class="top_voters home_container">
+<div class="sub_header2">
+<p>Guild Ranking</p>
+<h2><a href="http://guildox.com/guild/eu/twisting-nether/Hellenic%20Horde">based on GuildOx.com</a></h2>
+<span class="title_overlay"></span>
+</div>
+<div class="cont_container">
+<ul class="top_voters_list">
+<?php include('api/ranking.php');?>
+</ul>
+</div>
+</div>

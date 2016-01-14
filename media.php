@@ -56,7 +56,7 @@ echo '
 <div class="media-video-container" align="left">
 <div class="media-video-thumb container_frame">
 <div class="cframe_inner">
-<a href="#">
+<a href="'.$vids["contentlnk"].'">
 <!--Video Image Preview-->
 <div class="image-thumb-preview" style="background-image:url(assets/images/media/vids/'.$vids["image"].'.png);"></div>
 </a>

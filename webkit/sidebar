@@ -5,22 +5,7 @@
 <header>
 <!-- -->
 </header>
-<div class="top_voters home_container">
-<div class="sub_header2">
-<p><img src="assets/images/box.png" alt="Legion" title="Legion"> Future Expansion</p>
-<h2>6th Expansion</h2>
-<span class="title_overlay"></span>
-</div>
-<div class="cont_container">
-<ul class="top_voters_list">
-<li>
-<p><img src="assets/images/legion_logo.png" alt="Legion" title="Legion"></p>
-<a href="http://eu.battle.net/wow/en/legion/">World of Warcaft: Legion</a>
-<span><i>31.03.</i>2016</span>
-</li>
-</ul>
-</div>
- </div>
+<?php include("ranking");?>
 <footer>
 <!-- -->
 </footer>
