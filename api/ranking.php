@@ -14,11 +14,6 @@ foreach ($decode['rank'] as $i => $e)
 $rows[$i]['name'] = $e['name'];
 $rows[$i]['rank'] = $e['rank']['realm'];
 }
-foreach ($decode as $d => $a)
-{
-$rows[$i]['guild'] = $e['name'];
-$rows[$i]['members'] = $e['members'];
-}
 //Rank Arrays
 foreach($rows as $p) {
 $mrank = $p['rank'];
@@ -32,7 +27,7 @@ echo '
 </li>
 ';
 }
-function sksort(&$array, $subkey="id", $sort_ascending=false)
+function skrank(&$array, $subkey="id", $sort_ascending=false)
 {
 if (count($array))
 $temp_array[key($array)] = array_shift($array);
