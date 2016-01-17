@@ -62,6 +62,18 @@ There are <b>0</b> Recruit Posts <span>(0 of them are approved)</span>
 </div>
 <div class="clear"><br></div>
 <div class="container_form_1" align="center">
+<div class="container_rec_form rec-search-results" style="width:843px; padding-top:14px; padding-bottom:10px;">
+<div class="unity_rec">
+<a href="#">
+<ul class="rec-row" style="border:#1d2716 2px dashed;" onclick="$('#2650').toggle('slow')">
+<li class="title">Death Knight: Blood</li>
+<li class="by">by <b>FailZorD</b></li>
+<li class="date">01.15.2013 | 07:16 AM</li>
+<li class="status approved"><b>New</b></li>
+</ul>
+</a>                 
+</div>
+</div>
 </div>
 </div>
 </div>

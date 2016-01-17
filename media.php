@@ -41,10 +41,16 @@ include __DIR__ . '/configs.php';
 <!-- Main Content Add here -->
 <div class="container_4" align="center">
 <!-- Videos -->
+<div>
+<a href="upload.php" class="container_3 brown wider fixed">
+<span class="error_icons atention"></span>
+<p>Start Submitting Videos, Screenshots and Wallpapers! Be awesome as a Guild member and make content!</p>
+</a>
+</div>
 <div class="media-container flleft half-w" align="left">
 <div class="media-c-header">
 <h3>Videos</h3>
-<a class="view-all" href="index.php?page=all-videos">View all</a>
+<a class="view-all" href="#">View all</a>
 </div>
 <?php
 $vids = "SELECT * FROM vids ORDER BY id DESC LIMIT 2";
@@ -104,7 +110,7 @@ echo '
 <div class="media-container flright half-w" align="left">
  <div class="media-c-header">
 <h3>Wallpapers</h3>
-<a class="view-all" href="index.php?page=all-wallpapers">View all</a>
+<a class="view-all" href="#">View all</a>
 </div>
 <ul class="screanshots screanshots-media-page">
 <?php
@@ -142,7 +148,7 @@ echo '
 <div class="media-container flright full-w" align="left">
 <div class="media-c-header">
 <h3>Screenshots</h3>
-<a class="view-all" href="index.php?page=all-screenshots">View all</a>
+<a class="view-all" href="#">View all</a>
 </div>
 <ul class="screanshots screanshots-media-page-two">
 <?php

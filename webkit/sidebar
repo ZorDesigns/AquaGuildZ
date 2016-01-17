@@ -2,9 +2,6 @@
 <div id="sidebar_content" class="clearfix">
 <?php include("status"); ?>
 <section class="expansion">
-<header>
-<!-- -->
-</header>
 <?php include("ranking");?>
 <footer>
 <!-- -->

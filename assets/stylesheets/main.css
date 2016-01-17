@@ -28,6 +28,7 @@ header #searchbar input { background: transparent; border: none; border-radius: 
 .container_5 { margin-top: 10px;margin-left: 5px;padding:30px 40px;width: 895px;height: auto; min-height: 750px; background: url(../images/houroftwilight.png) no-repeat; box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05); -webkit-border-radius: 5px; border-radius: 5px; }
 .container_6 { margin-left: 2px;padding:30px 40px;width: 554px;height: 1194px; min-height: 750px; background: url(../images/commbg.png) no-repeat; box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05); -webkit-border-radius: 5px; border-radius: 5px; }
 .container_form_1 {width: 982px;height: auto;min-height: 400px;background: rgba(33,25,20,.55);box-shadow: 0 0 6px #000, inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding: 40px 1px 40px 0;}
+.container_rec_form {width: 633px;height: auto;min-height: 40px;background: rgba(31,23,19,.80);box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 0 0 14px 0;padding: 35px 0 25px 0;z-index: 1;}
 
 /* Raid Roster */
 #block-system-main {margin: 10px 0;text-shadow: 0 1px 0 #000;}
@@ -89,6 +90,12 @@ ul.screanshots-media-page-two .cframe_inner {width: 160px;height: 91px;}
 .media-zoom-ico {width: 81px;height: 76px;background-position: -219px -153px;position: absolute;z-index: 999;top: 50%;left: 50%;margin: -40px 0 0 -38px;opacity: 0;}
 .media-zoom-ico {background-image: url(../images/media-controls.png);background-repeat: no-repeat;}
 .screanshots-media-page-two li a span {background-size: 110% !important;}
+.wider {width: 100%;}
+.brown {padding: 0;}
+.fixed {display: block;width: 99%;padding: 0;}
+.brown {box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.05), inset 0 0 28px 25px rgba(255,255,255,.03),inset 0 0 18px 0px rgba(255,255,255,.1);color: #6c6c6c;text-shadow: 0 1px 0 #000, 0 0 6px #000;}
+.error_icons {float: left;background-image: url(../images/warning.png);background-repeat: no-repeat;background-color: transparent;width: 23px;height: 28px;display: inline-block;vertical-align: top;margin:10px 0px 0px 9px;top: 6px;}
+.brown p {font-size: 12px;padding: 0 12px 0 10px;display: inline-block;width: 90%;margin: 13px 0 13px 0;vertical-align: top;}
 
 /* Services */
 .content_holder {width: 982px;height: auto;padding: 0 0 0 0;}
@@ -474,10 +481,20 @@ ul.pagination-forum li {display: inline-block;vertical-align: top;margin: -3px 1
 .plus-ico #partone {height: 36px;width: 8px;background: #958e7f;left: 50%;margin: 0 0 0 -4px;}
 .plus-ico #parttwo {height: 8px;width: 36px;background: #958e7f;top: 50%;margin: -22px 0 0 -3px;}
 .submit-recruit h1 {float: left;margin: 54px 0 0 10px;display: block;color: #958e7f;opacity: .4;font-family: 'Ebrima';font-size: 28px;}
-.submit-recruit a:hover {color: #e39f1e;}
+.submit-recruit:hover h1 {color: #e09933;}
 .current-recruits {text-align: left;width: 880px;padding: 15px;margin: 30px 0 0 0;background: rgba(0,0,0,.4);box-shadow: inset 0 0 11px rgba(0,0,0,.6), 0 1px 0 rgba(255,255,255,.02);border-radius: 4px;color: #59554d;text-shadow: 0 0 5px rgba(0,0,0,.8), 0 1px 1px rgba(0,0,0,.8);}
 .current-recruits b {font-size: 13px;display: inline-block;padding: 0 2px;color: #949088;}
 .current-recruits span {color: #3f3c37;font-style: italic;padding: 0 0 0 10px;}
+.rec-row {display: block;width: 780px;height: auto;margin: 0 auto;padding: 11px 0 11px 0;text-align: left;border-bottom: dashed 1px rgba(0,0,0,.4);text-shadow: 0 0 4px rgba(0,0,0,.7), 2px 2px 0 rgba(0,0,0,.2);}
+.rec-row li.title {display: inline-block;width: 46%;font-size: 13px;font-weight: bold;color: #91897c;padding: 0 0 0 2%;}
+.rec-row li.by {display: inline-block;width: 20%;color: #4e4c48;}
+.rec-row li.date {display: inline-block;width: 20%;color: #4e4c48;}
+.rec-row li.status.approved {color: #79a026;}
+.rec-row li.status {display: inline-block;width: 8%;text-align: right;margin: 0 0 0 3px;color: #4e4c48;padding: 0 2% 0 0;}
+.submit-recruit:hover {box-shadow: 0 0 11px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.03), inset 0 0 0 80px rgba(255,255,204,.008);}
+.rec-row:hover {box-shadow: 0 0 11px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.03), inset 0 0 0 80px rgba(255,255,204,.008);}
+.rec-row:hover li.title {color: #e09933;}
+
 
 
 
