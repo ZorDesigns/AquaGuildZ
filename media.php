@@ -65,6 +65,7 @@ echo '
 <a href="'.$vids["contentlnk"].'">
 <!--Video Image Preview-->
 <div class="image-thumb-preview" style="background-image:url(assets/images/media/vids/'.$vids["image"].'.png);"></div>
+<div class="play-button-small"></div>
 </a>
 </div>
 </div>
