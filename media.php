@@ -62,9 +62,9 @@ echo '
 <div class="media-video-container" align="left">
 <div class="media-video-thumb container_frame">
 <div class="cframe_inner">
-<a href="'.$vids["contentlnk"].'">
+<a href="https://www.youtube.com/watch?v='.$vids["contentlnk"].'">
 <!--Video Image Preview-->
-<div class="image-thumb-preview" style="background-image:url(assets/images/media/vids/'.$vids["image"].'.png);"></div>
+<div class="image-thumb-preview" style="background-image:url(//i.ytimg.com/vi_webp/'.$vids["contentlnk"].'/mqdefault.webp);background-repeat: no-repeat;"></div>
 <div class="play-button-small"></div>
 </a>
 </div>
