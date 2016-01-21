@@ -38,8 +38,18 @@ $page_tit = "gprogress";
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div id="main_content">
-<?php include ('api/progress.php'); ?>
+<div class="container_6" align="center">
+<div>
+<div class="clear"></div>
+<br>
+<div class="clear"></div>
+<a class="container_3 brown wider fixed">
+<span class="error_icons atention"></span>
+<p>We are changing the Progress system! We will now redirect you to another site to check our project!</p>
+</a>
+</div>
+<meta http-equiv='refresh'content='5;url=http://guildox.com/guild/eu/twisting-nether/Hellenic%20Horde'>
+<div class="clear"></div>
 </div>
 </div>
 <?php include("webkit/sidebar"); ?>

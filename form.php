@@ -49,7 +49,7 @@ include __DIR__ . '/configs.php';
 <h1>2</h1>
 <h3>Approved Recruits</h3>
 </div>
-<a href="#" class="submit-recruit">
+<a href="crtRecruit.php" class="submit-recruit">
 <div class="plus-ico">
 <div id="partone"></div><div id="parttwo"></div>
 </div>
