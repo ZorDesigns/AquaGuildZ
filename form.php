@@ -39,14 +39,24 @@ include __DIR__ . '/configs.php';
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
+<?php
+if ($recrs = $aquaglz->query("SELECT * FROM recruits ORDER BY id DESC")){
+/* determine number of rows result set */
+$row_cnt = $recrs->num_rows;
+?>
 <div class="container_form_1" align="center">
 <div class="holder-bugtracker">
 <div class="recruit-reports-holder recruits">
-<h1>5</h1>
+<h1><?php echo $row_cnt;?></h1>
 <h3>Submited Recruits</h3>
 </div>
 <div class="recruit-reports-holder confirmed">
-<h1>2</h1>
+<?php
+if ($recra = $aquaglz->query("SELECT approved FROM recruits WHERE approved='1'")){
+/* determine number of rows result set */
+$row_rec = $recra->num_rows;
+?>
+<h1><?php echo $row_rec;?></h1>
 <h3>Approved Recruits</h3>
 </div>
 <a href="crtRecruit.php" class="submit-recruit">
@@ -57,22 +67,52 @@ include __DIR__ . '/configs.php';
 </a>
 <div class="clear"></div>
 <div class="current-recruits">
-There are <b>0</b> Recruit Posts <span>(0 of them are approved)</span> 
+There are <b><?php echo $row_cnt;
+/* close result set */
+$recrs->close();
+}
+?></b> Recruit Posts <span>(<?php echo $row_rec;
+/* close result set */
+$recra->close();
+}
+?> of them are approved)</span> 
 </div>
 </div>
 <div class="clear"><br></div>
 <div class="container_form_1" align="center">
 <div class="container_rec_form rec-search-results" style="width:843px; padding-top:14px; padding-bottom:10px;">
 <div class="unity_rec">
-<a href="#">
-<ul class="rec-row" style="border:#1d2716 2px dashed;" onclick="$('#2650').toggle('slow')">
-<li class="title">Death Knight: Blood</li>
-<li class="by">by <b>FailZorD</b></li>
-<li class="date">01.15.2013 | 07:16 AM</li>
-<li class="status approved"><b>New</b></li>
+<?php
+$recrs = "SELECT * FROM recruits ORDER BY id DESC";
+$recrslt = $aquaglz->query($recrs); 
+if ($recrslt->num_rows > 0) {
+// output data of each row
+while($recrs = $recrslt->fetch_assoc()) {
+echo '
+<a href="postRecruit.php?ctID='.$recrs["id"].'">
+<ul class="rec-row" style="border:#1d2716 2px dashed;">
+<li class="title">'.$recrs["class"].': '.$recrs["role"].'</li>
+<li class="by">by <b>'.$recrs["author"].'</b></li>
+<li class="date">'.$recrs["last_date"].'</li>
+<li class="status '.strtolower($recrs["type"]).'"><b>'.$recrs["type"].'</b></li>
 </ul>
-</a>                 
-</div>
+</a>
+';
+}
+}else{
+echo '
+<a href="#">
+<ul class="rec-row" style="border:#1d2716 2px dashed;">
+<li class="title">No Recruits</li>
+<li class="by">by <b>SYSTEM</b></li>
+<li class="date">The Future | The Past</li>
+<li class="status approved"><b>Closed</b></li>
+</ul>
+</a>
+';
+}
+?>
+</div>                 
 </div>
 </div>
 </div>

@@ -52,6 +52,16 @@ include __DIR__ . '/configs.php';
 <div class="container_form_2" align="left" style="padding:36px">
 <form method="post" action="#" name="BTSubmitForm">
 <div class="row_">
+<p><label>Character Name:</label></p>
+<input style="width: 832px;" type='text' name='tags' maxlength="150">
+</div>
+<div class="clear"></div>
+<div class="row_">
+<p><label>BattleTag:</label></p>
+<input style="width: 832px;" type='text' name='tags' maxlength="150">
+</div>
+<div class="clear"></div>
+<div class="row_">
 <p><label>Class:</label></p>
 <select name='cat' style="display: none;" styled="true" id="select-style-1">
 <option value="1">Death Knight</option>
@@ -80,19 +90,69 @@ include __DIR__ . '/configs.php';
 <br>
 <div class="clear"></div>
 <div class="row_">
-<p><label>Please link your Armory Link:</label></p>
+<p><label>Link your Armory Link:</label></p>
 <input style="width: 832px;" type='text' name='tags' maxlength="150">
 </div>
-
-<div class="sub-selects">
-<!-- Categories -->
-<div id="category-select" style="display:inline-block; margin:0 0 0 9px; display:none;">
-</div>
-<div id="subcategory-select" style="display:inline-block; margin:0 0 0 9px; display:none;">
-</div>
+<br>
+<div class="clear"></div>
+<div class="row_">
+<p><label>RaidUI Image:</label></p>
+<input style="width: 832px;" type='text' name='tags' maxlength="150" placeholder="Please upload a picture to imgur and link it here.">
 </div>
 <br>
-<textarea name="text" style="display:block; float:none; width:800px; height:300px; margin:20px 0px 15px 1px;" placeholder="Please describe yourself with as much detail as possible."></textarea>
+<div class="clear"></div>
+<div class="row_">
+<p><label>Do you have an Authenticator?</label></p>
+<select name='cat' style="display: none;" styled="true" id="select-style-1">
+<option value="1">Yes</option>
+<option value="2">No</option>
+</select>
+</div>
+<input style="width: 832px;" type='text' name='tags' maxlength="150" placeholder="Do you wish to get one, if we request it?">
+<br>
+<div class="clear"></div>
+<div class="row_">
+<label>What addons do you use? Do you have any coding experience to assist in creating custom WeakAuras and/or addons?</label>
+<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please describe what addons do you prefer and why! Also if you have any knowledge of Coding."></textarea>
+</select>
+</div>
+<div class="clear"></div>
+<div class="row_">
+<label>What made you consider applying to Hellenic Horde?</label>
+<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please be specific!"></textarea>
+</select>
+</div>
+<div class="clear"></div>
+<div class="row_">
+<label>Tell us about your last guild. Why are you choosing us over them? Do you have any references?</label>
+<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please be specific! How many guilds did you join before us? Why? Explain."></textarea>
+</select>
+</div>
+<div class="clear"></div>
+<div class="row_">
+<label>Tell us about the rest of your raiding history. What content have you cleared in the past? Which guilds did you do it with? Do you have any experience in guild leadership positions or other positions of responsibility?</label>
+<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Write specifically your raiding history. What content have you cleared in the past? Any experience in guild leadership; positions or other positions of responsibility?"></textarea>
+</select>
+</div><div class="clear"></div>
+<div class="row_">
+<label>Prove that you are as good as we expect. Go into detail about what makes someone a master of your current class/spec, and show us how that is reflected in your own logs.</label>
+<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Are you that good? Are you friendly? Reflect your gaming experience!"></textarea>
+</select>
+</div>
+<div class="clear"></div>
+<div class="row_">
+<p><label>Do you have friends in the Guild?</label></p>
+<select name='cat' style="display: none;" styled="true" id="select-style-1">
+<option value="1">Yes</option>
+<option value="2">No</option>
+</select>
+</div>
+<input style="width: 832px;" type='text' name='tags' maxlength="150" placeholder="Name one or two of them! Not more.">
+<br>
+<div class="clear"></div>
+<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:20px 0px 15px 1px;" placeholder="Please describe yourself with as much detail as possible."></textarea>
+<div class="clear"></div>
+<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:20px 0px 15px 1px;" placeholder="Please describe how comfortable are you when gaming!"></textarea>
 <input type="submit" value="Post">
 </form>
 </div>
