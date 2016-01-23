@@ -165,19 +165,19 @@ $(this).SelectTransform('selectOption',{option:options.option,index:options.inde
 {$element.SelectTransform('ScrollSetup');}
 var currentOffset=parseInt($(config.list).attr('currentOffset'));var totalOptions=parseInt($(config.list).attr('totalOptions'));var scrollToOffset=currentOffset-config.scrollConfig.scrollBy;if(scrollToOffset<0)
 {scrollToOffset=0;}
-var $find=config.list.children('#'+scrollToOffset);$(config.list).stop(true,true).animate({marginTop:'-'+($find.position().top)+'px'},400);$(config.list).attr('currentOffset',scrollToOffset);if(typeof config.searchBox!='undefined')
+var $find=config.list.children('#'+scrollToOffset);$(config.list).stop(true,true).animate({marginTop:'-'+($find.position().top)+'px'},450);$(config.list).attr('currentOffset',scrollToOffset);if(typeof config.searchBox!='undefined')
 {config.searchBox.attr('value','');config.searchBox.focus();}},ScrollDown:function()
 {var config=$(this).data('SelectTransform').config;$element=$(this);var isSetupDone=$(config.list).attr('isSetupDone');if(typeof isSetupDone=='undefined'||isSetupDone!='1')
 {$element.SelectTransform('ScrollSetup');}
 var currentOffset=parseInt($(config.list).attr('currentOffset'));var totalOptions=parseInt($(config.list).attr('totalOptions'));var scrollToOffset=currentOffset+config.scrollConfig.scrollBy;if(scrollToOffset>(totalOptions-config.scrollConfig.scrollBy))
 {scrollToOffset=totalOptions-config.scrollConfig.scrollBy;}
-var $find=config.list.children('#'+scrollToOffset);$(config.list).stop(true,true).animate({marginTop:'-'+($find.position().top)+'px'},400);$(config.list).attr('currentOffset',scrollToOffset);if(typeof config.searchBox!='undefined')
+var $find=config.list.children('#'+scrollToOffset);$(config.list).stop(true,true).animate({marginTop:'-'+($find.position().top)+'px'},450);$(config.list).attr('currentOffset',scrollToOffset);if(typeof config.searchBox!='undefined')
 {config.searchBox.attr('value','');config.searchBox.focus();}},ScrollTo:function(index)
 {var config=$(this).data('SelectTransform').config;var $element=$(this);var isSetupDone=$(config.list).attr('isSetupDone');if(typeof isSetupDone=='undefined'||isSetupDone!='1')
 {$element.SelectTransform('ScrollSetup');}
 var currentOffset=parseInt($(config.list).attr('currentOffset'));var totalOptions=parseInt($(config.list).attr('totalOptions'));if(index>(totalOptions-config.scrollConfig.scrollBy))
 {index=totalOptions-config.scrollConfig.scrollBy;}
-var $find=config.list.children('#'+index);$(config.list).stop(true,true).animate({marginTop:'-'+($find.position().top)+'px'},400);$(config.list).attr('currentOffset',index);},ScrollSetup:function()
+var $find=config.list.children('#'+index);$(config.list).stop(true,true).animate({marginTop:'-'+($find.position().top)+'px'},450);$(config.list).attr('currentOffset',index);},ScrollSetup:function()
 {var config=$(this).data('SelectTransform').config;$element=$(this);$(config.list).attr('totalOptions',config.list.children('ul').length);$(config.list).attr('currentOffset','0');$(config.list).attr('isSetupDone','1');},}
 $.fn.SelectTransform=function(method)
 {if(methods[method])

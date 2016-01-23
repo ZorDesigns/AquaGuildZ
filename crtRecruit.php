@@ -1,6 +1,6 @@
 <?php
 $page_cat = "services";
-$page_tit = "services";
+$page_tit = "formrec";
 include __DIR__ . '/configs.php';
 ?>
 <!DOCTYPE html>
@@ -50,115 +50,140 @@ include __DIR__ . '/configs.php';
 </div>
 </div>
 <div class="container_form_2" align="left" style="padding:36px">
-<form method="post" action="#" name="BTSubmitForm">
+<form action='' method='POST' name="post_topic">
 <div class="row_">
 <p><label>Character Name:</label></p>
-<input style="width: 832px;" type='text' name='tags' maxlength="150">
+<input style="width: 832px;" type='text' name='character' maxlength="150">
 </div>
 <div class="clear"></div>
 <div class="row_">
 <p><label>BattleTag:</label></p>
-<input style="width: 832px;" type='text' name='tags' maxlength="150">
+<input style="width: 832px;" type='text' name='battletag' maxlength="150">
 </div>
 <div class="clear"></div>
 <div class="row_">
 <p><label>Class:</label></p>
-<select name='cat' style="display: none;" styled="true" id="select-style-1">
-<option value="1">Death Knight</option>
-<option value="2">Druid</option>
+<select name='class' style="display: none;" styled="true" id="select-style-1">
+<option value="Warrior">Warrior</option>
+<option value="Paladin">Paladin</option>
+<option value="Hunter">Hunter</option>
+<option value="Rogue">Rogue</option>
+<option value="Priest">Priest</option>
+<option value="Death Knight">Death Knight</option>
+<option value="Shaman">Shaman</option>
+<option value="Mage">Mage</option>
+<option value="Warlock">Warlock</option>
+<option value="Monk">Monk</option>
+<option value="Druid">Druid</option>
+<option value="Demon Hunter">Demon Hunter</option>
 </select>
 </div>
 <br>
 <div class="clear"></div>
 <div class="row_">
 <p><label>Spec:</label></p>
-<select name='cat' style="display: none;" styled="true" id="select-style-1">
-<option value="1">Tank</option>
-<option value="2">Healer</option>
-<option value="3">DPS</option>
+<select name='spec' style="display: none;" styled="true" id="select-style-1">
+<option value="Tank">Tank</option>
+<option value="Healer">Healer</option>
+<option value="DPS">DPS</option>
 </select>
 </div>
 <br>
 <div class="clear"></div>
 <div class="row_">
 <p><label>Are you familiar with raiding?</label></p>
-<select name='cat' style="display: none;" styled="true" id="select-style-1">
-<option value="1">Yes</option>
-<option value="2">No</option>
+<select name='q1' style="display: none;" styled="true" id="select-style-1">
+<option value="Yes">Yes</option>
+<option value="No">No</option>
 </select>
 </div>
 <br>
 <div class="clear"></div>
 <div class="row_">
 <p><label>Link your Armory Link:</label></p>
-<input style="width: 832px;" type='text' name='tags' maxlength="150">
+<input style="width: 832px;" type='text' name='q2' maxlength="150">
 </div>
 <br>
 <div class="clear"></div>
 <div class="row_">
 <p><label>RaidUI Image:</label></p>
-<input style="width: 832px;" type='text' name='tags' maxlength="150" placeholder="Please upload a picture to imgur and link it here.">
+<input style="width: 832px;" type='text' name='q3' maxlength="150" placeholder="Please upload a picture to imgur and link it here.">
 </div>
 <br>
 <div class="clear"></div>
 <div class="row_">
 <p><label>Do you have an Authenticator?</label></p>
-<select name='cat' style="display: none;" styled="true" id="select-style-1">
-<option value="1">Yes</option>
-<option value="2">No</option>
+<select name='q4' style="display: none;" styled="true" id="select-style-1">
+<option value="Yes">Yes</option>
+<option value="No">No</option>
 </select>
 </div>
-<input style="width: 832px;" type='text' name='tags' maxlength="150" placeholder="Do you wish to get one, if we request it?">
+<input style="width: 832px;" type='text' name='q4_info' maxlength="150" placeholder="Do you wish to get one, if we request it?">
 <br>
 <div class="clear"></div>
 <div class="row_">
 <label>What addons do you use? Do you have any coding experience to assist in creating custom WeakAuras and/or addons?</label>
-<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please describe what addons do you prefer and why! Also if you have any knowledge of Coding."></textarea>
+<textarea name="q5" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please describe what addons do you prefer and why! Also if you have any knowledge of Coding."></textarea>
 </select>
 </div>
 <div class="clear"></div>
 <div class="row_">
 <label>What made you consider applying to Hellenic Horde?</label>
-<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please be specific!"></textarea>
+<textarea name="q6" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please be specific!"></textarea>
 </select>
 </div>
 <div class="clear"></div>
 <div class="row_">
 <label>Tell us about your last guild. Why are you choosing us over them? Do you have any references?</label>
-<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please be specific! How many guilds did you join before us? Why? Explain."></textarea>
+<textarea name="q7" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please be specific! How many guilds did you join before us? Why? Explain."></textarea>
 </select>
 </div>
 <div class="clear"></div>
 <div class="row_">
 <label>Tell us about the rest of your raiding history. What content have you cleared in the past? Which guilds did you do it with? Do you have any experience in guild leadership positions or other positions of responsibility?</label>
-<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Write specifically your raiding history. What content have you cleared in the past? Any experience in guild leadership; positions or other positions of responsibility?"></textarea>
+<textarea name="q8" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Write specifically your raiding history. What content have you cleared in the past? Any experience in guild leadership; positions or other positions of responsibility?"></textarea>
 </select>
 </div><div class="clear"></div>
 <div class="row_">
 <label>Prove that you are as good as we expect. Go into detail about what makes someone a master of your current class/spec, and show us how that is reflected in your own logs.</label>
-<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Are you that good? Are you friendly? Reflect your gaming experience!"></textarea>
+<textarea name="q9" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Are you that good? Are you friendly? Reflect your gaming experience!"></textarea>
+</select>
+</div>
+<div class="clear"></div>
+<div class="row_">
+<label>Do you have a good Computer & Internet Connection? How often do you upgrade?</label>
+<textarea name="q10" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please provide your specs of your system!"></textarea>
 </select>
 </div>
 <div class="clear"></div>
 <div class="row_">
 <p><label>Do you have friends in the Guild?</label></p>
-<select name='cat' style="display: none;" styled="true" id="select-style-1">
+<select name='q11' style="display: none;" styled="true" id="select-style-1">
 <option value="1">Yes</option>
 <option value="2">No</option>
 </select>
 </div>
-<input style="width: 832px;" type='text' name='tags' maxlength="150" placeholder="Name one or two of them! Not more.">
+<input style="width: 832px;" type='text' name='q11_info' maxlength="150" placeholder="Name one or two of them! Not more.">
 <br>
 <div class="clear"></div>
-<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:20px 0px 15px 1px;" placeholder="Please describe yourself with as much detail as possible."></textarea>
+<textarea name="q12" style="display:block; float:none; width:832px; height:55px; margin:20px 0px 15px 1px;" placeholder="Please describe yourself with as much detail as possible."></textarea>
 <div class="clear"></div>
-<textarea name="text" style="display:block; float:none; width:832px; height:55px; margin:20px 0px 15px 1px;" placeholder="Please describe how comfortable are you when gaming!"></textarea>
-<input type="submit" value="Post">
+<textarea name="q13" style="display:block; float:none; width:832px; height:55px; margin:20px 0px 15px 1px;" placeholder="Please describe how comfortable are you when gaming!"></textarea>
+<input name="createRecruit" type="submit" value="Post">
 </form>
 </div>
+<?php
+if(isset($_POST["createRecruit"])){
+$publish_date = 'NOW()';
+$sql = "INSERT INTO recruits (id, author, character, battletag, class, spec, type, approved, q1, q2, q3, q4, q4_info, q5, q6, q7, q8, q9, q10, q11, q11_info, q12, q13, last_date) VALUES ('', '0', '".$_POST["character"]."', '".$_POST["battletag"]."', '".$_POST["class"]."', '".$_POST["spec"]."', 'New', '0', '".$_POST["q1"]."', '".$_POST["q2"]."', '".$_POST["q3"]."', '".$_POST["q4"]."', '".$_POST["q4_info"]."', '".$_POST["q5"]."', '".$_POST["q6"]."', '".$_POST["q7"]."', '".$_POST["q8"]."', ''".$_POST["q9"]."', '".$_POST["q10"]."', '".$_POST["q11"]."', '".$_POST["q11_info"]."', '".$_POST["q12"]."', '".$_POST["q13"]."', '".$publish_date."')";
 
-
-
+if ($aquaglz->query($sql) === TRUE) {
+echo "<script type= 'text/javascript'>alert('New record created successfully');</script>";
+} else {
+echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $aquaglz->error."');</script>";
+}
+}
+?>
 </div>
 </div>
 <?php include("webkit/sidelogin"); ?>

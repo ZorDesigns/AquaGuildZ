@@ -57,8 +57,8 @@ header('Location: logsucc.php');
 </head>
 <body class="login-bg">
 <video loop muted autoplay poster="assets/images/frame.png" id="bgvid">
-<source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.webm" type="video/webm">
-<source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.mp4" type="video/mp4">
+<source src="assets/images/wod.webm" type="video/webm">
+<source src="assets/images/wod.mp4" type="video/mp4">
 </video>
 <!--SECTION-->
 <section class="l-main-container">

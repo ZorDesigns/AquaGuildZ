@@ -91,8 +91,8 @@ while($recrs = $recrslt->fetch_assoc()) {
 echo '
 <a href="postRecruit.php?ctID='.$recrs["id"].'">
 <ul class="rec-row" style="border:#1d2716 2px dashed;">
-<li class="title">'.$recrs["class"].': '.$recrs["role"].'</li>
-<li class="by">by <b>'.$recrs["author"].'</b></li>
+<li class="title">'.$recrs["class"].': '.$recrs["spec"].'</li>
+<li class="by">by <b>'.$recrs["battletag"].'</b></li>
 <li class="date">'.$recrs["last_date"].'</li>
 <li class="status '.strtolower($recrs["type"]).'"><b>'.$recrs["type"].'</b></li>
 </ul>

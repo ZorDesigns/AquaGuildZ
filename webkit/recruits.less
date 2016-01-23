@@ -1,0 +1,56 @@
+<section class="votingpanel">
+<header>
+<!-- -->
+</header>
+<div class="cont_container">
+<ul class="top_voters_list">
+<?php
+$recrp = "SELECT * FROM recruits_panel ORDER BY id ASC";
+$recprslt = $aquaglz->query($recrp); 
+if ($recprslt->num_rows > 0) {
+// output data of each row
+while($recrp = $recprslt->fetch_assoc()) {
+$closed = $recrp["closed"];
+$icon1 = $recrp["spec1_info"];
+$icon2 = $recrp["spec2_info"];
+$icon3 = $recrp["spec3_info"];
+$icon4 = $recrp["spec4_info"];
+echo'<li>
+<p><img src="assets/images/class/'.$recrp["class_img"].'.jpg" alt="'.$recrp["class"].'" title="'.$recrp["class"].'"></p>
+<a href="form.php">'.$recrp["class"].'</a><span>';
+if ($closed == '1'){
+echo 'Closed';
+}else{
+if($icon1 == '1'){
+echo '';
+}else{
+echo '<img style="margin: 0px 3px 0px 0px;" src="assets/images/class/specs/'.$recrp["spec1"].'.jpg">';
+}
+if ($icon2 == '1'){
+echo '';
+}else{
+echo '<img style="margin: 0px 3px 0px 0px;" src="assets/images/class/specs/'.$recrp["spec2"].'.jpg">';
+}
+if ($icon3 == '1'){
+echo '';
+}else{
+echo '<img style="margin: 0px -10px 0px 0px;" src="assets/images/class/specs/'.$recrp["spec3"].'.jpg">';
+}
+if ($icon4 == '1'){
+echo '';
+}else{
+echo '<img style="margin: 0px -12px 0px 12px;" src="assets/images/class/specs/'.$recrp["spec4"].'.jpg">';
+}
+}
+echo'
+</span>
+</li>';
+}
+}
+?>
+</ul>
+</div>
+<footer>
+<a href="form.php"><span>Get to the Recruitment Form</span></a>
+</footer>
+</section>
