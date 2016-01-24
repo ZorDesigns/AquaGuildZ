@@ -1,1 +1,0 @@
-ALTER TABLE `subcategories` ADD COLUMN `rank` INT NOT NULL AFTER `cat`;
