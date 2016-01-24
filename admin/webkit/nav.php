@@ -45,5 +45,13 @@
 <li class="<?php if($page_cat=='prog') echo'active';?>"><a href="#"><i class="icon fa fa-close"></i><span class="title">Remove Recruitment</span></a></li>
 </li>
 </ul>
+<li class="<?php if($page_cat=='char') echo'active';?><?php if($page_cat=='prog') echo'active';?>">
+<a href="#"><i class="icon fa fa-archive"></i><span class="title">Forums</span>
+<span class="arrow"><i class="fa fa-angle-left"></i></span><span class="info">2</span></a>
+<ul>
+<li class="<?php if($page_cat=='char') echo'active';?>"><a href="#"><i class="icon fa fa-reorder"></i><span class="title">List Topics</span></a></li>
+<li class="<?php if($page_cat=='prog') echo'active';?>"><a href="#"><i class="icon fa fa-trash"></i><span class="title">Remove Topic</span></a></li>
+</li>
+</ul>
 </nav>
 <?php } ?>

@@ -56,8 +56,11 @@ ul.topic_row li.lastpost h4 a {  color: #63503c;  text-shadow: 0 0 5px rgba(0,0,
 ul.topic_row li.lastpost h4 a:hover {  color: #b07e39;  text-shadow: 0 0 5px rgba(0,0,0,.4), 1px 1px 1px rgba(0,0,0,.25);  text-decoration: none;}
 ul.topic_row li.lastpost h5 {  margin: -2px 0 0 15px;}
 ul.topic_row li.lastpost a.go_to_lastpost {  display: block;  width: 33px;  height: 33px;  background-image: url(../images/forum/go_to_last_post.png);  background-repeat: no-repeat;  position: absolute;  margin: -33px 0px 0px 206px;}
+a#remove_post {  display: block;  width: 33px;  height: 33px;  background-image: url(../images/forum/remove_post.png);  background-repeat: no-repeat;  position: absolute;  margin: -33px 0px 0px 206px;}
 ul.topic_row li.lastpost a.go_to_lastpost p {  display: none;}
+a#remove_post p {  display: none;}
 ul.topic_row li.lastpost a.go_to_lastpost:hover{background-position:0 -34px}
+a#remove_post:hover{background-position:0 -34px}
 .actions_c {padding: 6px 0px 15px 0px;}
 .topic_header {  width: 100%;  height: 45px;  margin: 0 0 20px 0;  padding: 0 0 20px 0;  box-shadow: 0 2px 0 rgba(0,0,0,.25);}
 .topic_title {  float: left;}

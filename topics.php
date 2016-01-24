@@ -111,10 +111,18 @@ echo'
 <h1><a href="thread.php?tid='.$row["id"].'">['.$row["id"].'] '.$row["title"].'</a></h1>
 <p>Created by <a>System</a>, '.$row["last_date"].'</p>
 </li>
-<li class="lastpost">
+';
+if($login_rank < 3)
+{
+echo'<li class="lastpost">
 <h4>by <a>System</a></h4>
-<h5>'.$row["last_date"].'</h5>
-<a href="thread.php?tid='.$row["id"].'" class="go_to_lastpost" title="Go to last post"><p>Go to last post</p></a></li>
+<h5>'.$row["last_date"].'</h5><a href="thread.php?tid='.$row["id"].'" class="go_to_lastpost" title="Go to last post"><p>Go to last post</p></a></li>';
+}else{
+echo '<li class="lastpost">
+<h4>by <a>System</a></h4>
+<h5>'.$row["last_date"].'</h5><a href="admin/rmv_forum.php?tid='.$row["id"].'" id="remove_post" title="Delete Post"><p>Delete Post</p></a></li>';
+}
+echo'
 </ul>						
 ';
 }
