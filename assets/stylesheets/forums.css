@@ -4,7 +4,7 @@ a.important_notices {  display: block;  width: auto;  height: 45px;  margin: 10p
 a.important_notice {  display: block;  width: 977px;  height: 45px;  margin: 10px 0px 10px 3px;  background: url(../images/forum/important_bar.png) no-repeat;  color: #74634d;  font-family: Arial,Helvetica,sans-serif;  font-size: 13px;  text-shadow: 1px 1px 1px rgba(0,0,0,.4);  border-radius: 2px;  box-shadow: 0 0 6px rgba(0,0,0,.25), 2px 2px 1px rgba(0,0,0,.05);  transition: all 400ms;  -moz-transition: all 400ms;  -webkit-transition: all 400ms;  -o-transition: all 400ms;}
 a.important_notices p {  display: block;  padding: 14px 0 0 63px;  transition: all 400ms;  -moz-transition: all 400ms;  -webkit-transition: all 400ms;  -o-transition: all 400ms;}
 a.important_notice p {  display: block;  padding: 14px 0 0 63px;  transition: all 400ms;  -moz-transition: all 400ms;  -webkit-transition: all 400ms;  -o-transition: all 400ms;}
-.main-wide {  margin: 0 0 40px 0;  width: 996px;}
+.main-wide {  margin: 0 0 40px 0;  width: 983px;}
 .container_ {  width: 977px;  height: auto;  background: url(../images/forum/index_news_container.png) repeat;  box-shadow: 0 0 6px #000, inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);  -webkit-border-radius: 5px;  -moz-border-radius: 5px;  border-radius: 5px;  color: #3a3a39;  text-shadow: 0 1px 0 #000, 0 0 6px #000;  overflow: hidden;  margin: 10px 0px 10px 3px;}
 .wide-padding {  background: url(../images/forum/forum_mc_image1.png) no-repeat top;  padding: 35px 60px 60px 60px;}
 h1.category-title {  display: block;  padding: 0 0 33px 0;  margin: 0 0 0 25px;}
