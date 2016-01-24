@@ -49,15 +49,30 @@ die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
 <?php include("webkit/warning"); ?>
-<div class="container main-wide">
+<div class="container_ main-wide">
 <div class="forum-padding">
 <!-- Forum Header -->
 <div class="forum_header">
 <div class="forum_title">
-<h1>General Discussion</h1>
-<h3>Most of our posts contains kill and previous progression</h3>
+<?php
+$titlefor = "SELECT * FROM subcategories WHERE `uid`=$ctID";
+$title = $aquaglz->query($titlefor); 
+if ($title->num_rows > 0) {
+// output data of each row
+while($titlefor = $title->fetch_assoc()) {
+echo '<h1>'.$titlefor["title"].'</h1>
+<h3>'.$titlefor["desc"].'</h3>';
+}}
+?>
 </div>
-<h4><b>1</b> topic(s)</h4>
+<h4><b>
+<?php
+if ($recrs = $aquaglz->query("SELECT * FROM threads WHERE `cat`=$ctID")){
+/* determine number of rows result set */
+$row_cnt = $recrs->num_rows;
+echo $row_cnt;
+}?>
+</b> topic(s)</h4>
 </div>
 <!-- Actions -->
 <div class="actions_c">
@@ -80,10 +95,17 @@ die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
 $qu = mysqli_query($aquaglz, "SELECT * FROM `threads` WHERE `cat`=$ctID ORDER BY id DESC");
 if (mysqli_num_rows($qu) > 0) {
 while ($row = mysqli_fetch_array($qu)) {
+$hot = $row["hot"];
 echo '					
 <ul class="topic_row">
 <li class="icon">
-<img src="assets/images/forum/topic_unread_hot.png" width="55px" height="39px">
+';
+if ($hot == '1'){
+echo '<img src="assets/images/forum/topic_unread_hot.png" width="55px" height="39px">';
+}else{
+echo '<img src="assets/images/forum/topic_unread.png" width="55px" height="39px">';
+}
+echo'
 </li>
 <li class="topic_title_by_date">
 <h1><a href="thread.php?tid='.$row["id"].'">['.$row["id"].'] '.$row["title"].'</a></h1>

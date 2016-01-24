@@ -3,6 +3,7 @@ $page_cat = "forums";
 $page_tit = "forums";
 include __DIR__ . '/settings/forum.php';
 include __DIR__ . '/check.php';
+$tid = $_GET["tid"];
 if($login_rank <= 1)
 {
 die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
@@ -17,12 +18,15 @@ die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
 <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/forums.css" rel="stylesheet" type="text/css">
+<link href="assets/stylesheets/form/reg.css" rel="stylesheet" type="text/css">
 <!-- Le javascripts -->
 <script src="assets/javascript/jquery.min.js"></script>
 <script src="assets/javascript/jquery.flexslider.min.js"></script>
 <script src="assets/javascript/bootstrap.min.js"></script>
 <script src="assets/javascript/global.js"></script>
 <script src="assets/javascript/common_orig.js"></script>
+<script src="assets/stylesheets/form/reg.js"></script>
+<script src="assets/stylesheets/form/reg1.js"></script>
 <!-- WoWHead Linking -->
 <script type="text/javascript" src="//static.wowhead.com/widgets/power.js"></script>
 <script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
@@ -43,7 +47,7 @@ die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
 <?php include("webkit/warning"); ?>
-<div class="container main-wide">
+<div class="container_ main-wide">
 <div class="forum-padding">
 <?php 
 $qq = mysqli_query($aquaglz, "SELECT * FROM `threads` WHERE `id`='$id'");
@@ -149,8 +153,11 @@ echo '
 <br><br><br>
 </div>
 </div>
-<div class="container main-wide">
-<?php 
+<div class="container_ main-wide">
+<?php
+if ($recrs = $aquaglz->query("SELECT * FROM replies WHERE `threadID`=$tid")){
+/* determine number of rows result set */
+$row_cnt = $recrs->num_rows;
 echo "
 <div id='bottom' class='forum-padding'>
 <div class='topic_header'>
@@ -158,18 +165,19 @@ echo "
 <h1>Leave a Reply</h1>
 <h3>Reply as: $email</h3>
 </div>
-<h4><b>2</b> Reply(s)</h4>
+<h4><b>$row_cnt</b> Reply(s)</h4>
 </div>
 <div class='quick_reply topic_post'>
 <form "; echo 'threadPage.php?tid='.$_GET['tid']; echo " method='POST'>
 <h2>Quick Reply</h2>
 <textarea id='quick_reply_textarea' name='cont'></textarea>
-<input type='submit' value='Post' name='replySent'>
+<input type='submit' value='Post Reply' name='replySent'>
 <a class='forum_btn_large advanced_post' id='go-advanced-post'>Advanced post</a>
 </form>
 </div>
 </div>
 ";
+}
 ?>
 </div>
 <div class="clear"></div>

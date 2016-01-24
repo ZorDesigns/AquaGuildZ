@@ -16,7 +16,8 @@
 		if ($result->num_rows > 0) {
 		  while($row = $result->fetch_assoc()) {
 			$usern = $row['bTag'];
-			$q = mysqli_query($aquaglz, "INSERT INTO `replies` VALUES ('', '$thread', '', '$aquaglzt', '$usern', now())");
+			$date = $_POST['date'];
+			$q = mysqli_query($aquaglz, "INSERT INTO `replies` VALUES ('', '$thread', '', '$aquaglzt', '$usern', 'STR_TO_DATE('$date', '%m/%d/%Y')')");
 		  }
 		}
 		$qu = mysqli_query($aquaglz, "SELECT * FROM `subscriptions` WHERE `threadID`='$thread'");

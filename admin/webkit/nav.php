@@ -37,6 +37,13 @@
 <li class="<?php if($page_cat=='prog') echo'active';?>"><a href="prog.php"><i class="icon fa fa-plus-square"></i><span class="title">Progress API</span></a></li>
 </li>
 </ul>
+<li class="<?php if($page_cat=='char') echo'active';?><?php if($page_cat=='prog') echo'active';?>">
+<a href="#"><i class="icon fa fa-child"></i><span class="title">Recruitment</span>
+<span class="arrow"><i class="fa fa-angle-left"></i></span><span class="info">2</span></a>
+<ul>
+<li class="<?php if($page_cat=='char') echo'active';?>"><a href="#"><i class="icon fa fa-check-square-o"></i><span class="title">Add Recruitment</span></a></li>
+<li class="<?php if($page_cat=='prog') echo'active';?>"><a href="#"><i class="icon fa fa-close"></i><span class="title">Remove Recruitment</span></a></li>
+</li>
 </ul>
 </nav>
 <?php } ?>

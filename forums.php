@@ -48,7 +48,7 @@ $uid = $cat["id"];
 $name = $cat["name"];
 
 echo '
-<div class="container main-wide">
+<div class="container_ main-wide">
 <div class="wide-padding">
 <h1 class="category-title" data-forum-id="'.$uid.'"><a title="'.$name.'">'.$name.'</a></h1>
 ';
@@ -59,22 +59,25 @@ $sid = $scat['uid'];
 $categ = $scat['cat'];
 $title = $scat['title'];
 $desc = $scat['desc'];
+if ($recrs = $aquaglz->query("SELECT * FROM threads WHERE `cat`=$sid"))
+$row_cnt = $recrs->num_rows;
 echo '
 <ul class="forum_row">
 <li class="icon mark-as-read" data-forum-id="'.$sid.'">
-<img src="assets/images/forum/forum_unread_locked.png" width="56" height="53" title="New Posts">
+<img src="assets/images/forum/forum_unread.png" width="56" height="53" title="New Posts">
 </li>
+<li class="topics">
+<p>'.$sid.'</p>
+</li>
+<li class="seperator"></li>
 <li class="forum_title_desc">
 <a href="topics.php?ctID='.$sid.'">
 <h1>'.$scat['title'].'</h1>
 <h2>'.$scat['desc'].'</h2>
 </a>
 </li>
-<li class="post">
-<p>0</p>
-</li>
 <li class="topics">
-<p>0</p>
+<p>'.$row_cnt.'</p>
 </li>
 <li class="lastpost">
 <p class="topic_title"><a href="topics.php?ctID='.$sid.'">'.$name.'</a></p>
@@ -82,7 +85,6 @@ echo '
 <p class="postdate">Unlocked</p>
 </li>
 </ul>
-
 ';
 }
 echo '
