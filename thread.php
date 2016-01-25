@@ -110,7 +110,7 @@ AVG Rating: <a>'.@$average.'</a>
 '.$aquaglztent.'
 </div>
 <ul class="post_controls">
-<li class="post_date">'.$date.'</li><li><a class="report" href="#" title="Rate">Rate</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Quote">Quote</a></li>
+<li class="post_date">'.@$date.'</li><li><a class="report" href="#" title="Rate">Rate</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Quote">Quote</a></li>
 </ul>
 </div>
 <div class="clear"></div>
@@ -158,12 +158,13 @@ echo '
 if ($recrs = $aquaglz->query("SELECT * FROM replies WHERE `threadID`=$tid")){
 /* determine number of rows result set */
 $row_cnt = $recrs->num_rows;
+$emails = $_SESSION['email'];
 echo "
 <div id='bottom' class='forum-padding'>
 <div class='topic_header'>
 <div class='topic_title'>
 <h1>Leave a Reply</h1>
-<h3>Reply as: $email</h3>
+<h3>Reply as: $emails</h3>
 </div>
 <h4><b>$row_cnt</b> Reply(s)</h4>
 </div>

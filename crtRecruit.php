@@ -174,12 +174,15 @@ include __DIR__ . '/configs.php';
 </div>
 <?php
 if(isset($_POST["createRecruit"])){
-$publish_date = 'NOW()';
-$sql = "INSERT INTO recruits (id, author, character, battletag, class, spec, type, approved, q1, q2, q3, q4, q4_info, q5, q6, q7, q8, q9, q10, q11, q11_info, q12, q13, last_date) VALUES ('', '0', '".$_POST["character"]."', '".$_POST["battletag"]."', '".$_POST["class"]."', '".$_POST["spec"]."', 'New', '0', '".$_POST["q1"]."', '".$_POST["q2"]."', '".$_POST["q3"]."', '".$_POST["q4"]."', '".$_POST["q4_info"]."', '".$_POST["q5"]."', '".$_POST["q6"]."', '".$_POST["q7"]."', '".$_POST["q8"]."', ''".$_POST["q9"]."', '".$_POST["q10"]."', '".$_POST["q11"]."', '".$_POST["q11_info"]."', '".$_POST["q12"]."', '".$_POST["q13"]."', '".$publish_date."')";
+$sql = "INSERT INTO recruits VALUES ('', '0', '".$_POST["character"]."', '".$_POST["battletag"]."', '".$_POST["class"]."', '".$_POST["spec"]."', 'New', '0', '".$_POST["q1"]."', '".$_POST["q2"]."', '".$_POST["q3"]."', '".$_POST["q4"]."', '".$_POST["q4_info"]."', '".$_POST["q5"]."', '".$_POST["q6"]."', '".$_POST["q7"]."', '".$_POST["q8"]."', '".$_POST["q9"]."', '".$_POST["q10"]."', '".$_POST["q11"]."', '".$_POST["q11_info"]."', '".$_POST["q12"]."', '".$_POST["q13"]."', NOW())";
+
+echo $sql;
 
 if ($aquaglz->query($sql) === TRUE) {
 echo "<script type= 'text/javascript'>alert('New record created successfully');</script>";
+echo "INSERTED";
 } else {
+	echo "ERROR";
 echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $aquaglz->error."');</script>";
 }
 }

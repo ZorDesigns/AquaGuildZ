@@ -6,20 +6,13 @@
 		exit();
 	}
 	$email;
+	$q = false;
 	if (isSet($_SESSION['email']))
-		$email = $_SESSION['email'];
 	if (isSet($_POST['replySent']) && isSet($_POST['cont']) && $_POST['cont'] != '' && isSet($_GET['tid']) && $_GET['tid'] != '') {
 		$aquaglzt = $_POST['cont'];
 		$thread = $_GET['tid'];
-		$sql = "SELECT `bTag`, `name` FROM `users` WHERE `email`='$email'"; 
-		$result = $aquaglz->query($sql);
-		if ($result->num_rows > 0) {
-		  while($row = $result->fetch_assoc()) {
-			$usern = $row['bTag'];
-			$date = $_POST['date'];
-			$q = mysqli_query($aquaglz, "INSERT INTO `replies` VALUES ('', '$thread', '', '$aquaglzt', '$usern', 'STR_TO_DATE('$date', '%m/%d/%Y')')");
-		  }
-		}
+			$usern = $_SESSION['email'];
+			$q = mysqli_query($aquaglz, "INSERT INTO `replies` VALUES ('', '$thread', '', '$aquaglzt', '$usern', NOW())");
 		$qu = mysqli_query($aquaglz, "SELECT * FROM `subscriptions` WHERE `threadID`='$thread'");
 		if (mysqli_num_rows($qu) > 0) {
 			$msg = 'A new reply has been submitted to a thread you have subscribed to. '.$user.' had this to say:<br/>'.$aquaglzt;
@@ -29,8 +22,8 @@
 		}
 		if ($q) {
 		}else
-			echo '<meta http-equiv="refresh"content="2;url=ffail.php">';
-	}
+	echo '<meta http-equiv="refresh"content="2;url=ffail.php">';
+}
 	$replies = '';
 	$id;
 	$related = '<table><tbody><tr>';
