@@ -159,8 +159,8 @@ include __DIR__ . '/configs.php';
 <div class="row_">
 <p><label>Do you have friends in the Guild?</label></p>
 <select name='q11' style="display: none;" styled="true" id="select-style-1">
-<option value="1">Yes</option>
-<option value="2">No</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
 </select>
 </div>
 <input style="width: 832px;" type='text' name='q11_info' maxlength="150" placeholder="Name one or two of them! Not more.">
@@ -175,8 +175,6 @@ include __DIR__ . '/configs.php';
 <?php
 if(isset($_POST["createRecruit"])){
 $sql = "INSERT INTO recruits VALUES ('', '0', '".$_POST["character"]."', '".$_POST["battletag"]."', '".$_POST["class"]."', '".$_POST["spec"]."', 'New', '0', '".$_POST["q1"]."', '".$_POST["q2"]."', '".$_POST["q3"]."', '".$_POST["q4"]."', '".$_POST["q4_info"]."', '".$_POST["q5"]."', '".$_POST["q6"]."', '".$_POST["q7"]."', '".$_POST["q8"]."', '".$_POST["q9"]."', '".$_POST["q10"]."', '".$_POST["q11"]."', '".$_POST["q11_info"]."', '".$_POST["q12"]."', '".$_POST["q13"]."', NOW())";
-
-echo $sql;
 
 if ($aquaglz->query($sql) === TRUE) {
 echo "<script type= 'text/javascript'>alert('New record created successfully');</script>";
