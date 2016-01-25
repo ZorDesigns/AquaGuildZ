@@ -1,0 +1,130 @@
+<?php
+if ($result = $aquaglz->query("SELECT * FROM users ORDER BY uid")) {
+$row_cnt = $result->num_rows;
+
+$num_amount = $row_cnt;
+$num_total = '1000';
+
+function percent($num_amount, $num_total) {
+$count1 = $num_amount / $num_total;
+$count2 = $count1 * 100;
+$count = number_format($count2, 0);
+?>
+<div class="row panel-statistics">
+<div class="col-sm-6">
+<div class="panel panel-updates">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-7 col-lg-8">
+<h4 class="panel-title text-success">Total <strong>Users</strong></h4>
+<h3><?php echo $num_amount; ?> Users</h3>
+<div class="progress">
+<div style="width: <?php echo $count; } percent($num_amount, $num_total); ?>%" aria-valuemax="1000" aria-valuemin="0" aria-valuenow="<?php echo $num_amount; ?>" role="progressbar" class="progress-bar progress-bar-success">
+<span class="sr-only"><?php
+echo $row_cnt;
+$result->close();
+}
+?>% Complete (success)</span>
+</div>
+</div>
+<p>Current DB Rows Limit: 1000</p>
+</div>
+<div class="col-xs-5 col-lg-4 text-right">
+</div>
+</div>
+</div>
+</div><!-- panel -->
+</div><!-- col-sm-6 -->
+<?php 
+if ($newsrslt = $aquaglz->query("SELECT * FROM news ORDER BY id")) {
+$news_cnt = $newsrslt->num_rows;
+
+$news_amount = $news_cnt;
+$news_total = 1000;
+
+function percent_news($news_amount, $news_total) {
+$ncount1 = $news_amount / $news_total;
+$ncount2 = $ncount1 * 100;
+$ncount = number_format($ncount2, 0);
+?>
+<div class="col-sm-6">
+<div class="panel panel-danger-full panel-updates">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-7 col-lg-8">
+<h4 class="panel-title text-warning">Total <strong>News</strong> Posts</h4>
+<h3><?php echo $news_amount; ?> Posts</h3>
+<div class="progress">
+<div style="width: <?php echo $ncount; } percent_news($news_amount, $news_total); ?>%" aria-valuemax="1000" aria-valuemin="0" aria-valuenow="<?php echo $news_amount; ?>" role="progressbar" class="progress-bar progress-bar-warning">
+<span class="sr-only"><?php
+echo $row_cnt;
+$result->close();
+}
+?>% Complete (success)</span>
+</div>
+</div>
+<p>Current DB Rows Limit: 1000</p>
+</div>
+<div class="col-xs-5 col-lg-4 text-right">
+</div>
+</div>
+</div>
+</div><!-- panel -->
+</div><!-- col-sm-6 -->
+<?php 
+if ($forumrslt = $aquaglz->query("SELECT * FROM threads ORDER BY id")) {
+$frm_cnt = $forumrslt->num_rows;
+
+$forum_amount = $frm_cnt;
+$forum_total = 1000;
+
+function percent_forums($forum_amount, $forum_total) {
+$fcount1 = $forum_amount / $forum_total;
+$fcount2 = $fcount1 * 100;
+$fcount = number_format($fcount2, 0);
+?>
+<div class="col-sm-6">
+<div class="panel panel-success-full panel-updates">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-7 col-lg-8">
+<h4 class="panel-title text-success">Total <strong>Forum</strong> Posts</h4>
+<h3><?php echo $forum_amount; ?> Threads</h3>
+<div class="progress">
+<div style="width: <?php echo $fcount; } percent_forums($forum_amount, $forum_total); ?>%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<?php echo $frm_cnt; ?>" role="progressbar" class="progress-bar progress-bar-info">
+<span class="sr-only"><?php
+echo $frm_cnt;
+$forumrslt->close();
+}
+?>% Complete (success)</span>
+</div>
+</div>
+<p>Current DB Rows Limit: 1000</p>
+</div>
+<div class="col-xs-5 col-lg-4 text-right">
+</div>
+</div>
+</div>
+</div><!-- panel -->
+</div><!-- col-sm-6 -->
+<div class="col-sm-6">
+<div class="panel panel-updates">
+<div class="panel-body">
+<div class="row">
+<div class="col-xs-7 col-lg-8">
+<h4 class="panel-title text-danger">Unpaid Maintenance</h4>
+<h3>1%</h3>
+<div class="progress">
+<div style="width: 1%" aria-valuemax="1000" aria-valuemin="0" aria-valuenow="1" role="progressbar" class="progress-bar progress-bar-danger">
+<span class="sr-only">1% Complete (failed)</span>
+</div>
+</div>
+<p>Based on Power Consumption.</p>
+</div>
+<div class="col-xs-5 col-lg-4 text-right">
+</div>
+</div>
+</div>
+</div><!-- panel -->
+</div><!-- col-sm-6 -->
+</div><!-- row -->

@@ -74,7 +74,7 @@ die('
 <!--Logo-->
 <div class="logo-in-side">
 <h1>
-<span class="logo-default visible-default-inline-block"><img src="img/logo.png" alt="Proteus"></span>
+<span class="logo-default visible-default-inline-block"><img src="img/logo.png" alt="AquaGuildZ"></span>
 </h1>
 </div>
 </div>
@@ -102,9 +102,6 @@ die('
 <header class="l-header l-header-1 t-header-1">
 <div class="navbar navbar-ason">
 <div class="container-fluid">
-<div class="navbar-header">
-<button type="button" data-toggle="collapse" data-target="#ason-navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand widget-logo"><span class="logo-default-header"><img src="img/logo_dark.png" alt="Proteus"></span></a>
-</div>
 <div id="ason-navbar-collapse" class="collapse navbar-collapse">
 <ul class="nav navbar-nav">
 <li>
@@ -434,7 +431,7 @@ $num_total = 1000;
 
 function percent($num_amount, $num_total) {
 $count1 = $num_amount / $num_total;
-$count2 = $count1 * 100;
+$count2 = $count1 * 1000;
 $count = number_format($count2, 0);
 ?>
 <div class="widget-stats-info">

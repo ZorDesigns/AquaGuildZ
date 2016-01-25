@@ -1,0 +1,39 @@
+<div class="media leftpanel-profile">
+<div class="media-left">
+<a href="#">
+<img src="../assets/images/avatar/<?php echo $row['avatar']; ?>" alt="" class="media-object img-circle">
+</a>
+</div>
+<div class="media-body">
+<h4 class="media-heading"><?php echo $row['firstname']; ?> <a data-toggle="collapse" data-target="#loguserinfo" class="pull-right"><i class="fa fa-angle-down"></i></a></h4>
+<?php
+$rank = $row['rank'];
+if ($rank == '3'){
+echo'
+<span>Officer</span>';}
+if ($rank == '4'){
+echo'
+<span>Guild Master</span>';}
+if ($rank == '5'){
+echo'
+<span>Developer</span>';}
+?>
+</div>
+</div>
+<div class="leftpanel-userinfo collapse" id="loguserinfo">
+<h5 class="sidebar-title">Information</h5>
+<ul class="list-group">
+<li class="list-group-item">
+<label class="pull-left">Email</label>
+<span class="pull-right"><?php echo $row['email']; ?></span>
+</li>
+<li class="list-group-item">
+<label class="pull-left">BattleTag</label>
+<span class="pull-right"><?php echo $row['bTag']; ?></span>
+</li>
+<li class="list-group-item">
+<label class="pull-left">Avatar</label>
+<span class="pull-right"><?php echo $row['avatar']; ?></span>
+</li>
+</ul>
+</div>

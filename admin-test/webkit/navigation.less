@@ -1,0 +1,61 @@
+<?php if(isset($page_cat)){?>
+<div class="tab-pane active" id="mainmenu">
+<ul class="nav nav-pills nav-stacked nav-quirk">
+<li class="<?php if($page_cat=='home') echo'active';?>"><a href="index.php"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+</ul>
+<h5 class="sidebar-title">Functionalities</h5>
+<ul class="nav nav-pills nav-stacked nav-quirk">
+<li class="nav-parent <?php if($page_cat=='users') echo'active';?>">
+<a href=""><i class="fa fa-users"></i> <span>Users</span></a>
+<ul class="children">
+<li class="<?php if($page_cat=='users') echo'active';?>"><a href="users.php"><span class="title">List Users</span></a></li>
+<li class="<?php if($page_cat=='rusers') echo'active';?>"><a href="users.php"><span class="title">Delete User</span></a></li>
+<li class="<?php if($page_cat=='edituser') echo'active';?>"><a href="users.php"><span class="title">Edit User</span></a></li>
+</ul>
+</li>
+<li class="nav-parent <?php if($page_cat=='news') echo'active';?>">
+<a href=""><i class="fa fa-newspaper-o"></i> <span>News</span></a>
+<ul class="children">
+<li class="<?php if($page_cat=='news') echo'active';?>"><a href="news.php"><span class="title">List Articles</span></a></li>
+<li class="<?php if($page_cat=='lnews') echo'active';?>"><a href="edit-news.php"><span class="title">Create Article</span></a></li>
+<li class="<?php if($page_cat=='enews') echo'active';?>"><a href="news.php"><span class="title">Edit Article</span></a></li>
+<li class="<?php if($page_cat=='rnews') echo'active';?>"><a href="news.php"><span class="title">Remove Article</span></a></li>
+</ul>
+</li>
+<li class="nav-parent <?php if($page_cat=='recr') echo'active';?>">
+<a href=""><i class="fa fa-child"></i> <span>Recruitment</span></a>
+<ul class="children">
+<li class="<?php if($page_cat=='char') echo'active';?>"><a href="#"><span class="title">Add Recruitment</span></a></li>
+<li class="<?php if($page_cat=='prog') echo'active';?>"><a href="#"><span class="title">Remove Recruitment</span></a></li>
+</ul>
+</li>
+<li class="nav-parent <?php if($page_cat=='forum') echo'active';?>">
+<a href=""><i class="fa fa-archive"></i> <span>Forum</span></a>
+<ul class="children">
+<li class="<?php if($page_cat=='char') echo'active';?>"><a href="#"><span class="title">List Topics</span></a></li>
+<li class="<?php if($page_cat=='prog') echo'active';?>"><a href="#"><span class="title">Remove Topic</span></a></li>
+</ul>
+</li>
+<li class="nav-parent <?php if($page_cat=='media') echo'active';?>">
+<a href=""><i class="fa fa-video-camera"></i> <span>Media</span></a>
+<ul class="children">
+<li class="<?php if($page_cat=='lismedia') echo'active';?>"><a href="#"><span class="title">List Media</span></a></li>
+<li class="<?php if($page_cat=='addmedia') echo'active';?>"><a href="#"><span class="title">Accept Media</span></a></li>
+<li class="<?php if($page_cat=='remedia') echo'active';?>"><a href="#"><span class="title">Remove Media</span></a></li>
+</ul>
+</li>
+<li class="nav-parent <?php if($page_cat=='comm') echo'active';?>">
+<a href=""><i class="fa fa-university"></i> <span>Community</span></a>
+<ul class="children">
+<li class="<?php if($page_cat=='editcomm') echo'active';?>"><a href="#"><span class="title">Edit Community</span></a></li>
+</ul>
+</li>
+<li class="nav-parent <?php if($page_cat=='rank') echo'active';?>">
+<a href=""><i class="fa fa-star-half-o"></i> <span>Rankings</span></a>
+<ul class="children">
+<li class="<?php if($page_cat=='editrank') echo'active';?>"><a href="#"><span class="title">Edit Ranking</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<?php } ?>

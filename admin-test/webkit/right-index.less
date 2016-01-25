@@ -1,0 +1,167 @@
+<div class="col-md-3 col-lg-4 dash-right">
+<div class="panel panel-warning-full">
+<div class="panel-heading">
+<h4 class="panel-title">WARNING: Officers!</h4>
+</div>
+<div class="panel-body">
+<h4 class="mt0">Take everything into consideration!</h4>
+<p>When it comes to deciding something please take everything into consideration! Why are we warning you? Simple. You may click something and delete a user, news, posts, forums, recruits, media or even unrank another officer by mistake. And there is no Undo here! So please, take everything into consideration!</p>
+<div class="mb20"></div>
+<ul class="list-inline nomargin">
+<li><a href="">May the force be with you!</a></li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-5 col-md-12 col-lg-6">
+<div class="panel panel-danger panel-weather">
+<div class="panel-heading">
+<h4 class="panel-title">Server Maintenance</h4>
+</div>
+<div class="panel-body inverse">
+<div class="row mb10">
+<div class="col-xs-6">
+<h2 class="today-day">Monthly</h2>
+<h3 class="today-date">Costs</h3>
+</div>
+<div class="col-xs-6">
+<i class="fa big fa-euro"></i>
+</div>
+</div>
+<p class="nomargin">Maintenance pays for upgrades, costs, and sustaining the server online!</p>
+<div class="row mt10">
+<div class="col-xs-7">
+<strong>Current Costs:</strong> 2 <i class="fa fa-euro"></i>
+</div>
+<div class="col-xs-5">
+<strong>Paid:</strong> 0 <i class="fa fa-euro"></i>
+</div>
+</div>
+</div>
+</div>
+</div><!-- col-md-12 -->
+<div class="col-sm-5 col-md-12 col-lg-6">
+<div class="panel panel-danger panel-weather">
+<div class="panel-heading">
+<h4 class="panel-title">Server System</h4>
+</div>
+<div class="panel-body inverse">
+<p class="nomargin">
+<ul class="list-unstyled">
+<?php
+echo '<li><strong>CPU:</strong> AMD Sempron 2650 Dual-Core</li>';
+?>
+<?php
+exec('wmic memorychip get capacity', $totalMemory);
+echo '<li><strong>RAM:</strong> ';
+echo array_sum($totalMemory) / 1024 / 1024 / 1024; // GB
+echo ' GB</li>';
+?>
+<?php
+if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+echo '<li><strong>OS:</strong> Windows</li>';
+} else {
+echo '<li><strong>OS:</strong> Other</li>';
+}
+?>
+<?php
+echo '<li><strong>SSD:</strong> 0GB</li>';
+?>
+<?php
+echo '<li><strong>HDD:</strong> 500GB</li>';
+?>
+</ul>
+<p class="nomargin">These information are updated only when the server gets upgrades!</p>
+<div class="row mt10">
+<div class="col-xs-7">
+</div>
+<div class="col-xs-5">
+</div>
+</div>
+</div>
+</div>
+</div><!-- col-md-12 -->
+</div><!-- row -->
+<div class="row">
+<div class="col-sm-5 col-md-12 col-lg-6">
+<div class="panel panel-success">
+<div class="panel-heading">
+<h4 class="panel-title">Recent Registered Users</h4>
+</div>
+<div class="panel-body">
+<ul class="media-list user-list">
+<?php $uservi = "SELECT * FROM users ORDER BY uid DESC LIMIT 5";
+$userrslt = $aquaglz->query($uservi);
+if ($userrslt->num_rows > 0) {
+// output data of each row
+while($uservi = $userrslt->fetch_assoc()) {
+echo '
+<li class="media">
+<div class="media-left">
+<a href="#">
+<img class="media-object img-circle" src="../assets/images/avatar/'.$uservi["avatar"].'" alt="">
+</a>
+</div>
+<div class="media-body">
+<h4 class="media-heading nomargin"><a href="">'.$uservi["lastname"].' '.$uservi["firstname"].'</a></h4>
+Email: <a>'.$uservi["email"].'</a>
+& with BattleTag: <a>'.$uservi["bTag"].'</a>
+<small class="date"><i class="glyphicon glyphicon-time"></i>ID: '.$uservi["uid"].'</small>
+</div>
+</li>
+';}
+}else{
+echo 'No Users Yet...';
+}
+?>
+</ul>
+</div>
+</div><!-- panel -->
+</div>
+<div class="col-sm-5 col-md-12 col-lg-6">
+<div class="panel panel-success">
+<div class="panel-heading">
+<h4 class="panel-title">Recent Posted News</h4>
+</div>
+<div class="panel-body">
+<ul class="media-list user-list">
+<?php
+$news = "SELECT * FROM news ORDER BY id DESC LIMIT 5";
+$result = $aquaglz->query($news);
+if ($result->num_rows > 0) {
+// output data of each row
+while($news = $result->fetch_assoc()) {
+if($news['content'] == "")
+{
+$news['content'] = substr(strip_tags($news['content'],'<p><a><br><li><ol><ul>'),0,20);
+if (substr($news['content'], -1) == '<') 
+{$news['content'] = substr($news['content'], 0, -1);}
+$content = $news['content'];
+}else{
+$content = substr(strip_tags($news['content']),0,70);}
+echo '
+<li class="media">
+<div class="media-left">
+<a href="#">
+<img class="media-object img-circle" src="../assets/images/news/square/'.$news["image"].'.png" alt="'.$news["image"].'">
+</a>
+</div>
+<div class="media-body">
+<h4 class="media-heading nomargin"><a href="">'.$news["title"].'</a></h4>
+'.$content.'...
+<small class="date"><i class="glyphicon glyphicon-time"></i> ID: '.$news["id"].'</small>
+</div>
+</li>
+';
+}
+} else {
+echo '
+No Posts Yet!';
+}
+?>
+</ul>
+</div>
+</div><!-- panel -->
+</div>
+</div>
+</div><!-- col-md-3 -->

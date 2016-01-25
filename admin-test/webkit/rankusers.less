@@ -1,0 +1,44 @@
+<div class="tab-pane" id="contactmenu">
+<div class="input-group input-search-contact">
+<input type="text" class="form-control" placeholder="Search contact">
+<span class="input-group-btn">
+<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+</span>
+</div>
+<h5 class="sidebar-title">Guild Officers</h5>
+<ul class="media-list media-list-contacts">
+<?php
+$uservis = "SELECT * FROM users WHERE rank >= '3'";
+$usersslt = $aquaglz->query($uservis);
+if ($usersslt->num_rows > 0) {
+// output data of each row
+while($uservis = $usersslt->fetch_assoc()) {
+$rank = $uservis["rank"];
+echo '
+<li class="media">
+<a href="#">
+<div class="media-left">
+<img class="media-object img-circle" src="../assets/images/avatar/'.$uservis["avatar"].'" alt="">
+</div>
+<div class="media-body">
+<h4 class="media-heading">'.$uservis["lastname"].' '.$uservis["firstname"].'</h4>
+';
+if ($rank == '3'){
+echo'
+<span><i class="fa fa-bolt"></i> Officer</span>';}
+if ($rank == '4'){
+echo'
+<span><i class="fa fa-bolt"></i> Guild Master</span>';}
+if ($rank == '5'){
+echo'
+<span><i class="fa fa-bolt"></i> Developer</span>';}
+echo'</div>
+</a>
+</li>
+';}
+}else{
+echo 'No Users Yet...';
+}
+?>
+</ul>
+</div>
