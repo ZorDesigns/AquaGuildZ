@@ -57,7 +57,7 @@ $rdate = $recr['last_date'];
 ?>
 <div class="recr">
 <div id="title">
-<h1><?php echo $rclass; ?><p></p><span></span></h1>
+<h1><?php echo $rclass; ?></h1>
 </div>
 </div>
 <div class="container_3 recr_light_cont recr_info_cont" align="left">
@@ -65,7 +65,9 @@ $rdate = $recr['last_date'];
 <ul class="recr_class">
 <?php if ($rclass == 'Death Knight'){
 echo '<li id="class"><span style="background:url(assets/images/recr-banners/Death-Knight.png) no-repeat; background-size: 100%; position:static;"></span><p></p></li>
-';}
+';}else{
+echo '<li id="class"><span style="background:url(assets/images/recr-banners/'.$rclass.'.png) no-repeat; background-size: 100%; position:static;"></span><p></p></li>';
+}
 ?>
 </ul>		
 <ul class="recr_info_main">
@@ -122,13 +124,13 @@ echo '<div class="recruit-reports-holder approved">
 <div class="recr-row" align="left">
 <h4>Link your Armory Link:</h4>
 <p>
-<a href="<?php echo $recr['q2']; ?>"><?php echo $char; ?> - <?php echo $rclass; ?> - <?php echo $rrole; ?> - Armory Link</a>
+<a onclick="window.open('<?php echo $recr['q2']; ?>');"href="#"><?php echo $char; ?> - <?php echo $rclass; ?> - <?php echo $rrole; ?> - Armory Link</a>
 </p>
 </div>
 <div class="recr-row" align="left">
 <h4>RaidUI Image:</h4>
 <p>
-<a href="<?php echo $recr['q3']; ?>"><?php echo $char; ?> - <?php echo $rclass; ?> - <?php echo $rrole; ?> - RaidingUI</a>
+<a onclick="window.open('<?php echo $recr['q3']; ?>');"href="#"><?php echo $char; ?> - <?php echo $rclass; ?> - <?php echo $rrole; ?> - RaidingUI</a>
 </p>
 </div>
 <div class="recr-row" align="left">
