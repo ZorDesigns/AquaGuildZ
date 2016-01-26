@@ -297,6 +297,7 @@ echo "
 </div>
 </div>
 </div>
+</div>
 ";
 }else{
 echo "
