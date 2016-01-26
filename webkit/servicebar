@@ -6,6 +6,7 @@ include("check.php");
 <source src="assets/images/wod.mp4" type="video/mp4">
 </video>
 <link href="assets/stylesheets/nav.css" rel="stylesheet" type="text/css">
+<?php if(isset($_SESSION['email'])){ ?>
 <div id="nav-client-header" class="nav-client compact">
 <div id="nav-client-bar">
 <div class="grid-container nav-header-content">
@@ -19,7 +20,6 @@ include("check.php");
 </ul>
 <ul class="nav-list nav-right" id="nav-client-account-menu">
 <li>
-<?php if(isset($_SESSION['email'])){ ?>
 <div id="username">
 <div class="dropdown pull-right">
 <a class="nav-link username needsclick dropdown-toggle" data-toggle="dropdown" rel="navbar">Welcome
@@ -57,10 +57,24 @@ echo '<div class="dropdown-section">
 </div>
 </div>
 <?php }else{ ?>
+<div id="nav-client-header" class="nav-client compact">
+<div id="nav-client-bar">
+<div class="grid-container nav-header-content">
+<ul class="nav-list nav-left" id="nav-client-main-menu">
+<li>
+<a id="nav-client-home" class="nav-item nav-home" href="/en/" data-analytics="global-nav" data-analytics-placement="Home"></a>
+</li>
+<li>
+<a id="nav-client-shop" class="nav-item nav-link" href="index.php" data-analytics="global-nav" data-analytics-placement="Home">Home</a>
+</li>
+</ul>
+<ul class="nav-list nav-right" id="nav-client-account-menu">
+<li>
 <div id="username">
 <div class="dropdown pull-right">
-<a class="nav-link username dropdown-toggle" data-toggle="dropdown" rel="navbar">Your account<b class="caret"></b></a>
-<div class="dropdown-menu">
+<a class="nav-link username needsclick dropdown-toggle" data-toggle="dropdown" rel="navbar">Welcome
+<b class="caret"></b></a>
+<div class="dropdown-menu  pull-right">
 <div class="arrow top"></div>
 <div class="user-profile">
 <div class="dropdown-section">
@@ -83,7 +97,6 @@ echo '<div class="dropdown-section">
 <li>
 <a id="nav-client-support-link" class="nav-item nav-link" href="services.php" data-analytics="global-nav" data-analytics-placement="About Us"> About Us </a>
 </li>
-</ul>
 </div>
 </div>
 </div>

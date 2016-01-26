@@ -538,6 +538,12 @@ ul.recr_class li#class p {margin: -117px 0 0px 0px;display: block;width: 118px;h
 #moveme {margin: 3px 0px 0px 28px;}
 .recruit-reports-holder.new {background: #3A3D18;text-shadow: 0 0 5px rgba(0,0,0,.4);box-shadow: 0 0 8px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 0 15px rgba(0,0,0,.015), inset 0 0 15px rgba(0,255,0,.05), inset 0 0 0 1px rgba(0,255,0,.05);}
 .recruit-reports-holder.closed {background: #490000;text-shadow: 0 0 5px rgba(0,0,0,.4);box-shadow: 0 0 8px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 0 15px rgba(0,0,0,.015), inset 0 0 15px rgba(0,255,0,.05), inset 0 0 0 1px rgba(0,255,0,.05);}
-.recruit-reports-holder.considered {font-size: 15px!important;background: #351A15;text-shadow: 0 0 5px rgba(0,0,0,.4);box-shadow: 0 0 8px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 0 15px rgba(0,0,0,.015), inset 0 0 15px rgba(0,255,0,.05), inset 0 0 0 1px rgba(0,255,0,.05);}
-.recruit-reports-holder.considered h3{font-size: 15px!important;}
-.recruit-reports-holder.considered h1{line-height: 112%!important;font-size: 44px!important;}
+.recruit-reports-holder.considering {font-size: 15px!important;background: #351A15;text-shadow: 0 0 5px rgba(0,0,0,.4);box-shadow: 0 0 8px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 0 15px rgba(0,0,0,.015), inset 0 0 15px rgba(0,255,0,.05), inset 0 0 0 1px rgba(0,255,0,.05);}
+.recruit-reports-holder.considering h3{font-size: 15px!important;}
+.recruit-reports-holder.considering h1{line-height: 112%!important;font-size: 44px!important;}
+.officer_post {background: url(../images/forum/topic_bg_bottom.png) no-repeat bottom, url(../images/forum/topic_bg_row_admin.png) no-repeat, url(../images/forum/texture_light_2.gif) repeat;box-shadow: 0 0 0 1px #080707, 0 -2px 0 #684e19, 0 0 0 2px #413111, 0 0 4px 2px rgba(0,0,0,.8), 0 0 11px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.03), 0 0 25px rgba(255,210,0,.12);}
+.recr_post {width: 710px!important;}
+.fix_recr {width: 550px!important;}
+.fix_officer {margin: 0 50px 0 -36px!important;}
+.fix-padding {margin: -13px 0 0 0px!important;}
+input[type="submit"] {width: auto!important;height: 36px!important;border: none;cursor: pointer;line-height: 0;vertical-align: top;}
