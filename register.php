@@ -25,7 +25,7 @@ echo" <meta http-equiv='refresh'content='0; url=failed.php'>";
 }
 else
 {
-$query = mysqli_query($aquaglz, "INSERT INTO users (firstname, lastname, bTag, email, password, rank)VALUES ('$fname', '$lname', '$bTag', '$email', '$password', 0)");
+$query = mysqli_query($aquaglz, "INSERT INTO users (firstname, lastname, bTag, email, password, rank)VALUES ('$fname', '$lname', '$bTag', '$email', '$password', NOW())");
 if($query)
 {
 echo" <meta http-equiv='refresh'content='0; url=success.php'>";

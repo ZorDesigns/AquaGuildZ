@@ -211,7 +211,7 @@ echo '<div class="recruit-reports-holder approved">
 <div class="topic_post recr_post admin_post" id="post-9">
 <div class="officer_post_logo_hh"></div>
 <div class="left_side">	
-<div class="user_avatar"><span style="background:url(admin/img/profile/lady.gif) no-repeat; background-size: 100%;">
+<div class="user_avatar"><span style="background:url(assets/images/avatar/profile.gif) no-repeat; background-size: 100%;">
 </span></div>
 <div class="user_info">
 <div class="usr_and_pr">
@@ -225,7 +225,7 @@ echo '<div class="recruit-reports-holder approved">
 <p style="text-align: left;">
 Hello there, <?php echo $char; ?>!</p>
 <p style="text-align: left;">
-One of our Officers will contant you here as soon as possible. Thanks for your post for the recruitment about <?php echo $rclass; ?>! We might need a <?php echo $rrole; ?> like you! The Hellenic Horde Team wishes you good luck with your Post!
+One of our Officers will contant you here as soon as possible. Thanks for your post for the recruitment about the <?php echo $rclass; ?>! We might need a <?php echo $rrole; ?> like you! The Hellenic Horde Team wishes you good luck with your Post!
 </p>
 <p style="text-align: left;">
 With Respect,</p>

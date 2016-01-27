@@ -35,7 +35,7 @@ include("check.php");
 </div>
 </div>
 <div class="dropdown-section">
-<a class="nav-item nav-a nav-item-box" href="#" data-analytics="global-nav" data-analytics-placement="Nav - Account - Settings"><i class="nav-icon-24-blue nav-icon-character-cog"></i>Account Settings</a>
+<a class="nav-item nav-a nav-item-box" href="account.php" data-analytics="global-nav" data-analytics-placement="Nav - Account - Settings"><i class="nav-icon-24-blue nav-icon-character-cog"></i>Account Settings</a>
 </div>
 <?php if($login_rank < 3)
 {
@@ -43,6 +43,8 @@ echo'';
 }else{
 echo '<div class="dropdown-section">
 <a class="nav-item nav-a nav-item-box" href="admin/" data-analytics="global-nav" data-analytics-placement="Nav - Account - Settings"><i class="nav-icon-24-blue nav-icon-globe"></i>Admin Settings</a>
+</div><div class="dropdown-section">
+<a class="nav-item nav-a nav-item-box" href="admin-test/" data-analytics="global-nav" data-analytics-placement="Nav - Account - Settings"><i class="nav-icon-24-blue nav-icon-globe"></i>BETA Panel</a>
 </div>';
 }
 ?>

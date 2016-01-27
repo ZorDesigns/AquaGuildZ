@@ -547,3 +547,38 @@ ul.recr_class li#class p {margin: -117px 0 0px 0px;display: block;width: 118px;h
 .fix_officer {margin: 0 50px 0 -36px!important;}
 .fix-padding {margin: -13px 0 0 0px!important;}
 input[type="submit"] {width: auto!important;height: 36px!important;border: none;cursor: pointer;line-height: 0;vertical-align: top;}
+
+/* Account */
+.sitehead-account {width: 983px;height: 106px;display: block;border-radius: 3px;background-image: url(../images/account/bg-1.png);background-repeat: no-repeat;margin: -6px 0 0 0px;}
+.sitehead-account h1 {font-family: 'Ebrima';font-weight: bold;text-transform: uppercase;font-size: 32px;color: #8e6b3e;text-shadow: 0 0 8px rgba(0,0,0,1), 0 1px 2px rgba(0,0,0,1);margin: 5px 0 0 0;height: 22px;padding: 31px;line-height: 125%;}
+#user_card.bg_cata {background-image: url(../images/bg-a.png);}
+#user_card {margin: -25px 0 0 13px;float: left;font-size: 0px;display: inline-block;vertical-align: top;width: 550px;height: 320px;background: transparent no-repeat right top;-moz-box-shadow: 0 0 5px 2px rgba(0,0,0,0.35);-webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.35);box-shadow: 0 0 5px 2px rgba(0,0,0,0.35);}
+#user_card .left {display: inline-block;vertical-align: top;width: 202px;height: 320px;text-align: center;}
+#user_card .right {display: inline-block;width: 348px;height: 320px;text-align: left;}
+#user_card .right ul {display: block;margin: 30px 0 0 35px;list-style: none;padding: 0;}
+#user_card .right ul li.lab {text-transform: uppercase;}
+#user_card .right ul li {font-family: 'Ebrima';font-size: 10px;color: #44403e;text-shadow: 0 1px 1px rgba(0,0,0,0.35);}
+#user_card .right ul li.data {font-size: 12px;color: #645c57;padding-bottom: 10px;}
+ul.recr_class li#change_avatar {margin: 0 auto;display: block;text-align: center;font-size: 10px;text-transform: uppercase;margin: 10px 18px 0 0;text-shadow: 0 1px 1px rgba(0,0,0,.5), 0 0 3px rgba(0,0,0,.20);}
+ul.recr_class li#change_avatar a {text-shadow: 0 0 5px rgba(0,0,0,.4), 1px 1px 1px rgba(0,0,0,.25);text-decoration: none;color: #565043;}
+ul.recr_class li#change_avatar a:hover {color: #e9a930;}
+#user-right {margin: -25px 0 0 0;display: inline-block;color: #5B554D;height: 320px;width: 400px;font-size: 13px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;-moz-box-shadow: 0 0 2px 2px rgba(0,0,0,0.25),inset 0 0 1px 1px rgba(255,255,255,0.03);-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,0.25),inset 0 0 1px 1px rgba(255,255,255,0.03);box-shadow: 0 0 2px 2px rgba(0,0,0,0.25),inset 0 0 1px 1px rgba(255,255,255,0.03);background-color: #1b1715;}
+#user-right .points {display: block;font-family: 'Ebrima';text-align: center;text-shadow: 0 0 5px rgba(0,0,0,0.35),0 2px rgba(0,0,0,0.35);padding: 20px 0px 0 34px;font-size: 0px;}
+.col-xs-8 {width: 33.33333333%;float: left;}
+#user-right .points .point.support {color: #d9b963;}
+#user-right .points .point {width: auto;
+max-width: 85px;font-size: 38px;}
+#user-right .points .pt_txt {display: inline-block;font-size: 11px;color: #645c57;padding: 9px;line-height: 11px;text-align: left;text-transform: uppercase;}
+#user-right .points .point.creeper {color: #8d8277;}
+#user-right .msg_pm:hover, #user-right .msg_pm:focus, #user-right .msg_pm.active {color: #afa396;}
+#user-right .msg_pm {display: block;padding: 5px;text-align: center;text-decoration: none;color: rgba(53,50,49,0.8);border-top: 1px solid rgba(0,0,0,0.4);border-bottom: 1px solid rgba(0,0,0,0.4);-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.04),0 1px 0 rgba(255,255,255,0.04),inset 0 -35px 60px -40px rgba(255,255,255,0.1);-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.04),0 1px 0 rgba(255,255,255,0.04),inset 0 -35px 60px -40px rgba(255,255,255,0.1);box-shadow: inset 0 1px 0 rgba(255,255,255,0.04),0 1px 0 rgba(255,255,255,0.04),inset 0 -35px 60px -40px rgba(255,255,255,0.1);text-shadow: 1px 1px 0px #000000;-moz-transition-property: box-shadow,color;-o-transition-property: box-shadow,color;-webkit-transition-property: box-shadow,color;transition-property: box-shadow,color;-moz-transition-duration: 0.4s,0.4s;-o-transition-duration: 0.4s,0.4s;-webkit-transition-duration: 0.4s,0.4s;transition-duration: 0.4s,0.4s;}
+#user-right .msg_pm .achievements {vertical-align: middle;font-size: 45px;margin: 9px 0px -13px 12px;height: 63px;background-image: url(../images/achievs.png);background-repeat: no-repeat;}
+#user-right .msg_pm:hover {-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.04),0 1px 0 rgba(255,255,255,0.04),inset 0 -35px 60px -40px rgba(255,255,255,0.18);-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.04),0 1px 0 rgba(255,255,255,0.04),inset 0 -35px 60px -40px rgba(255,255,255,0.18);box-shadow: inset 0 1px 0 rgba(255,255,255,0.04),0 1px 0 rgba(255,255,255,0.04),inset 0 -35px 60px -40px rgba(255,255,255,0.18);}
+#user-right .msg_pm .msg_txt {margin: -60px 0 0px 0px;display: inline-block;color: #7D766E;vertical-align: middle;-moz-transition-property: color;-o-transition-property: color;-webkit-transition-property: color;transition-property: color;-moz-transition-duration: 0.4s;-o-transition-duration: 0.4s;-webkit-transition-duration: 0.4s;transition-duration: 0.4s;}
+#user-right .msg_pm .msg_txt span {color: #514D49;font-size: 11px;}
+.col-xs-12 {width: 50%;float: left;}
+#user-right nav.accountnav ul {list-style: none;margin-top: 20px;padding: 0 15px;font-size: 0px;}
+#user-right nav.accountnav ul li {text-align: left;margin-bottom: 10px;color: #847769;-moz-transition-property: box-shadow,color;-o-transition-property: box-shadow,color;-webkit-transition-property: box-shadow,color;transition-property: box-shadow,color;-moz-transition-duration: 0.4s,0.4s;-o-transition-duration: 0.4s,0.4s;-webkit-transition-duration: 0.4s,0.4s;transition-duration: 0.4s,0.4s;font-size: 12px;}
+#user-right nav.accountnav ul li a {padding-left: 10px;font-family: 'Ebrima';font-size: 12px;color: #645c57;text-shadow: 0 0 5px rgba(0,0,0,0.1),1px 1px 1px rgba(0,0,0,0.25);-moz-transition-property: box-shadow,color;-o-transition-property: box-shadow,color;-webkit-transition-property: box-shadow,color;transition-property: box-shadow,color;-moz-transition-duration: 0.4s,0.4s;-o-transition-duration: 0.4s,0.4s;-webkit-transition-duration: 0.4s,0.4s;transition-duration: 0.4s,0.4s;}
+#user-right.bg_cata {background-image: url(../images/bg-b.png);}
+#user-right nav.accountnav ul li a:hover {color: #ac9f92;}
