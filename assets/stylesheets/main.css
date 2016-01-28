@@ -494,6 +494,7 @@ ul.pagination-forum li {display: inline-block;vertical-align: top;margin: -3px 1
 .rec-row li.status.approved {color: #79a026;}
 .rec-row li.status.considering {color: #FF8623;}
 .rec-row li.status.new {color: #DBE524;}
+.rec-row li.status.closed {color: #FF0000;}
 .rec-row li.status {display: inline-block;width: 8%;text-align: right;margin: 0 0 0 3px;color: #4e4c48;padding: 0 2% 0 0;}
 .submit-recruit:hover {box-shadow: 0 0 11px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.03), inset 0 0 0 80px rgba(255,255,204,.008);}
 .rec-row:hover {box-shadow: 0 0 11px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.03), inset 0 0 0 80px rgba(255,255,204,.008);}

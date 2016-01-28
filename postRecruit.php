@@ -289,10 +289,11 @@ $qu = mysqli_query($aquaglz, "SELECT * FROM `recr_replies` WHERE `recrID`='$ctID
 if (mysqli_num_rows($qu) > 0) {
 while ($row = mysqli_fetch_array($qu)) {
 $author = $row['author'];
-$qer = mysqli_query($aquaglz, "SELECT avatar FROM `users` WHERE `bTag`='$author'");
+$qer = mysqli_query($aquaglz, "SELECT avatar, rank FROM `users` WHERE `bTag`='$author'");
 if (mysqli_num_rows($qer) > 0) {
 while ($recr = mysqli_fetch_array($qer)) {
 $avatar = $recr['avatar'];
+$rank = $recr['rank'];
 echo '
 <div class="topic_post recr_post admin_post" id="post-9">
 <div class="officer_post_logo_hh"></div>
@@ -303,14 +304,37 @@ echo '
 <div class="usr_and_pr">
 <a class="username">'.$author.'</a>
 </div>
-<h3><font color="#FF0000">Officer</font></h3>
+';
+if ($rank == '5'){
+echo '<h3><font color="#00B4FF">Developer</font></h3>
+';}
+if ($rank == '4'){
+echo '<h3><font color="#a335ee">Guild Master</font></h3>
+';}
+if ($rank == '3'){
+echo '<h3><font color="#81B558">Officer</font></h3>
+';}
+echo'
 </div>
 </div>
 <div class="right_side fix_recr">
-<div class="post_container">
-<p style="text-align: left;">'.$row['content'].'
-</p>
+';
+if ($rank == '5'){
+echo '<div class="post_container" style="color: #00B4FF;">
+<p style="text-align: left;">'.$row['content'].'</p>
 </div>
+';}
+if ($rank == '4'){
+echo '<div class="post_container" style="color: #81B558;">
+<p style="text-align: left;">'.$row['content'].'</p>
+</div>
+';}
+if ($rank == '3'){
+echo '<div class="post_container" style="color: #81B558;">
+<p style="text-align: left;">'.$row['content'].'</p>
+</div>
+';}
+echo'
 <ul class="post_controls">
 <li class="post_date">'.$row['date'].'</li>
 </ul>
