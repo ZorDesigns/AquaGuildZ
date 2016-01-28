@@ -25,7 +25,7 @@ echo" <meta http-equiv='refresh'content='0; url=failed.php'>";
 }
 else
 {
-$query = mysqli_query($aquaglz, "INSERT INTO users (firstname, lastname, bTag, email, password, rank)VALUES ('$fname', '$lname', '$bTag', '$email', '$password', NOW())");
+$query = mysqli_query($aquaglz, "INSERT INTO users (uid, email, bTag, password, firstname, lastname, rank, avatar, signup_date)VALUES ('', '$email', '$bTag', '$password', '$fname', '$lname', '0', 'profile.gif', NOW())");
 if($query)
 {
 echo" <meta http-equiv='refresh'content='0; url=success.php'>";
@@ -58,8 +58,8 @@ if ((isset($_SESSION['email']) != ''))
 </head>
 <body class="login-bg">
 <video loop muted autoplay poster="assets/images/frame.png" id="bgvid">
-<source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.webm" type="video/webm">
-<source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.mp4" type="video/mp4">
+<source src="assets/images/wod.webm" type="video/webm">
+<source src="assets/images/wod.mp4" type="video/mp4">
 </video>
 <!--[if lt IE 9]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

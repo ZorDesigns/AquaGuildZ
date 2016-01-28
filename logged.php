@@ -23,12 +23,10 @@ echo"<meta http-equiv='refresh'content='2;url=index.php'>";
 <link rel="stylesheet" href="admin/css/background.css">
 </head>
 <body class="login-bg">
-<div class="fullscreen-bg">
 <video loop muted autoplay poster="assets/images/frame.png" id="bgvid">
 <source src="assets/images/wod.webm" type="video/webm">
 <source src="assets/images/wod.mp4" type="video/mp4">
 </video>
-</div>
 <!--SECTION-->
 <section class="l-main-container">
 <!--Main Content-->
