@@ -285,15 +285,20 @@ SYSTEM
 <div class="clear"></div>
 </div>
 <?php
+$var = mysqli_query($aquaglz, "SELECT rank FROM `users` WHERE `email`='$user_check'");
+if (mysqli_num_rows($var) > 0) {
+while ($rowvar = mysqli_fetch_array($var)) {
+$rank_check = $rowvar['rank'];
 $qu = mysqli_query($aquaglz, "SELECT * FROM `recr_replies` WHERE `recrID`='$ctID'");
 if (mysqli_num_rows($qu) > 0) {
 while ($row = mysqli_fetch_array($qu)) {
 $author = $row['author'];
-$qer = mysqli_query($aquaglz, "SELECT avatar, rank FROM `users` WHERE `bTag`='$author'");
+$qer = mysqli_query($aquaglz, "SELECT avatar, rank, bTag FROM `users` WHERE `email`='$author'");
 if (mysqli_num_rows($qer) > 0) {
 while ($recr = mysqli_fetch_array($qer)) {
 $avatar = $recr['avatar'];
 $rank = $recr['rank'];
+$btRag = $recr['bTag'];
 echo '
 <div class="topic_post recr_post admin_post" id="post-9">
 <div class="officer_post_logo_hh"></div>
@@ -302,7 +307,7 @@ echo '
 </span></div>
 <div class="user_info">
 <div class="usr_and_pr">
-<a class="username">'.$author.'</a>
+<a class="username">'.$btRag.'</a>
 </div>
 ';
 if ($rank == '6'){
@@ -344,7 +349,16 @@ echo '<div class="post_container" style="color: #a335ee;">
 ';}
 echo'
 <ul class="post_controls">
-<li class="post_date">'.$row['date'].'</li>
+<li class="post_date">'.$row['date'].'</li>';
+if ($author == $user_check){
+echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Delete">Delete</a></li>
+';}
+else{
+if ( in_array($rank_check, array(4, 5, 6)) ) {
+echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Delete">Delete</a></li>
+';}
+}
+echo'
 </ul>
 </div>
 <div class="clear"></div>
@@ -353,7 +367,7 @@ echo'
 }
 }
 }
-}
+}}}
 ?>
 <!-- Actions -->
 </div>
@@ -361,7 +375,6 @@ echo'
 <?php $rer = mysqli_query($aquaglz, "SELECT bTag FROM `users` WHERE `email`='$user_check'");
 if (mysqli_num_rows($rer) > 0) {
 while ($rera = mysqli_fetch_array($rer)) {
-$bTrag = $rera['bTag'];
 ?>
 <?php if($login_rank < 3)
 {
@@ -383,7 +396,7 @@ echo "
 <div class='topic_header'>
 <div class='topic_title'>
 <h1>Leave a Reply</h1>
-<h3>Reply as: $bTrag</h3>
+<h3>Reply as: $user_check (Thou your BattleTag will be posted, relax your BattleTag Numbers will not)</h3>
 </div>
 </div>
 <div class='quick_reply topic_post recr_post'>
@@ -400,7 +413,7 @@ echo "
 ?>
 <?php
 if(isset($_POST["createReply"])){
-$sql = "INSERT INTO recr_replies VALUES ('', '".$ctID."', '".$_POST["cont"]."', '".$bTrag."', NOW())";
+$sql = "INSERT INTO recr_replies VALUES ('', '".$ctID."', '".$_POST["cont"]."', '".$user_check."', NOW())";
 
 if ($aquaglz->query($sql) === TRUE) {
 echo "<script type= 'text/javascript'>alert('Your reply has been submitted!');</script>";

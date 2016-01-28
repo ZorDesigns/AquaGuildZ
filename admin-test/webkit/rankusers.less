@@ -8,7 +8,7 @@
 <h5 class="sidebar-title">Guild Officers</h5>
 <ul class="media-list media-list-contacts">
 <?php
-$uservis = "SELECT * FROM users WHERE rank >= '3'";
+$uservis = "SELECT * FROM users WHERE rank >= '4'";
 $usersslt = $aquaglz->query($uservis);
 if ($usersslt->num_rows > 0) {
 // output data of each row
@@ -23,13 +23,13 @@ echo '
 <div class="media-body">
 <h4 class="media-heading">'.$uservis["lastname"].' '.$uservis["firstname"].'</h4>
 ';
-if ($rank == '3'){
-echo'
-<span><i class="fa fa-bolt"></i> Officer</span>';}
 if ($rank == '4'){
 echo'
-<span><i class="fa fa-bolt"></i> Guild Master</span>';}
+<span><i class="fa fa-bolt"></i> Officer</span>';}
 if ($rank == '5'){
+echo'
+<span><i class="fa fa-bolt"></i> Guild Master</span>';}
+if ($rank == '6'){
 echo'
 <span><i class="fa fa-bolt"></i> Developer</span>';}
 echo'</div>

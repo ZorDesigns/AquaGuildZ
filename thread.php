@@ -83,6 +83,10 @@ $("#hulk").click(function() {
 </div>
 <!-- Topic Post -->
 <?php
+$var = mysqli_query($aquaglz, "SELECT rank FROM `users` WHERE `email`='$user_check'");
+if (mysqli_num_rows($var) > 0) {
+while ($rowvar = mysqli_fetch_array($var)) {
+$rank_check = $rowvar['rank'];
 $qer = mysqli_query($aquaglz, "SELECT * FROM `users` WHERE `email`='$author'");
 if (mysqli_num_rows($qer) > 0) {
 while ($rowgb = mysqli_fetch_array($qer)) {
@@ -176,7 +180,16 @@ echo '<div class="post_container">
 ';}
 echo'
 <ul class="post_controls">
-<li class="post_date">'.@$date.'</li><li><a class="report" href="#" title="Rate">Rate</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Quote">Quote</a></li>
+<li class="post_date">'.@$date.'</li>';
+if ( in_array($rank_check , array('4', '5', '6')) ) {
+echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Delete">Delete</a></li>
+';}
+else{
+if ($author == $user_check){
+echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Delete">Delete</a></li>
+';}
+}
+echo'
 </ul>
 </div>
 <div class="clear"></div>
@@ -272,7 +285,16 @@ echo '<div class="post_container">
 ';}
 echo'
 <ul class="post_controls">
-<li class="post_date">'.$row["date"].'</li><li><a class="report" href="#" title="Rate">Rate</a></li><li><a class="quote post-quote-button" data-post-id="'.$row["id"].'" href="#" title="Quote">Quote</a></li>
+<li class="post_date">'.@$date.'</li>';
+if ( in_array($rank_check, array(4, 5, 6)) ) {
+echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Delete">Delete</a></li>
+';
+}else{
+if ($reply_author == $user_check){
+echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Delete">Delete</a></li>
+';}
+}
+echo'
 </ul>
 </div>
 <div class="clear"></div>
@@ -281,7 +303,7 @@ echo'
 }
 }
 }
-}
+}}}
 ?>
 <!-- Actions -->
 <div class="actions_c bottom"></div>
