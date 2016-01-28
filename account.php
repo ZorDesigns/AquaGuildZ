@@ -68,11 +68,14 @@ echo'
 <li class="data" id="rank"><span> Member</span></li>';}
 if ($rank == '3'){
 echo'
-<li class="data" id="rank"><span> Officer</span></li>';}
+<li class="data" id="rank"><span> Raider</span></li>';}
 if ($rank == '4'){
 echo'
-<li class="data" id="rank"><span> Guild Master</span></li>';}
+<li class="data" id="rank"><span> Officer</span></li>';}
 if ($rank == '5'){
+echo'
+<li class="data" id="rank"><span> Guild Master</span></li>';}
+if ($rank == '6'){
 echo'
 <li class="data" id="rank"><span> Developer</span></li>';}
 echo'

@@ -1,7 +1,7 @@
 <?php
 $page_cat = "news";
 include("../check.php");
-if($login_rank <= 2)
+if($login_rank < 4)
 {
 die('
 <meta http-equiv="refresh" content="2;url=wrong.php"/>

@@ -305,22 +305,30 @@ echo '
 <a class="username">'.$author.'</a>
 </div>
 ';
-if ($rank == '5'){
+if ($rank == '6'){
 echo '<h3><font color="#00B4FF">Developer</font></h3>
 ';}
+if ($rank == '5'){
+echo '<h3><font color="#ff8000">Guild Master</font></h3>
+';}
 if ($rank == '4'){
-echo '<h3><font color="#a335ee">Guild Master</font></h3>
+echo '<h3><font color="#81B558">Officer</font></h3>
 ';}
 if ($rank == '3'){
-echo '<h3><font color="#81B558">Officer</font></h3>
+echo '<h3><font color="#a335ee">Raider</font></h3>
 ';}
 echo'
 </div>
 </div>
 <div class="right_side fix_recr">
 ';
-if ($rank == '5'){
+if ($rank == '6'){
 echo '<div class="post_container" style="color: #00B4FF;">
+<p style="text-align: left;">'.$row['content'].'</p>
+</div>
+';}
+if ($rank == '5'){
+echo '<div class="post_container" style="color: #ff8000;">
 <p style="text-align: left;">'.$row['content'].'</p>
 </div>
 ';}
@@ -330,7 +338,7 @@ echo '<div class="post_container" style="color: #81B558;">
 </div>
 ';}
 if ($rank == '3'){
-echo '<div class="post_container" style="color: #81B558;">
+echo '<div class="post_container" style="color: #a335ee;">
 <p style="text-align: left;">'.$row['content'].'</p>
 </div>
 ';}

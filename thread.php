@@ -98,6 +98,10 @@ echo '<!-- Forum Header -->
 <h4><b>2</b> Post(s)</h4>
 </div>
 ';
+if ($gUseR == '6'){
+echo '<div class="topic_post admin_post" id="post-'.$id.'">
+<div class="officer_post_logo_hh"></div>
+';}
 if ($gUseR == '5'){
 echo '<div class="topic_post admin_post" id="post-'.$id.'">
 <div class="officer_post_logo_hh"></div>
@@ -124,14 +128,17 @@ echo'
 <a class="username">'.$gBtaG.'</a>
 </div>
 ';
-if ($gUseR == '5'){
+if ($gUseR == '6'){
 echo '<h3 style="color: #00B4FF;">Developer</h3>
 ';}
+if ($gUseR == '5'){
+echo '<h3 style="color: #ff8000;">Guild Master</h3>
+';}
 if ($gUseR == '4'){
-echo '<h3 style="color: #a335ee;">Guild Master</h3>
+echo '<h3 style="color: #81B558;">Officer</h3>
 ';}
 if ($gUseR == '3'){
-echo '<h3 style="color: #81B558;">Officer</h3>
+echo '<h3 style="color: #a335ee;">Raider</h3>
 ';}
 if ($gUseR == '2'){
 echo '<h3>Member</h3>
@@ -142,8 +149,13 @@ AVG Rating: <a>'.@$average.'</a>
 </div>
 <div class="right_side">
 ';
-if ($gUseR == '5'){
+if ($gUseR == '6'){
 echo '<div class="post_container" style="color: #00B4FF;">
+'.$aquaglztent.'
+</div>
+';}
+if ($gUseR == '5'){
+echo '<div class="post_container" style="color: #ff8000;">
 '.$aquaglztent.'
 </div>
 ';}
@@ -153,7 +165,7 @@ echo '<div class="post_container" style="color: #81B558;">
 </div>
 ';}
 if ($gUseR == '3'){
-echo '<div class="post_container" style="color: #81B558;">
+echo '<div class="post_container" style="color: #a335ee;">
 '.$aquaglztent.'
 </div>
 ';}
@@ -183,6 +195,10 @@ while ($rowg = mysqli_fetch_array($qer)) {
 $gBta = $rowg['bTag'];
 $gbAv = $rowg['avatar'];
 $gRank = $rowg['rank'];
+if ($gRank == '6'){
+echo '<div class="topic_post admin_post" id="post-'.$row["id"].'">
+<div class="officer_post_logo_hh"></div>
+';}
 if ($gRank == '5'){
 echo '<div class="topic_post admin_post" id="post-'.$row["id"].'">
 <div class="officer_post_logo_hh"></div>
@@ -209,14 +225,17 @@ echo'
 <a class="username"><small>'.$gBta.'</small></a>
 </div>
 ';
-if ($gRank == '5'){
+if ($gRank == '6'){
 echo '<h3 style="color: #00B4FF;">Developer</h3>
 ';}
+if ($gRank == '5'){
+echo '<h3 style="color: #ff8000;">Guild Master</h3>
+';}
 if ($gRank == '4'){
-echo '<h3 style="color: #a335ee;">Guild Master</h3>
+echo '<h3 style="color: #81B558;">Officer</h3>
 ';}
 if ($gRank == '3'){
-echo '<h3 style="color: #81B558;">Officer</h3>
+echo '<h3 style="color: #a335ee;">Raider</h3>
 ';}
 if ($gRank == '2'){
 echo '<h3>Member</h3>
@@ -226,22 +245,27 @@ echo'
 </div>
 <div class="right_side">
 ';
-if ($gUseR == '5'){
+if ($gRank == '6'){
 echo '<div class="post_container" style="color: #00B4FF;">
 '.$row["content"].'
 </div>
 ';}
-if ($gUseR == '4'){
+if ($gRank == '5'){
+echo '<div class="post_container" style="color: #ff8000;">
+'.$row["content"].'
+</div>
+';}
+if ($gRank == '4'){
 echo '<div class="post_container" style="color: #81B558;">
 '.$row["content"].'
 </div>
 ';}
-if ($gUseR == '3'){
-echo '<div class="post_container" style="color: #81B558;">
+if ($gRank == '3'){
+echo '<div class="post_container" style="color: #a335ee;">
 '.$row["content"].'
 </div>
 ';}
-if ($gUseR == '2'){
+if ($gRank == '2'){
 echo '<div class="post_container">
 '.$row["content"].'
 </div>

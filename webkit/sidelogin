@@ -4,15 +4,15 @@ include("check.php");
 <?php if(isset($_SESSION['email'])){ ?>
 <div id="sidebar">
 <div id="user_control-log">
-<a data-toggle="modal" href="login.php">
+<a data-toggle="modal" href="#">
 <div id="user_control_deco-logged"><!-- --></div>
 <p><span>You are logged!</span> Character <br>list is coming soonish...</p></a>
 </div>
 <?php }else{ ?>
 <div id="sidebar">
 <div id="user_control">
-<a data-toggle="modal" href="login.php">
+<a href="login.php">
 <div id="user_control_deco"><!-- --></div>
-<p><span>Log in</span><span> now</span> to participate <br>in the Hellenic Experience!</p></a>
-</div>
+<p><span>Log in</span><span> now</span> to participate <br>in the Hellenic Experience!</p>
+</div></a>
 <?php } ?>

@@ -129,11 +129,14 @@ echo'
 <small>Member</small>';}
 if ($rank == '3'){
 echo'
-<small>Officer</small>';}
+<small>Raider</small>';}
 if ($rank == '4'){
 echo'
-<small>Guild Master</small>';}
+<small>Officer</small>';}
 if ($rank == '5'){
+echo'
+<small>Guild Master</small>';}
+if ($rank == '6'){
 echo'
 <small>Developer</small>';}
 echo'
@@ -158,8 +161,11 @@ echo'
 <td><span class="op_player">Member</span></td>';}
 if ($rank == '3'){
 echo'
-<td><span class="op_player">Officer</span></td>';}
+<td><span class="op_player">Raider</span></td>';}
 if ($rank == '4'){
+echo'
+<td><span class="op_player">Officer</span></td>';}
+if ($rank == '5'){
 echo'
 <td><span class="op_player">Guild Master</span></td>';}
 if ($rank == '5'){

@@ -2,6 +2,12 @@
 $page_cat = "home";
 $page_tit = "home";
 include('../check.php');
+if($login_rank < 4)
+{
+die('
+<meta http-equiv="refresh" content="2;url=wrong.php"/>
+');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

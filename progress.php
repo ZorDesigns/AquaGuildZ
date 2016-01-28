@@ -48,7 +48,7 @@ $page_tit = "gprogress";
 <p>We are changing the Progress system! We will now redirect you to another site to check our project!</p>
 </a>
 </div>
-<meta http-equiv='refresh'content='5;url=http://guildox.com/guild/eu/twisting-nether/Hellenic%20Horde'>
+<meta http-equiv='refresh'content='5;url=http://www.wowprogress.com/guild/eu/twisting-nether/Hellenic+Horde'>
 <div class="clear"></div>
 </div>
 </div>
