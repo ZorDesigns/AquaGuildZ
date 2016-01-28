@@ -49,21 +49,56 @@ include __DIR__ . '/configs.php';
 <h4>Please answer all the questions correctly with please do not lie to any of the questions because we are gonna check! All the Questions must be answered correctly! Please try to read again and again your post, so everything is in place and written well!</h4>
 </div>
 </div>
-<div class="container_form_2" align="left" style="padding:36px">
+<div class="recruit-bg-personal">
+<div class="recruit-personal">
+<h1>Personal Information</h1>
+<h4>Please answer the Questions on the PERSONAL Tab correctly! We need to know more about you!</h4>
+</div>
+</div>
 <form action='' method='POST' name="post_topic">
+<div class="container_form_2" align="left" style="padding:36px">
+<div class="row_">
+<p><label>What's your name?</label></p>
+<input style="width: 832px;" type='text' name='p1' maxlength="150" placeholder="Write your name">
+</div>
+<br>
+<div class="clear"></div>
+<div class="row_">
+<p><label>What's your occupation?</label></p>
+<input style="width: 832px;" type='text' name='p2' maxlength="150" placeholder="Do you study? Do you work? Define your status.">
+</div>
+<br>
+<div class="clear"></div>
+<div class="clear"></div>
+<div class="row_">
+<p><label>What's your age?</label></p>
+<input style="width: 832px;" type='text' name='p3' maxlength="150" placeholder="How many years old are you?">
+</div>
+<div class="clear"></div>
+<textarea name="q12" style="display:block; float:none; width:832px; height:55px; margin:20px 0px 15px 1px;" placeholder="Please describe yourself as a player. We need to know your attitude."></textarea>
+<div class="clear"></div>
+<textarea name="q13" style="display:block; float:none; width:832px; height:55px; margin:20px 0px 15px 1px;" placeholder="Please describe how comfortable you are when playing games."></textarea>
+</div>
+<div class="recruit-bg-character">
+<div class="recruit-character">
+<h1>Character Information</h1>
+<h4>Please answer the Questions on the Character Tab correctly! We need to know more about your character!</h4>
+</div>
+</div>
+<div class="container_form_2 fix_form_2" align="left" style="padding:36px">
 <div class="row_">
 <p><label>Character Name:</label></p>
-<input style="width: 832px;" type='text' name='character' maxlength="150">
+<input style="width: 832px;" type='text' name='character' maxlength="150" placeholder="What's your character name?">
 </div>
 <div class="clear"></div>
 <div class="row_">
 <p><label>BattleTag:</label></p>
-<input style="width: 832px;" type='text' name='battletag' maxlength="150">
+<input style="width: 832px;" type='text' name='battletag' maxlength="150" placeholder="Please provide your battletag so we can contact you.">
 </div>
 <div class="clear"></div>
 <div class="row_">
 <p><label>Class:</label></p>
-<select name='class' style="display: none;" styled="true" id="select-style-1">
+<select name='class' style="display: none;" styled="true" id="select-style-1" placeholder="Select your Class!">
 <option value="Warrior">Warrior</option>
 <option value="Paladin">Paladin</option>
 <option value="Hunter">Hunter</option>
@@ -82,7 +117,7 @@ include __DIR__ . '/configs.php';
 <div class="clear"></div>
 <div class="row_">
 <p><label>Spec:</label></p>
-<select name='spec' style="display: none;" styled="true" id="select-style-1">
+<select name='spec' style="display: none;" styled="true" id="select-style-1" placeholder="Select your Role!">
 <option value="Tank">Tank</option>
 <option value="Healer">Healer</option>
 <option value="DPS">DPS</option>
@@ -92,7 +127,7 @@ include __DIR__ . '/configs.php';
 <div class="clear"></div>
 <div class="row_">
 <p><label>Are you familiar with raiding?</label></p>
-<select name='q1' style="display: none;" styled="true" id="select-style-1">
+<select name='q1' style="display: none;" styled="true" id="select-style-1" placeholder="Select one of the options!">
 <option value="Yes">Yes</option>
 <option value="No">No</option>
 </select>
@@ -101,29 +136,46 @@ include __DIR__ . '/configs.php';
 <div class="clear"></div>
 <div class="row_">
 <p><label>Link your Armory Link:</label></p>
-<input style="width: 832px;" type='text' name='q2' maxlength="150">
+<input style="width: 832px;" type='text' name='q2' maxlength="150" placeholder="Please provide your armory link!">
 </div>
 <br>
 <div class="clear"></div>
 <div class="row_">
 <p><label>RaidUI Image:</label></p>
-<input style="width: 832px;" type='text' name='q3' maxlength="150" placeholder="Please upload a picture to imgur and link it here.">
+<input style="width: 832px;" type='text' name='q3' maxlength="150" placeholder="Please upload a picture to imgur and link it here. Do not write anything else in it.">
 </div>
 <br>
 <div class="clear"></div>
 <div class="row_">
 <p><label>Do you have an Authenticator?</label></p>
-<select name='q4' style="display: none;" styled="true" id="select-style-1">
+<select name='q4' style="display: none;" styled="true" id="select-style-1" placeholder="Select one of the options!">
 <option value="Yes">Yes</option>
 <option value="No">No</option>
 </select>
 </div>
-<input style="width: 832px;" type='text' name='q4_info' maxlength="150" placeholder="Do you wish to get one, if we request it?">
+<input style="width: 832px;" type='text' name='q4_info' maxlength="150" placeholder="Do you wish to get one, if we request it? If yes, Don't leave blank.">
 <br>
 <div class="clear"></div>
 <div class="row_">
-<label>What addons do you use? Do you have any coding experience to assist in creating custom WeakAuras and/or addons?</label>
-<textarea name="q5" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please describe what addons do you prefer and why! Also if you have any knowledge of Coding."></textarea>
+<label>What addons do you use? We use some specific Add-ons like WeakAuras, EPGPlootmaster and Exorsus. Do you mind downloading them? </label>
+<textarea name="q5" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please describe what addons do you prefer and why! Do you mind downloading the addons that we might request you to download?"></textarea>
+</select>
+</div>
+<div class="clear"></div>
+<div class="row_">
+<label>Are you patient enough to handle Wipes while we Progress? </label>
+<textarea name="q16" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="We might wipe on a single boss for days before we progress"></textarea>
+</select>
+</div>
+<div class="clear"></div>
+<div class="row_">
+<label>We use Loot Council to handle the loot. Can you handle that? </label>
+<textarea name="q15" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Can you?"></textarea>
+</select>
+</div>
+<div class="row_">
+<label>What is your Rotation? (Don’t bother Copy/Paste a rotation guide from a site. Just let us know the key parts of your rotation and how you perfect them to max your damage!)</label>
+<textarea name="q14" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Are you that good? Are you friendly? Reflect your gaming experience!"></textarea>
 </select>
 </div>
 <div class="clear"></div>
@@ -152,7 +204,7 @@ include __DIR__ . '/configs.php';
 <div class="clear"></div>
 <div class="row_">
 <label>Do you have a good Computer & Internet Connection? How often do you upgrade?</label>
-<textarea name="q10" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please provide your specs of your system!"></textarea>
+<textarea name="q10" style="display:block; float:none; width:832px; height:55px; margin:5px 0px 15px 1px;" placeholder="Please provide your Specs of your system (CPU, Graphics Card, RAM, Hard Drive)! Is your internet connection good enough?"></textarea>
 </select>
 </div>
 <div class="clear"></div>
@@ -165,23 +217,20 @@ include __DIR__ . '/configs.php';
 </div>
 <input style="width: 832px;" type='text' name='q11_info' maxlength="150" placeholder="Name one or two of them! Not more.">
 <br>
-<div class="clear"></div>
-<textarea name="q12" style="display:block; float:none; width:832px; height:55px; margin:20px 0px 15px 1px;" placeholder="Please describe yourself with as much detail as possible."></textarea>
-<div class="clear"></div>
-<textarea name="q13" style="display:block; float:none; width:832px; height:55px; margin:20px 0px 15px 1px;" placeholder="Please describe how comfortable are you when gaming!"></textarea>
 <input name="createRecruit" type="submit" value="Post">
 </form>
 </div>
 <?php
 if(isset($_POST["createRecruit"])){
-$sql = "INSERT INTO recruits VALUES ('', '0', '".$_POST["character"]."', '".$_POST["battletag"]."', '".$_POST["class"]."', '".$_POST["spec"]."', 'New', '0', '".$_POST["q1"]."', '".$_POST["q2"]."', '".$_POST["q3"]."', '".$_POST["q4"]."', '".$_POST["q4_info"]."', '".$_POST["q5"]."', '".$_POST["q6"]."', '".$_POST["q7"]."', '".$_POST["q8"]."', '".$_POST["q9"]."', '".$_POST["q10"]."', '".$_POST["q11"]."', '".$_POST["q11_info"]."', '".$_POST["q12"]."', '".$_POST["q13"]."', NOW())";
-
+$sql = "INSERT INTO recruits VALUES ('', '0', '".$_POST["character"]."', '".$_POST["battletag"]."', '".$_POST["class"]."', '".$_POST["spec"]."', 'New', '0', '".$_POST["p1"]."', '".$_POST["p2"]."', '".$_POST["p3"]."', '".$_POST["q1"]."', '".$_POST["q2"]."', '".$_POST["q3"]."', '".$_POST["q4"]."', '".$_POST["q4_info"]."', '".$_POST["q5"]."', '".$_POST["q6"]."', '".$_POST["q7"]."', '".$_POST["q8"]."', '".$_POST["q9"]."', '".$_POST["q10"]."', '".$_POST["q11"]."', '".$_POST["q11_info"]."', '".$_POST["q12"]."', '".$_POST["q13"]."', '".$_POST["q14"]."', '".$_POST["q15"]."', '".$_POST["q16"]."', NOW())";
 if ($aquaglz->query($sql) === TRUE) {
 echo "<script type= 'text/javascript'>alert('New record created successfully');</script>";
-echo "INSERTED";
+echo "<meta http-equiv='refresh'content='2;url=form.php'>";
+echo $sql;
 } else {
-	echo "ERROR";
 echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $aquaglz->error."');</script>";
+echo "<meta http-equiv='refresh'content='2;url=crtRecruit.php'>";
+echo $sql;
 }
 }
 ?>

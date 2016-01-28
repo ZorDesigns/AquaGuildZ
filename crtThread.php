@@ -1,7 +1,6 @@
 <?php
 $page_cat = "forums";
 $page_tit = "forums";
-include __DIR__ . '/settings/forum.php';
 include __DIR__ . '/check.php';
 if($login_rank <= 1)
 {
@@ -50,25 +49,6 @@ die('<meta http-equiv="refresh" content="2;url=wrong.php"/>');
 <?php include("webkit/warning"); ?>
 <div class="container main-wide">
 <div class="forum-padding">
-<?php
-if (isSet($_POST['createThread'])) {
-if (isSet($_POST['title']) && $_POST['title'] != '' && isSet($_POST['cat']) && $_POST['cat'] != '' && isSet($_POST['description']) && $_POST['description'] != '' && isSet($_SESSION['email']) && $_SESSION['email'] != '' && isSet($_POST['tags']) && $_POST['tags'] != '') {
-$title = $_POST['title'];
-$cat = $_POST['cat'];
-$description = $_POST['description'];
-$tags = $_POST['tags'];
-$tags = strtolower($tags);
-$user = $_SESSION['email'];
-$q = mysqli_query($aquaglz, "INSERT INTO `threads` VALUES ('', '$cat', '$title', '', '', '$description', '$user', '$tags', now())") or die(mysql_error());
-if ($q) {
-echo '<a href="#" class="important_succ"><p>Topic Created. Please wait while we redirect you!</p></a>
-<meta http-equiv="refresh"content="2;url=forums.php">';
-}else
-echo '<a href="#" class="important_notice"><p>Failed to Create Topic. Please wait while we redirect you!</p></a>
-<meta http-equiv="refresh"content="2;url=crtThread.php">';
-}
-}
-?>
 <div class="forum_header">
 <div class="new_title">
 <p>Post New Topic</p>
@@ -140,6 +120,18 @@ CKEDITOR.replace('editor1');
 </div>
 </form>
 </div>
+<?php
+if(isset($_POST["createThread"])){
+$sql = "INSERT INTO threads VALUES ('', '".$_POST["cat"]."', '".$_POST["title"]."', '', '', '', '".$_POST["description"]."', '$user_check', '".$_POST["tags"]."', now())";
+if ($aquaglz->query($sql) === TRUE) {
+echo "<script type= 'text/javascript'>alert('New record created successfully');</script>";
+echo "<meta http-equiv='refresh'content='2;url=forums.php'>";
+}else{
+echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $aquaglz->error."');</script>";
+echo "<meta http-equiv='refresh'content='2;url=crtThread.php'>";
+}
+}
+?>
 </div>
 <div class="clear"></div>
 <br>

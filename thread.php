@@ -83,6 +83,12 @@ $("#hulk").click(function() {
 </div>
 <!-- Topic Post -->
 <?php
+$qer = mysqli_query($aquaglz, "SELECT * FROM `users` WHERE `email`='$author'");
+if (mysqli_num_rows($qer) > 0) {
+while ($rowgb = mysqli_fetch_array($qer)) {
+$gBtaG = $rowgb['bTag'];
+$gbAvA = $rowgb['avatar'];
+$gUseR = $rowgb['rank'];
 echo '<!-- Forum Header -->
 <div class="topic_header">
 <div class="topic_title">
@@ -90,54 +96,157 @@ echo '<!-- Forum Header -->
 <h3>Mon Oct 26, 2015, 02:44 AM</h3>
 </div>
 <h4><b>2</b> Post(s)</h4>
-</div>	
-<div class="topic_post" id="post-'.$id.'">
+</div>
+';
+if ($gUseR == '5'){
+echo '<div class="topic_post admin_post" id="post-'.$id.'">
+<div class="officer_post_logo_hh"></div>
+';}
+if ($gUseR == '4'){
+echo '<div class="topic_post admin_post" id="post-'.$id.'">
+<div class="officer_post_logo_hh"></div>
+';}
+if ($gUseR == '3'){
+echo '<div class="topic_post admin_post" id="post-'.$id.'">
+<div class="officer_post_logo_hh"></div>
+';}
+if ($gUseR == '2'){
+echo '<div class="topic_post" id="post-'.$id.'">
+';}
+echo'
 <!--<div class="topic_post admin_post" id="post-'.$id.'">-->
 <!--<div class="admin_post_logo_hh"></div>-->
 <div class="left_side">	
-<div class="user_avatar"><span style="background:url(admin/img/profile/lady.gif) no-repeat; background-size: 100%;">
+<div class="user_avatar"><span style="background:url(assets/images/avatar/'.$gbAvA.') no-repeat; background-size: 100%;">
 </span></div>
 <div class="user_info">
 <div class="usr_and_pr">
-<a class="username">'.$author.'</a>
+<a class="username">'.$gBtaG.'</a>
 </div>
-<h3>Member</h3>
+';
+if ($gUseR == '5'){
+echo '<h3 style="color: #00B4FF;">Developer</h3>
+';}
+if ($gUseR == '4'){
+echo '<h3 style="color: #a335ee;">Guild Master</h3>
+';}
+if ($gUseR == '3'){
+echo '<h3 style="color: #81B558;">Officer</h3>
+';}
+if ($gUseR == '2'){
+echo '<h3>Member</h3>
+';}
+echo'
 AVG Rating: <a>'.@$average.'</a>
 </div>
 </div>
 <div class="right_side">
-<div class="post_container">
+';
+if ($gUseR == '5'){
+echo '<div class="post_container" style="color: #00B4FF;">
 '.$aquaglztent.'
 </div>
+';}
+if ($gUseR == '4'){
+echo '<div class="post_container" style="color: #81B558;">
+'.$aquaglztent.'
+</div>
+';}
+if ($gUseR == '3'){
+echo '<div class="post_container" style="color: #81B558;">
+'.$aquaglztent.'
+</div>
+';}
+if ($gUseR == '2'){
+echo '<div class="post_container">
+'.$aquaglztent.'
+</div>
+';}
+echo'
 <ul class="post_controls">
 <li class="post_date">'.@$date.'</li><li><a class="report" href="#" title="Rate">Rate</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Quote">Quote</a></li>
 </ul>
 </div>
 <div class="clear"></div>
-</div>';?>
+</div>';
+}}
+?>
 <!-- Topic Post -->
-<?php 
+<?php
 $qu = mysqli_query($aquaglz, "SELECT * FROM `replies` WHERE `threadID`='$id'");
 if (mysqli_num_rows($qu) > 0) {
 while ($row = mysqli_fetch_array($qu)) {
-echo '
-<div class="topic_post" id="post-'.$row["id"].'">
+$reply_author = $row["author"];
+$qer = mysqli_query($aquaglz, "SELECT * FROM `users` WHERE `email`='$reply_author'");
+if (mysqli_num_rows($qer) > 0) {
+while ($rowg = mysqli_fetch_array($qer)) {
+$gBta = $rowg['bTag'];
+$gbAv = $rowg['avatar'];
+$gRank = $rowg['rank'];
+if ($gRank == '5'){
+echo '<div class="topic_post admin_post" id="post-'.$row["id"].'">
+<div class="officer_post_logo_hh"></div>
+';}
+if ($gRank == '4'){
+echo '<div class="topic_post admin_post" id="post-'.$row["id"].'">
+<div class="officer_post_logo_hh"></div>
+';}
+if ($gRank == '3'){
+echo '<div class="topic_post admin_post" id="post-'.$row["id"].'">
+<div class="officer_post_logo_hh"></div>
+';}
+if ($gRank == '2'){
+echo '<div class="topic_post" id="post-'.$row["id"].'">
+';}
+echo'
 <!--<div class="topic_post admin_post" id="post-'.$row["id"].'">-->
 <!--<div class="admin_post_logo_hh"></div>-->
 <div class="left_side">	
-<div class="user_avatar"><span style="background:url(admin/img/profile/profile.gif) no-repeat; background-size: 100%;">
+<div class="user_avatar"><span style="background:url(assets/images/avatar/'.$gbAv.') no-repeat; background-size: 100%;">
 </span></div>
 <div class="user_info">
 <div class="usr_and_pr">
-<a class="username"><small>'.$row["author"].'</small></a>
+<a class="username"><small>'.$gBta.'</small></a>
 </div>
-<h3>Member</h3>
+';
+if ($gRank == '5'){
+echo '<h3 style="color: #00B4FF;">Developer</h3>
+';}
+if ($gRank == '4'){
+echo '<h3 style="color: #a335ee;">Guild Master</h3>
+';}
+if ($gRank == '3'){
+echo '<h3 style="color: #81B558;">Officer</h3>
+';}
+if ($gRank == '2'){
+echo '<h3>Member</h3>
+';}
+echo'
 </div>
 </div>
 <div class="right_side">
-<div class="post_container">
+';
+if ($gUseR == '5'){
+echo '<div class="post_container" style="color: #00B4FF;">
 '.$row["content"].'
 </div>
+';}
+if ($gUseR == '4'){
+echo '<div class="post_container" style="color: #81B558;">
+'.$row["content"].'
+</div>
+';}
+if ($gUseR == '3'){
+echo '<div class="post_container" style="color: #81B558;">
+'.$row["content"].'
+</div>
+';}
+if ($gUseR == '2'){
+echo '<div class="post_container">
+'.$row["content"].'
+</div>
+';}
+echo'
 <ul class="post_controls">
 <li class="post_date">'.$row["date"].'</li><li><a class="report" href="#" title="Rate">Rate</a></li><li><a class="quote post-quote-button" data-post-id="'.$row["id"].'" href="#" title="Quote">Quote</a></li>
 </ul>
@@ -145,6 +254,8 @@ echo '
 <div class="clear"></div>
 </div>
 ';
+}
+}
 }
 }
 ?>
@@ -164,7 +275,7 @@ echo "
 <div class='topic_header'>
 <div class='topic_title'>
 <h1>Leave a Reply</h1>
-<h3>Reply as: $emails</h3>
+<h3>You will reply with your BattleTag (Your Specific Code e.g. #0000 is not posted, you can relax).</h3>
 </div>
 <h4><b>$row_cnt</b> Reply(s)</h4>
 </div>

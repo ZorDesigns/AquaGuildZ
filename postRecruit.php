@@ -111,7 +111,52 @@ echo '<div class="recruit-reports-holder approved">
 ?>
 </div>
 </ul>                
-<div class="clear"></div>
+<div class="clear"><br></div>
+</div>
+</div>
+<div class="clear"><br></div>
+<div class="recr">
+<div id="title">
+<h1>Personal Information</h1>
+</div>
+</div>
+<div class="clear"><br></div>
+<div class="container_rec_form rec-search-results" style="width:843px; padding-top:14px; padding-bottom:10px;">
+<div class="unity_rec">
+<div class="recr-row" align="left">
+<h4>What's your name?</h4>
+<p>
+<?php echo $recr['p1']; ?>
+</p>
+</div>
+<div class="recr-row" align="left">
+<h4>What's your occupation?</h4>
+<p>
+<?php echo $recr['p2']; ?>
+</p>
+</div>
+<div class="recr-row" align="left">
+<h4>What's your age?</h4>
+<p>
+<?php echo $recr['p3']; ?>
+</p>
+</div>
+<div class="recr-row" align="left">
+<h4>Please describe yourself as a player. We need to know your attitude.</h4>
+<p>
+<?php echo $recr['q12']; ?></p>
+</div>
+<div class="recr-row" align="left">
+<h4>Please describe how comfortable you are when playing games.</h4>
+<p>
+<?php echo $recr['q13']; ?></p>
+</div>
+</div>
+</div>
+<div class="clear"><br></div>
+<div class="recr">
+<div id="title">
+<h1>Character Information</h1>
 </div>
 </div>
 <div class="clear"><br></div>
@@ -145,9 +190,19 @@ echo '<div class="recruit-reports-holder approved">
 </p>
 </div>
 <div class="recr-row" align="left">
-<h4>What addons do you use? Do you have any coding experience to assist in creating custom WeakAuras and/or addons?</h4>
+<h4>What addons do you use? We use some specific Add-ons like WeakAuras, EPGPlootmaster and Exorsus. Do you mind downloading them?</h4>
 <p>
 <?php echo $recr['q5']; ?></p>
+</div>
+<div class="recr-row" align="left">
+<h4>Are you patient enough to handle Wipes while we Progress?</h4>
+<p>
+<?php echo $recr['q16']; ?></p>
+</div>
+<div class="recr-row" align="left">
+<h4>What is your Rotation? (Don’t bother Copy/Paste a rotation guide from a site. Just let us know the key parts of your rotation and how you perfect them to max your damage!)</h4>
+<p>
+<?php echo $recr['q14']; ?></p>
 </div>
 <div class="recr-row" align="left">
 <h4>What made you consider applying to Hellenic Horde?</h4>
@@ -182,16 +237,6 @@ echo '<div class="recruit-reports-holder approved">
 <p>
 <?php echo $recr['q11_info']; ?>
 </p>
-</div>
-<div class="recr-row" align="left">
-<h4>Please describe yourself with as much detail as possible.</h4>
-<p>
-<?php echo $recr['q12']; ?></p>
-</div>
-<div class="recr-row" align="left">
-<h4>Please describe how comfortable are you when gaming!</h4>
-<p>
-<?php echo $recr['q13']; ?></p>
 </div>
 </div>
 <?php } }?>

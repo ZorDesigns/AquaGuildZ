@@ -30,7 +30,7 @@ header #searchbar input { background: transparent; border: none; border-radius: 
 .container_6 { margin-left: 2px;padding:30px 40px;width: 554px;height: 1194px; min-height: 750px; background: url(../images/commbg.png) no-repeat; box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05); -webkit-border-radius: 5px; border-radius: 5px; }
 .container_form_1 {width: 982px;height: auto;min-height: 400px;background: rgba(33,25,20,.55);box-shadow: 0 0 6px #000, inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding: 40px 1px 40px 0;}
 .container_rec_form {width: 633px;height: auto;min-height: 40px;background: rgba(31,23,19,.80);box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 0 0 14px 0;padding: 35px 0 25px 0;z-index: 1;}
-.container_form_2 {width: 891px;height: auto;min-height: 40px;background-color: rgba(0,0,0,.2);box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 64px 0 28px -34px;padding: 35px 0 25px 0;z-index: 1;}
+.container_form_2 {width: 891px;height: auto;min-height: 40px;background-color: rgba(0,0,0,.2);box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 154px 0 28px -34px;padding: 35px 0 25px 0;z-index: 1;}
 
 /* Raid Roster */
 #block-system-main {margin: 10px 0;text-shadow: 0 1px 0 #000;}
@@ -502,6 +502,14 @@ ul.pagination-forum li {display: inline-block;vertical-align: top;margin: -3px 1
 .recruit-title h1 {font-family: 'Ebrima';font-size: 26px;color: #958e7f;font-weight: normal;text-transform: uppercase;}
 .recruit-title h4 {font-weight: normal;color: #958e7f;}
 .recruit-bg-dark {width: 965px;height: 85px;background-color: rgba(0,0,0,.2);position: absolute;z-index: 0;top: 5px;box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);border-radius: 6px;overflow: hidden;margin-left: -35px;}
+.recruit-bg-personal {width: 965px;height: 85px;background-color: rgba(0,0,0,.2);position: absolute;z-index: 0;top: 5px;box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);border-radius: 6px;overflow: hidden;margin: 89px 0px 0 -35px;}
+.recruit-personal {width: 915px;text-align: left;margin: 0 0 20px 0;text-shadow: 0 0 8px rgba(0,0,0,1), 1px 1px 0 rgba(0,0,0,.5);}
+.recruit-personal h1 {float: left;font-family: 'Ebrima';font-size: 26px;color: #958e7f;font-weight: normal;text-transform: uppercase;}
+.recruit-personal h4 {float: left;font-weight: normal;color: #958e7f;}
+.recruit-bg-character {width: 965px;height: 85px;background-color: rgba(0,0,0,.2);position: absolute;z-index: 0;top: 5px;box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);border-radius: 6px;overflow: hidden;margin: 585px 0px 0 -35px;}
+.recruit-character {width: 915px;text-align: left;margin: 0 0 20px 0;text-shadow: 0 0 8px rgba(0,0,0,1), 1px 1px 0 rgba(0,0,0,.5);}
+.recruit-character h1 {float: left;font-family: 'Ebrima';font-size: 26px;color: #958e7f;font-weight: normal;text-transform: uppercase;}
+.recruit-character h4 {float: left;font-weight: normal;color: #958e7f;}
 form .row_ label {font-family: Arial,Helvetica,sans-serif;font-size: 12px;margin: 10px 20px 10px 2px;color: #958e7f;font-weight: bold;display: inline-block;vertical-align: top;}
 form .js-select-selected {color: #958e7f;}
 .banners{width:297px;height:71px;margin:-12px 0 12px 0;border-radius:2px;overflow:hidden;box-shadow: 0 0 12px 6px #000;}
@@ -510,13 +518,14 @@ form .js-select-selected {color: #958e7f;}
 .banners #recruit{width:100%;height:71px;background-position:0 0}
 .banners #recruit p {width:100%;height:71px;background-position:0 -128px}
 .banners #recruit:hover p {opacity:.8;background-color:rgba(255,255,255,.05)}
+.fix_form_2 {margin: 100px 0 28px -35px!important;}
 
 /* Recruitment Post */
 .recr-row {padding: 0 0 10px 0;margin: 0 0 10px 0;border-bottom: dotted 1px rgba(0,0,0,.5);}
 .recr-row h4 {display: block;font-size: 13px;font-weight: bold;padding: 0 0 7px 10px;color: #7a7665;text-shadow: 0 0 3px rgba(0,0,0,.7), 0 1px 1px rgba(0,0,0,.5);}
 .recr-row p {padding: 0 0 0 10px;font-size: 12px;font-style: italic;color: #5c5a59;text-shadow: 0 0 3px rgba(0,0,0,.7), 0 1px 1px rgba(0,0,0,.5);}
 .recr_info_cont {height: 203px;border-radius: 3px;box-shadow: inset 0 0 0 1px rgba(255,255,255,.01), 0 0 45px 5px rgba(0,0,0,.65), 0 1px 1px rgba(0,0,0,.25);margin: 0;}
-.recr_light_cont {margin: 35px 0 0px 0px;width: 843px;padding: 0;}
+.recr_light_cont {margin: 35px 0px 25px 0px;width: 843px;padding: 0;}
 .recr_info {height: 203px;background: url(../images/recr_info_bg.png) no-repeat top;font-family: 'Ebrima';font-size: 14px;text-shadow: 0 0 4px rgba(0,0,0,.3), 0 1px 0 rgba(0,0,0,.2);}
 .recr_info ul.recr_class {width: 179px;}
 .recr_info ul {float: left;height: 203px;}
@@ -536,6 +545,7 @@ ul.recr_class li#class p {margin: -117px 0 0px 0px;display: block;width: 118px;h
 .recr #title {display: block;height: 39px;margin: -30px 0 0 0px;padding: 0px 0px 0px 0px;}
 .recr #title h1 {font-family: 'Ebrima';font-weight: bold;text-transform: uppercase;font-size: 32px;color: #8e6b3e;text-shadow: 0 0 8px rgba(0,0,0,1), 0 1px 2px rgba(0,0,0,1);margin: 5px 0 0 0;height: 22px;padding: 0;line-height: 125%;}
 #moveme {margin: 3px 0px 0px 28px;}
+.recruit-reports-holder.approved {    background: #1d2716;    text-shadow: 0 0 5px rgba(0,0,0,.4);    box-shadow: 0 0 8px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 0 15px rgba(0,0,0,.015), inset 0 0 15px rgba(0,255,0,.05), inset 0 0 0 1px rgba(0,255,0,.05);}
 .recruit-reports-holder.new {background: #3A3D18;text-shadow: 0 0 5px rgba(0,0,0,.4);box-shadow: 0 0 8px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 0 15px rgba(0,0,0,.015), inset 0 0 15px rgba(0,255,0,.05), inset 0 0 0 1px rgba(0,255,0,.05);}
 .recruit-reports-holder.closed {background: #490000;text-shadow: 0 0 5px rgba(0,0,0,.4);box-shadow: 0 0 8px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 0 15px rgba(0,0,0,.015), inset 0 0 15px rgba(0,255,0,.05), inset 0 0 0 1px rgba(0,255,0,.05);}
 .recruit-reports-holder.considering {font-size: 15px!important;background: #351A15;text-shadow: 0 0 5px rgba(0,0,0,.4);box-shadow: 0 0 8px rgba(0,0,0,.3), 0 1px 1px rgba(0,0,0,.2), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 0 15px rgba(0,0,0,.015), inset 0 0 15px rgba(0,255,0,.05), inset 0 0 0 1px rgba(0,255,0,.05);}
