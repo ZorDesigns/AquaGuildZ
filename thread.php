@@ -182,11 +182,11 @@ echo'
 <ul class="post_controls">
 <li class="post_date">'.@$date.'</li>';
 if ( in_array($rank_check , array('4', '5', '6')) ) {
-echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Delete">Delete</a></li>
+echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="rmv_topic.php?rid='.$id.'" title="Delete">Delete</a></li>
 ';}
 else{
 if ($author == $user_check){
-echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Delete">Delete</a></li>
+echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="rmv_topic.php?rid='.$id.'" title="Delete">Delete</a></li>
 ';}
 }
 echo'
@@ -196,7 +196,7 @@ echo'
 </div>';
 }}
 ?>
-<!-- Topic Post -->
+<!-- Replies Post -->
 <?php
 $qu = mysqli_query($aquaglz, "SELECT * FROM `replies` WHERE `threadID`='$id'");
 if (mysqli_num_rows($qu) > 0) {
@@ -287,11 +287,11 @@ echo'
 <ul class="post_controls">
 <li class="post_date">'.@$date.'</li>';
 if ( in_array($rank_check, array(4, 5, 6)) ) {
-echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Delete">Delete</a></li>
+echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="rmv_replies.php?rid='.$row['id'].'" title="Delete">Delete</a></li>
 ';
 }else{
 if ($reply_author == $user_check){
-echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="#" title="Delete">Delete</a></li>
+echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="rmv_replies.php?rid='.$row['id'].'" title="Delete">Delete</a></li>
 ';}
 }
 echo'

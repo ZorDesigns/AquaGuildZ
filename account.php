@@ -117,10 +117,10 @@ echo'
 <div class="col-xs-12">
 <ul>
 <li>
-<a href="change-avatar.php"> Change Avatar</a>
+<a href="change-avatar.php">Change Avatar</a>
 </li>
 <li>
-<a href="#">Change password</a>
+<a href="chn-pass.php">Change password</a>
 </li>
 <li>
 <a href="#">Change email</a>

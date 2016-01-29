@@ -12,15 +12,12 @@ $page_tit = "none";
 <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/status.css" rel="stylesheet" type="text/css">
-<link href="assets/stylesheets/form/reg.css" rel="stylesheet" type="text/css">
 <!-- Le javascripts -->
 <script src="assets/javascript/jquery.min.js"></script>
 <script src="assets/javascript/jquery.flexslider.min.js"></script>
 <script src="assets/javascript/bootstrap.min.js"></script>
 <script src="assets/javascript/global.js"></script>
 <script src="assets/javascript/common_orig.js"></script>
-<script src="assets/stylesheets/form/reg.js"></script>
-<script src="assets/stylesheets/form/reg1.js"></script>
 </head>
 <body>
 <?php include("webkit/servicebar") ?>
@@ -38,75 +35,12 @@ $page_tit = "none";
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
 <div class="sitehead-account">
-<h1>Account Panel > Upload Avatar</h1>
+<h1>Account Panel > Change Password</h1>
 </div>
-<div class="container_form_1 container_fix_ava avatar-fix" align="center">
-<div class="warning_notice">
-<p>Follow the rules for uploading correspondingly!</p>
+<div class="container_form_1 fix_container_pass" align="center">
+<div class="warning_notice fix_volume">
+<p>Your password changes immediately without notice when you accept the changes.</p>
 </div>
-<?php
-$target_dir = "assets/images/avatar/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo '<div class="warning_notice">
-<p>The file is an '.$check["mime"].'</p>
-</div>';
-        $uploadOk = 1;
-    } else {
-        echo '<div class="warning_notice">
-<p>File is not an image! Please upload an Image!</p>
-</div>';
-        $uploadOk = 1;
-    }
-}
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo '<div class="warning_notice">
-<p>Start uploading now or please upload your file with another name. Duplicate name found!</p>
-</div>';
-    $uploadOk = 1;
-}
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 1500000) {
-    echo '<div class="warning_notice">
-<p>Your file is too big! Find a way to make is smaller in KB size. Max File allowed: 1.5MB!</p>
-</div>';
-    $uploadOk = 1;
-}
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-    echo '<div class="warning_notice">
-<p>Your file type is wrong! Only JPG, JPEG, PNG & GIF files are allowed! Sorry...</p>
-</div>';
-    $uploadOk = 1;
-}
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo '<div class="warning_notice">
-<p>Sorry... file was not uploaded. File was not updated in the Database.</p>
-</div>';
-// if everything is ok, try to upload file
-} else {
-if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-echo '<div class="warning_notice">
-<p>Your avatar with name: '.basename( $_FILES["fileToUpload"]["name"]).' has been uploaded successfully!</p>
-</div>';
-$image = basename( $_FILES["fileToUpload"]["name"]);
-$sql = "UPDATE users SET avatar='$image' WHERE `email`='$user_check';";
-if ($aquaglz->query($sql) === TRUE) {
-echo "<script type= 'text/javascript'>alert('Your Avatar has been updated!');</script>";
-}
-} else {
-echo "<script type= 'text/javascript'>alert('Sorry, there was an error uploading your file.');</script>";
-}
-}
-?>
 <?php
 $qer = mysqli_query($aquaglz, "SELECT * FROM `users` WHERE `email`='$user_check'");
 if (mysqli_num_rows($qer) > 0) {
@@ -192,24 +126,54 @@ echo'
 }
 }
 ?>
-<div class="widget widget-simple padding margin15">
-<div class="widget-header">
-<h2 class="fontawesome-money" data-speak="payment_gain_frostpoints">Upload Avatar</h2>
+<div class="container_3 account-bg account_sub_header">
+<div class="grad">
+<div class="page-title">Change Password</div>
+<a href="account.php">Back to account</a>
 </div>
-<div class="widget-content">
-<div class="widget-body" data-charlist="">
-<form action="change-avatar.php" method="post" enctype="multipart/form-data">
-<h1>Select image to upload:</h1>
-<div class="distance_cr">
-<a class="download" href="#" title="Select Photo" target="_self"><input class="simple_button fix-upl-avatar" type="file" name="fileToUpload" id="fileToUpload"></a>
 </div>
-<div id="fix-center-ava">
-<input type="submit" value="Upload Image" name="submit">
+<div class="container_cha pass-bg account-wide" align="center">
+<p style="padding: 20px;">
+</p>
+<form action="" method="post">
+<div class="page-desc-holder">
+Your new password will take place immediately. Be careful and don't do mistakes.
 </div>
+<div class="row_ps">
+<label for="newPassword">New password: </label>
+<input type="password" name="password">
+</div>
+<div class="row_ps">
+<label for="newPassword2">Confirm new password: </label>
+<input type="password" name="password">
+</div>
+<br>
+<div class="row_ps">
+<input style="left:-18px;" name="chngpass" type="submit" value="Change">
+</div>
+<br>
+<br>
+<br>
 </form>
+<p></p>                        
 </div>
-</div>
-</div>
+<?php
+if(isset($_POST["chngpass"])){
+$password = $_POST["password"];
+$password = mysqli_real_escape_string($aquaglz, $password);
+$password = md5($password);
+$sql = "UPDATE users SET password='".$password."' WHERE `email`='".$user_check."';";
+if ($aquaglz->query($sql) === TRUE) {
+echo "<script type= 'text/javascript'>alert('Your Password has been changed! Please wait while we redirect you!');</script>";
+echo "<meta http-equiv='refresh'content='2;url=account.php'>";
+echo $sql;
+} else {
+echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $aquaglz->error."');</script>";
+echo "<meta http-equiv='refresh'content='2;url=chn-pass.php'>";
+echo $sql;
+}
+}
+?>
 
 </div>
 </div>

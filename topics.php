@@ -120,7 +120,7 @@ echo'<li class="lastpost">
 }else{
 echo '<li class="lastpost">
 <h4>by <a>System</a></h4>
-<h5>'.$row["last_date"].'</h5><a href="admin/rmv_forum.php?tid='.$row["id"].'" id="remove_post" title="Delete Post"><p>Delete Post</p></a></li>';
+<h5>'.$row["last_date"].'</h5><a href="rmv_forum.php?tid='.$row["id"].'" id="remove_post" title="Delete Post"><p>Delete Post</p></a></li>';
 }
 echo'
 </ul>						
