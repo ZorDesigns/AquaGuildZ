@@ -123,7 +123,7 @@ echo'
 <a href="chn-pass.php">Change password</a>
 </li>
 <li>
-<a href="#">Change email</a>
+<a href="chn-btag.php">Change bTag / Nickname</a>
 </li>
 </ul>
 </div>
