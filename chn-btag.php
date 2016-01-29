@@ -158,15 +158,13 @@ Are you sure you want to apply all the new changes? If yes, please submit your c
 </div>
 <?php
 if(isset($_POST["chngnick"])){
-$sql = "UPDATE users SET password='".$_POST["nickname"]."' WHERE `email`='".$user_check."';";
+$sql = "UPDATE users SET bTag='".$_POST["nickname"]."' WHERE `email`='".$user_check."';";
 if ($aquaglz->query($sql) === TRUE) {
 echo "<script type= 'text/javascript'>alert('Your Nickname has been changed! Please wait while we redirect you!');</script>";
 echo "<meta http-equiv='refresh'content='2;url=account.php'>";
-echo $sql;
 } else {
 echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $aquaglz->error."');</script>";
 echo "<meta http-equiv='refresh'content='2;url=chn-pass.php'>";
-echo $sql;
 }
 }
 ?>

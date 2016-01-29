@@ -166,11 +166,9 @@ $sql = "UPDATE users SET password='".$password."' WHERE `email`='".$user_check."
 if ($aquaglz->query($sql) === TRUE) {
 echo "<script type= 'text/javascript'>alert('Your Password has been changed! Please wait while we redirect you!');</script>";
 echo "<meta http-equiv='refresh'content='2;url=account.php'>";
-echo $sql;
 } else {
 echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $aquaglz->error."');</script>";
 echo "<meta http-equiv='refresh'content='2;url=chn-pass.php'>";
-echo $sql;
 }
 }
 ?>
