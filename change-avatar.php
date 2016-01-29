@@ -1,6 +1,6 @@
 <?php
-$page_cat = "none";
-$page_tit = "none";
+$page_cat = "chnava";
+$page_tit = "chnava";
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,28 +49,6 @@ $target_dir = "assets/images/avatar/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo '<div class="warning_notice">
-<p>The file is an '.$check["mime"].'</p>
-</div>';
-        $uploadOk = 1;
-    } else {
-        echo '<div class="warning_notice">
-<p>File is not an image! Please upload an Image!</p>
-</div>';
-        $uploadOk = 1;
-    }
-}
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo '<div class="warning_notice">
-<p>Start uploading now or please upload your file with another name. Duplicate name found!</p>
-</div>';
-    $uploadOk = 1;
-}
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 1500000) {
     echo '<div class="warning_notice">
@@ -79,16 +57,15 @@ if ($_FILES["fileToUpload"]["size"] > 1500000) {
     $uploadOk = 1;
 }
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-    echo '<div class="warning_notice">
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+echo '<div class="warning_notice">
 <p>Your file type is wrong! Only JPG, JPEG, PNG & GIF files are allowed! Sorry...</p>
 </div>';
     $uploadOk = 1;
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    echo '<div class="warning_notice">
+echo '<div class="warning_notice">
 <p>Sorry... file was not uploaded. File was not updated in the Database.</p>
 </div>';
 // if everything is ok, try to upload file
@@ -102,8 +79,6 @@ $sql = "UPDATE users SET avatar='$image' WHERE `email`='$user_check';";
 if ($aquaglz->query($sql) === TRUE) {
 echo "<script type= 'text/javascript'>alert('Your Avatar has been updated!');</script>";
 }
-} else {
-echo "<script type= 'text/javascript'>alert('Sorry, there was an error uploading your file.');</script>";
 }
 }
 ?>
@@ -192,23 +167,35 @@ echo'
 }
 }
 ?>
-<div class="widget widget-simple padding margin15">
-<div class="widget-header">
-<h2 class="fontawesome-money" data-speak="payment_gain_frostpoints">Upload Avatar</h2>
+<div class="container_3 account-bg account_sub_header">
+<div class="grad">
+<div class="page-title">Change Avatar</div>
+<a href="account.php">Back to account</a>
 </div>
-<div class="widget-content">
-<div class="widget-body" data-charlist="">
+</div>
+<div class="container_cha pass-bg account-wide" align="center">
+<p style="padding: 20px;">
+</p>
 <form action="change-avatar.php" method="post" enctype="multipart/form-data">
-<h1>Select image to upload:</h1>
-<div class="distance_cr">
-<a class="download" href="#" title="Select Photo" target="_self"><input class="simple_button fix-upl-avatar" type="file" name="fileToUpload" id="fileToUpload"></a>
+<div class="page-desc-holder">
+Your new Avatar will take place immediately. Be careful and don't do mistakes.
 </div>
-<div id="fix-center-ava">
-<input type="submit" value="Upload Image" name="submit">
+<div class="row_ps">
+<label for="newAvatar">New Avatar: </label>
+<input class="simple_button fix-upl-avatar" type="file" name="fileToUpload" id="fileToUpload">
 </div>
+<div class="page-desc-holder">
+Are you sure you want to apply all the new changes? If yes, please submit your changes!
+</div>
+<br>
+<div class="row_ps">
+<input style="left:-18px;" type="submit" value="Upload Image" name="submit">
+</div>
+<br>
+<br>
+<br>
 </form>
-</div>
-</div>
+<p></p>                        
 </div>
 
 </div>

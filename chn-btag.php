@@ -1,6 +1,6 @@
 <?php
-$page_cat = "none";
-$page_tit = "none";
+$page_cat = "chnbtag";
+$page_tit = "chnbtag";
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,6 +1,6 @@
 <?php
-$page_cat = "none";
-$page_tit = "none";
+$page_cat = "chnpass";
+$page_tit = "chnpass";
 ?>
 <!DOCTYPE html>
 <html>

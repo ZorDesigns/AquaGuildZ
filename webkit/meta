@@ -13,7 +13,10 @@
 <?php if($page_tit=='groster') echo' Guild Roster';?>
 <?php if($page_tit=='community') echo' Community';?>
 <?php if($page_tit=='form') echo' Recruit Form';?>
-<?php if($page_tit=='formrec') echo' Recruitment Form';?>
+<?php if($page_tit=='account') echo' Account Panel';?>
+<?php if($page_tit=='chnpass') echo' Change Password';?>
+<?php if($page_tit=='chnbtag') echo' Change bTag / Nickname';?>
+<?php if($page_tit=='chnava') echo' Change Avatar';?>
 </title>
 <?php } ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
