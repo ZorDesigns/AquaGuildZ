@@ -10,10 +10,10 @@ body
 	font-size: 12px;
 
 	/* Text color */
-	color: #333;
+	color: #c9a33c;
 
 	/* Remove the background color to make it transparent */
-	background-color: #fff;
+	background-color: transparent;
 
 	margin: 20px;
 }

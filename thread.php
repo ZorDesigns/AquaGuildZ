@@ -287,11 +287,11 @@ echo'
 <ul class="post_controls">
 <li class="post_date">'.@$date.'</li>';
 if ( in_array($rank_check, array(4, 5, 6)) ) {
-echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="rmv_replies.php?rid='.$row['id'].'" title="Delete">Delete</a></li>
+echo '<li><a class="report" href="edit-reply.php?edid='.$row['id'].'" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$row['id'].'" href="rmv_replies.php?rid='.$row['id'].'" title="Delete">Delete</a></li>
 ';
 }else{
 if ($reply_author == $user_check){
-echo '<li><a class="report" href="#" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$id.'" href="rmv_replies.php?rid='.$row['id'].'" title="Delete">Delete</a></li>
+echo '<li><a class="report" href="edit-reply.php?edid='.$row['id'].'" title="Edit">Edit</a></li><li><a class="quote post-quote-button" data-post-id="'.$row['id'].'" href="rmv_replies.php?rid='.$row['id'].'" title="Delete">Delete</a></li>
 ';}
 }
 echo'
