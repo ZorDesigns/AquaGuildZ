@@ -21,6 +21,8 @@
 			}
 		}
 		if ($q) {
+	echo "<script type= 'text/javascript'>alert('Your Reply has been posted! We are redirecting you!');</script>";
+	echo '<meta http-equiv="refresh"content="2;url=thread.php?tid='.$_GET['tid'].'">';
 		}else
 	echo '<meta http-equiv="refresh"content="2;url=ffail.php">';
 }
