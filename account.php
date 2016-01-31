@@ -111,7 +111,7 @@ echo'
 <div class="achievements"></div>
 <div class="msg_txt" data-speak="panel_pm_info">You have <b id="pm_count">';
 echo $gp+$sp+$cp;
-echo '</b> achievement(s).<br><span>Be active on the Site and you will be awarded!</span>
+echo '</b> Gold point(s).<br><span>Be active on the Site and you will be awarded!</span>
 </div>
 </a>
 <nav class="accountnav"><div class="row">

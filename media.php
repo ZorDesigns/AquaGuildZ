@@ -37,16 +37,18 @@ include __DIR__ . '/configs.php';
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div class="container_4 media-bg-main" align="center">
+<div class="container_4" align="center">
 <!-- Videos -->
 <div class="warning_notice fix_media_warn">
 <p>Start Submitting Videos, Screenshots and Wallpapers! Be awesome as a Guild member and make content!</p>
 </div>
-<div class="media-container flleft half-w" align="left">
-<div class="media-c-header">
-<h3>Videos</h3>
-<a class="view-all" href="videos.php">View all</a>
+<div class="container_3 account-bg fix_media_vid_panel">
+<div class="grad">
+<div class="page-title">Videos</div>
+<a href="videos.php">View All</a>
 </div>
+</div>
+<div class="container_videos vid-bg account-wide" align="left">
 <?php
 $vids = "SELECT * FROM vids ORDER BY id DESC LIMIT 2";
 $vidrslt = $aquaglz->query($vids); 
@@ -99,15 +101,17 @@ echo '
 </div>
 ';
 }
-?>
+?>                       
 </div>
 <!-- Videos.End -->
 <!-- Wallpapers -->
-<div class="media-container flright half-w" align="left">
- <div class="media-c-header">
-<h3>Wallpapers</h3>
-<a class="view-all" href="#">View all</a>
+<div class="container_3 bg-small-wallp fix_media_vid_panel2">
+<div class="grad">
+<div class="page-title">Wallpapers</div>
+<a href="#">View All</a>
 </div>
+</div>
+<div class="container_wallp wallp-bg account-wide" align="right">
 <ul class="screanshots screanshots-media-page">
 <?php
 $wlp = "SELECT * FROM wallpapers ORDER BY id DESC LIMIT 4";
@@ -141,11 +145,13 @@ echo '
 <div class="clear"></div>
 <br>
 <!-- Screanshots -->
-<div class="media-container flright full-w" align="left">
-<div class="media-c-header">
-<h3>Screenshots</h3>
-<a class="view-all" href="screens.php">View all</a>
+<div class="container_3 bg-wide-screen fix_media_vid_panel3">
+<div class="grad">
+<div class="page-title">Screenshots</div>
+<a href="screens.php">View All</a>
 </div>
+</div>
+<div class="container_screen screen-bg account-wide">
 <ul class="screanshots screanshots-media-page-two">
 <?php
 $scrn = "SELECT * FROM screenshots ORDER BY id DESC LIMIT 10";
