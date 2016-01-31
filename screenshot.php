@@ -2,6 +2,7 @@
 $page_cat = "media";
 $page_tit = "media";
 include __DIR__ . '/configs.php';
+$sid = $_GET["id"];
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -37,67 +38,35 @@ include __DIR__ . '/configs.php';
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div class="container_4" style="height: 817px!important;" align="center">
+<div class="container_4" style="height: 751px!important;" align="center">
 <!-- Screenshots -->
 <?php
-if ($scrnrslt = $aquaglz->query("SELECT * FROM screenshots ORDER BY id")) {
-/* determine number of rows result set */
-$scrn_cnt = $scrnrslt->num_rows;
+$scrn = "SELECT * FROM screenshots WHERE id=$sid";
+$scrnrslts = $aquaglz->query($scrn); 
+if ($scrnrslts->num_rows > 0) {
+// output data of each row
+while($scrn = $scrnrslts->fetch_assoc()) {
 ?>
 <div class="warning_notice fix_media_warn">
 <p>Screenshots posted are uploaded to IMGUR.com! Thou you can preview them here!</p>
 </div>
 <div class="container_3 bg-wide-screen fix_media_2 fix_media_vid_panel3">
 <div class="grad">
-<div class="page-title">Screenshots (<?php echo $scrn_cnt; } ?>)</div>
-<a href="media.php">Back to Media</a>
+<div class="page-title">Screenshot > <?php echo $scrn["title"]; ?></div>
+<a href="screens.php">Back to Screenshots</a>
 </div>
 </div>
-<div class="container_screen account-wide" style="background-image: url(assets/images/bg-media-screen-wide.png)!important;height: 747px!important;">
-<ul class="screanshots all-screanshots screanshots-media-page-two">
+<div class="container_screen account-wide" style="background-image: url(assets/images/bg-media-screen-wide.png)!important;height: 680px!important;">
 <?php
-$scrn = "SELECT * FROM screenshots ORDER BY id DESC LIMIT 16";
-$scrnrslts = $aquaglz->query($scrn); 
-if ($scrnrslts->num_rows > 0) {
-// output data of each row
-while($scrn = $scrnrslts->fetch_assoc()) {
-echo '
-<li>
-<div class="media-video-container" align="left">
-<div class="media-video-thumb container_frame">
-<div class="cframe_inner">
-<a href="screenshot.php?id='.$scrn["id"].'">
-<!--Video Image Preview-->
-<div class="image-thumb-preview" style="background-image:url('.$scrn["image"].');background-size: 200px 113px;background-repeat: no-repeat;"></div>
-<div class="media-zoom-ico fix-zoom-media"></div>
-</a>
-</div>
-</div>
-</div>
-<div class="screanshot-title-info">'.$scrn["title"].'<p>On Imgur.com</p></div>
-</li>
-';
-}
-}else{
-echo '
-<li>
-<div class="media-video-container" align="left">
-<div class="media-video-thumb container_frame">
-<div class="cframe_inner">
-<a href="#">
-<!--Video Image Preview-->
-<div class="image-thumb-preview" style="background-image:url(assets/images/media/screens/screen.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
-<div class="media-zoom-ico fix-zoom-media"></div>
-</a>
-</div>
-</div>
-</div>
-<div class="screanshot-title-info">Coming soon...</div>
-</li>
-';
-}
+echo '<div class="datam" style="background-image: url('.$scrn['image'].');background-size: 930px 523px;background-repeat: no-repeat;"></div>
+<div class="infosm"><h3></h3><ul><li>
+<span>Description</span>: <a>'.$scrn['desc'].'</a>
+</li><li><span>Uploaded on</span>: <span>'.$scrn['date'].'</span></li>';
 ?>
 </ul>
+</div>
+<a class="goback" href="#" onclick="window.open('<?php echo $scrn["image"]; ?>')">View Bigger</a>
+<?php }} ?>
 </div>
 <!-- Videos.End -->
 <div class="clear"></div>
