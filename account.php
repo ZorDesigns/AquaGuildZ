@@ -43,6 +43,9 @@ $qer = mysqli_query($aquaglz, "SELECT * FROM `users` WHERE `email`='$user_check'
 if (mysqli_num_rows($qer) > 0) {
 while ($recr = mysqli_fetch_array($qer)) {
 $rank = $recr['rank'];
+$gp = $recr['g_points'];
+$cp = $recr['creep_points'];
+$sp = $recr['saint_points'];
 echo'
 <div id="user_card" class="bg_cata">
 <div class="left">
@@ -92,25 +95,23 @@ echo'
 </ul>
 </div>
 </div>
-';
-}
-}
-?>
 <div id="user-right" class="bg_cata">
 <div class="points margin0 row" data-points="">
 <div class="col-xs-8">
-<span class="point support">0</span><br><span class="pt_txt">CMS Points</span>
+<span class="point support">'.$recr['g_points'].'</span><br><span class="pt_txt">CMS Points</span>
 </div>
 <div class="col-xs-8">
-<span class="point vote">0</span><br><span class="pt_txt">Creeper Points</span>
+<span class="point vote">'.$recr['creep_points'].'</span><br><span class="pt_txt">Creeper Points</span>
 </div>
 <div class="col-xs-8">
-<span class="point saint">0</span><br><span class="pt_txt">Saint Points</span>
+<span class="point saint">'.$recr['saint_points'].'</span><br><span class="pt_txt">Saint Points</span>
 </div>
 </div>
 <a href="#" class="msg_pm active">
 <div class="achievements"></div>
-<div class="msg_txt" data-speak="panel_pm_info">You have <b id="pm_count">0</b> achievement(s).<br><span>Be active on the Site and you will be awarded!</span>
+<div class="msg_txt" data-speak="panel_pm_info">You have <b id="pm_count">';
+echo $gp+$sp+$cp;
+echo '</b> achievement(s).<br><span>Be active on the Site and you will be awarded!</span>
 </div>
 </a>
 <nav class="accountnav"><div class="row">
@@ -124,6 +125,9 @@ echo'
 </li>
 <li>
 <a href="chn-btag.php">Change bTag / Nickname</a>
+</li>
+<li>
+<a href="up-screens.php">Upload Screenshot</a>
 </li>
 </ul>
 </div>
@@ -149,7 +153,10 @@ Become Gold
 </div>
 </nav> 
 </div>
-
+';
+}
+}
+?>
 <br>
 <br>
 <br>

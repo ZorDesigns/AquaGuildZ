@@ -69,7 +69,7 @@ if ($vidrslt->num_rows > 0) {
 while($vids = $vidrslt->fetch_assoc()) {
 echo '<li>
 <a href="'.$vids["contentlnk"].'">
-<img src="" alt="" style="background-image: url(assets/images/media/vids/'.$vids["image"].'.png);">
+<img src="//i.ytimg.com/vi_webp/'.$vids["contentlnk"].'/mqdefault.webp" alt="" style="background-repeat: no-repeat;max-width: 138px;max-height: 86px;">
 <span>'.$vids["title"].'</span>
 </a>
 </li>';

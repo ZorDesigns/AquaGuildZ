@@ -15,8 +15,6 @@ include __DIR__ . '/configs.php';
 <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
-<link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
-<link href="assets/stylesheets/media.css" rel="stylesheet" type="text/css">
 <!-- Le javascripts -->
 <script src="assets/javascript/jquery.min.js"></script>
 <script src="assets/javascript/jquery.flexslider.min.js"></script>
@@ -39,18 +37,15 @@ include __DIR__ . '/configs.php';
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div class="container_4" align="center">
+<div class="container_4 media-bg-main" align="center">
 <!-- Videos -->
-<div>
-<a href="upload.php" class="container_3 brown wider fixed">
-<span class="error_icons atention"></span>
+<div class="warning_notice fix_media_warn">
 <p>Start Submitting Videos, Screenshots and Wallpapers! Be awesome as a Guild member and make content!</p>
-</a>
 </div>
 <div class="media-container flleft half-w" align="left">
 <div class="media-c-header">
 <h3>Videos</h3>
-<a class="view-all" href="#">View all</a>
+<a class="view-all" href="videos.php">View all</a>
 </div>
 <?php
 $vids = "SELECT * FROM vids ORDER BY id DESC LIMIT 2";
@@ -59,12 +54,12 @@ if ($vidrslt->num_rows > 0) {
 // output data of each row
 while($vids = $vidrslt->fetch_assoc()) {
 echo '
-<div class="media-video-container" align="left">
+<div class="media-video-container media-fix" align="left">
 <div class="media-video-thumb container_frame">
 <div class="cframe_inner">
 <a href="https://www.youtube.com/watch?v='.$vids["contentlnk"].'">
 <!--Video Image Preview-->
-<div class="image-thumb-preview" style="background-image:url(//i.ytimg.com/vi_webp/'.$vids["contentlnk"].'/mqdefault.webp);background-repeat: no-repeat;"></div>
+<div class="image-thumb-preview" style="background-image:url(//i.ytimg.com/vi_webp/'.$vids["contentlnk"].'/mqdefault.webp);background-size: 200px 113px;background-repeat: no-repeat;"></div>
 <div class="play-button-small"></div>
 </a>
 </div>
@@ -149,7 +144,7 @@ echo '
 <div class="media-container flright full-w" align="left">
 <div class="media-c-header">
 <h3>Screenshots</h3>
-<a class="view-all" href="#">View all</a>
+<a class="view-all" href="screens.php">View all</a>
 </div>
 <ul class="screanshots screanshots-media-page-two">
 <?php
@@ -160,8 +155,8 @@ if ($scrnrsl->num_rows > 0) {
 while($scrn = $scrnrsl->fetch_assoc()) {
 echo '
 <li>
-<a href="#'.$scrn["id"].'" class="container_frame" rel="shadowbox" title="'.$scrn["title"].'">
-<span class="cframe_inner" style="background-image:url(assets/images/media/screens/'.$scrn["image"].'.png); background-size: 100%; background-repeat: no-repeat;"></span>
+<a href="screens.php" class="container_frame" rel="shadowbox" title="'.$scrn["title"].'">
+<span class="cframe_inner" style="background-image:url('.$scrn["image"].'); background-size: 100%; background-repeat: no-repeat;"></span>
 <div class="media-zoom-ico"></div>
 </a>
 </li>
@@ -179,7 +174,7 @@ echo '
 ?>
 <div class="clear"></div>
 </ul>
- <div class="clear"></div>  
+<div class="clear"></div>  
 </div>
 <!-- Screanshots.End -->
 <div class="clear"></div>
