@@ -37,23 +37,26 @@ include __DIR__ . '/configs.php';
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div class="container_4" align="center">
-<!-- Videos -->
+<div class="container_4" style="height: 817px!important;" align="center">
+<!-- Screenshots -->
 <?php
-if ($vidrsltc = $aquaglz->query("SELECT * FROM vids ORDER BY id")) {
+if ($scrnrslt = $aquaglz->query("SELECT * FROM vids ORDER BY id")) {
 /* determine number of rows result set */
-$vid_cnt = $vidrsltc->num_rows;
+$scrn_cnt = $scrnrslt->num_rows;
 ?>
-<a class="goback" href="media.php">Back to Media</a>
-<div class="media-header">
-<h2>Videos</h2>
-<h3 class="items-number">(<?php echo $vid_cnt; } ?>)</h3>
-<div class="clear"></div>
-<div class="bline"></div>
+<div class="warning_notice fix_media_warn">
+<p>Videos are uploaded to YouTube or other services and displayed here!</p>
 </div>
+<div class="container_3 bg-wide-screen fix_media_2 fix_media_vid_panel3">
+<div class="grad">
+<div class="page-title">Videos (<?php echo $scrn_cnt; } ?>)</div>
+<a href="media.php">Back to Media</a>
+</div>
+</div>
+<div class="container_screen account-wide" style="background-image: url(assets/images/bg-media-screen-wide.png)!important;height: 747px!important;">
 <ul class="screanshots all-screanshots screanshots-media-page-two">
 <?php
-$vids = "SELECT * FROM vids ORDER BY id DESC LIMIT 2";
+$vids = "SELECT * FROM vids ORDER BY id DESC LIMIT 16";
 $vidrslt = $aquaglz->query($vids); 
 if ($vidrslt->num_rows > 0) {
 // output data of each row
@@ -63,7 +66,7 @@ echo '
 <div class="media-video-container" align="left">
 <div class="media-video-thumb container_frame">
 <div class="cframe_inner">
-<a href="https://www.youtube.com/watch?v='.$vids["contentlnk"].'">
+<a href="video.php?id='.$vids["id"].'">
 <!--Video Image Preview-->
 <div class="image-thumb-preview" style="background-image:url(//i.ytimg.com/vi_webp/'.$vids["contentlnk"].'/mqdefault.webp);background-size: 200px 113px;background-repeat: no-repeat;"></div>
 <div class="play-button-small"></div>
@@ -83,8 +86,8 @@ echo '
 <div class="cframe_inner">
 <a href="#">
 <!--Video Image Preview-->
-<div class="image-thumb-preview" style="background-image:url(assets/images/media/vids/vids.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
-<div class="play-button-small"></div>
+<div class="image-thumb-preview" style="background-image:url(assets/images/media/screens/screen.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="media-zoom-ico fix-zoom-media"></div>
 </a>
 </div>
 </div>
@@ -95,6 +98,7 @@ echo '
 }
 ?>
 </ul>
+</div>
 <!-- Videos.End -->
 <div class="clear"></div>
 <br>

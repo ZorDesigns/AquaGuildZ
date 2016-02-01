@@ -45,7 +45,7 @@ include __DIR__ . '/configs.php';
 <div class="container_3 account-bg fix_media_vid_panel">
 <div class="grad">
 <div class="page-title">Videos</div>
-<a href="videos.php">View All</a>
+<a href="vids.php">View All</a>
 </div>
 </div>
 <div class="container_videos vid-bg account-wide" align="left">
