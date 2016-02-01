@@ -43,6 +43,9 @@ $ctID = $_GET["ctID"];
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
 <div class="container_form_1" align="center">
+<div class="warning_notice fix_recr_warn">
+<p>All Recruits are instantly posted and will be read when an officer gets online! Please be patient! It's all about you anyway!</p>
+</div>
 <?php
 $recr = "SELECT * FROM recruits WHERE id=$ctID";
 $recrslt = $aquaglz->query($recr); 
@@ -57,11 +60,27 @@ $rtype = $recr['type'];
 $rappr = $recr['approved'];
 $rdate = $recr['last_date'];
 ?>
-<div class="recr">
-<div id="title">
-<h1><?php echo $rclass; ?></h1>
+<div class="container_3 bg-wide-screen fix_recr_title">
+<div class="grad">
+<div class="page-title">Recruitment > <?php echo $rclass; ?></div>
+<a href="form.php">Back to Recruits</a>
 </div>
 </div>
+<?php if($login_rank < 4)
+{
+echo'';
+}else{
+echo '<p style="margin: 6px 0 0 0;"></p>
+<div class="container_3 bg-wide-screen fix_recr_title">
+<div class="grad">
+<div class="page-title">Change Recruit Status</div>
+<a href="settings/closed.php?id='.$recr['id'].'">Cancelled</a>
+<a href="settings/considering.php?id='.$recr['id'].'">Considering</a>
+<a href="settings/accepted.php?id='.$recr['id'].'">Accepted</a>
+</div>
+</div>';
+}
+?>
 <div class="container_3 recr_light_cont recr_info_cont" align="left">
 <div class="recr_info" align="left">
 <ul class="recr_class">
@@ -74,8 +93,53 @@ echo '<li id="class"><span style="background:url(assets/images/recr-banners/'.$r
 </ul>		
 <ul class="recr_info_main">
 <li id="charname"><span>Character:</span><p><?php echo $char; ?></p></li>
-<li id="role"><span>BattleTag:</span><p><font color="#FFFFFF"><?php echo $cbTag; ?></font></p></li>
-<li><span>Class:</span><p><?php echo $rclass; ?></p></li>
+<li id="role"><span>BattleTag:</span><p><font color="#0072a3"><?php echo $cbTag; ?></font></p></li>
+<li><span>Class:</span><p>
+<?php
+if ($rclass == 'Warrior'){
+echo '<font color="#c69b6d">Warrior</font>';}
+?>
+<?php
+if ($rclass == 'Paladin'){
+echo '<font color="#f48cba">Paladin</font>';}
+?>
+<?php
+if ($rclass == 'Hunter'){
+echo '<font color="#aad372">Hunter</font>';}
+?>
+<?php
+if ($rclass == 'Rogue'){
+echo '<font color="#fff468">Rogue</font>';}
+?>
+<?php
+if ($rclass == 'Priest'){
+echo '<font color="#f0ebe0">Priest</font>';}
+?>
+<?php
+if ($rclass == 'Death Knight'){
+echo '<font color="#c41e3b">Death Knight</font>';}
+?>
+<?php
+if ($rclass == 'Shaman'){
+echo '<font color="#2359ff">Shaman</font>';}
+?>
+<?php
+if ($rclass == 'Mage'){
+echo '<font color="#68ccef">Mage</font>';}
+?>
+<?php
+if ($rclass == 'Warlock'){
+echo '<font color="#9382c9">Warlock</font>';}
+?>
+<?php
+if ($rclass == 'Monk'){
+echo '<font color="#00ffba">Monk</font>';}
+?>
+<?php
+if ($rclass == 'Druid'){
+echo '<font color="#ff7c0a">Druid</font>';}
+?>
+</p></li>
 <li><span>Role:</span><p><?php echo $rrole; ?></p></li>
 </ul>				
 <ul class="recr_info_second">

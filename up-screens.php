@@ -163,14 +163,14 @@ Your Screenshot will take place immediately. Be careful, your screenshot can NOT
 </div>
 <?php
 if(isset($_POST["subscreen"])){
-$sql = "INSERT INTO screenshots VALUES ('', '".$_POST["title"]."', '".$_POST["image"]."', '".$_POST["descript"]."', NOW())";
+$sql = "INSERT INTO screenshots VALUES ('', '".$_POST["title"]."', '".$_POST["image"]."', '".$_POST["descript"]."', NOW());";
 $sql2 = "UPDATE users SET g_points = g_points + 1 WHERE `email`='".$user_check."';";
 if ($aquaglz->query($sql) === TRUE) {
 echo "<script type= 'text/javascript'>alert('Your Screenshot has been posted! Go check Media page!');</script>";
 echo "<meta http-equiv='refresh'content='2;url=account.php'>";
 } else {
 echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $aquaglz->error."');</script>";
-echo "<meta http-equiv='refresh'content='2;url=chn-pass.php'>";
+echo "<meta http-equiv='refresh'content='2;url=up-screens.php'>";
 }
 if ($aquaglz->query($sql2) === TRUE) {
 echo "<script type= 'text/javascript'>alert('You have gained +1 CMS Point! Congratulations!');</script>";
