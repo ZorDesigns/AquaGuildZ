@@ -59,7 +59,7 @@ echo '
 <div class="media-video-container media-fix" align="left">
 <div class="media-video-thumb container_frame">
 <div class="cframe_inner">
-<a href="https://www.youtube.com/watch?v='.$vids["contentlnk"].'">
+<a href="video.php?id='.$vids["id"].'">
 <!--Video Image Preview-->
 <div class="image-thumb-preview" style="background-image:url(//i.ytimg.com/vi_webp/'.$vids["contentlnk"].'/mqdefault.webp);background-size: 200px 113px;background-repeat: no-repeat;"></div>
 <div class="play-button-small"></div>
