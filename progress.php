@@ -45,7 +45,7 @@ $page_tit = "gprogress";
 <div class="clear"></div>
 <a class="container_3 brown wider fixed">
 <span class="error_icons atention"></span>
-<p>We are changing the Progress system! We will now redirect you to another site to check our project!</p>
+<p>We are changing the Progress system! We will now redirect you to another site to check our Progress! You are redirected to WoWProgress.com</p>
 </a>
 </div>
 <meta http-equiv='refresh'content='5;url=http://www.wowprogress.com/guild/eu/twisting-nether/Hellenic+Horde'>

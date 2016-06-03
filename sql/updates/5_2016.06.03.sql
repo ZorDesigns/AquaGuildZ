@@ -1,0 +1,2 @@
+ALTER TABLE `wallpapers`
+	ADD COLUMN `date` DATETIME NULL AFTER `desc`;

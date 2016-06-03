@@ -108,7 +108,7 @@ echo '
 <div class="container_3 bg-small-wallp fix_media_vid_panel2">
 <div class="grad">
 <div class="page-title">Wallpapers</div>
-<a href="#">View All</a>
+<a href="wallps.php">View All</a>
 </div>
 </div>
 <div class="container_wallp wallp-bg account-wide" align="right">
@@ -121,8 +121,8 @@ if ($wlprsl->num_rows > 0) {
 while($wlp = $wlprsl->fetch_assoc()) {
 echo '
 <li>
-<a href="#'.$wlp["id"].'" class="container_frame">
-<span class="cframe_inner" style="background-image:url(assets/images/news/usquare/'.$wlp["image"].'.png);"></span>
+<a href="wallps.php" class="container_frame">
+<span class="cframe_inner" style="background-image:url(assets/images/media/wallps/'.$wlp["image"].');"></span>
 <div class="media-zoom-ico"></div>
 </a>
 </li>

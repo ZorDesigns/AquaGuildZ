@@ -2,7 +2,6 @@
 $page_cat = "community";
 $page_tit = "community";
 include __DIR__ . '/configs.php';
-include __DIR__ . '/settings/comslide';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -16,9 +15,6 @@ include __DIR__ . '/settings/comslide';
 <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
-<link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
-<link href="assets/stylesheets/status.css" rel="stylesheet" type="text/css">
-<link href="//wow.zamimg.com/css/basic.css" rel="stylesheet" type="text/css" id="style1">
 <!-- Le javascripts -->
 <script src="assets/javascript/jquery.min.js"></script>
 <script src="assets/javascript/jquery.flexslider.min.js"></script>
@@ -41,74 +37,152 @@ include __DIR__ . '/settings/comslide';
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div class="container_6" align="center">
-<div class="content_holder">
-<div id="wowhd-search">
-<div class="lgo"></div>
-<form action="http://www.wowhead.com/search" class="search">
-<span><a href="javascript:;"></a><input class="searchwd" type="text" name="q"></span>
-<input class="search-bwd" type="submit" name="" value=""><img style="margin: 19px 0px 0px -505px;" src="assets/stylesheets/form/images/logo_search.png"/></input>
-</form>
+<div class="container_com" align="center">
+<!-- Videos -->
+<div class="warning_notice fix_media_warn">
+<p>The community is a place to hangout and check the basic features of the site in a quick way!</p>
 </div>
-<span class="clear"><!-- --></span>
-<!-- Slider for Community -->
-<div class="flexslider flexicom">
-<ul class="slides">
-<?php
-if ($sldrslt->num_rows > 0) {
-// output data of each row
-while($slds = $sldrslt->fetch_assoc()) {
-echo '<li><div class="slide_mask">
-<a href="'.$slds["lnk"].'"><img src="assets/images/slider/'.$slds["image"].'.png">
-<span class="comslider-title">'.$slds["title"].'</span></a>
-<span class="comslider-desc">'.$slds["desc"].'</span>
+<div class="container_3 account-bg fix_media_vid_panel">
+<div class="grad">
+<div class="page-title">WoWHead</div>
+<a href="http://wowhead.com">Go Now!</a>
 </div>
-';
-}
-}else{
-echo '<li><div class="slide_mask">
-<a href="#"><img src="assets/images/slider/noslider.png">
-<span class="comslider-title">No Sliders</span></a>
-<span class="comslider-desc">Go to the Admin Panel and add some!</span>
-</div>';
-}
-?>
-</ul>
 </div>
-<span class="clear"><!-- --></span>
-<a href="http://www.icy-veins.com/wow/" class="main-services-banner left-bnr" style="background-image:url('assets/images/community/icyveins.jpg');">
-<span class="banner-title">Icy Veins</span>
-<span class="banner-desc">Icy Veins provides news and detailed guides for all Blizzard Games like World of Warcraft.</span>
+<div class="container_wowhead vid-bg account-wide" align="left">
+<div class="media-video-container media-fix" align="left">
+<div class="media-video-thumb container_frame">
+<div class="cframe_inner">
+<a href="http://wowhead.com">
+<!--Video Image Preview-->
+<div class="image-thumb-preview" style="background-image:url(assets/images/wowhead.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="play-button-small"></div>
 </a>
-<a href="http://www.mmo-champion.com/content/" class="main-services-banner right-bnr" style="background-image:url('assets/images/community/mmochamp.jpg');">
-<span class="banner-title">MMO Champion</span>
-<span class="banner-desc">Articles and forums with game news and raiding strategies for World of Warcraft!</span>
+</div>
+</div>
+<div class="video-info">
+<!--Video Title-->
+<h3>WoWHead</h3>
+<!--Video Description-->
+<p>WoWHead is the perfect tool to find items guides and even little hidden secrets!</p>
+<!--Video Youtube Link-->
+<a href="http://wowhead.com" target="_blank">Go to WoWHead now!</a>
+</div>
+<div class="clear"></div>
+</div>                   
+</div>
+<!-- Videos.End -->
+<!-- Wallpapers -->
+<div class="container_3 bg-small-wallp fix_media_vid_panel2">
+<div class="grad">
+<div class="page-title">MMO-CHAMPION</div>
+<a href="http://mmo-champion.com">Go Now!</a>
+</div>
+</div>
+<div class="container_mmo wallp-bg account-wide" align="right">
+<div class="media-video-container media-fix" align="left">
+<div class="media-video-thumb container_frame">
+<div class="cframe_inner">
+<a href="http://mmo-champion.com">
+<!--Video Image Preview-->
+<div class="image-thumb-preview" style="background-image:url(assets/images/mmo.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="play-button-small"></div>
 </a>
-<span class="clear"><!-- --></span>
-<section id="twitter-com">
-<a class="twitter-timeline" href="https://twitter.com/BlizzardCSEU_EN" data-widget-id="687110952177799169"></a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</section>
-<section id="fb-com">
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=1526693774317181";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-page" data-href="https://www.facebook.com/WorldofWarcraft.eu" data-tabs="timeline" data-width="280" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" adapt_container_width="true"><div class="fb-xfbml-parse-ignore">
-<blockquote cite="https://www.facebook.com/WorldofWarcraft.eu"><a href="https://www.facebook.com/WorldofWarcraft.eu">World of Warcraft</a></blockquote></div></div>
-</section>
 </div>
+</div>
+<div class="video-info">
+<!--Video Title-->
+<h3>MMO-Champion</h3>
+<!--Video Description-->
+<p>MMO-Champion is the best site for World of Warcraft News and upcoming features of the game!</p>
+<!--Video Youtube Link-->
+<a href="http://mmo-champion.com" target="_blank">Go to MMO-Champion now!</a>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<!-- Wallpapers.End -->
+<div class="clear"></div>
+<div class="container_3 account-bg fix_icyveins_panel">
+<div class="grad">
+<div class="page-title">Icy-Veins</div>
+<a href="http://www.icy-veins.com/wow/">Go Now!</a>
+</div>
+</div>
+<div class="container_icyveins vid-bg account-wide" align="left">
+<div class="media-video-container media-fix" align="left">
+<div class="media-video-thumb container_frame">
+<div class="cframe_inner">
+<a href="http://www.icy-veins.com/wow/">
+<!--Video Image Preview-->
+<div class="image-thumb-preview" style="background-image:url(assets/images/icyveins.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="play-button-small"></div>
+</a>
+</div>
+</div>
+<div class="video-info">
+<!--Video Title-->
+<h3>Icy-Veins</h3>
+<!--Video Description-->
+<p>Icy-Veins is the perfect tool to find class guides, rotations and everything that you need for your class!</p>
+<!--Video Youtube Link-->
+<a href="http://www.icy-veins.com/wow/" target="_blank">Go to Icy-Veins now!</a>
+</div>
+<div class="clear"></div>
+</div>                   
+</div>
+<!-- Videos.End -->
+<!-- Wallpapers -->
+<div class="container_3 bg-small-wallp fix_curse_panel">
+<div class="grad">
+<div class="page-title">Curse</div>
+<a href="http://curse.com">Go Now!</a>
+</div>
+</div>
+<div class="container_mmo wallp-bg account-wide" align="right">
+<div class="media-video-container media-fix" align="left">
+<div class="media-video-thumb container_frame">
+<div class="cframe_inner">
+<a href="http://curse.com">
+<!--Video Image Preview-->
+<div class="image-thumb-preview" style="background-image:url(assets/images/curse.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="play-button-small"></div>
+</a>
+</div>
+</div>
+<div class="video-info">
+<!--Video Title-->
+<h3>Curse</h3>
+<!--Video Description-->
+<p>Curse is the best site for Addons, News, WoW Facts and mods of the game!</p>
+<!--Video Youtube Link-->
+<a href="http://curse.com" target="_blank">Go to Curse now!</a>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<!-- Wallpapers.End -->
 <br>
+<!-- Screanshots -->
+<div class="container_3 bg-wide-screen fix_curse_voice_panel">
+<div class="grad">
+<div class="page-title">Guild Facts</div>
 </div>
-<br>
 </div>
-<?php include("webkit/sidecom"); ?>
+<div class="container_screen screen-bg account-wide">
+<p><?php include('api/rankfact.php');?></p>
+<div class="clear"></div>  
+</div>
+<!-- Screanshots.End -->
+<div class="clear"></div>
+ </div>
+</div>
+<?php include("webkit/sidelogin"); ?>
+</div>
 </div>
 <?php include("webkit/footer"); ?>
-</div>
+<?php 
+// Closing the Connection for Injection Measures!
+$aquaglz->close();
+?>
 </body>
 </html>

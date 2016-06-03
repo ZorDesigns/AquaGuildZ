@@ -12,7 +12,7 @@ include("check.php");
 <div class="grid-container nav-header-content">
 <ul class="nav-list nav-left" id="nav-client-main-menu">
 <li>
-<a id="nav-client-home" class="nav-item nav-home" href="/en/" data-analytics="global-nav" data-analytics-placement="Home"></a>
+<a id="nav-client-home" class="nav-item nav-home" href="index.php" data-analytics="global-nav" data-analytics-placement="Home"></a>
 </li>
 <li>
 <a id="nav-client-shop" class="nav-item nav-link" href="index.php" data-analytics="global-nav" data-analytics-placement="Home">Home</a>
@@ -64,7 +64,7 @@ echo '<div class="dropdown-section">
 <div class="grid-container nav-header-content">
 <ul class="nav-list nav-left" id="nav-client-main-menu">
 <li>
-<a id="nav-client-home" class="nav-item nav-home" href="/en/" data-analytics="global-nav" data-analytics-placement="Home"></a>
+<a id="nav-client-home" class="nav-item nav-home" href="index.php" data-analytics="global-nav" data-analytics-placement="Home"></a>
 </li>
 <li>
 <a id="nav-client-shop" class="nav-item nav-link" href="index.php" data-analytics="global-nav" data-analytics-placement="Home">Home</a>

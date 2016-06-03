@@ -48,8 +48,6 @@ while($vrsn = $resultv->fetch_assoc()) {
 <li><a href="https://github.com/Blizzard/api-wow-docs">WoWAPI</a></li>
 <li><a href="https://github.com/ZorDesigns/AquaGuildZ">AquaGuildZ v<?php echo $vrsn["text"]; }}?></a></li>
 </ul>
-</nav>
-<a href="http://www.dmca.com/Protection/Status.aspx?ID=aa1acc65-a572-4ce1-b30a-4424f10e95d6" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="assets/images/dmca_protected_17_120.png?ID=aa1acc65-a572-4ce1-b30a-4424f10e95d6"  alt="DMCA.com Protection Status" /></a>  <script src="https://streamtest.github.io/badges/streamtest.js" type="text/javascript"></script> 
-Hellenic Horde &copy; 2012 <a href="//flamecms.org/" style="color: #e39f1e;  text-decoration: none;">AquaGuildZ</a>, INC. All rights reserved. Powered by <a href="//flamecms.org/" style="color: #e39f1e;  text-decoration: none;">FlameCMS</a>
+</nav>Hellenic Horde &copy; 2012 <a href="//hellenichorde.com/" style="color: #e39f1e;  text-decoration: none;">AquaGuildZ</a>, INC. All rights reserved. Powered by <a href="//zordesigns.org/" style="color: #e39f1e;  text-decoration: none;">FlameCMS</a>
 </div>
 </footer>
