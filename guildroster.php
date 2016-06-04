@@ -1,8 +1,13 @@
 <?php
 $page_cat = "roster";
 $page_tit = "groster";
+include __DIR__ . '/configs.php';
 ?>
 <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>   <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>   <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
 <?php include ('webkit/meta'); ?>
@@ -33,29 +38,25 @@ $page_tit = "groster";
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div id="main_content">
-<div class="container_3" align="center">
-<div class="players">
-<a id="main-content"></a>
-<div class="sub_header_h1">
-<h1>Guild Roster</h1>
+<div class="container_roster" align="center" style="height:39100px;">
+<!-- Videos -->
+<div class="warning_notice fix_media_warn">
+<p>TIP: Keep in mind that the Roster changes everyday almost 24 times! It refreshes almost every hour!</p>
 </div>
-<div class="region region-content">
-<div id="block-system-main" class="block block-system">
-<div class="content">
-<div class="view view-players view-id-players view-display-id-page_1 view-dom-id-89414b9b52314f613ee7b35d83babee2 clearfix">
-<hr>
-<div class="wrapper clearfix">
+<!-- Screanshots -->
+<div class="container_3 bg-wide-screen fix_roster_panel">
+<div class="grad">
+<div class="page-title">Guild Roster</div>
+<a href="http://<?php echo $RegionName ?>.battle.net/wow/en/guild/<?php echo $RealmName ?>/<?php echo $GuildName?>/">View at Battle.net</a>
+</div>
+</div>
+<div class="fix_roster_container">
 <?php include ('api/character.php'); ?>
 </div>
-</div> </div>
 </div>
 </div>
+<?php include("webkit/sidelogin"); ?>
 </div>
-</div>
-</div>
-</div>
-<?php include("webkit/sidebar"); ?>
 </div>
 <?php include("webkit/footer"); ?>
 <?php 

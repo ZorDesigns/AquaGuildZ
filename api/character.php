@@ -48,18 +48,40 @@ $replacements = array( 'Warrior', 'Paladin', 'Hunter', 'Rogue',
 $resultclass = $replacements[$p['class'] - 1];
 //Table of Guild Members
 echo '
-<div class="roster-bg-dark">
-<div class="groster-row">
-<img src="http://eu.battle.net/static-render/eu/'.$mthumb.'" width="90" height="90" style="float:left;">
-<div class="grinfo">
-<p><a href="http://eu.battle.net/wow/en/character/twisting-nether/'.$mname.'/advanced">'.$mname.'</small></a></p>
-<p class="wow-class-'.$mclass.'">'.$resultclass.'</p>
-<p class="wow-class-'.$mclass.'">'.$mrole.'</p>
-<p class="wow-grank">'.$ranks[$mrank].'</p>
-<p class="wow-gachiev"><img src="assets/images/achievements.gif"> '.$machiev.'</p>
+<div class="panel_fix panel-default margin-5" style="background-image: url(assets/images/roster/bg-'.$mclass.'.png);">
+<div class="panel-heading">
+<div class="community-title">
+<div class="tit op_player wow-class-'.$mclass.'"><a href="http://eu.battle.net/wow/en/character/twisting-nether/'.$mname.'/advanced">'.$mname.'</a></div>
+<small>'.$ranks[$mrank].'</small>
 </div>
-<div class="clear"></div>
 </div>
+<ul class="recr_class fix-ava">
+<li id="class"><span style="background:url(http://eu.battle.net/static-render/eu/'.$mthumb.') no-repeat; background-size: 100%; position:static;"></span><p></p></li>
+<li id="change_avatar"><a href="#" class="fix-lett-ava"></a></li>
+</ul>
+<table class="table table-stripped"><tbody>
+<tr>
+<td style="width:40%;">Class</td>
+<td><span class="op_player wow-class-'.$mclass.'">'.$resultclass.'</span></td>
+</tr>
+<tr>
+<td style="width:40%;">Talent</td>
+<td><span class="op_player wow-class-'.$mclass.'">'.$mrole.'</span></td>
+</tr>
+<tr>
+<td data-speak="com_user_messages">Achievements</td>
+<td><span>'.$machiev.'</span></td>
+</tr>
+<tr>
+<td data-speak="com_user_likes">Rank</td>
+<td><span>'.$ranks[$mrank].'</span></td>
+</tr>
+<tr>
+<td>Member Since</td>
+<td>Under Dev</td>
+</tr>
+</tbody>
+</table>
 </div>
 ';
 }
