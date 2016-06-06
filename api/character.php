@@ -20,6 +20,7 @@ $rows[$i]['gender'] = $e['character']['gender'];
 $rows[$i]['achiev'] = $e['character']['achievementPoints'];
 $rows[$i]['thumbnail'] = $e['character']['thumbnail'];
 $rows[$i]['spec'] = @$e['character']['spec']['name'];
+$rows[$i]['desc'] = @$e['character']['spec']['role'];
 }
 $s = (isset($_GET['s']) ? $_GET['s'] : '');
 $u = (isset($_GET['u']) ? $_GET['u'] : '0');
@@ -42,6 +43,7 @@ $mgender = $p['gender'];
 $machiev = $p['achiev'];
 $mthumb = $p['thumbnail'];
 $mrole = $p['spec'];
+$mtype = $p['desc'];
 $classes = array( '1', '2', '4', '5', '6', '7', '8', '9', '10', '11' );
 $replacements = array( 'Warrior', 'Paladin', 'Hunter', 'Rogue', 
 'Priest', 'Death Knight', 'Shaman', 'Mage', 'Warlock', 'Monk','Druid' );
@@ -69,16 +71,16 @@ echo '
 <td><span class="op_player wow-class-'.$mclass.'">'.$mrole.'</span></td>
 </tr>
 <tr>
+<td>Type</td>
+<td><small>'.$mtype.'</small></td>
+</tr>
+<tr>
 <td data-speak="com_user_messages">Achievements</td>
 <td><span>'.$machiev.'</span></td>
 </tr>
 <tr>
 <td data-speak="com_user_likes">Rank</td>
-<td><span>'.$ranks[$mrank].'</span></td>
-</tr>
-<tr>
-<td>Member Since</td>
-<td>Under Dev</td>
+<td><span><small>'.$ranks[$mrank].'</small></span></td>
 </tr>
 </tbody>
 </table>

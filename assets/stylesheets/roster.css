@@ -3,16 +3,27 @@
 .grinfo{  padding-top: 7px; }
 .grinfo p { font-variant: small-caps;  font-size: 20px;}
 .wow-class-1, .wow-class-1 a { color: #c69b6d !important; } /* warrior */
+.wow-class-1, .wow-class-1 a:hover { color: #FFF !important; } /* warrior */
 .wow-class-2, .wow-class-2 a { color: #f48cba !important; } /* paladin */
+.wow-class-2, .wow-class-2 a:hover { color: #FFF !important; } /* paladin */
 .wow-class-3, .wow-class-3 a { color: #aad372 !important; } /* hunter */
+.wow-class-3, .wow-class-3 a:hover { color: #FFF !important; } /* hunter */
 .wow-class-4, .wow-class-4 a { color: #fff468 !important; } /* rogue */
+.wow-class-4, .wow-class-4 a:hover { color: #FFF !important; } /* rogue */
 .wow-class-5, .wow-class-5 a { color: #f0ebe0 !important; } /* priest */
+.wow-class-5, .wow-class-5 a:hover { color: #FFF !important; } /* priest */
 .wow-class-6, .wow-class-6 a { color: #c41e3b !important; } /* death knight */
+.wow-class-6, .wow-class-6 a:hover { color: #FFF !important; } /* death knight */
 .wow-class-7, .wow-class-7 a { color: #2359ff !important; } /* shaman */
+.wow-class-7, .wow-class-7 a:hover { color: #FFF !important; } /* shaman */
 .wow-class-8, .wow-class-8 a { color: #68ccef !important; } /* mage */
+.wow-class-8, .wow-class-8 a:hover { color: #FFF !important; } /* mage */
 .wow-class-9, .wow-class-9 a { color: #9382c9 !important; } /* warlock */
+.wow-class-9, .wow-class-9 a:hover { color: #FFF !important; } /* warlock */
 .wow-class-10, .wow-class-10 a { color: #00ffba !important; } /* monk */
+.wow-class-10, .wow-class-10 a:hover { color: #FFF !important; } /* monk */
 .wow-class-11, .wow-class-11 a { color: #ff7c0a !important; } /* druid */
+.wow-class-11, .wow-class-11 a:hover { color: #FFF !important; } /* druid */
 .roster-bg-dark {  width: 620px;  height: 90px;  background-color: rgba(0,0,0,.2);  z-index: 0;  top: 473px;  box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);  border-radius: 6px;  overflow: hidden;  margin-left: -10px;  margin-bottom: 5px;}
 .wow-grank {margin: -54px 277px -51px 30px;}
 .wow-gachiev {margin: 36px -335px -51px 30px;}
@@ -25,3 +36,4 @@
 .fix_roster_container {width: 964px;height: auto;background-color: rgba(0,0,0,.2);position: absolute;z-index: 0;top: 473px;box-shadow: inset 0 2px 1px rgba(0,0,0,.3), inset 0 -2px 1px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.03);border-radius: 6px;overflow: hidden;    margin: 7px 0px 0px -35px;}
 .panel_fix {float: left;width: 32%;margin: 5px 3px 5px 7px;background-color: #1e1b18;border: 1px solid transparent;border-radius: 4px;-webkit-box-shadow: 0 0 5px 3px rgba(0,0,0,0.4),0 0 1px 1px rgba(255,255,255,0.03) inset;box-shadow: 0 0 5px 3px rgba(0,0,0,0.4),0 0 1px 1px rgba(255,255,255,0.03) inset;}
 .container_roster {margin-top: 10px;margin-left: 5px;padding: 30px 40px;width: 895px;height: 100%;min-height: 800px;background: url(../images/texture_1.png) repeat;box-shadow: 0 0 6px black, inset 0 0 0 1px rgba(255, 255, 255, .015), inset 0 1px 0 rgba(255, 255, 255, .05);-webkit-border-radius: 5px;border-radius: 5px;}
+small {text-transform: uppercase!important;font-family: 'Ebrima'!important;}

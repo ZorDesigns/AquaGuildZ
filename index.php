@@ -174,7 +174,7 @@ echo '
 <article>
 <header>
 <h1><a href="news.php?id='.$row[0].'">'.$row[4].'</a></h1>
-<p class="meta">by <a href="">System</a> '.$row[2].' <a href="">0</a> <img src="assets/images/content-comments.png" alt="Comments"></p>
+<p class="meta">Posted by <a href="#">'.$cms['name'].'</a> '.$row[2].' <a href="">0</a> <img src="assets/images/content-comments.png" alt="Comments"></p>
 </header>
 <div class="content">
 <div class="thumb">

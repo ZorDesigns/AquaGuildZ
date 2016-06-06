@@ -6,19 +6,19 @@ if ($json == false) {
 throw new Exception("Failed To load infomation. Check setup options");
 }
 $result = json_decode($json, true);
-if (isset($result['realm_rank'])) {
-if (is_array($result['realm_rank'])) {
-foreach ($result["realm_rank"] as $value) {
+if (isset($result['area_rank'])) {
+if (is_array($result['area_rank'])) {
+foreach ($result["area_rank"] as $value) {
 echo'
 <div class="block online_players">
 <div class="half_top logo_container">
-<div class="realm_logo">
+<div class="area_logo">
 <span class="picto_Joueurs"></span>
 </div>
 </div>
 <div class="middle_content">
-<h1>'.$value.'</h1>
-<h2>Realm Rank</h2>
+<h1 class="fix_area_h1">'.$value.'</h1>
+<h2>Europe Rank</h2>
 </div>
 </div>';
 }
@@ -27,13 +27,13 @@ else {
 echo'
 <div class="block online_players">
 <div class="half_top logo_container">
-<div class="realm_logo">
+<div class="area_logo">
 <span class="picto_Joueurs"></span>
 </div>
 </div>
 <div class="middle_content">
-<h1>'.$result['realm_rank'].'</h1>
-<h2>Realm Rank</h2>
+<h1 class="fix_area_h1">'.$result['area_rank'].'</h1>
+<h2>Europe Rank</h2>
 </div>
 </div>
 ';

@@ -1,6 +1,7 @@
 <?php
 $page_cat = "roster";
-$page_tit = "roster";
+$page_tit = "groster";
+include __DIR__ . '/configs.php';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -14,8 +15,7 @@ $page_tit = "roster";
 <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
-<link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
-<link href="assets/stylesheets/status.css" rel="stylesheet" type="text/css">
+<link href="assets/stylesheets/roster.css" rel="stylesheet" type="text/css">
 <!-- Le javascripts -->
 <script src="assets/javascript/jquery.min.js"></script>
 <script src="assets/javascript/jquery.flexslider.min.js"></script>
@@ -36,50 +36,32 @@ $page_tit = "roster";
 </header>
 <div id="content" class="clearfix">
 <div id="main">
-<?php include("webkit/menu") ?>
+<?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div class="container_5 features" align="center">
-<div class="content_holder">
-<div class="sub-page-title">
-<div id="title"><h1>Roster<p></p><span></span></h1></div>
+<div class="container_roster" align="center" style="height:39100px;">
+<!-- Videos -->
+<div class="warning_notice fix_media_warn">
+<p>TIP: Keep in mind that the Roster changes everyday almost 24 times! It refreshes almost every hour!</p>
 </div>
-<ul>
-<div class="features-bg-dark_roster">
-<li class="container_0 archived-news w-addons">
-<div class="w-addon-row">
-<img src="assets/images/gr.jpg" width="268" height="163" alt="Guild Roster">
-<div class="addon-info">
-<h1>Guild Roster</h1>
-<p>You will access a page that will preview all the members of the Guild. Technically speaking it will show the Roster of the Guild.</p>
-<div class="war-links">
-<a class="download" href="guildroster.php" title="Guild Roster" target="_self">Guild Roster</a>
+<!-- Screanshots -->
+<div class="container_3 bg-wide-screen fix_roster_panel">
+<div class="grad">
+<div class="page-title">Guild Roster</div>
+<a href="http://<?php echo $RegionName ?>.battle.net/wow/en/guild/<?php echo $RealmName ?>/<?php echo $GuildName?>/">View at Battle.net</a>
 </div>
 </div>
-</div>
-<div class="clear"></div>
-</li>
-<li class="container_0 archived-news w-addons">
-<div class="w-addon-row">
-<img src="assets/images/rr.jpg" width="268" height="163" alt="Heroes WoW Background Downloader">
-<div class="addon-info">
-<h1>Raid Progress</h1>
-<p>You will access a page that will view all the Progress of our Guild. Technically speaking it will show the Raid Bosses if they are killed or not.</p>
-<div class="war-links">
-<a class="download" href="progress.php" title="Raid Roster" target="_self">Raid Progress</a>
+<div class="fix_roster_container">
+<?php include ('api/character.php'); ?>
 </div>
 </div>
-</div>
-<div class="clear"></div>
-</li>
-</div>
-</ul>
-</div>
-</div>
-<br>
 </div>
 <?php include("webkit/sidelogin"); ?>
 </div>
 </div>
 <?php include("webkit/footer"); ?>
+<?php 
+// Closing the Connection for Injection Measures!
+$aquaglz->close();
+?>
 </body>
 </html>

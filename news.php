@@ -67,7 +67,7 @@ $nextid = $nextRow['id'];
 }
 echo '
 <div class="arnews-head" align="left">
-<h1>'.$newsTT.' </h1>'.$newsDT.', posted by System
+<h1>'.$newsTT.' </h1>Posted by '.$cms['name'].', '.$newsDT.'
 </div>
 <div class="header-image">
 <img itemprop="image" alt="" src="assets/images/news/full/'.$newsIMG.'-big.png" />

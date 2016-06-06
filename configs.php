@@ -57,6 +57,7 @@ $socialnk['Twitter']  	= "#";
 $socialnk['Youtube']  	= "https://www.youtube.com/channel/UCcegG7KKMvpd7UVFHdJ4tTQ";
 
 /* CMS LINKS */
+$cms['name']		= "Hellenic Horde";
 $cms['title']   	= "Hellenic Horde |";
 $cms['description'] = "Hellenic Horde is the best Hellenic Guild on Twisting Nether Europe, the best and the most friendliest guild for Greek members! Join us and improve your progress and your mood with us!";
 $cms['keywords']	= "Hellenic, Hellenic Horde, ZorDesigns, FlameCMS, World of Warcraft Guild, Guild. AquaGuildZ";

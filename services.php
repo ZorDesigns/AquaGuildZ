@@ -1,6 +1,7 @@
 <?php
 $page_cat = "services";
 $page_tit = "services";
+include __DIR__ . '/configs.php';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -14,8 +15,6 @@ $page_tit = "services";
 <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
-<link href="assets/stylesheets/forum.css" rel="stylesheet" type="text/css">
-<link href="assets/stylesheets/status.css" rel="stylesheet" type="text/css">
 <!-- Le javascripts -->
 <script src="assets/javascript/jquery.min.js"></script>
 <script src="assets/javascript/jquery.flexslider.min.js"></script>
@@ -38,64 +37,195 @@ $page_tit = "services";
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div class="container_5" align="center">
-<div class="content_holder">
-<div class="sub-page-title">
-<div id="title"><h1>Services<p></p><span></span></h1></div>
+<div class="container_com" align="center">
+<!-- Videos -->
+<div class="warning_notice fix_media_warn">
+<p><?php echo $cms['name']; ?> provide the following features free of charge just to make the Guild a better place!</p>
 </div>
-<div class="feature-row">
-<img src="assets/images/services/raf.jpg" width="90" height="90">
-<div class="info">
-<h1>We are a Family</h1>
-<h2>We are a family and we raid as one. We feel that progress is really important, but members too. We are strict and we will go hard on you if you fail, cause we all love World of Warcraft.</h2>
+<div class="container_3 account-bg fix_media_vid_panel">
+<div class="grad">
+<div class="page-title">Guild Score</div>
+<a href="#">Coming Soon!</a>
+</div>
+</div>
+<div class="container_wowhead vid-bg account-wide" align="left">
+<div class="media-video-container media-fix" align="left">
+<div class="media-video-thumb container_frame">
+<div class="cframe_inner">
+<a href="#">
+<!--Video Image Preview-->
+<div class="image-thumb-preview" style="background-image:url(assets/images/guildscore.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="play-button-small"></div>
+</a>
+</div>
+</div>
+<div class="video-info">
+<!--Video Title-->
+<h3>Guild Score</h3>
+<!--Video Description-->
+<p>Our Score is really important and we do want to focus on becoming great. We also have Guides to help you understand your class by a perspective of our loyal members.</p>
+<!--Video Youtube Link-->
+<a href="#">Coming Soon!</a>
+</div>
+<div class="clear"></div>
+</div>                   
+</div>
+<!-- Videos.End -->
+<!-- Wallpapers -->
+<div class="container_3 bg-small-wallp fix_media_vid_panel2">
+<div class="grad">
+<div class="page-title">Character Fixer</div>
+<a href="#">Coming Soon!</a>
+</div>
+</div>
+<div class="container_mmo wallp-bg account-wide" align="right">
+<div class="media-video-container media-fix" align="left">
+<div class="media-video-thumb container_frame">
+<div class="cframe_inner">
+<a href="#">
+<!--Video Image Preview-->
+<div class="image-thumb-preview" style="background-image:url(assets/images/characterfixer.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="play-button-small"></div>
+</a>
+</div>
+</div>
+<div class="video-info">
+<!--Video Title-->
+<h3>Character Fixer</h3>
+<!--Video Description-->
+<p>We provide a feature that will balance your character and show you what is best on you to raid with us. Also you can follow a Guide to understand your role better.</p>
+<!--Video Youtube Link-->
+<a href="#">Coming Soon!</a>
+</div>
 </div>
 <div class="clear"></div>
 </div>
-<div class="feature-row">
-<img src="assets/images/services/bug-tracker.jpg" width="90" height="90">
-<div class="info">
-<h1>Guild Score</h1>
-<h2>Our Score is really important and we do want to focus on becoming great. We also have Guides and more features to help you understand your class by a perspective of our loyal members. You can scan your character and check if your avatar is ready for it.</h2>
+<!-- Wallpapers.End -->
+<div class="clear"></div>
+<div class="container_3 account-bg fix_icyveins_panel">
+<div class="grad">
+<div class="page-title">Change Logs</div>
+<a href="#">Coming Soon!</a>
+</div>
+</div>
+<div class="container_icyveins vid-bg account-wide" align="left">
+<div class="media-video-container media-fix" align="left">
+<div class="media-video-thumb container_frame">
+<div class="cframe_inner">
+<a href="#">
+<!--Video Image Preview-->
+<div class="image-thumb-preview" style="background-image:url(assets/images/changelogs.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="play-button-small"></div>
+</a>
+</div>
+</div>
+<div class="video-info">
+<!--Video Title-->
+<h3>Change Logs</h3>
+<!--Video Description-->
+<p>The changelog page enables you to view our changes that we make everyday... Please keep in mind that not all changes are currently applied to the guild or the website.</p>
+<!--Video Youtube Link-->
+<a href="#" target="_blank">Coming Soon!</a>
+</div>
+<div class="clear"></div>
+</div>                   
+</div>
+<!-- Videos.End -->
+<!-- Wallpapers -->
+<div class="container_3 bg-small-wallp fix_curse_panel">
+<div class="grad">
+<div class="page-title">Curse Voice</div>
+<a href="http://curse.com">Go Now!</a>
+</div>
+</div>
+<div class="container_mmo wallp-bg account-wide" align="right">
+<div class="media-video-container media-fix" align="left">
+<div class="media-video-thumb container_frame">
+<div class="cframe_inner">
+<a href="http://curse.com">
+<!--Video Image Preview-->
+<div class="image-thumb-preview" style="background-image:url(assets/images/cursevoice.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="play-button-small"></div>
+</a>
+</div>
+</div>
+<div class="video-info">
+<!--Video Title-->
+<h3>Curse Voice</h3>
+<!--Video Description-->
+<p>Curse Voice is the Voice (VoIP) Application that our Guild uses to achieve our progress! Curse Voice Provides the Best Voice (Audio) Quality that is out there!</p>
+<!--Video Youtube Link-->
+<a href="http://curse.com" target="_blank">Go to Curse now!</a>
+</div>
 </div>
 <div class="clear"></div>
 </div>
-<div class="feature-row">
-<img src="assets/images/services/teleporter.jpg" width="90" height="90">
-<div class="info">
-<h1>Guild Secrets</h1>
-<h2>We are full with Secrets to help you gain a step up in the game. But to do get to those secrets you must prove your self. Raiders and Core Raiders allowed only.</h2>
-</div>
-<div class="clear"></div>
-</div>
-<div class="feature-row">
-<img src="assets/images/services/store.jpg" width="90" height="90">
-<div class="info">
-<h1>Character Fixer</h1>
-<h2>We provide a feature that will balance your character and show you what is best on you to raid with us and to raid better. Also you can follow a Guide that we also provide to understand your role better.</h2>
-</div>
-<div class="clear"></div>
-</div>
-<div class="feature-row">
-<img src="assets/images/services/changelogs.jpg" width="90" height="90">
-<div class="info">
-<h1>Changelogs</h1>
-<h2>
-The changelog page enables you to view our changes that we make everyday...
-Please keep in mind that not all changes are currently applied to the guild or the website, but will be on the next maintenance.
-</h2>
-</div>
-<div class="clear"></div>
-</div>
-<div class="features-bg-dark"></div>
-<div class="features-bg"></div>
-</div>
+<!-- Wallpapers.End -->
 <br>
+<!-- Screanshots -->
+<div class="container_3 bg-wide-screen fix_curse_voice_panel">
+<div class="grad">
+<div class="page-title">Guild Site Progress</div>
+<a href="#">Details Coming Soon!</a>
 </div>
-<br>
+</div>
+<div class="container_screen screen-bg account-wide">
+<p><div class="block online_players">
+<div class="half_top logo_container">
+</div>
+<div class="middle_content">
+<h1>70%</h1>
+<h2 style="font-size: 23px!important;margin: -10px 0 0 43px!important;">Site Style</h2>
+</div>
+</div></p>
+<p><div class="block online_players">
+<div class="half_top logo_container">
+</div>
+<div class="middle_content">
+<h1 class="fix_area_h1">85%</h1>
+<h2 style="font-size: 23px!important;margin: -10px 0 0 17px!important;">Site Code</h2>
+</div>
+</div></p>
+<p><div class="block online_players">
+<div class="half_top logo_container">
+<div class="realm_logo">
+<span class="picto_Joueurs"></span>
+</div>
+</div>
+<div class="middle_content">
+<h1 class="fix_area_h1">67%</h1>
+<h2 style="font-size: 23px!important;margin: -10px 0 0 -4px!important;">Site Features</h2>
+</div>
+</div></p>
+<p><div class="block online_players">
+<div class="half_top logo_container">
+</div>
+<div class="middle_content">
+<h1 class="fix_memb_h1">92%</h1>
+<h2 style="font-size: 23px!important;margin: -10px 0 0 34px!important;">ART Style</h2>
+</div>
+</div></p>
+<p><div class="block online_players">
+<div class="half_top logo_container">
+</div>
+<div class="middle_content">
+<h1 class="fix_area_h1">100%</h1>
+<h2 style="font-size: 23px!important;margin: -10px 0 0 56px!important;">BETA</h2>
+</div>
+</div></p>
+<div class="clear"></div>  
+</div>
+<!-- Screanshots.End -->
+<div class="clear"></div>
+ </div>
 </div>
 <?php include("webkit/sidelogin"); ?>
 </div>
 </div>
 <?php include("webkit/footer"); ?>
+<?php 
+// Closing the Connection for Injection Measures!
+$aquaglz->close();
+?>
 </body>
 </html>

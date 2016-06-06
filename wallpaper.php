@@ -48,12 +48,12 @@ if ($scrnrslts->num_rows > 0) {
 while($scrn = $scrnrslts->fetch_assoc()) {
 ?>
 <div class="warning_notice fix_media_warn">
-<p>Screenshots posted are uploaded to IMGUR.com! Thou you can preview them here!</p>
+<p>Wallpapers posted are uploaded to the main & backup System! Thou you can preview & download them here!</p>
 </div>
 <div class="container_3 bg-wide-screen fix_media_2 fix_media_vid_panel3">
 <div class="grad">
-<div class="page-title">Screenshot > <?php echo $scrn["title"]; ?></div>
-<a href="screens.php">Back to Screenshots</a>
+<div class="page-title">Wallpaper > <?php echo $scrn["title"]; ?></div>
+<a href="wallps.php">Back to Wallpapers</a>
 </div>
 </div>
 <div class="container_screen account-wide" style="background-image: url(assets/images/bg-media-screen-wide.png)!important;height: 680px!important;">

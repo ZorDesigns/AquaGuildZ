@@ -170,6 +170,30 @@ include __DIR__ . '/configs.php';
 </div>
 <div class="container_screen screen-bg account-wide">
 <p><?php include('api/rankfact.php');?></p>
+<p><?php include('api/areafact.php');?></p>
+<p><?php include('api/worldfact.php');?></p>
+<p><div class="block online_players">
+<div class="half_top logo_container">
+<div class="realm_logo">
+<span class="picto_Joueurs"></span>
+</div>
+</div>
+<div class="middle_content">
+<h1 class="fix_memb_h1">242</h1>
+<h2 class="fix_memb_h2">G. Members</h2>
+</div>
+</div></p>
+<p><div class="block online_players">
+<div class="half_top logo_container">
+<div class="realm_logo">
+<span class="picto_Joueurs"></span>
+</div>
+</div>
+<div class="middle_content">
+<h1 class="fix_area_h1">2007</h1>
+<h2>Guild Since</h2>
+</div>
+</div></p>
 <div class="clear"></div>  
 </div>
 <!-- Screanshots.End -->

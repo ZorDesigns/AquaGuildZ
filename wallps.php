@@ -74,7 +74,7 @@ echo '
 </div>
 </div>
 </div>
-<div class="screanshot-title-info">'.$walp["title"].'<p>On Imgur.com</p></div>
+<div class="screanshot-title-info">'.$walp["title"].'<p>On Main Server</p></div>
 </li>
 ';
 }
