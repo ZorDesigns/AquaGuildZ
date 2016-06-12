@@ -42,28 +42,28 @@ include __DIR__ . '/configs.php';
 <div class="warning_notice fix_media_warn">
 <p><?php echo $cms['name']; ?> provide the following features free of charge just to make the Guild a better place!</p>
 </div>
-<div class="container_3 account-bg fix_media_vid_panel">
+<div class="container_3 fix_media_vid_panel" style="background-image: url(assets/images/bg-rec.png)!important;">
 <div class="grad">
-<div class="page-title">Guild Score</div>
-<a href="#">Coming Soon!</a>
+<div class="page-title">Guild Recruitment</div>
+<a href="form.php">Go Now!</a>
 </div>
 </div>
-<div class="container_wowhead vid-bg account-wide" align="left">
+<div class="container_wowhead account-wide" align="left" style="background-image: url(assets/images/bg-guildrecr.png)!important;">
 <div class="media-video-container media-fix" align="left">
 <div class="media-video-thumb container_frame">
 <div class="cframe_inner">
 <a href="#">
 <!--Video Image Preview-->
-<div class="image-thumb-preview" style="background-image:url(assets/images/guildscore.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="image-thumb-preview" style="background-image:url(assets/images/guildrecr.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
 <div class="play-button-small"></div>
 </a>
 </div>
 </div>
 <div class="video-info">
 <!--Video Title-->
-<h3>Guild Score</h3>
+<h3>Guild Recruitment</h3>
 <!--Video Description-->
-<p>Our Score is really important and we do want to focus on becoming great. We also have Guides to help you understand your class by a perspective of our loyal members.</p>
+<p>Want to join the Guild? Interested in becoming a Hellenic Horde member? Go now to the link and place a form to be recruited! You will pass 2 tests! Good Luck!</p>
 <!--Video Youtube Link-->
 <a href="#">Coming Soon!</a>
 </div>
@@ -132,13 +132,13 @@ include __DIR__ . '/configs.php';
 </div>
 <!-- Videos.End -->
 <!-- Wallpapers -->
-<div class="container_3 bg-small-wallp fix_curse_panel">
+<div class="container_3 fix_curse_panel" style="background-image: url(assets/images/bg-cursevoip.png)!important;">
 <div class="grad">
 <div class="page-title">Curse Voice</div>
 <a href="http://curse.com">Go Now!</a>
 </div>
 </div>
-<div class="container_mmo wallp-bg account-wide" align="right">
+<div class="container_mmo account-wide" align="right" style="background-image: url(assets/images/bg-cursevoice.png)!important;">
 <div class="media-video-container media-fix" align="left">
 <div class="media-video-thumb container_frame">
 <div class="cframe_inner">
@@ -163,13 +163,13 @@ include __DIR__ . '/configs.php';
 <!-- Wallpapers.End -->
 <br>
 <!-- Screanshots -->
-<div class="container_3 bg-wide-screen fix_curse_voice_panel">
+<div class="container_3 fix_curse_voice_panel" style="background-image: url(assets/images/bg-wide-serv.png)!important;">
 <div class="grad">
 <div class="page-title">Guild Site Progress</div>
 <a href="#">Details Coming Soon!</a>
 </div>
 </div>
-<div class="container_screen screen-bg account-wide">
+<div class="container_screen account-wide" style="background-image: url(assets/images/bg-serv-screen.png)!important;">
 <p><div class="block online_players">
 <div class="half_top logo_container">
 </div>
