@@ -52,7 +52,7 @@ include __DIR__ . '/configs.php';
 <div class="media-video-container media-fix" align="left">
 <div class="media-video-thumb container_frame">
 <div class="cframe_inner">
-<a href="#">
+<a href="form.php">
 <!--Video Image Preview-->
 <div class="image-thumb-preview" style="background-image:url(assets/images/guildrecr.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
 <div class="play-button-small"></div>
@@ -65,7 +65,7 @@ include __DIR__ . '/configs.php';
 <!--Video Description-->
 <p>Want to join the Guild? Interested in becoming a Hellenic Horde member? Go now to the link and place a form to be recruited! You will pass 2 tests! Good Luck!</p>
 <!--Video Youtube Link-->
-<a href="#">Coming Soon!</a>
+<a href="form.php">Go to Recruitment Now!</a>
 </div>
 <div class="clear"></div>
 </div>                   
