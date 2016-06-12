@@ -6,16 +6,16 @@
 | Functions        | Progress           | Admin Panel        | Progress           | Account Panel        | Progress           |
 | ------------- |:-------------:| ------------- |:-------------:| ------------- |:-------------:| -----:|
 | News        | 100% |News        | 100% |Functions         | 50% |
-| Register        | 100% |Media    | 10% |Characters    | 0% |
+| Register        | 100% |Media    | 10% |Characters    | IDEA |
 | Login        | 100% |Forums        | 5% |Settings | 100% |
-| Media    | 35%      |Services        | 100% |Avatar        | 100% |
-| Community | BETA 100%     |Accounts        | 100% |Custom Avatar        | 100% |
-| Forums        | 85% |Characters        | 0% |Signatures        | 0% |
+| Media    | 100%      |Services        | 100% |Avatar        | 100% |
+| Community | 100%     |Accounts        | 100% |Custom Avatar        | 100% |
+| Forums        | 92% |Characters        | IDEA |Signatures        | IDEA |
 | Services        | 100%|Settings        | 100% |Index - Main        | 80% |
-| Admin Panel        | BETA 60% |Dashboard        | 100% |
-| Account Panel        | BETA 80% |
+| Admin Panel        | 60% TEST |Dashboard        | 100% |
+| Account Panel        | 80% TEST |
 | WoWProgress API        | 100% |
-| WoW API        | 50% |
+| WoW API        | 70% |
 
 ### ![icon](http://i.imgur.com/S3haPfo.png) Introduction
 ----------
