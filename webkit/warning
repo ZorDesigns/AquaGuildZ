@@ -1,1 +1,3 @@
-<a href="#" class="important_notice"><p>Forums are almost complete so please use them politly!</p></a>
+<div class="warning_notice fix_forum_warning">
+<p>Forums are almost complete so please use them politly!</p>
+</div>

@@ -9,8 +9,8 @@ Twisting Nether
 </div>
 </div>
 <div class="ts-status">
-<h3>TEAMSPEAK is <p class="status" id="teeamspeak-status"><!--<font color="#680000">--><font color="#313F09">Online</font></p></h3>
-<a href="http://www.teamspeak.com/?page=downloads" target="_blank" id="download-ts">Download TS3 Client</a>
+<h3>Curse Voice is <p class="status" id="teeamspeak-status"><!--<font color="#680000">--><font color="#313F09">Online</font></p></h3>
+<a href="http://curse.com" target="_blank" id="download-ts">Download Curse Client</a>
 <a href="#" id="download-htc">How to Connect</a>
 </div>
 <div class="logon-status">

@@ -426,8 +426,8 @@ ul.top_voters_list li span i {font-style: normal;font-weight: normal;font-size: 
 #user_control p { display: block; margin: 0 0 0 23px; padding: 29px 0 0 0; }
 #user_control span { color: #b5ca2c; font-weight: bold; }
 #user_control a:hover span { color: #fff; }
-#user_control_deco {background: url(../images/user-control-deco.png) 100% 100% no-repeat;bottom: 7px;height: 183px;position: absolute;right: 0;width: 181px;margin-right: -27px;}
-#user_control_deco-logged {background: url(../images/user-control-deco-logged.png) 100% 100% no-repeat;bottom: 7px;height: 183px;position: absolute;right: 0;width: 181px;margin-right: -27px;}
+#user_control_deco {background: url(../images/user-control-deco.png) 100% 100% no-repeat;bottom: 11px;height: 183px;position: absolute;right: 0;width: 181px;margin-right: -27px;}
+#user_control_deco-logged {background: url(../images/user-control-deco-logged.png) 100% 100% no-repeat;bottom: 10px;height: 183px;position: absolute;right: 0;width: 181px;margin-right: -27px;}
 #user_control-log { background: url(../images/user-control-log.png) 0 0 no-repeat; color: #8e9469; font-size: 1.15em; height: 98px; position: relative; }
 #user_control-log:hover { background: url(../images/user-control-log.png) 0 100% no-repeat; }
 #user_control-log a { color: #8e9469; display: block; height: 98px; text-decoration: none;}
