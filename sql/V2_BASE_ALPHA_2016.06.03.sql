@@ -330,6 +330,19 @@ CREATE TABLE IF NOT EXISTS `wallpapers` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+-- Dumping structure for table gcms.wallpapers
+DROP TABLE IF EXISTS `youtubers`;
+CREATE TABLE `youtubers` (
+	`id` INT(5) NOT NULL AUTO_INCREMENT,
+	`name` TEXT NOT NULL,
+	`link` TEXT NULL,
+	`image` TEXT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=MyISAM
+AUTO_INCREMENT=4;
+
 -- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

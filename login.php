@@ -56,6 +56,7 @@ header('Location: logsucc.php');
 <link rel="stylesheet" href="admin/css/background.css">
 </head>
 <body class="login-bg">
+<?php include("settings/googletracking.php") ?>
 <video loop muted autoplay poster="assets/images/frame.png" id="bgvid">
 <source src="assets/images/wod.webm" type="video/webm">
 <source src="assets/images/wod.mp4" type="video/mp4">

@@ -1,0 +1,11 @@
+<?php
+if (!$socket = @fsockopen("udp://ts6.freets3.net", 10436, $errno, $errstr, 1))
+{
+  echo '<FONT COLOR=#680000><B>Offline</B></FONT>';
+}
+else 
+{
+  echo '<FONT COLOR=#313F09><B>Online</B></FONT>';
+  fclose($socket);
+}
+?>

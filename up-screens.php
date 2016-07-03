@@ -20,6 +20,7 @@ $page_tit = "chnbtag";
 <script src="assets/javascript/common_orig.js"></script>
 </head>
 <body>
+<?php include("settings/googletracking.php") ?>
 <?php include("webkit/servicebar") ?>
 <div id="wrapper">
 <header id="main_header" class="clearfix">

@@ -72,30 +72,30 @@ include __DIR__ . '/configs.php';
 </div>
 <!-- Videos.End -->
 <!-- Wallpapers -->
-<div class="container_3 bg-small-wallp fix_media_vid_panel2">
+<div class="container_3 fix_media_vid_panel2" style="background-image: url(assets/images/youtube-ac.png)!important;">
 <div class="grad">
-<div class="page-title">Character Fixer</div>
-<a href="#">Coming Soon!</a>
+<div class="page-title">Youtubers</div>
+<a href="youtubers.php">Go Now!</a>
 </div>
 </div>
-<div class="container_mmo wallp-bg account-wide" align="right">
+<div class="container_mmo account-wide" align="right" style="background-image: url(assets/images/bg-youtube.png)!important;">
 <div class="media-video-container media-fix" align="left">
 <div class="media-video-thumb container_frame">
 <div class="cframe_inner">
-<a href="#">
+<a href="youtubers.php">
 <!--Video Image Preview-->
-<div class="image-thumb-preview" style="background-image:url(assets/images/characterfixer.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
+<div class="image-thumb-preview" style="background-image:url(assets/images/youtubers.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
 <div class="play-button-small"></div>
 </a>
 </div>
 </div>
 <div class="video-info">
 <!--Video Title-->
-<h3>Character Fixer</h3>
+<h3>Youtubers</h3>
 <!--Video Description-->
-<p>We provide a feature that will balance your character and show you what is best on you to raid with us. Also you can follow a Guide to understand your role better.</p>
+<p>We provide a feature that shows our latest Youtubers that upload content relative to the progress of the Guild or their own.</p>
 <!--Video Youtube Link-->
-<a href="#">Coming Soon!</a>
+<a href="youtubers.php">Go check them out!</a>
 </div>
 </div>
 <div class="clear"></div>
@@ -134,15 +134,15 @@ include __DIR__ . '/configs.php';
 <!-- Wallpapers -->
 <div class="container_3 fix_curse_panel" style="background-image: url(assets/images/bg-cursevoip.png)!important;">
 <div class="grad">
-<div class="page-title">Curse Voice</div>
-<a href="http://curse.com">Go Now!</a>
+<div class="page-title">Teamspeak</div>
+<a href="http://www.teamspeak.com/">Go Now!</a>
 </div>
 </div>
 <div class="container_mmo account-wide" align="right" style="background-image: url(assets/images/bg-cursevoice.png)!important;">
 <div class="media-video-container media-fix" align="left">
 <div class="media-video-thumb container_frame">
 <div class="cframe_inner">
-<a href="http://curse.com">
+<a href="http://www.teamspeak.com/">
 <!--Video Image Preview-->
 <div class="image-thumb-preview" style="background-image:url(assets/images/cursevoice.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
 <div class="play-button-small"></div>
@@ -151,11 +151,11 @@ include __DIR__ . '/configs.php';
 </div>
 <div class="video-info">
 <!--Video Title-->
-<h3>Curse Voice</h3>
+<h3>Teamspeak</h3>
 <!--Video Description-->
-<p>Curse Voice is the Voice (VoIP) Application that our Guild uses to achieve our progress! Curse Voice Provides the Best Voice (Audio) Quality that is out there!</p>
+<p>Teamspeak is the Voice (VoIP) Application that our Guild uses to achieve our progress! Teamspeak provides the Best Voice (Audio) Quality that is currently out there!</p>
 <!--Video Youtube Link-->
-<a href="http://curse.com" target="_blank">Go to Curse now!</a>
+<a href="http://www.teamspeak.com/" target="_blank">Go to Teamspeak now!</a>
 </div>
 </div>
 <div class="clear"></div>

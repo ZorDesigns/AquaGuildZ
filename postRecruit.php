@@ -28,6 +28,7 @@ $ctID = $_GET["ctID"];
 <script src="assets/stylesheets/form/reg1.js"></script>
 </head>
 <body>
+<?php include("settings/googletracking.php") ?>
 <?php include("webkit/servicebar") ?>
 <div id="wrapper">
 <header id="main_header" class="clearfix">

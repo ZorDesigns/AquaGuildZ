@@ -5,13 +5,13 @@
 <span class="online"><img src="assets/images/status_up.png"></span>
 Twisting Nether
 </div>
-<p class="realm-desc">Resets in 6 days!</p>
+<p class="realm-desc">Server EU Online!</p>
 </div>
 </div>
 <div class="ts-status">
-<h3>Curse Voice is <p class="status" id="teeamspeak-status"><!--<font color="#680000">--><font color="#313F09">Online</font></p></h3>
-<a href="http://curse.com" target="_blank" id="download-ts">Download Curse Client</a>
-<a href="#" id="download-htc">How to Connect</a>
+<h3>TeamSpeak is <p class="status" id="teeamspeak-status"><?php include("teamspeak.less"); ?></p></h3>
+<a href="http://www.teamspeak.com/downloads" target="_blank" id="download-ts">Download TeamSpeak</a>
+<a href="https://www.youtube.com/watch?v=I_juISLTYWM" id="download-htc">How to Connect</a>
 </div>
 <div class="logon-status">
 <div id="logon-status">

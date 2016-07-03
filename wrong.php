@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="admin/css/theme.css" class="style-theme">
 </head>
 <body>
+<?php include("settings/googletracking.php") ?>
 <!--Main Content-->
 <section id="error-bg" class="error-container">
 <div id="error-particle" class="hide"></div>

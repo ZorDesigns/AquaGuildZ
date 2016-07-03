@@ -1,6 +1,6 @@
 <?php
-$page_cat = "media";
-$page_tit = "media";
+$page_cat = "services";
+$page_tit = "services";
 include __DIR__ . '/configs.php';
 $sid = $_GET["id"];
 ?>
@@ -39,34 +39,32 @@ $sid = $_GET["id"];
 <div id="main">
 <?php include("webkit/menu"); ?>
 <!-- Main Content Add here -->
-<div class="container_4" style="height: 751px!important;" align="center">
+<div class="container_4" style="height: 858px!important;" align="center">
 <!-- Screenshots -->
 <?php
-$scrn = "SELECT * FROM screenshots WHERE id=$sid";
-$scrnrslts = $aquaglz->query($scrn); 
+$vids = "SELECT * FROM youtubers WHERE id=$sid";
+$scrnrslts = $aquaglz->query($vids); 
 if ($scrnrslts->num_rows > 0) {
 // output data of each row
-while($scrn = $scrnrslts->fetch_assoc()) {
+while($vids = $scrnrslts->fetch_assoc()) {
+$ytname = $vids['name'];
+$ytlink = $vids['link'];
 ?>
 <div class="warning_notice fix_media_warn">
-<p>Screenshots posted are uploaded to IMGUR.com! Thou you can preview them here!</p>
+<p>This Profile uploads only on Youtube with the name of <?php echo $ytname; ?></p>
 </div>
 <div class="container_3 bg-wide-screen fix_media_2 fix_media_vid_panel3">
 <div class="grad">
-<div class="page-title">Screenshot > <?php echo $scrn["title"]; ?></div>
-<a href="screens.php">Back to Screenshots</a>
+<script src="https://apis.google.com/js/platform.js"></script>
+<div class="page-title">Account > <?php echo $vids["name"]; ?></div>
+<div style="    margin: 16px 0px 0px 10px!important;float: left!important;"><div class="g-ytsubscribe" data-channelid="<?php echo $ytlink; ?>" data-layout="default" data-count="default"></div></div>
+<a href="youtubers.php">Back to Youtubers</a>
 </div>
 </div>
-<div class="container_screen account-wide" style="background-image: url(assets/images/bg-media-screen-wide.png)!important;height: 680px!important;">
-<?php
-echo '<div class="datam" style="background-image: url('.$scrn['image'].');background-size: 930px 523px;background-repeat: no-repeat;"></div>
-<div class="infosm"><h3></h3><ul><li>
-<span>Description</span>: <a>'.$scrn['desc'].'</a>
-</li><li><span>Uploaded on</span>: <span>'.$scrn['date'].'</span></li>';
-?>
+<div class="container_screen account-wide" style="background-image: url(assets/images/bg-youtube-screen-wide.png)!important;height: 787px!important;">
+<ul class="screanshots all-screanshots screanshots-media-page-two">
+<?php include ('api/youtuber_list.php'); ?>
 </ul>
-</div>
-<a class="goback" href="#" onclick="window.open('<?php echo $scrn["image"]; ?>')">View Bigger</a>
 <?php }} ?>
 </div>
 <!-- Videos.End -->

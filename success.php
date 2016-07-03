@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="admin/css/background.css">
 </head>
 <body class="login-bg">
+<?php include("settings/googletracking.php") ?>
 <div class="fullscreen-bg">
 <video loop="" muted="" autoplay="" poster="assets/images/frame.png" class="fullscreen-bg__video">
 <source src="http://media.blizzard.com/wow/legion-6a153ad2/videos/demon-hunters.webm" type="video/webm">

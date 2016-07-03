@@ -24,6 +24,7 @@ $sid = $_GET["id"];
 <script src="assets/javascript/common_orig.js"></script>
 </head>
 <body>
+<?php include("settings/googletracking.php") ?>
 <?php include("webkit/servicebar") ?>
 <div id="wrapper">
 <header id="main_header" class="clearfix">
@@ -96,7 +97,6 @@ event.target.playVideo();
 var done = false;
 function onPlayerStateChange(event) {
 if (event.data == YT.PlayerState.PLAYING && !done) {
-setTimeout(stopVideo, 6000);
 done = true;
 }
 }
