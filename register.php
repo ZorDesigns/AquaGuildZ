@@ -1,47 +1,43 @@
 <?php
 $page_tit = "reg";
 session_start();
-include __DIR__ . '/configs.php';
-$msg = "";
-if(isset($_POST["submit"]))
-{
-$fname = $_POST["fname"];
-$lname = $_POST["lname"];
-$bTag = $_POST["bTag"];
-$email = $_POST["email"];
-$password = $_POST["password"];
-$fname = mysqli_real_escape_string($aquaglz, $fname);
-$lname = mysqli_real_escape_string($aquaglz, $lname);
-$bTag = mysqli_real_escape_string($aquaglz, $bTag);
-$email = mysqli_real_escape_string($aquaglz, $email);
-$password = mysqli_real_escape_string($aquaglz, $password);
-$password = md5($password);
-$sql="SELECT email FROM users WHERE email='$email'";
-$result=mysqli_query($aquaglz,$sql);
-$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-if(mysqli_num_rows($result) == 1)
-{
-echo" <meta http-equiv='refresh'content='0; url=failed.php'>";
+if (isset($_SESSION['userSession'])!=""){
+header("Location: index.php");
 }
-else
-{
-$query = mysqli_query($aquaglz, "INSERT INTO users (uid, email, bTag, password, firstname, lastname, rank, avatar, g_points, creep_points, saint_points, signup_date)VALUES ('', '$email', '$bTag', '$password', '$fname', '$lname', '0', 'profile.gif', '1', '0', '0', NOW())");
-if($query)
-{
-echo" <meta http-equiv='refresh'content='0; url=success.php'>";
+require_once 'configs.php';
+if(isset($_POST['btn-signup'])) {
+$fname = strip_tags($_POST['fname']);
+$lname = strip_tags($_POST['lname']);
+$bTag = strip_tags($_POST['bTag']);
+$email = strip_tags($_POST['email']);
+$password = strip_tags($_POST['password']);
+$fname = $aquaglz->real_escape_string($fname);
+$lname = $aquaglz->real_escape_string($lname);
+$bTag = $aquaglz->real_escape_string($bTag);
+$email = $aquaglz->real_escape_string($email);
+$password = $aquaglz->real_escape_string($password);
+$hpassword = md5($password);
+$check_email = $aquaglz->query("SELECT email FROM users WHERE email='$email'");
+$count=$check_email->num_rows;
+if ($count==0) {
+$query = "INSERT INTO users (email, bTag, password, firstname, lastname, rank, avatar, g_points, creep_points, saint_points, signup_date)VALUES('$email', '$bTag', '$hpassword', '$fname', '$lname', '0', 'profile.gif', '1', '0', '0', NOW())";
+if ($aquaglz->query($query)) {
+$msg = "<div class='alert alert-success'>
+<span class='glyphicon glyphicon-info-sign'></span> &nbsp; Successfully registered!
+<meta http-equiv='refresh'content='1; url=success.php'>
+</div>";
+}else {
+$msg = "<div class='alert alert-danger'>
+<span class='glyphicon glyphicon-info-sign'></span> &nbsp; Error while registering!
+</div>";
 }
+}else{
+$msg = "<div class='alert alert-danger'>
+<span class='glyphicon glyphicon-info-sign'></span> &nbsp; Sorry email already taken!
+</div>";
 }
+$aquaglz->close();
 }
-?>
-<?php
-$user_check=@$_SESSION['email'];
-$ses_sql = mysqli_query($aquaglz,"SELECT email FROM users WHERE email='$user_check' ");
-$row=mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
-$login_user=$row['email'];
-if ((isset($_SESSION['email']) != '')) 
-	{
-		header('Location: logged.php');
-	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,6 +69,11 @@ if ((isset($_SESSION['email']) != ''))
 <!--Logo-->
 <h1 class="login-logo"><img src="admin/img/logo.png"></h1>
 <!--Login Form-->
+<?php
+  if (isset($msg)) {
+   echo $msg;
+  }
+  ?>
 <form id="registerForm" role="form" method="post" action="" class="login-form">
 <div class="form-group">
 <input id="fname" type="text" name="fname" placeholder="First Name" class="form-control">
@@ -82,9 +83,6 @@ if ((isset($_SESSION['email']) != ''))
 </div>
 <div class="form-group bTag">
 <input id="bTag" type="text" name="bTag" placeholder="BattleTag" class="form-control">
-</div>
-<div class="next form-group bTag">
-<input id="" type="text" name="" placeholder="#0000" class="form-control" disabled>
 </div>
 <div class="form-group">
 <input id="email" type="email" name="email" placeholder="Email" class="form-control">
@@ -98,8 +96,8 @@ if ((isset($_SESSION['email']) != ''))
 <div class="checkbox">
 <input id="registerTerms" type="checkbox" name="registerTerms" class="checkradios checkradiosDark-1">By signing up you are accepting our <a href="#">Terms and Conditions</a>
 </div>
-<button type="submit" name="submit" class="btn btn-dark btn-block btn-login">Sign Up</button>
-</form>
+<button type="submit" name="btn-signup" class="btn btn-dark btn-block btn-login">Sign Up</button>
+</form>  
 </div>
 </div>
 </section>

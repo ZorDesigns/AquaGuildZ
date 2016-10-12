@@ -49,7 +49,7 @@ $GameName = 'wow';
 
 //-- Your Realm, Guild & Player Name --//
 $RealmName = str_replace(' ', '%20', 'Twisting Nether');
-$GuildName = str_replace(' ', '%20', 'Hellenic Horde');
+$GuildName = str_replace(' ', '%20', 'O M E G A');
 
 /* SOCIAL LINKS */
 $socialnk['Facebook'] 	= "https://www.facebook.com/";
@@ -57,10 +57,10 @@ $socialnk['Twitter']  	= "#";
 $socialnk['Youtube']  	= "https://www.youtube.com/channel/UCcegG7KKMvpd7UVFHdJ4tTQ";
 
 /* CMS LINKS */
-$cms['name']		= "Hellenic Horde";
-$cms['title']   	= "Hellenic Horde |";
-$cms['description'] = "Hellenic Horde is the best Hellenic Guild on Twisting Nether Europe, the best and the most friendliest guild for Greek members! Join us and improve your progress and your mood with us!";
-$cms['keywords']	= "Hellenic, Hellenic Horde, ZorDesigns, FlameCMS, World of Warcraft Guild, Guild. AquaGuildZ";
+$cms['name']		= "OMEGA";
+$cms['title']   	= "OMEGA |";
+$cms['description'] = "OMEGA is the best Hellenic Guild on Twisting Nether Europe, the best and the most friendliest guild for Greek members! Join us and improve your progress and your mood with us!";
+$cms['keywords']	= "OMEGA, OMEGA Gaming, O M E G A, ZorDesigns, FlameCMS, World of Warcraft Guild, Guild, AquaGuildZ";
 $cms['author']		= "ZorDesigns, FailZorD, FlameCMS, AquaGuildZ";
 $cms['favicon']		= "admin/img/favicon.png";
 

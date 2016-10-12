@@ -295,7 +295,7 @@ INSERT INTO `version` (`id`, `text`) VALUES
 	(1, '1.0 ALPHA'),
 	(2, '1.5 BETA'),
 	(3, '2.0 ALPHA'),
-	(3, '2.1 ALPHA');
+	(4, '2.1 ALPHA');
 /*!40000 ALTER TABLE `version` ENABLE KEYS */;
 
 

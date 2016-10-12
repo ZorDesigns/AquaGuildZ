@@ -1,7 +1,7 @@
 <?php
 include(dirname(__DIR__).'/configs.php');
 $ranks = '';
-$json = file_get_contents("http://www.wowprogress.com/guild/eu/twisting-nether/hellenic%20horde/json_rank");
+$json = file_get_contents("http://www.wowprogress.com/guild/eu/twisting-nether/O+M+E+G+A/json_rank");
 if ($json == false) {
 throw new Exception("Failed To load infomation. Check setup options");
 }

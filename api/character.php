@@ -44,9 +44,9 @@ $machiev = $p['achiev'];
 $mthumb = $p['thumbnail'];
 $mrole = $p['spec'];
 $mtype = $p['desc'];
-$classes = array( '1', '2', '4', '5', '6', '7', '8', '9', '10', '11' );
+$classes = array( '1', '2', '4', '5', '6', '7', '8', '9', '10', '11', '12' );
 $replacements = array( 'Warrior', 'Paladin', 'Hunter', 'Rogue', 
-'Priest', 'Death Knight', 'Shaman', 'Mage', 'Warlock', 'Monk','Druid' );
+'Priest', 'Death Knight', 'Shaman', 'Mage', 'Warlock', 'Monk','Druid','Demon Hunter' );
 $resultclass = $replacements[$p['class'] - 1];
 //Table of Guild Members
 echo '

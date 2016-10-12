@@ -56,7 +56,7 @@ include __DIR__ . '/configs.php';
 <a href="http://wowhead.com">
 <!--Video Image Preview-->
 <div class="image-thumb-preview" style="background-image:url(assets/images/wowhead.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
-<div class="play-button-small"></div>
+<div class="link-button-small"></div>
 </a>
 </div>
 </div>
@@ -86,7 +86,7 @@ include __DIR__ . '/configs.php';
 <a href="http://mmo-champion.com">
 <!--Video Image Preview-->
 <div class="image-thumb-preview" style="background-image:url(assets/images/mmo.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
-<div class="play-button-small"></div>
+<div class="link-button-small"></div>
 </a>
 </div>
 </div>
@@ -116,7 +116,7 @@ include __DIR__ . '/configs.php';
 <a href="http://www.icy-veins.com/wow/">
 <!--Video Image Preview-->
 <div class="image-thumb-preview" style="background-image:url(assets/images/icyveins.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
-<div class="play-button-small"></div>
+<div class="link-button-small"></div>
 </a>
 </div>
 </div>
@@ -146,7 +146,7 @@ include __DIR__ . '/configs.php';
 <a href="http://curse.com">
 <!--Video Image Preview-->
 <div class="image-thumb-preview" style="background-image:url(assets/images/curse.png);background-size: 200px 113px;background-repeat: no-repeat;"></div>
-<div class="play-button-small"></div>
+<div class="link-button-small"></div>
 </a>
 </div>
 </div>
@@ -180,7 +180,7 @@ include __DIR__ . '/configs.php';
 </div>
 </div>
 <div class="middle_content">
-<h1 class="fix_memb_h1">242</h1>
+<h1 class="fix_memb_h1">800+</h1>
 <h2 class="fix_memb_h2">G. Members</h2>
 </div>
 </div></p>
@@ -191,7 +191,7 @@ include __DIR__ . '/configs.php';
 </div>
 </div>
 <div class="middle_content">
-<h1 class="fix_area_h1">2007</h1>
+<h1 class="fix_area_h1">2008</h1>
 <h2>Guild Since</h2>
 </div>
 </div></p>

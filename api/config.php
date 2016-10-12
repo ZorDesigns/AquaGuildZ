@@ -8,7 +8,7 @@ if(file_exists($settingsDirectory . 'config.local.php')){
 
 define('WOW_REGION', 'EU');
 define('WOW_LOCALE', 'en_GB');
-define('GUILD_NAME', 'Hellenic Horde');
+define('GUILD_NAME', 'O M E G A');
 define('GUILD_SERVER', 'Twisting Nether');
 define('MAX_LEVEL', 100);
 define('CHARACTERS_TO_CHECK', 30);

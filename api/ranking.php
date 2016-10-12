@@ -1,7 +1,7 @@
 <?php
 include(dirname(__DIR__).'/configs.php');
 $ranks = '';
-$json = file_get_contents("http://www.wowprogress.com/guild/eu/twisting-nether/hellenic%20horde/json_rank");
+$json = file_get_contents("http://www.wowprogress.com/guild/eu/twisting-nether/O+M+E+G+A/json_rank");
 if ($json == false) {
 throw new Exception("Failed To load infomation. Check setup options");
 }
@@ -13,7 +13,7 @@ echo'<div class="cont_container">
 <ul class="top_voters_list">
 <li>
 <p><img src="assets/images/Raid.png" alt="Rank: '.$value.'" title="Rank: '.$value.'"></p>
-<a href="http://www.wowprogress.com/guild/eu/twisting-nether/Hellenic+Horde">Realm Rank: </a>
+<a href="http://www.wowprogress.com/guild/eu/twisting-nether/O+M+E+G+A">Realm Rank: </a>
 <span>'.$value.'</span>
 </li>
 </ul>
@@ -25,7 +25,7 @@ echo'<div class="cont_container">
 <ul class="top_voters_list">
 <li>
 <p><img src="assets/images/Raid.png" alt="Rank: '.$result['realm_rank'].'" title="Rank: '.$result['realm_rank'].'"></p>
-<a href="http://www.wowprogress.com/guild/eu/twisting-nether/Hellenic+Horde">Realm Rank: </a>
+<a href="http://www.wowprogress.com/guild/eu/twisting-nether/O+M+E+G+A">Realm Rank: </a>
 <span>'.$result['realm_rank'].'</span>
 </li>
 </ul>

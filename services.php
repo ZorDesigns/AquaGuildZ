@@ -63,7 +63,7 @@ include __DIR__ . '/configs.php';
 <!--Video Title-->
 <h3>Guild Recruitment</h3>
 <!--Video Description-->
-<p>Want to join the Guild? Interested in becoming a Hellenic Horde member? Go now to the link and place a form to be recruited! You will pass 2 tests! Good Luck!</p>
+<p>Want to join the Guild? Interested in becoming an OMEGA member? Go now to the link and place a form to be recruited! You will pass 2 tests! Good Luck!</p>
 <!--Video Youtube Link-->
 <a href="form.php">Go to Recruitment Now!</a>
 </div>
@@ -104,8 +104,8 @@ include __DIR__ . '/configs.php';
 <div class="clear"></div>
 <div class="container_3 account-bg fix_icyveins_panel">
 <div class="grad">
-<div class="page-title">Change Logs</div>
-<a href="#">Coming Soon!</a>
+<div class="page-title">Livestreams</div>
+<a href="#">Go Now!</a>
 </div>
 </div>
 <div class="container_icyveins vid-bg account-wide" align="left">
@@ -121,9 +121,9 @@ include __DIR__ . '/configs.php';
 </div>
 <div class="video-info">
 <!--Video Title-->
-<h3>Change Logs</h3>
+<h3>Livestreams</h3>
 <!--Video Description-->
-<p>The changelog page enables you to view our changes that we make everyday... Please keep in mind that not all changes are currently applied to the guild or the website.</p>
+<p>Livestreams is where you can watch members of our Guild do Livestreams about raiding, talking or even fun!</p>
 <!--Video Youtube Link-->
 <a href="#" target="_blank">Coming Soon!</a>
 </div>
