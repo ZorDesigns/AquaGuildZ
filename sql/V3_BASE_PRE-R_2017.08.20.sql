@@ -1,14 +1,21 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               5.6.15-log - MySQL Community Server (GPL)
+-- Server version:               5.7.17 - MySQL Community Server (GPL)
 -- Server OS:                    Win32
--- HeidiSQL Version:             9.3.0.4984
+-- HeidiSQL Version:             9.5.0.5196
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- Dumping database structure for gcms
+DROP DATABASE IF EXISTS `gcms`;
+CREATE DATABASE IF NOT EXISTS `gcms` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `gcms`;
 
 -- Dumping structure for table gcms.categories
 DROP TABLE IF EXISTS `categories`;
@@ -17,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `name` text NOT NULL,
   `icon` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table gcms.categories: 3 rows
 DELETE FROM `categories`;
@@ -28,7 +35,6 @@ INSERT INTO `categories` (`id`, `name`, `icon`) VALUES
 	(3, 'Developer\'s Corner', NULL);
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 
-
 -- Dumping structure for table gcms.com_slides
 DROP TABLE IF EXISTS `com_slides`;
 CREATE TABLE IF NOT EXISTS `com_slides` (
@@ -38,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `com_slides` (
   `desc` text CHARACTER SET latin1,
   `image` varchar(255) CHARACTER SET latin1 DEFAULT 'noslider',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table gcms.com_slides: 2 rows
 DELETE FROM `com_slides`;
@@ -47,7 +53,6 @@ INSERT INTO `com_slides` (`id`, `title`, `lnk`, `desc`, `image`) VALUES
 	(1, 'Icy Veins', 'http://icy-veins.com', 'Icy Veins! The best place to read about your class! Cool Features and Premade Macros', 'noslider'),
 	(2, 'MMO Champion', 'http://facebook.com', 'More News from MMO-Champion about World of Warcraft!', 'recruit');
 /*!40000 ALTER TABLE `com_slides` ENABLE KEYS */;
-
 
 -- Dumping structure for table gcms.news
 DROP TABLE IF EXISTS `news`;
@@ -62,20 +67,22 @@ CREATE TABLE IF NOT EXISTS `news` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
-
+-- Dumping data for table gcms.news: 0 rows
+DELETE FROM `news`;
+/*!40000 ALTER TABLE `news` DISABLE KEYS */;
+/*!40000 ALTER TABLE `news` ENABLE KEYS */;
 
 -- Dumping structure for table gcms.recruits
 DROP TABLE IF EXISTS `recruits`;
 CREATE TABLE IF NOT EXISTS `recruits` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `author` int(10) NOT NULL,
-  `character` varchar(255) NOT NULL,
-  `battletag` varchar(255) NOT NULL,
-  `class` varchar(255) NOT NULL,
-  `spec` varchar(255) NOT NULL,
-  `type` varchar(255) NOT NULL DEFAULT 'New',
-  `approved` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `author` text,
+  `character` text,
+  `battletag` varchar(50) NOT NULL,
+  `class` varchar(50) NOT NULL,
+  `spec` varchar(50) NOT NULL,
+  `type` text,
+  `approved` text NOT NULL,
   `p1` varchar(255) NOT NULL,
   `p2` varchar(255) NOT NULL,
   `p3` varchar(255) NOT NULL,
@@ -99,10 +106,12 @@ CREATE TABLE IF NOT EXISTS `recruits` (
   `q16` varchar(255) NOT NULL,
   `last_date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
-
+-- Dumping data for table gcms.recruits: 3 rows
+DELETE FROM `recruits`;
+/*!40000 ALTER TABLE `recruits` DISABLE KEYS */;
+/*!40000 ALTER TABLE `recruits` ENABLE KEYS */;
 
 -- Dumping structure for table gcms.recruits_panel
 DROP TABLE IF EXISTS `recruits_panel`;
@@ -120,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `recruits_panel` (
   `spec4_info` varchar(50) DEFAULT '0',
   `closed` varchar(50) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table gcms.recruits_panel: 12 rows
 DELETE FROM `recruits_panel`;
@@ -140,8 +149,6 @@ INSERT INTO `recruits_panel` (`id`, `class`, `class_img`, `spec1`, `spec1_info`,
 	(12, 'Demon Hunter', 'class_demonhunter', '', '1', 'ability_demonhunter_specdps', '0', 'ability_demonhunter_spectank', '0', NULL, '1', '1');
 /*!40000 ALTER TABLE `recruits_panel` ENABLE KEYS */;
 
-
-
 -- Dumping structure for table gcms.recr_replies
 DROP TABLE IF EXISTS `recr_replies`;
 CREATE TABLE IF NOT EXISTS `recr_replies` (
@@ -153,8 +160,10 @@ CREATE TABLE IF NOT EXISTS `recr_replies` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
-
+-- Dumping data for table gcms.recr_replies: 0 rows
+DELETE FROM `recr_replies`;
+/*!40000 ALTER TABLE `recr_replies` DISABLE KEYS */;
+/*!40000 ALTER TABLE `recr_replies` ENABLE KEYS */;
 
 -- Dumping structure for table gcms.replies
 DROP TABLE IF EXISTS `replies`;
@@ -168,8 +177,10 @@ CREATE TABLE IF NOT EXISTS `replies` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
-
+-- Dumping data for table gcms.replies: 0 rows
+DELETE FROM `replies`;
+/*!40000 ALTER TABLE `replies` DISABLE KEYS */;
+/*!40000 ALTER TABLE `replies` ENABLE KEYS */;
 
 -- Dumping structure for table gcms.screenshots
 DROP TABLE IF EXISTS `screenshots`;
@@ -182,8 +193,10 @@ CREATE TABLE IF NOT EXISTS `screenshots` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
-
+-- Dumping data for table gcms.screenshots: 0 rows
+DELETE FROM `screenshots`;
+/*!40000 ALTER TABLE `screenshots` DISABLE KEYS */;
+/*!40000 ALTER TABLE `screenshots` ENABLE KEYS */;
 
 -- Dumping structure for table gcms.slides
 DROP TABLE IF EXISTS `slides`;
@@ -192,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `slides` (
   `alt` text CHARACTER SET latin1,
   `image` varchar(255) CHARACTER SET latin1 DEFAULT 'staff',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table gcms.slides: 3 rows
 DELETE FROM `slides`;
@@ -203,7 +216,6 @@ INSERT INTO `slides` (`id`, `alt`, `image`) VALUES
 	(3, NULL, 'hellfireass');
 /*!40000 ALTER TABLE `slides` ENABLE KEYS */;
 
-
 -- Dumping structure for table gcms.subcategories
 DROP TABLE IF EXISTS `subcategories`;
 CREATE TABLE IF NOT EXISTS `subcategories` (
@@ -213,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `subcategories` (
   `cat` text NOT NULL,
   `rank` int(11) NOT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table gcms.subcategories: 5 rows
 DELETE FROM `subcategories`;
@@ -226,7 +238,6 @@ INSERT INTO `subcategories` (`uid`, `title`, `desc`, `cat`, `rank`) VALUES
 	(5, 'Requests', 'Here you can make requests for the developers', '3', 1);
 /*!40000 ALTER TABLE `subcategories` ENABLE KEYS */;
 
-
 -- Dumping structure for table gcms.subscriptions
 DROP TABLE IF EXISTS `subscriptions`;
 CREATE TABLE IF NOT EXISTS `subscriptions` (
@@ -236,8 +247,10 @@ CREATE TABLE IF NOT EXISTS `subscriptions` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
--- Data exporting was unselected.
-
+-- Dumping data for table gcms.subscriptions: 0 rows
+DELETE FROM `subscriptions`;
+/*!40000 ALTER TABLE `subscriptions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `subscriptions` ENABLE KEYS */;
 
 -- Dumping structure for table gcms.threads
 DROP TABLE IF EXISTS `threads`;
@@ -255,8 +268,10 @@ CREATE TABLE IF NOT EXISTS `threads` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
--- Data exporting was unselected.
-
+-- Dumping data for table gcms.threads: 0 rows
+DELETE FROM `threads`;
+/*!40000 ALTER TABLE `threads` DISABLE KEYS */;
+/*!40000 ALTER TABLE `threads` ENABLE KEYS */;
 
 -- Dumping structure for table gcms.users
 DROP TABLE IF EXISTS `users`;
@@ -275,10 +290,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   `signup_date` datetime NOT NULL,
   PRIMARY KEY (`uid`),
   UNIQUE KEY `username` (`email`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
-
+-- Dumping data for table gcms.users: 1 rows
+DELETE FROM `users`;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Dumping structure for table gcms.version
 DROP TABLE IF EXISTS `version`;
@@ -286,18 +303,18 @@ CREATE TABLE IF NOT EXISTS `version` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `text` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Dumping data for table gcms.version: 3 rows
+-- Dumping data for table gcms.version: 4 rows
 DELETE FROM `version`;
 /*!40000 ALTER TABLE `version` DISABLE KEYS */;
 INSERT INTO `version` (`id`, `text`) VALUES
 	(1, '1.0 ALPHA'),
 	(2, '1.5 BETA'),
 	(3, '2.0 ALPHA'),
-	(4, '2.1 ALPHA');
+	(4, '2.1 ALPHA'),
+	(5, '3 PRE-R');
 /*!40000 ALTER TABLE `version` ENABLE KEYS */;
-
 
 -- Dumping structure for table gcms.vids
 DROP TABLE IF EXISTS `vids`;
@@ -308,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `vids` (
   `image` varchar(255) CHARACTER SET latin1 DEFAULT 'staff',
   `desc` varchar(255) DEFAULT 'staff',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table gcms.vids: 2 rows
 DELETE FROM `vids`;
@@ -317,7 +334,6 @@ INSERT INTO `vids` (`id`, `contentlnk`, `title`, `image`, `desc`) VALUES
 	(1, 'M6s04rFylfQ', 'Intro', 'vids', 'This is a small Description for the Video'),
 	(2, 'M6s04rFylfQ', 'Intro 2', 'vids', 'This is a small Description for the Video');
 /*!40000 ALTER TABLE `vids` ENABLE KEYS */;
-
 
 -- Dumping structure for table gcms.wallpapers
 DROP TABLE IF EXISTS `wallpapers`;
@@ -330,20 +346,26 @@ CREATE TABLE IF NOT EXISTS `wallpapers` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping structure for table gcms.wallpapers
-DROP TABLE IF EXISTS `youtubers`;
-CREATE TABLE `youtubers` (
-	`id` INT(5) NOT NULL AUTO_INCREMENT,
-	`name` TEXT NOT NULL,
-	`link` TEXT NULL,
-	`image` TEXT NULL,
-	PRIMARY KEY (`id`)
-)
-COLLATE='latin1_swedish_ci'
-ENGINE=MyISAM
-AUTO_INCREMENT=4;
+-- Dumping data for table gcms.wallpapers: 0 rows
+DELETE FROM `wallpapers`;
+/*!40000 ALTER TABLE `wallpapers` DISABLE KEYS */;
+/*!40000 ALTER TABLE `wallpapers` ENABLE KEYS */;
 
--- Data exporting was unselected.
+-- Dumping structure for table gcms.youtubers
+DROP TABLE IF EXISTS `youtubers`;
+CREATE TABLE IF NOT EXISTS `youtubers` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `name` text NOT NULL,
+  `link` text,
+  `image` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table gcms.youtubers: 0 rows
+DELETE FROM `youtubers`;
+/*!40000 ALTER TABLE `youtubers` DISABLE KEYS */;
+/*!40000 ALTER TABLE `youtubers` ENABLE KEYS */;
+
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

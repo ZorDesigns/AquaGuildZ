@@ -223,15 +223,13 @@ include __DIR__ . '/configs.php';
 </div>
 <?php
 if(isset($_POST["createRecruit"])){
-$sql = "INSERT INTO recruits VALUES ('', '0', '".$_POST["character"]."', '".$_POST["battletag"]."', '".$_POST["class"]."', '".$_POST["spec"]."', 'New', '0', '".$_POST["p1"]."', '".$_POST["p2"]."', '".$_POST["p3"]."', '".$_POST["q1"]."', '".$_POST["q2"]."', '".$_POST["q3"]."', '".$_POST["q4"]."', '".$_POST["q4_info"]."', '".$_POST["q5"]."', '".$_POST["q6"]."', '".$_POST["q7"]."', '".$_POST["q8"]."', '".$_POST["q9"]."', '".$_POST["q10"]."', '".$_POST["q11"]."', '".$_POST["q11_info"]."', '".$_POST["q12"]."', '".$_POST["q13"]."', '".$_POST["q14"]."', '".$_POST["q15"]."', '".$_POST["q16"]."', NOW())";
+$sql = "INSERT INTO recruits VALUES (NULL, '0', '".$_POST["character"]."', '".$_POST["battletag"]."', '".$_POST["class"]."', '".$_POST["spec"]."', 'New', '0', '".$_POST["p1"]."', '".$_POST["p2"]."', '".$_POST["p3"]."', '".$_POST["q1"]."', '".$_POST["q2"]."', '".$_POST["q3"]."', '".$_POST["q4"]."', '".$_POST["q4_info"]."', '".$_POST["q5"]."', '".$_POST["q6"]."', '".$_POST["q7"]."', '".$_POST["q8"]."', '".$_POST["q9"]."', '".$_POST["q10"]."', '".$_POST["q11"]."', '".$_POST["q11_info"]."', '".$_POST["q12"]."', '".$_POST["q13"]."', '".$_POST["q14"]."', '".$_POST["q15"]."', '".$_POST["q16"]."', NOW())";
 if ($aquaglz->query($sql) === TRUE) {
 echo "<script type= 'text/javascript'>alert('New record created successfully');</script>";
 echo "<meta http-equiv='refresh'content='2;url=form.php'>";
-echo $sql;
 } else {
 echo "<script type= 'text/javascript'>alert('Error: " . $sql . "<br>" . $aquaglz->error."');</script>";
 echo "<meta http-equiv='refresh'content='2;url=crtRecruit.php'>";
-echo $sql;
 }
 }
 ?>
